@@ -1,5 +1,67 @@
 {
-  "passed": false,
-  "stage": "pending-final-release-validation",
-  "scope": "Final validation not yet run."
+  "passed": true,
+  "public_file_count": 83,
+  "html_count": 21,
+  "byte_identical_html_rebuild": true,
+  "changed_html": [],
+  "raw_source_files_available": false,
+  "browser_checks_requested": true,
+  "git_archive_commit": "4e3ce86079eb6a9153dadc380573f0ca8872c22f",
+  "export_method": "git archive HEAD",
+  "scope": "A source-free export inside ignored work/; no acquisition sources or private review reports copied. Existing Python packages and installed Chrome are used; this is not a pristine-machine dependency installation test.",
+  "html_sha256": {
+    "book-overview.html": "ea79a95b9266fbf885de3e27642a7b45b6e17b0941e009907f8ed58236f86dff",
+    "chapter-01-graphs-routes-spanning-trees.html": "4db1fb6e1bb097ea5eeeaef4926ee4734cdba67361e352298ea31dde783a7c4c",
+    "chapter-02-incidence-determinants-matrix-tree.html": "24fb6927874aa0031a4faa187c1317ff6f6fb50bb4bc338d26c6a8c3a395d4bd",
+    "chapter-03-rank-components-cycles-bipartite.html": "a90302628c487bee789bd317b7c4955b4353baf790bdc9d70cfa4ce75e6751d3",
+    "chapter-04-eigenvectors-walks-spectral-theorem.html": "d32e634f4e5a1a30fbde923932d4912e30bc07bb0a8168676f2946eef3535872",
+    "chapter-05-diameter-polynomials-spectral-rank.html": "3cd77e10d849a2e983e7c42e79105f5fc9ec4fc9904e43e40da7c6328de807ae",
+    "chapter-06-perron-vectors-structural-bounds.html": "8ce42580764edac19e1e0baf7af3650428f3fcea906d6ad669154c6bff595e78",
+    "chapter-07-interlacing-positive-blocks-quotients.html": "d30e5b3b0b166f8b4063cc34c4ca7b772a227438adcabb8b8ddb0699a3a5d24c",
+    "chapter-08-coloring-cliques-independence.html": "beaf388ea05c2e47903151d43ad165f938cbcff2c6ff053bf06e86aa452f7b3b",
+    "chapter-09-random-walks-stationary-mixing.html": "8f36d98eb9b85a0939360142b0459ba8c7a9569d3422c620f8459eb5a724b120",
+    "chapter-10-regularity-strong-regularity-friendship.html": "4faf77713c78e9bff62a3c43df209b63ddc1762646e7ccad603912516afda776",
+    "chapter-11-cospectral-switching-spectral-uniqueness.html": "b21df57f7388f1ef3c4e6beb99b3cbbad008ca6c2a0607e6cb36266fef0815b4",
+    "chapter-12-hypercubes-sensitivity-theorem.html": "3700b7136a32b8d8b0132bf194d2936cea518839fbc0d8f0fef42bf390490342",
+    "chapter-13-expanders-ramanujan-lifts-zigzag.html": "3c0ea31dc15e8ecd58cc079100d8169ad361d8c39a346285d18ac7e8c2e2b2fa",
+    "chapter-14-algebraic-connectivity-fiedler-geometry.html": "e55e537e334f869ff553512f28ba17370f79cca6ca8eb9f5bb1046a2e8daa1b2",
+    "chapter-15-signed-balance-switching-spectra.html": "a93d7865fcb791ae7f3e79460588abb85489b0c2719d9b7592fc0195fa717fa3",
+    "chapter-16-signed-laplacians-frustration-cycle-covers.html": "843133d92b700cf35c9789eded461643ae856512cf84d5fe5897891409e2d2cd",
+    "index.html": "fd5ee34171e1e1b59404469740319c9119651d45b7f48736935ee16e7970fa97",
+    "numerical-lab.html": "78ebcb17e8ba3d06fa0ccd8227562237ab171e6085938744c4d7eb01f78ad9b7",
+    "references.html": "b25c30047a019eb72221e7f22bf644df757ad3abd882a8b9892c263132f1b685",
+    "source-map.html": "7336aed5999cdef77e225f386d4f6e4e4141ed739d194ddd05ff3da35f2dfe5f"
+  },
+  "checks": [
+    {
+      "command": "python tools/build_book.py",
+      "returncode": 0,
+      "stdout": "Built 16 chapters and reader navigation\n",
+      "stderr": ""
+    },
+    {
+      "command": "python tools/check_chapter_code.py",
+      "returncode": 0,
+      "stdout": "chapter-01-graphs-routes-spanning-trees.html pilot-enumeration PASS\nchapter-02-incidence-determinants-matrix-tree.html matrix-tree-exact PASS\nchapter-03-rank-components-cycles-bipartite.html rank-cycles-flows PASS\nchapter-04-eigenvectors-walks-spectral-theorem.html walks-and-spectrum PASS\nchapter-05-diameter-polynomials-spectral-rank.html diameter-rank-spectra PASS\nchapter-06-perron-vectors-structural-bounds.html perron PASS\nchapter-07-interlacing-positive-blocks-quotients.html interlacing PASS\nchapter-08-coloring-cliques-independence.html coloring PASS\nchapter-09-random-walks-stationary-mixing.html code/ch09_walks.py PASS\nchapter-10-regularity-strong-regularity-friendship.html code/ch10_regular_graphs.py PASS\nchapter-11-cospectral-switching-spectral-uniqueness.html code/ch11_cospectral.py PASS\nchapter-12-hypercubes-sensitivity-theorem.html code/ch12_sensitivity.py PASS\nchapter-13-expanders-ramanujan-lifts-zigzag.html code/ch13_expanders.py PASS\nchapter-14-algebraic-connectivity-fiedler-geometry.html code/ch14_fiedler.py PASS\nchapter-15-signed-balance-switching-spectra.html code/ch15_balance.py PASS\nchapter-16-signed-laplacians-frustration-cycle-covers.html code/ch16_frustration_covers.py PASS\n",
+      "stderr": ""
+    },
+    {
+      "command": "python numerical_lab.py",
+      "returncode": 0,
+      "stdout": "vertices=5 edges=6 components=1 cycle_rank=2\nspanning_trees=8 cofactor_counts=[8, 8, 8, 8, 8]\nclosed_walks_length_3=12 triangles=2\nadjacency_eigenvalues=[-1.749118 -1.27133   0.        0.334904  2.685544]\nlaplacian_eigenvalues=[0. 1. 2. 4. 5.]\nlazy_walk_stationary=[0.25     0.166667 0.333333 0.166667 0.083333]\nlazy_walk_TV_after_20=0.00006413\nincidence, determinant, spectral and Markov checks: PASS\n",
+      "stderr": ""
+    },
+    {
+      "command": "python tools/validate_books.py --browser",
+      "returncode": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"html_count\": 21,\n  \"timestamp_count\": 40,\n  \"failures\": []\n}\nBrowser: True 40 page/viewport checks\n",
+      "stderr": ""
+    },
+    {
+      "command": "python tools/audit_public.py --release",
+      "returncode": 0,
+      "stdout": "Public package: 83 files; privacy inventory passed\n",
+      "stderr": ""
+    }
+  ]
 }

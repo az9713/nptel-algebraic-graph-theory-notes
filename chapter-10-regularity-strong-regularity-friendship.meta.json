@@ -198,13 +198,21 @@
         "round": 1,
         "report": "work/reviews/ch10-r1.md",
         "verdict": "accepted",
-        "authored_body_sha256": "8db57925fc5ad85d78d52d6d3c5333c565c939e54bebf1d9d0e51ea1621618ec"
+        "authored_body_sha256": "8db57925fc5ad85d78d52d6d3c5333c565c939e54bebf1d9d0e51ea1621618ec",
+        "reviewer": "Independent thermodynamics course worker",
+        "blocking": 0,
+        "major": 0,
+        "minor": 0
       },
       {
         "round": 2,
         "report": "work/reviews/ch10-r2.md",
         "verdict": "accepted",
-        "authored_body_sha256": "8db57925fc5ad85d78d52d6d3c5333c565c939e54bebf1d9d0e51ea1621618ec"
+        "authored_body_sha256": "8db57925fc5ad85d78d52d6d3c5333c565c939e54bebf1d9d0e51ea1621618ec",
+        "reviewer": "Independent lead coordinator",
+        "blocking": 0,
+        "major": 0,
+        "minor": 0
       }
     ],
     "blocking": 0,

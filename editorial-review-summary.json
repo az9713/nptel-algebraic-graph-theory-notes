@@ -255,13 +255,21 @@
           "round": 1,
           "report": "work/reviews/ch10-r1.md",
           "verdict": "accepted",
-          "authored_body_sha256": "8db57925fc5ad85d78d52d6d3c5333c565c939e54bebf1d9d0e51ea1621618ec"
+          "authored_body_sha256": "8db57925fc5ad85d78d52d6d3c5333c565c939e54bebf1d9d0e51ea1621618ec",
+          "reviewer": "Independent thermodynamics course worker",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0
         },
         {
           "round": 2,
           "report": "work/reviews/ch10-r2.md",
           "verdict": "accepted",
-          "authored_body_sha256": "8db57925fc5ad85d78d52d6d3c5333c565c939e54bebf1d9d0e51ea1621618ec"
+          "authored_body_sha256": "8db57925fc5ad85d78d52d6d3c5333c565c939e54bebf1d9d0e51ea1621618ec",
+          "reviewer": "Independent lead coordinator",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0
         }
       ]
     },
@@ -274,13 +282,21 @@
           "round": 1,
           "report": "work/reviews/ch11-r1.md",
           "verdict": "accepted",
-          "authored_body_sha256": "617490c9886fb5555eb66d13f540280887b7de26bcb21d7a71f4ac5b70327232"
+          "authored_body_sha256": "617490c9886fb5555eb66d13f540280887b7de26bcb21d7a71f4ac5b70327232",
+          "reviewer": "Independent cardiovascular course worker",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0
         },
         {
           "round": 2,
           "report": "work/reviews/ch11-r2.md",
           "verdict": "accepted",
-          "authored_body_sha256": "617490c9886fb5555eb66d13f540280887b7de26bcb21d7a71f4ac5b70327232"
+          "authored_body_sha256": "617490c9886fb5555eb66d13f540280887b7de26bcb21d7a71f4ac5b70327232",
+          "reviewer": "Independent lead coordinator",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0
         }
       ]
     },
@@ -293,13 +309,21 @@
           "round": 1,
           "report": "work/reviews/ch12-r1.md",
           "verdict": "accepted",
-          "authored_body_sha256": "fc93b1aa92b1a48f42ee4d00dbdd7d4023f4d1e6df34496a79b9ca8fc8cf416c"
+          "authored_body_sha256": "fc93b1aa92b1a48f42ee4d00dbdd7d4023f4d1e6df34496a79b9ca8fc8cf416c",
+          "reviewer": "Independent cardiovascular course worker",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0
         },
         {
           "round": 2,
           "report": "work/reviews/ch12-r2.md",
           "verdict": "accepted",
-          "authored_body_sha256": "fc93b1aa92b1a48f42ee4d00dbdd7d4023f4d1e6df34496a79b9ca8fc8cf416c"
+          "authored_body_sha256": "fc93b1aa92b1a48f42ee4d00dbdd7d4023f4d1e6df34496a79b9ca8fc8cf416c",
+          "reviewer": "Independent lead coordinator",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0
         }
       ]
     },
@@ -312,13 +336,21 @@
           "round": 1,
           "report": "work/reviews/ch13-r1.md",
           "verdict": "accepted",
-          "authored_body_sha256": "11ab25f82d29fb480838ebe147374510edc5a34064579a08636f9a4623ba277f"
+          "authored_body_sha256": "11ab25f82d29fb480838ebe147374510edc5a34064579a08636f9a4623ba277f",
+          "reviewer": "Independent thermodynamics course worker",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0
         },
         {
           "round": 2,
           "report": "work/reviews/ch13-r2.md",
           "verdict": "accepted",
-          "authored_body_sha256": "11ab25f82d29fb480838ebe147374510edc5a34064579a08636f9a4623ba277f"
+          "authored_body_sha256": "11ab25f82d29fb480838ebe147374510edc5a34064579a08636f9a4623ba277f",
+          "reviewer": "Independent lead coordinator",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0
         }
       ]
     },
@@ -331,13 +363,21 @@
           "round": 1,
           "report": "work/reviews/ch14-r1.md",
           "verdict": "accepted",
-          "authored_body_sha256": "a7de276c927893fe87961ba2444eac633799b66b0a24cd1d5e9599bc17ec49cf"
+          "authored_body_sha256": "a7de276c927893fe87961ba2444eac633799b66b0a24cd1d5e9599bc17ec49cf",
+          "reviewer": "Independent cardiovascular course worker",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0
         },
         {
           "round": 2,
           "report": "work/reviews/ch14-r2.md",
           "verdict": "accepted",
-          "authored_body_sha256": "a7de276c927893fe87961ba2444eac633799b66b0a24cd1d5e9599bc17ec49cf"
+          "authored_body_sha256": "a7de276c927893fe87961ba2444eac633799b66b0a24cd1d5e9599bc17ec49cf",
+          "reviewer": "Independent lead coordinator",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0
         }
       ]
     },

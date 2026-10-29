@@ -1,6 +1,6 @@
 {
   "complete": false,
-  "stage": "all-chapters-reviewed-final-validation-and-publication-pending",
+  "stage": "source-free-Git-export-passed-release-hardening-export-in-progress",
   "planned_chapters": 16,
   "authored_chapters": 16,
   "scientifically_accepted_chapters": 16,
@@ -10,7 +10,7 @@
   "worked_solutions": 139,
   "executed_listing_count": 16,
   "public_repository_created": false,
-  "committed": false,
+  "committed": true,
   "pushed": false,
   "limitations": [
     "Machine ASR and chunk boundaries remain fallible.",

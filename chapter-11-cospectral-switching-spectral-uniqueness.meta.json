@@ -224,13 +224,21 @@
         "round": 1,
         "report": "work/reviews/ch11-r1.md",
         "verdict": "accepted",
-        "authored_body_sha256": "617490c9886fb5555eb66d13f540280887b7de26bcb21d7a71f4ac5b70327232"
+        "authored_body_sha256": "617490c9886fb5555eb66d13f540280887b7de26bcb21d7a71f4ac5b70327232",
+        "reviewer": "Independent cardiovascular course worker",
+        "blocking": 0,
+        "major": 0,
+        "minor": 0
       },
       {
         "round": 2,
         "report": "work/reviews/ch11-r2.md",
         "verdict": "accepted",
-        "authored_body_sha256": "617490c9886fb5555eb66d13f540280887b7de26bcb21d7a71f4ac5b70327232"
+        "authored_body_sha256": "617490c9886fb5555eb66d13f540280887b7de26bcb21d7a71f4ac5b70327232",
+        "reviewer": "Independent lead coordinator",
+        "blocking": 0,
+        "major": 0,
+        "minor": 0
       }
     ],
     "blocking": 0,

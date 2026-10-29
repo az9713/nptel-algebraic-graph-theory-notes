@@ -209,13 +209,21 @@
         "round": 1,
         "report": "work/reviews/ch13-r1.md",
         "verdict": "accepted",
-        "authored_body_sha256": "11ab25f82d29fb480838ebe147374510edc5a34064579a08636f9a4623ba277f"
+        "authored_body_sha256": "11ab25f82d29fb480838ebe147374510edc5a34064579a08636f9a4623ba277f",
+        "reviewer": "Independent thermodynamics course worker",
+        "blocking": 0,
+        "major": 0,
+        "minor": 0
       },
       {
         "round": 2,
         "report": "work/reviews/ch13-r2.md",
         "verdict": "accepted",
-        "authored_body_sha256": "11ab25f82d29fb480838ebe147374510edc5a34064579a08636f9a4623ba277f"
+        "authored_body_sha256": "11ab25f82d29fb480838ebe147374510edc5a34064579a08636f9a4623ba277f",
+        "reviewer": "Independent lead coordinator",
+        "blocking": 0,
+        "major": 0,
+        "minor": 0
       }
     ],
     "blocking": 0,

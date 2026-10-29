@@ -14,6 +14,27 @@ from build_book import original_body, read
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def accepted_rounds(record, digest):
+    rounds = record.get('rounds', [])
+    if len(rounds) != 2 or {r.get('round') for r in rounds} != {1, 2}:
+        return False
+    reviewers = {r.get('reviewer', '').strip().casefold() for r in rounds}
+    if len(reviewers) != 2 or '' in reviewers:
+        return False
+    if not all(r.get('verdict') == 'accepted'
+               and r.get('authored_body_sha256') == digest
+               and all(r.get(level, 0) == 0 for level in ('blocking', 'major', 'minor'))
+               for r in rounds):
+        return False
+    previous = record.get('previous_scientific_acceptance')
+    if previous is not None:
+        if not previous.get('accepted') or not accepted_rounds(previous, previous.get('accepted_body_sha256')):
+            return False
+    if any('Formatting-only' in r.get('scope', '') for r in rounds) and previous is None:
+        return False
+    return record.get('accepted') is True and record.get('accepted_body_sha256') == digest
+
+
 def static_checks():
     errors = []
     manifest = json.loads((ROOT / 'source-manifest.json').read_text(encoding='utf-8'))
@@ -42,10 +63,11 @@ def static_checks():
             if editorial:
                 review = next((r for r in editorial['chapters']
                                if r['chapter'] == chapter_number), None)
+                independent = sidecar.get('independent_review', {})
                 if (not review or review['authored_body_sha256'] != body_sha
-                        or len(review['reviews']) < 2
-                        or review['reviews'][-1]['verdict'] != 'accepted'
-                        or review['reviews'][-1]['authored_body_sha256'] != body_sha):
+                        or not review.get('accepted')
+                        or review.get('reviews') != independent.get('rounds')
+                        or not accepted_rounds(independent, body_sha)):
                     errors.append(f'{path.name}: stale or missing scientific acceptance')
             if {r['video_id'] for r in sidecar['recordings']} != expected:
                 errors.append(f'{path.name}: recording assignment differs')

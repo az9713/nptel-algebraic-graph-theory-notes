@@ -94,6 +94,7 @@ def main():
     parser.add_argument('--base', required=True, help='This course GitHub Pages base URL')
     parser.add_argument('--repo', required=True, help='This course GitHub repository URL')
     parser.add_argument('--browser', action='store_true', help='Run hidden desktop/mobile checks')
+    parser.add_argument('--bootstrap', action='store_true', help='Permit an existing pending served report on the first deployment only')
     args = parser.parse_args()
     base = args.base.rstrip('/')+'/'
     if not (base.startswith('https://') and args.repo.startswith('https://github.com/')):
@@ -124,10 +125,11 @@ def main():
                         'passed': actual == expected,
                         'error': None if actual == expected else error})
     # The self-hash exclusion must never hide a missing served report.
-    report_present, report_error = False, None
+    report_present, served_report_passed, report_error = False, False, None
     try:
         existing = json.loads(fetch(base+'publication-validation.json'))
         report_present = isinstance(existing, dict) and isinstance(existing.get('passed'), bool)
+        served_report_passed = report_present and existing.get('passed') is True
     except Exception as exception:
         report_error = str(exception)
     reader = browser_checks(base) if args.browser else []
@@ -146,13 +148,15 @@ def main():
         preview_error = str(exception)
     commit = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
     passed = (bool(records) and all(row['passed'] for row in records)
-              and report_present and preview and all(row['passed'] for row in reader))
+              and report_present and (args.bootstrap or served_report_passed)
+              and preview and all(row['passed'] for row in reader))
     report = {'passed': passed,
         'checked_at_utc': datetime.datetime.now(datetime.timezone.utc).isoformat(),
         'base_url': base, 'repository_url': args.repo, 'payload_commit': commit,
         'served_file_count': len(records), 'files': records,
         'excluded_from_served_hashes': exclusions,
         'served_report_exists_and_is_json': report_present,
+        'served_report_passed': served_report_passed, 'bootstrap_probe': args.bootstrap,
         'served_report_error': report_error, 'browser_checks_requested': args.browser,
         'live_reader': reader, 'github_readme_preview_links_to_book': preview,
         'preview_error': preview_error,
