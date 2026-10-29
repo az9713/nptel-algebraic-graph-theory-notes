@@ -1,0 +1,263 @@
+{
+  "chapter": 2,
+  "title": "Incidence determinants and the matrix-tree theorem",
+  "status": "reviewed — two independent AI scientific reviews",
+  "authored_body_sha256": "fccb745c79993b8a742d16fe9e0c1fdfea0ec65bc1089de57495f23ddb65444f",
+  "recordings": [
+    {
+      "video_id": "uK5TqHRL1Uo",
+      "playlist_position": 2,
+      "lecture_label": "Lecture 2",
+      "duration_seconds": 1580,
+      "decoded_audio_duration_seconds": 1579.5141875,
+      "complete_decoded_audio": true,
+      "media_sha256": "963537b50b192a34bdaf3acc8a9648ae5e0e34162ae35cbb60a4d2f40c9eaf4f",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1572.88,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    },
+    {
+      "video_id": "6agb6_zMIE8",
+      "playlist_position": 3,
+      "lecture_label": "Lecture 3",
+      "duration_seconds": 1665,
+      "decoded_audio_duration_seconds": 1664.685,
+      "complete_decoded_audio": true,
+      "media_sha256": "303bdff8bc1bd57b07766e55a42c61161273949e0fc6baaaef4d6a4602dfe29c",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1658.1,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    },
+    {
+      "video_id": "bQBZn77jdhY",
+      "playlist_position": 4,
+      "lecture_label": "Lecture 4",
+      "duration_seconds": 1662,
+      "decoded_audio_duration_seconds": 1661.898625,
+      "complete_decoded_audio": true,
+      "media_sha256": "52972d0a29aa6719df43b03509df3646ab862c8e886628f8f6c41850b626fdf8",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1655.52,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    }
+  ],
+  "sections": [
+    {
+      "section": "2.1 Give each edge a temporary direction 02:44",
+      "anchor": "incidence",
+      "video_id": "uK5TqHRL1Uo",
+      "start": 164,
+      "end": 478,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "2.2 The Laplacian is a Gram matrix 07:58",
+      "anchor": "laplacian",
+      "video_id": "uK5TqHRL1Uo",
+      "start": 478,
+      "end": 1093,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "2.3 Equal cofactors include their signs 18:13",
+      "anchor": "cofactor-signs",
+      "video_id": "uK5TqHRL1Uo",
+      "start": 1093,
+      "end": 1537,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "2.4 An incidence determinant recognizes a tree 05:58",
+      "anchor": "tree-minors",
+      "video_id": "6agb6_zMIE8",
+      "start": 358,
+      "end": 1618,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "2.5 Cauchy–Binet: expand over sets of columns 01:22",
+      "anchor": "cauchy-binet",
+      "video_id": "bQBZn77jdhY",
+      "start": 82,
+      "end": 343,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "2.6 The matrix-tree theorem 05:43",
+      "anchor": "matrix-tree",
+      "video_id": "bQBZn77jdhY",
+      "start": 343,
+      "end": 867,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "2.7 Efficient evaluation still needs a number model 14:27",
+      "anchor": "computation",
+      "video_id": "bQBZn77jdhY",
+      "start": 867,
+      "end": 1191,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "2.8 Removing alternating signs changes the problem 19:51",
+      "anchor": "permanent",
+      "video_id": "bQBZn77jdhY",
+      "start": 1191,
+      "end": 1656,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "2.9 A weighted extension: count products of edge weights",
+      "anchor": "weighted-extension",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "2.10 Check the complete small example with exact arithmetic",
+      "anchor": "code",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "2.11 Problems with complete solutions",
+      "anchor": "exercises",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "2.12 What the determinant has established",
+      "anchor": "limits",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    }
+  ],
+  "references": [
+    {
+      "url": "https://homepages.cwi.nl/~aeb/math/ipm/ipm.pdf",
+      "title": "Brouwer–Haemers author-hosted text, §1.3.5",
+      "supports": "Exact claim and locator are stated beside the chapter citation"
+    },
+    {
+      "url": "https://sites.math.washington.edu/~billey/colombia/references/valiant.permanent.1979pdf.pdf",
+      "title": "original 1979 paper, pp. 189–191",
+      "supports": "Exact claim and locator are stated beside the chapter citation"
+    }
+  ],
+  "prose_words_including_math": 4776,
+  "solution_count": 8,
+  "executable_listing_count": 1,
+  "independent_review": {
+    "accepted": true,
+    "accepted_body_sha256": "fccb745c79993b8a742d16fe9e0c1fdfea0ec65bc1089de57495f23ddb65444f",
+    "rounds": [
+      {
+        "round": 1,
+        "reviewer": "Independent thermodynamics course worker",
+        "verdict": "accepted",
+        "blocking": 0,
+        "major": 0,
+        "minor": 0,
+        "authored_body_sha256": "fccb745c79993b8a742d16fe9e0c1fdfea0ec65bc1089de57495f23ddb65444f",
+        "scope": "Formatting-only exact-byte equivalence closure carrying prior full scientific R1",
+        "report": "work/reviews/spacing-peer-closure.md"
+      },
+      {
+        "round": 2,
+        "reviewer": "Independent lead coordinator",
+        "verdict": "accepted",
+        "blocking": 0,
+        "major": 0,
+        "minor": 0,
+        "authored_body_sha256": "fccb745c79993b8a742d16fe9e0c1fdfea0ec65bc1089de57495f23ddb65444f",
+        "scope": "Formatting-only exact-byte equivalence closure carrying prior full scientific R2",
+        "report": "work/reviews/spacing-root-closure.md"
+      }
+    ],
+    "previous_scientific_acceptance": {
+      "accepted": true,
+      "accepted_body_sha256": "e172ffc65e96e2c198932161314a0d6e2ab8f632d4dbb8822ae9f7651d7f71ff",
+      "rounds": [
+        {
+          "round": 1,
+          "reviewer": "Independent thermodynamics course worker",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0,
+          "verdict": "accepted",
+          "authored_body_sha256": "e172ffc65e96e2c198932161314a0d6e2ab8f632d4dbb8822ae9f7651d7f71ff"
+        },
+        {
+          "round": 2,
+          "reviewer": "Independent lead coordinator",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0,
+          "verdict": "accepted",
+          "authored_body_sha256": "e172ffc65e96e2c198932161314a0d6e2ab8f632d4dbb8822ae9f7651d7f71ff"
+        }
+      ],
+      "scope": "Exact authored chapter2 body only. Both reviewers independently reconstructed proofs,exercises and actual displayed computation; R1 read full3sourceASR; both inspected bounded primary statements. No formal proof,audiovisual or full-course acceptance."
+    },
+    "scope": "Prior full scientific reviews plus two independent proofs that only ordinary prose spaces were inserted; all TeX/listings/output bytes unchanged. No new scientific claims or full audiovisual/publication acceptance."
+  },
+  "visual_boundary": "No comprehensive audiovisual or board transcription; machine recognition and chunk boundaries remain fallible."
+}

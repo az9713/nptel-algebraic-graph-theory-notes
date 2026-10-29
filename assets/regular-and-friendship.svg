@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 340" role="img" aria-labelledby="title desc"><title id="title">Three local structures and their global spectra</title><desc id="desc">A five cycle and Petersen graph are strongly regular. Three triangles sharing one hub satisfy the unique common neighbor property while their hub and outer vertices have different degrees.</desc><rect width="960" height="340" rx="16" fill="#101b2a"/>
+<text x="160" y="32" fill="#e5edf5" font-family="sans-serif" font-size="20" text-anchor="middle">Five-cycle</text>
+<line x1="160" y1="75" x2="245.59508646656383" y2="137.18847050625473" stroke="#72b8e8" stroke-width="3"/>
+<line x1="245.59508646656383" y1="137.18847050625473" x2="212.90067270632258" y2="237.81152949374527" stroke="#72b8e8" stroke-width="3"/>
+<line x1="212.90067270632258" y1="237.81152949374527" x2="107.09932729367742" y2="237.81152949374527" stroke="#72b8e8" stroke-width="3"/>
+<line x1="107.09932729367742" y1="237.81152949374527" x2="74.40491353343617" y2="137.18847050625476" stroke="#72b8e8" stroke-width="3"/>
+<line x1="74.40491353343617" y1="137.18847050625476" x2="160" y2="75" stroke="#72b8e8" stroke-width="3"/>
+<circle cx="160" cy="75" r="8" fill="#7de0c0"/>
+<circle cx="245.59508646656383" cy="137.18847050625473" r="8" fill="#7de0c0"/>
+<circle cx="212.90067270632258" cy="237.81152949374527" r="8" fill="#7de0c0"/>
+<circle cx="107.09932729367742" cy="237.81152949374527" r="8" fill="#7de0c0"/>
+<circle cx="74.40491353343617" cy="137.18847050625476" r="8" fill="#7de0c0"/>
+<text x="160" y="302" fill="#b4c7db" font-family="sans-serif" font-size="16" text-anchor="middle">(n,d,a,b) = (5,2,0,1)</text>
+<text x="480" y="32" fill="#e5edf5" font-family="sans-serif" font-size="20" text-anchor="middle">Petersen graph</text>
+<line x1="480" y1="65" x2="575.1056516295154" y2="134.09830056250527" stroke="#72b8e8" stroke-width="3"/>
+<line x1="480" y1="65" x2="480" y2="121" stroke="#72b8e8" stroke-width="3"/>
+<line x1="480" y1="121" x2="505.8625511008688" y2="200.5967477524977" stroke="#72b8e8" stroke-width="3"/>
+<line x1="575.1056516295154" y1="134.09830056250527" x2="538.7785252292473" y2="245.90169943749476" stroke="#72b8e8" stroke-width="3"/>
+<line x1="575.1056516295154" y1="134.09830056250527" x2="521.8464867169868" y2="151.4032522475023" stroke="#72b8e8" stroke-width="3"/>
+<line x1="521.8464867169868" y1="151.4032522475023" x2="454.1374488991312" y2="200.5967477524977" stroke="#72b8e8" stroke-width="3"/>
+<line x1="538.7785252292473" y1="245.90169943749476" x2="421.2214747707527" y2="245.90169943749476" stroke="#72b8e8" stroke-width="3"/>
+<line x1="538.7785252292473" y1="245.90169943749476" x2="505.8625511008688" y2="200.5967477524977" stroke="#72b8e8" stroke-width="3"/>
+<line x1="505.8625511008688" y1="200.5967477524977" x2="438.15351328301324" y2="151.4032522475023" stroke="#72b8e8" stroke-width="3"/>
+<line x1="421.2214747707527" y1="245.90169943749476" x2="384.89434837048464" y2="134.09830056250527" stroke="#72b8e8" stroke-width="3"/>
+<line x1="421.2214747707527" y1="245.90169943749476" x2="454.1374488991312" y2="200.5967477524977" stroke="#72b8e8" stroke-width="3"/>
+<line x1="454.1374488991312" y1="200.5967477524977" x2="480" y2="121" stroke="#72b8e8" stroke-width="3"/>
+<line x1="384.89434837048464" y1="134.09830056250527" x2="480" y2="65" stroke="#72b8e8" stroke-width="3"/>
+<line x1="384.89434837048464" y1="134.09830056250527" x2="438.15351328301324" y2="151.4032522475023" stroke="#72b8e8" stroke-width="3"/>
+<line x1="438.15351328301324" y1="151.4032522475023" x2="521.8464867169868" y2="151.4032522475023" stroke="#72b8e8" stroke-width="3"/>
+<circle cx="480" cy="65" r="8" fill="#7de0c0"/>
+<circle cx="575.1056516295154" cy="134.09830056250527" r="8" fill="#7de0c0"/>
+<circle cx="538.7785252292473" cy="245.90169943749476" r="8" fill="#7de0c0"/>
+<circle cx="421.2214747707527" cy="245.90169943749476" r="8" fill="#7de0c0"/>
+<circle cx="384.89434837048464" cy="134.09830056250527" r="8" fill="#7de0c0"/>
+<circle cx="480" cy="121" r="8" fill="#7de0c0"/>
+<circle cx="521.8464867169868" cy="151.4032522475023" r="8" fill="#7de0c0"/>
+<circle cx="505.8625511008688" cy="200.5967477524977" r="8" fill="#7de0c0"/>
+<circle cx="454.1374488991312" cy="200.5967477524977" r="8" fill="#7de0c0"/>
+<circle cx="438.15351328301324" cy="151.4032522475023" r="8" fill="#7de0c0"/>
+<text x="480" y="302" fill="#b4c7db" font-family="sans-serif" font-size="16" text-anchor="middle">(n,d,a,b) = (10,3,0,1)</text>
+<text x="800" y="32" fill="#e5edf5" font-family="sans-serif" font-size="20" text-anchor="middle">Friendship windmill</text>
+<line x1="800" y1="165" x2="800" y2="65" stroke="#72b8e8" stroke-width="3"/>
+<line x1="800" y1="165" x2="886.6025403784439" y2="115" stroke="#72b8e8" stroke-width="3"/>
+<line x1="800" y1="165" x2="886.6025403784439" y2="215" stroke="#72b8e8" stroke-width="3"/>
+<line x1="800" y1="165" x2="800" y2="265" stroke="#72b8e8" stroke-width="3"/>
+<line x1="800" y1="165" x2="713.3974596215562" y2="215.00000000000003" stroke="#72b8e8" stroke-width="3"/>
+<line x1="800" y1="165" x2="713.3974596215561" y2="114.99999999999999" stroke="#72b8e8" stroke-width="3"/>
+<line x1="800" y1="65" x2="886.6025403784439" y2="115" stroke="#72b8e8" stroke-width="3"/>
+<line x1="886.6025403784439" y1="215" x2="800" y2="265" stroke="#72b8e8" stroke-width="3"/>
+<line x1="713.3974596215562" y1="215.00000000000003" x2="713.3974596215561" y2="114.99999999999999" stroke="#72b8e8" stroke-width="3"/>
+<circle cx="800" cy="165" r="8" fill="#f4b55d"/>
+<circle cx="800" cy="65" r="8" fill="#7de0c0"/>
+<circle cx="886.6025403784439" cy="115" r="8" fill="#7de0c0"/>
+<circle cx="886.6025403784439" cy="215" r="8" fill="#7de0c0"/>
+<circle cx="800" cy="265" r="8" fill="#7de0c0"/>
+<circle cx="713.3974596215562" cy="215.00000000000003" r="8" fill="#7de0c0"/>
+<circle cx="713.3974596215561" cy="114.99999999999999" r="8" fill="#7de0c0"/>
+<text x="800" y="302" fill="#b4c7db" font-family="sans-serif" font-size="16" text-anchor="middle">Degrees: hub 6; outer vertices 2</text>
+</svg>

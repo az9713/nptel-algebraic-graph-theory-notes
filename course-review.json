@@ -1,0 +1,116 @@
+{
+  "passed": true,
+  "course": "Introduction to Algebraic Graph Theory",
+  "instructor": "Prof. Ranveer Singh",
+  "institution": "IIT Indore",
+  "chapter_count": 16,
+  "independent_scientific_rounds_per_chapter": 2,
+  "unresolved_blocking": 0,
+  "unresolved_major": 0,
+  "unresolved_minor": 0,
+  "scope": "Two independent AI scientific reviews per exact chapter body; full source reading in R1, proofs/solutions/code and selected primary references checked. No formal proof verification, comprehensive audiovisual/board audit, or guarantee of correctness.",
+  "chapters": [
+    {
+      "chapter": 1,
+      "file": "chapter-01-graphs-routes-spanning-trees.html",
+      "authored_body_sha256": "7287ead1d34b2792b0f9c7cf5c9cfe05a6a92d6b98ddeabcb610210546f64770",
+      "accepted": true
+    },
+    {
+      "chapter": 2,
+      "file": "chapter-02-incidence-determinants-matrix-tree.html",
+      "authored_body_sha256": "fccb745c79993b8a742d16fe9e0c1fdfea0ec65bc1089de57495f23ddb65444f",
+      "accepted": true
+    },
+    {
+      "chapter": 3,
+      "file": "chapter-03-rank-components-cycles-bipartite.html",
+      "authored_body_sha256": "ecd104aa41a1f39b80732d88323f0c766e2db7e24ef8539c227b8a967af77fb1",
+      "accepted": true
+    },
+    {
+      "chapter": 4,
+      "file": "chapter-04-eigenvectors-walks-spectral-theorem.html",
+      "authored_body_sha256": "61fe97718525b99a1d150dd7b7cb361acb9347db42ebd1b97fc9af4e73169e18",
+      "accepted": true
+    },
+    {
+      "chapter": 5,
+      "file": "chapter-05-diameter-polynomials-spectral-rank.html",
+      "authored_body_sha256": "e01ba208b3361b71f0c997f94358db25dc6c8044ce496de0dd0d21ac18d952d1",
+      "accepted": true
+    },
+    {
+      "chapter": 6,
+      "file": "chapter-06-perron-vectors-structural-bounds.html",
+      "authored_body_sha256": "462733a5b5f079812823169e3d82830831988f950d27b91366dcd8a8d170320b",
+      "accepted": true
+    },
+    {
+      "chapter": 7,
+      "file": "chapter-07-interlacing-positive-blocks-quotients.html",
+      "authored_body_sha256": "ec7623c0215b0f8c50e766e23a4ef90ca6b0061cb791a50dcee5b85a324a7247",
+      "accepted": true
+    },
+    {
+      "chapter": 8,
+      "file": "chapter-08-coloring-cliques-independence.html",
+      "authored_body_sha256": "ee01b82813ddf528472f7201b2226e10c11a09a58ff70e27851d1c406076d5ff",
+      "accepted": true
+    },
+    {
+      "chapter": 9,
+      "file": "chapter-09-random-walks-stationary-mixing.html",
+      "authored_body_sha256": "aa394d53050fff385959e213fb6a47ff72202f68b1f620ed9709f4d78661d7d6",
+      "accepted": true
+    },
+    {
+      "chapter": 10,
+      "file": "chapter-10-regularity-strong-regularity-friendship.html",
+      "authored_body_sha256": "8db57925fc5ad85d78d52d6d3c5333c565c939e54bebf1d9d0e51ea1621618ec",
+      "accepted": true
+    },
+    {
+      "chapter": 11,
+      "file": "chapter-11-cospectral-switching-spectral-uniqueness.html",
+      "authored_body_sha256": "617490c9886fb5555eb66d13f540280887b7de26bcb21d7a71f4ac5b70327232",
+      "accepted": true
+    },
+    {
+      "chapter": 12,
+      "file": "chapter-12-hypercubes-sensitivity-theorem.html",
+      "authored_body_sha256": "fc93b1aa92b1a48f42ee4d00dbdd7d4023f4d1e6df34496a79b9ca8fc8cf416c",
+      "accepted": true
+    },
+    {
+      "chapter": 13,
+      "file": "chapter-13-expanders-ramanujan-lifts-zigzag.html",
+      "authored_body_sha256": "11ab25f82d29fb480838ebe147374510edc5a34064579a08636f9a4623ba277f",
+      "accepted": true
+    },
+    {
+      "chapter": 14,
+      "file": "chapter-14-algebraic-connectivity-fiedler-geometry.html",
+      "authored_body_sha256": "a7de276c927893fe87961ba2444eac633799b66b0a24cd1d5e9599bc17ec49cf",
+      "accepted": true
+    },
+    {
+      "chapter": 15,
+      "file": "chapter-15-signed-balance-switching-spectra.html",
+      "authored_body_sha256": "9a7b943facaf086e7041e6754583c8c0ecee65b94dbb0dbcc96d7e5ed6a9b872",
+      "accepted": true
+    },
+    {
+      "chapter": 16,
+      "file": "chapter-16-signed-laplacians-frustration-cycle-covers.html",
+      "authored_body_sha256": "a8b73eb8995176b7db549762607d94476ab89f780abba9e417dfeea506c24a59",
+      "accepted": true
+    }
+  ],
+  "limitations": [
+    "Machine ASR and chunk boundaries remain fallible.",
+    "All45 playlist identities are retained; entries41/45 are verified byte-identical media,44 unique audio representations.",
+    "Original expositions and finite checks are distinguished from source claims and reported research.",
+    "Primary source access scopes are bounded by explicit chapter citations and sidecars."
+  ]
+}

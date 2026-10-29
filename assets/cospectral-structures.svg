@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 650" role="img" aria-labelledby="title desc"><title id="title">What equal eigenvalues can hide</title><desc id="desc">A four-leaf star and a square with an isolated vertex have the same adjacency spectrum. The neighbor graph of a rook-graph vertex is two triangles, whereas that of a Shrikhande vertex is a six-cycle.</desc><rect width="960" height="650" rx="16" fill="#101b2a"/>
+<text x="240" y="45" fill="#e8eef7" font-family="sans-serif" font-size="22" text-anchor="middle">Four-leaf star</text>
+<line x1="240" y1="160" x2="240" y2="80" stroke="#72b8e8" stroke-width="3"/>
+<line x1="240" y1="160" x2="320" y2="160" stroke="#72b8e8" stroke-width="3"/>
+<line x1="240" y1="160" x2="240" y2="240" stroke="#72b8e8" stroke-width="3"/>
+<line x1="240" y1="160" x2="160" y2="160" stroke="#72b8e8" stroke-width="3"/>
+<circle cx="240" cy="160" r="9" fill="#7de0c0"/>
+<circle cx="240" cy="80" r="9" fill="#7de0c0"/>
+<circle cx="320" cy="160" r="9" fill="#7de0c0"/>
+<circle cx="240" cy="240" r="9" fill="#7de0c0"/>
+<circle cx="160" cy="160" r="9" fill="#7de0c0"/>
+<text x="240" y="280" fill="#b9ccdf" font-family="sans-serif" font-size="18" text-anchor="middle">Connected; degrees 4,1,1,1,1</text>
+<text x="720" y="45" fill="#e8eef7" font-family="sans-serif" font-size="22" text-anchor="middle">Square plus isolate</text>
+<line x1="640" y1="100" x2="760" y2="100" stroke="#72b8e8" stroke-width="3"/>
+<line x1="760" y1="100" x2="760" y2="220" stroke="#72b8e8" stroke-width="3"/>
+<line x1="760" y1="220" x2="640" y2="220" stroke="#72b8e8" stroke-width="3"/>
+<line x1="640" y1="220" x2="640" y2="100" stroke="#72b8e8" stroke-width="3"/>
+<circle cx="640" cy="100" r="9" fill="#7de0c0"/>
+<circle cx="760" cy="100" r="9" fill="#7de0c0"/>
+<circle cx="760" cy="220" r="9" fill="#7de0c0"/>
+<circle cx="640" cy="220" r="9" fill="#7de0c0"/>
+<circle cx="830" cy="160" r="9" fill="#7de0c0"/>
+<text x="720" y="280" fill="#b9ccdf" font-family="sans-serif" font-size="18" text-anchor="middle">Disconnected; degrees 2,2,2,2,0</text>
+<text x="240" y="365" fill="#e8eef7" font-family="sans-serif" font-size="22" text-anchor="middle">Rook neighborhood</text>
+<line x1="190" y1="432" x2="231.56921938165306" y2="504" stroke="#72b8e8" stroke-width="3"/>
+<line x1="231.56921938165306" y1="504" x2="148.43078061834694" y2="504" stroke="#72b8e8" stroke-width="3"/>
+<line x1="148.43078061834694" y1="504" x2="190" y2="432" stroke="#72b8e8" stroke-width="3"/>
+<line x1="300" y1="432" x2="341.56921938165306" y2="504" stroke="#72b8e8" stroke-width="3"/>
+<line x1="341.56921938165306" y1="504" x2="258.43078061834694" y2="504" stroke="#72b8e8" stroke-width="3"/>
+<line x1="258.43078061834694" y1="504" x2="300" y2="432" stroke="#72b8e8" stroke-width="3"/>
+<circle cx="190" cy="432" r="9" fill="#7de0c0"/>
+<circle cx="231.56921938165306" cy="504" r="9" fill="#7de0c0"/>
+<circle cx="148.43078061834694" cy="504" r="9" fill="#7de0c0"/>
+<circle cx="300" cy="432" r="9" fill="#7de0c0"/>
+<circle cx="341.56921938165306" cy="504" r="9" fill="#7de0c0"/>
+<circle cx="258.43078061834694" cy="504" r="9" fill="#7de0c0"/>
+<text x="240" y="600" fill="#b9ccdf" font-family="sans-serif" font-size="18" text-anchor="middle">Two triangles: a 4-clique extends each triangle</text>
+<text x="720" y="365" fill="#e8eef7" font-family="sans-serif" font-size="22" text-anchor="middle">Shrikhande neighborhood</text>
+<line x1="720" y1="400" x2="789.282032302755" y2="440" stroke="#72b8e8" stroke-width="3"/>
+<line x1="789.282032302755" y1="440" x2="789.282032302755" y2="520" stroke="#72b8e8" stroke-width="3"/>
+<line x1="789.282032302755" y1="520" x2="720" y2="560" stroke="#72b8e8" stroke-width="3"/>
+<line x1="720" y1="560" x2="650.717967697245" y2="520" stroke="#72b8e8" stroke-width="3"/>
+<line x1="650.717967697245" y1="520" x2="650.717967697245" y2="440" stroke="#72b8e8" stroke-width="3"/>
+<line x1="650.717967697245" y1="440" x2="720" y2="400" stroke="#72b8e8" stroke-width="3"/>
+<circle cx="720" cy="400" r="9" fill="#7de0c0"/>
+<circle cx="789.282032302755" cy="440" r="9" fill="#7de0c0"/>
+<circle cx="789.282032302755" cy="520" r="9" fill="#7de0c0"/>
+<circle cx="720" cy="560" r="9" fill="#7de0c0"/>
+<circle cx="650.717967697245" cy="520" r="9" fill="#7de0c0"/>
+<circle cx="650.717967697245" cy="440" r="9" fill="#7de0c0"/>
+<text x="720" y="600" fill="#b9ccdf" font-family="sans-serif" font-size="18" text-anchor="middle">Six-cycle: no triangle can extend to a 4-clique</text>
+</svg>

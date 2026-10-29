@@ -1,0 +1,215 @@
+{
+  "chapter": 15,
+  "title": "Signed graphs, balance and switching",
+  "status": "reviewed — two independent AI scientific reviews",
+  "authored_body_sha256": "9a7b943facaf086e7041e6754583c8c0ecee65b94dbb0dbcc96d7e5ed6a9b872",
+  "recordings": [
+    {
+      "video_id": "JY9oBv9-zBc",
+      "playlist_position": 41,
+      "lecture_label": "Lecture 41",
+      "duration_seconds": 1438,
+      "decoded_audio_duration_seconds": 1437.6403125,
+      "complete_decoded_audio": true,
+      "media_sha256": "614be46d4eaa8e0f5f467e71d0dc3e322bc3db4af9f8ac55940a6e06affa3bc6",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1437.6403125,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    },
+    {
+      "video_id": "P7vy9Gtym_I",
+      "playlist_position": 42,
+      "lecture_label": "Lecture 42",
+      "duration_seconds": 1058,
+      "decoded_audio_duration_seconds": 1057.80825,
+      "complete_decoded_audio": true,
+      "media_sha256": "c4c57cd8ac8e4e76a4bf772dd70b77d902f7d8094529024e3603cd6783fd1c86",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1051.58,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    },
+    {
+      "video_id": "iFi1I-qSI14",
+      "playlist_position": 45,
+      "lecture_label": "Lecture 41 alternative upload",
+      "duration_seconds": 1438,
+      "decoded_audio_duration_seconds": 1437.6403125,
+      "complete_decoded_audio": true,
+      "media_sha256": "614be46d4eaa8e0f5f467e71d0dc3e322bc3db4af9f8ac55940a6e06affa3bc6",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1437.6403125,
+      "transcript_provenance": "local machine ASR reused for byte-identical acquired audio; not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain.",
+        "reused_asr_of": "JY9oBv9-zBc",
+        "duplicate_basis": "Both complete acquired media representations have identical SHA256 614be46d4eaa8e0f5f467e71d0dc3e322bc3db4af9f8ac55940a6e06affa3bc6"
+      }
+    }
+  ],
+  "sections": [
+    {
+      "section": "15.1 Products around cycles",
+      "anchor": "signs",
+      "video_id": "JY9oBv9-zBc",
+      "start": 0,
+      "end": 408,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "15.2 Balance is exactly a vertex-potential consistency condition",
+      "anchor": "potential",
+      "video_id": "JY9oBv9-zBc",
+      "start": 408,
+      "end": 764,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "15.3 Switching is a change of coordinates",
+      "anchor": "switching",
+      "video_id": "P7vy9Gtym_I",
+      "start": 0,
+      "end": 352,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "15.4 A binary linear-algebra view and a count of switching classes",
+      "anchor": "cycle-space",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "15.5 Full spectral equality detects balance, even without connectivity",
+      "anchor": "walks-spectrum",
+      "video_id": "JY9oBv9-zBc",
+      "start": 764,
+      "end": 1438,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "15.6 For a connected support, the largest eigenvalue alone suffices",
+      "anchor": "top-root",
+      "video_id": "P7vy9Gtym_I",
+      "start": 352,
+      "end": 1058,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "15.7 Absolute spectral radius detects two different possibilities",
+      "anchor": "antibalance",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "15.8 Enumerate small switching classes and test the boundary cases",
+      "anchor": "code",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "15.9 Worked problems",
+      "anchor": "solutions",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "15.10 The invariant is a cycle product",
+      "anchor": "perspective",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    }
+  ],
+  "references": [
+    {
+      "url": "https://people.math.binghamton.edu/zaslav/Tpapers/mananthavady-lecture-notes.20110729.pdf",
+      "title": "Zaslavsky, Signed Graphs and Geometry , pp.4–6",
+      "supports": "Exact claim and locator are stated beside the chapter citation"
+    }
+  ],
+  "prose_words_including_math": 3264,
+  "solution_count": 9,
+  "executable_listing_count": 1,
+  "independent_review": {
+    "accepted": true,
+    "accepted_body_sha256": "9a7b943facaf086e7041e6754583c8c0ecee65b94dbb0dbcc96d7e5ed6a9b872",
+    "rounds": [
+      {
+        "round": 1,
+        "report": "work/reviews/ch15-r1.md",
+        "verdict": "accepted",
+        "authored_body_sha256": "9a7b943facaf086e7041e6754583c8c0ecee65b94dbb0dbcc96d7e5ed6a9b872",
+        "reviewer": "Independent Thermodynamics course worker",
+        "blocking": 0,
+        "major": 0,
+        "minor": 0
+      },
+      {
+        "round": 2,
+        "report": "work/reviews/ch15-r2.md",
+        "verdict": "accepted",
+        "authored_body_sha256": "9a7b943facaf086e7041e6754583c8c0ecee65b94dbb0dbcc96d7e5ed6a9b872",
+        "reviewer": "Independent coordinating reviewer",
+        "blocking": 0,
+        "major": 0,
+        "minor": 0
+      }
+    ],
+    "blocking": 0,
+    "major": 0,
+    "minor": 0
+  },
+  "visual_boundary": "No comprehensive audiovisual or board transcription; machine recognition and chunk boundaries remain fallible."
+}

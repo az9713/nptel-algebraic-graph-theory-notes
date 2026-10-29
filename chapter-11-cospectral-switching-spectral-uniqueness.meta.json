@@ -1,0 +1,241 @@
+{
+  "chapter": 11,
+  "title": "Cospectrality, switching and spectral determination",
+  "status": "reviewed — two independent AI scientific reviews",
+  "authored_body_sha256": "617490c9886fb5555eb66d13f540280887b7de26bcb21d7a71f4ac5b70327232",
+  "recordings": [
+    {
+      "video_id": "MQ0x_mv1blI",
+      "playlist_position": 27,
+      "lecture_label": "Lecture 27",
+      "duration_seconds": 1926,
+      "decoded_audio_duration_seconds": 1925.9095,
+      "complete_decoded_audio": true,
+      "media_sha256": "1d01022af7c89c30209ec7c96dc7cbedec143ae0dc110f23a760695b872dfc1e",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1919.02,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    },
+    {
+      "video_id": "QP1WJLJKpcU",
+      "playlist_position": 28,
+      "lecture_label": "Lecture 28",
+      "duration_seconds": 1678,
+      "decoded_audio_duration_seconds": 1677.548875,
+      "complete_decoded_audio": true,
+      "media_sha256": "3178d96867a14e8565536186b262da0257517331713663046c8e772a92e16707",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1677.548875,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    },
+    {
+      "video_id": "-T0B5-Fhy0c",
+      "playlist_position": 29,
+      "lecture_label": "Lecture 29",
+      "duration_seconds": 1672,
+      "decoded_audio_duration_seconds": 1671.651,
+      "complete_decoded_audio": true,
+      "media_sha256": "28876ac40e0c503333b2721618d2350917a330b605f263a3ac20fa0b4f2ffd45",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1665.04,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    },
+    {
+      "video_id": "M6ja-UNxrGQ",
+      "playlist_position": 30,
+      "lecture_label": "Lecture 30",
+      "duration_seconds": 2085,
+      "decoded_audio_duration_seconds": 2083.9909375,
+      "complete_decoded_audio": true,
+      "media_sha256": "8793394f3e4f0b0b7ccbea27310a1ee0a27c13e8511fdd958399a20cc07d8527",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 2077.68,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    }
+  ],
+  "sections": [
+    {
+      "section": "11.1 Permutation similarity is sufficient, but orthogonal similarity is weaker",
+      "anchor": "invariant",
+      "video_id": "MQ0x_mv1blI",
+      "start": 0,
+      "end": 501,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "11.2 Change the matrix, change which distinctions survive",
+      "anchor": "matrix-choice",
+      "video_id": "MQ0x_mv1blI",
+      "start": 501,
+      "end": 1363,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "11.3 Seidel switching toggles a cut, not the whole graph",
+      "anchor": "seidel",
+      "video_id": "MQ0x_mv1blI",
+      "start": 1363,
+      "end": 1919,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "11.4 Godsil–McKay switching preserves adjacency by a block reflection",
+      "anchor": "gm",
+      "video_id": "QP1WJLJKpcU",
+      "start": 0,
+      "end": 1678,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "11.5 Cartesian products add eigenvalues, including multiplicities",
+      "anchor": "cartesian",
+      "video_id": "-T0B5-Fhy0c",
+      "start": 0,
+      "end": 1096,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "11.6 Equal regular spectra can hide different clique geometry",
+      "anchor": "shrikhande",
+      "video_id": "-T0B5-Fhy0c",
+      "start": 1096,
+      "end": 1665,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "11.7 Some graphs really are determined by adjacency spectrum",
+      "anchor": "ds",
+      "video_id": "M6ja-UNxrGQ",
+      "start": 0,
+      "end": 1184,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "11.8 A fourth moment finishes the less obvious path case",
+      "anchor": "paths",
+      "video_id": "M6ja-UNxrGQ",
+      "start": 1184,
+      "end": 2078,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "11.9 Reproduce exact collisions and uniqueness ingredients",
+      "anchor": "code",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "11.10 Problems with complete solutions",
+      "anchor": "exercises",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "11.11 Spectral rejection and isomorphism certification are different tasks",
+      "anchor": "limits",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    }
+  ],
+  "references": [
+    {
+      "url": "https://users.cecs.anu.edu.au/~bdm/papers/GodsilMcKayCospectral.pdf",
+      "title": "original Godsil–McKay paper, Construction 2.1 and Theorem 2.2, printed pp. 258–259",
+      "supports": "Exact claim and locator are stated beside the chapter citation"
+    },
+    {
+      "url": "https://arxiv.org/abs/1512.03547",
+      "title": "Babai's primary abstract for Graph Isomorphism in Quasipolynomial Time",
+      "supports": "Exact claim and locator are stated beside the chapter citation"
+    }
+  ],
+  "prose_words_including_math": 4691,
+  "solution_count": 9,
+  "executable_listing_count": 1,
+  "independent_review": {
+    "accepted": true,
+    "accepted_body_sha256": "617490c9886fb5555eb66d13f540280887b7de26bcb21d7a71f4ac5b70327232",
+    "rounds": [
+      {
+        "round": 1,
+        "report": "work/reviews/ch11-r1.md",
+        "verdict": "accepted",
+        "authored_body_sha256": "617490c9886fb5555eb66d13f540280887b7de26bcb21d7a71f4ac5b70327232"
+      },
+      {
+        "round": 2,
+        "report": "work/reviews/ch11-r2.md",
+        "verdict": "accepted",
+        "authored_body_sha256": "617490c9886fb5555eb66d13f540280887b7de26bcb21d7a71f4ac5b70327232"
+      }
+    ],
+    "blocking": 0,
+    "major": 0,
+    "minor": 0
+  },
+  "visual_boundary": "No comprehensive audiovisual or board transcription; machine recognition and chunk boundaries remain fallible."
+}

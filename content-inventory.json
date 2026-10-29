@@ -1,0 +1,154 @@
+{
+  "planned_chapter_count": 16,
+  "authored_chapter_count": 16,
+  "chapters": [
+    {
+      "chapter": 1,
+      "file": "chapter-01-graphs-routes-spanning-trees.html",
+      "body_sha256": "7287ead1d34b2792b0f9c7cf5c9cfe05a6a92d6b98ddeabcb610210546f64770",
+      "words": 4205,
+      "solutions": 6,
+      "listings": 1,
+      "scientifically_accepted": true
+    },
+    {
+      "chapter": 2,
+      "file": "chapter-02-incidence-determinants-matrix-tree.html",
+      "body_sha256": "fccb745c79993b8a742d16fe9e0c1fdfea0ec65bc1089de57495f23ddb65444f",
+      "words": 4776,
+      "solutions": 8,
+      "listings": 1,
+      "scientifically_accepted": true
+    },
+    {
+      "chapter": 3,
+      "file": "chapter-03-rank-components-cycles-bipartite.html",
+      "body_sha256": "ecd104aa41a1f39b80732d88323f0c766e2db7e24ef8539c227b8a967af77fb1",
+      "words": 4345,
+      "solutions": 8,
+      "listings": 1,
+      "scientifically_accepted": true
+    },
+    {
+      "chapter": 4,
+      "file": "chapter-04-eigenvectors-walks-spectral-theorem.html",
+      "body_sha256": "61fe97718525b99a1d150dd7b7cb361acb9347db42ebd1b97fc9af4e73169e18",
+      "words": 4427,
+      "solutions": 9,
+      "listings": 1,
+      "scientifically_accepted": true
+    },
+    {
+      "chapter": 5,
+      "file": "chapter-05-diameter-polynomials-spectral-rank.html",
+      "body_sha256": "e01ba208b3361b71f0c997f94358db25dc6c8044ce496de0dd0d21ac18d952d1",
+      "words": 4104,
+      "solutions": 9,
+      "listings": 1,
+      "scientifically_accepted": true
+    },
+    {
+      "chapter": 6,
+      "file": "chapter-06-perron-vectors-structural-bounds.html",
+      "body_sha256": "462733a5b5f079812823169e3d82830831988f950d27b91366dcd8a8d170320b",
+      "words": 3829,
+      "solutions": 9,
+      "listings": 1,
+      "scientifically_accepted": true
+    },
+    {
+      "chapter": 7,
+      "file": "chapter-07-interlacing-positive-blocks-quotients.html",
+      "body_sha256": "ec7623c0215b0f8c50e766e23a4ef90ca6b0061cb791a50dcee5b85a324a7247",
+      "words": 3888,
+      "solutions": 9,
+      "listings": 1,
+      "scientifically_accepted": true
+    },
+    {
+      "chapter": 8,
+      "file": "chapter-08-coloring-cliques-independence.html",
+      "body_sha256": "ee01b82813ddf528472f7201b2226e10c11a09a58ff70e27851d1c406076d5ff",
+      "words": 3537,
+      "solutions": 9,
+      "listings": 1,
+      "scientifically_accepted": true
+    },
+    {
+      "chapter": 9,
+      "file": "chapter-09-random-walks-stationary-mixing.html",
+      "body_sha256": "aa394d53050fff385959e213fb6a47ff72202f68b1f620ed9709f4d78661d7d6",
+      "words": 2974,
+      "solutions": 9,
+      "listings": 1,
+      "scientifically_accepted": true
+    },
+    {
+      "chapter": 10,
+      "file": "chapter-10-regularity-strong-regularity-friendship.html",
+      "body_sha256": "8db57925fc5ad85d78d52d6d3c5333c565c939e54bebf1d9d0e51ea1621618ec",
+      "words": 3924,
+      "solutions": 9,
+      "listings": 1,
+      "scientifically_accepted": true
+    },
+    {
+      "chapter": 11,
+      "file": "chapter-11-cospectral-switching-spectral-uniqueness.html",
+      "body_sha256": "617490c9886fb5555eb66d13f540280887b7de26bcb21d7a71f4ac5b70327232",
+      "words": 4691,
+      "solutions": 9,
+      "listings": 1,
+      "scientifically_accepted": true
+    },
+    {
+      "chapter": 12,
+      "file": "chapter-12-hypercubes-sensitivity-theorem.html",
+      "body_sha256": "fc93b1aa92b1a48f42ee4d00dbdd7d4023f4d1e6df34496a79b9ca8fc8cf416c",
+      "words": 3413,
+      "solutions": 9,
+      "listings": 1,
+      "scientifically_accepted": true
+    },
+    {
+      "chapter": 13,
+      "file": "chapter-13-expanders-ramanujan-lifts-zigzag.html",
+      "body_sha256": "11ab25f82d29fb480838ebe147374510edc5a34064579a08636f9a4623ba277f",
+      "words": 3132,
+      "solutions": 9,
+      "listings": 1,
+      "scientifically_accepted": true
+    },
+    {
+      "chapter": 14,
+      "file": "chapter-14-algebraic-connectivity-fiedler-geometry.html",
+      "body_sha256": "a7de276c927893fe87961ba2444eac633799b66b0a24cd1d5e9599bc17ec49cf",
+      "words": 3014,
+      "solutions": 9,
+      "listings": 1,
+      "scientifically_accepted": true
+    },
+    {
+      "chapter": 15,
+      "file": "chapter-15-signed-balance-switching-spectra.html",
+      "body_sha256": "9a7b943facaf086e7041e6754583c8c0ecee65b94dbb0dbcc96d7e5ed6a9b872",
+      "words": 3264,
+      "solutions": 9,
+      "listings": 1,
+      "scientifically_accepted": true
+    },
+    {
+      "chapter": 16,
+      "file": "chapter-16-signed-laplacians-frustration-cycle-covers.html",
+      "body_sha256": "a8b73eb8995176b7db549762607d94476ab89f780abba9e417dfeea506c24a59",
+      "words": 3769,
+      "solutions": 9,
+      "listings": 1,
+      "scientifically_accepted": true
+    }
+  ],
+  "prose_words_including_math": 61292,
+  "worked_solution_count": 139,
+  "executable_listing_count": 16,
+  "counting_note": "Whitespace tokens include math and code; inventory is not a pure prose estimate or a scientific completion verdict."
+}

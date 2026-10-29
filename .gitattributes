@@ -1,0 +1,3 @@
+# Preserve reviewed authored bodies and published package hashes byte for byte.
+# Line-ending normalization would invalidate exact SHA256 acceptance records.
+* -text

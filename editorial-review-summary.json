@@ -1,0 +1,399 @@
+{
+  "scope": "Recorded independent AI scientific reviews; acceptance binds only to an exact chapter body, not full-course completion.",
+  "chapters": [
+    {
+      "chapter": 1,
+      "authored_body_sha256": "7287ead1d34b2792b0f9c7cf5c9cfe05a6a92d6b98ddeabcb610210546f64770",
+      "accepted": true,
+      "reviews": [
+        {
+          "round": 1,
+          "reviewer": "Independent lead coordinator",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0,
+          "verdict": "accepted",
+          "authored_body_sha256": "7287ead1d34b2792b0f9c7cf5c9cfe05a6a92d6b98ddeabcb610210546f64770"
+        },
+        {
+          "round": 2,
+          "reviewer": "Independent thermodynamics course worker",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0,
+          "verdict": "accepted",
+          "authored_body_sha256": "7287ead1d34b2792b0f9c7cf5c9cfe05a6a92d6b98ddeabcb610210546f64770"
+        }
+      ]
+    },
+    {
+      "chapter": 2,
+      "authored_body_sha256": "fccb745c79993b8a742d16fe9e0c1fdfea0ec65bc1089de57495f23ddb65444f",
+      "accepted": true,
+      "reviews": [
+        {
+          "round": 1,
+          "reviewer": "Independent thermodynamics course worker",
+          "verdict": "accepted",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0,
+          "authored_body_sha256": "fccb745c79993b8a742d16fe9e0c1fdfea0ec65bc1089de57495f23ddb65444f",
+          "scope": "Formatting-only exact-byte equivalence closure carrying prior full scientific R1",
+          "report": "work/reviews/spacing-peer-closure.md"
+        },
+        {
+          "round": 2,
+          "reviewer": "Independent lead coordinator",
+          "verdict": "accepted",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0,
+          "authored_body_sha256": "fccb745c79993b8a742d16fe9e0c1fdfea0ec65bc1089de57495f23ddb65444f",
+          "scope": "Formatting-only exact-byte equivalence closure carrying prior full scientific R2",
+          "report": "work/reviews/spacing-root-closure.md"
+        }
+      ]
+    },
+    {
+      "chapter": 3,
+      "authored_body_sha256": "ecd104aa41a1f39b80732d88323f0c766e2db7e24ef8539c227b8a967af77fb1",
+      "accepted": true,
+      "reviews": [
+        {
+          "round": 1,
+          "reviewer": "Independent thermodynamics course worker",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0,
+          "verdict": "accepted",
+          "authored_body_sha256": "ecd104aa41a1f39b80732d88323f0c766e2db7e24ef8539c227b8a967af77fb1"
+        },
+        {
+          "round": 2,
+          "reviewer": "Independent lead coordinator",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0,
+          "verdict": "accepted",
+          "authored_body_sha256": "ecd104aa41a1f39b80732d88323f0c766e2db7e24ef8539c227b8a967af77fb1"
+        }
+      ]
+    },
+    {
+      "chapter": 4,
+      "authored_body_sha256": "61fe97718525b99a1d150dd7b7cb361acb9347db42ebd1b97fc9af4e73169e18",
+      "accepted": true,
+      "reviews": [
+        {
+          "round": 1,
+          "reviewer": "Independent thermodynamics course worker",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0,
+          "verdict": "accepted",
+          "authored_body_sha256": "61fe97718525b99a1d150dd7b7cb361acb9347db42ebd1b97fc9af4e73169e18"
+        },
+        {
+          "round": 2,
+          "reviewer": "Independent lead coordinator",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0,
+          "verdict": "accepted",
+          "authored_body_sha256": "61fe97718525b99a1d150dd7b7cb361acb9347db42ebd1b97fc9af4e73169e18"
+        }
+      ]
+    },
+    {
+      "chapter": 5,
+      "authored_body_sha256": "e01ba208b3361b71f0c997f94358db25dc6c8044ce496de0dd0d21ac18d952d1",
+      "accepted": true,
+      "reviews": [
+        {
+          "round": 1,
+          "reviewer": "Independent thermodynamics course worker",
+          "verdict": "accepted",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0,
+          "authored_body_sha256": "e01ba208b3361b71f0c997f94358db25dc6c8044ce496de0dd0d21ac18d952d1",
+          "scope": "Formatting-only exact-byte equivalence closure carrying prior full scientific R1",
+          "report": "work/reviews/spacing-peer-closure.md"
+        },
+        {
+          "round": 2,
+          "reviewer": "Independent lead coordinator",
+          "verdict": "accepted",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0,
+          "authored_body_sha256": "e01ba208b3361b71f0c997f94358db25dc6c8044ce496de0dd0d21ac18d952d1",
+          "scope": "Formatting-only exact-byte equivalence closure carrying prior full scientific R2",
+          "report": "work/reviews/spacing-root-closure.md"
+        }
+      ]
+    },
+    {
+      "chapter": 6,
+      "authored_body_sha256": "462733a5b5f079812823169e3d82830831988f950d27b91366dcd8a8d170320b",
+      "accepted": true,
+      "reviews": [
+        {
+          "round": 1,
+          "reviewer": "Independent thermodynamics course worker",
+          "verdict": "accepted",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0,
+          "authored_body_sha256": "462733a5b5f079812823169e3d82830831988f950d27b91366dcd8a8d170320b",
+          "scope": "Formatting-only exact-byte equivalence closure carrying prior full scientific R1",
+          "report": "work/reviews/spacing-peer-closure.md"
+        },
+        {
+          "round": 2,
+          "reviewer": "Independent lead coordinator",
+          "verdict": "accepted",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0,
+          "authored_body_sha256": "462733a5b5f079812823169e3d82830831988f950d27b91366dcd8a8d170320b",
+          "scope": "Formatting-only exact-byte equivalence closure carrying prior full scientific R2",
+          "report": "work/reviews/spacing-root-closure.md"
+        }
+      ]
+    },
+    {
+      "chapter": 7,
+      "authored_body_sha256": "ec7623c0215b0f8c50e766e23a4ef90ca6b0061cb791a50dcee5b85a324a7247",
+      "accepted": true,
+      "reviews": [
+        {
+          "round": 1,
+          "reviewer": "Independent thermodynamics course worker",
+          "verdict": "accepted",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0,
+          "authored_body_sha256": "ec7623c0215b0f8c50e766e23a4ef90ca6b0061cb791a50dcee5b85a324a7247",
+          "scope": "Formatting-only exact-byte equivalence closure carrying prior full scientific R1",
+          "report": "work/reviews/spacing-peer-closure.md"
+        },
+        {
+          "round": 2,
+          "reviewer": "Independent lead coordinator",
+          "verdict": "accepted",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0,
+          "authored_body_sha256": "ec7623c0215b0f8c50e766e23a4ef90ca6b0061cb791a50dcee5b85a324a7247",
+          "scope": "Formatting-only exact-byte equivalence closure carrying prior full scientific R2",
+          "report": "work/reviews/spacing-root-closure.md"
+        }
+      ]
+    },
+    {
+      "chapter": 8,
+      "authored_body_sha256": "ee01b82813ddf528472f7201b2226e10c11a09a58ff70e27851d1c406076d5ff",
+      "accepted": true,
+      "reviews": [
+        {
+          "round": 1,
+          "reviewer": "Independent thermodynamics course worker",
+          "verdict": "accepted",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0,
+          "authored_body_sha256": "ee01b82813ddf528472f7201b2226e10c11a09a58ff70e27851d1c406076d5ff",
+          "scope": "Formatting-only exact-byte equivalence closure carrying prior full scientific R1",
+          "report": "work/reviews/spacing-peer-closure.md"
+        },
+        {
+          "round": 2,
+          "reviewer": "Independent lead coordinator",
+          "verdict": "accepted",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0,
+          "authored_body_sha256": "ee01b82813ddf528472f7201b2226e10c11a09a58ff70e27851d1c406076d5ff",
+          "scope": "Formatting-only exact-byte equivalence closure carrying prior full scientific R2",
+          "report": "work/reviews/spacing-root-closure.md"
+        }
+      ]
+    },
+    {
+      "chapter": 9,
+      "authored_body_sha256": "aa394d53050fff385959e213fb6a47ff72202f68b1f620ed9709f4d78661d7d6",
+      "accepted": true,
+      "reviews": [
+        {
+          "round": 1,
+          "reviewer": "Independent thermodynamics course worker",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0,
+          "verdict": "accepted",
+          "authored_body_sha256": "aa394d53050fff385959e213fb6a47ff72202f68b1f620ed9709f4d78661d7d6"
+        },
+        {
+          "round": 2,
+          "reviewer": "Independent lead coordinator",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0,
+          "verdict": "accepted",
+          "authored_body_sha256": "aa394d53050fff385959e213fb6a47ff72202f68b1f620ed9709f4d78661d7d6"
+        }
+      ]
+    },
+    {
+      "chapter": 10,
+      "authored_body_sha256": "8db57925fc5ad85d78d52d6d3c5333c565c939e54bebf1d9d0e51ea1621618ec",
+      "accepted": true,
+      "reviews": [
+        {
+          "round": 1,
+          "report": "work/reviews/ch10-r1.md",
+          "verdict": "accepted",
+          "authored_body_sha256": "8db57925fc5ad85d78d52d6d3c5333c565c939e54bebf1d9d0e51ea1621618ec"
+        },
+        {
+          "round": 2,
+          "report": "work/reviews/ch10-r2.md",
+          "verdict": "accepted",
+          "authored_body_sha256": "8db57925fc5ad85d78d52d6d3c5333c565c939e54bebf1d9d0e51ea1621618ec"
+        }
+      ]
+    },
+    {
+      "chapter": 11,
+      "authored_body_sha256": "617490c9886fb5555eb66d13f540280887b7de26bcb21d7a71f4ac5b70327232",
+      "accepted": true,
+      "reviews": [
+        {
+          "round": 1,
+          "report": "work/reviews/ch11-r1.md",
+          "verdict": "accepted",
+          "authored_body_sha256": "617490c9886fb5555eb66d13f540280887b7de26bcb21d7a71f4ac5b70327232"
+        },
+        {
+          "round": 2,
+          "report": "work/reviews/ch11-r2.md",
+          "verdict": "accepted",
+          "authored_body_sha256": "617490c9886fb5555eb66d13f540280887b7de26bcb21d7a71f4ac5b70327232"
+        }
+      ]
+    },
+    {
+      "chapter": 12,
+      "authored_body_sha256": "fc93b1aa92b1a48f42ee4d00dbdd7d4023f4d1e6df34496a79b9ca8fc8cf416c",
+      "accepted": true,
+      "reviews": [
+        {
+          "round": 1,
+          "report": "work/reviews/ch12-r1.md",
+          "verdict": "accepted",
+          "authored_body_sha256": "fc93b1aa92b1a48f42ee4d00dbdd7d4023f4d1e6df34496a79b9ca8fc8cf416c"
+        },
+        {
+          "round": 2,
+          "report": "work/reviews/ch12-r2.md",
+          "verdict": "accepted",
+          "authored_body_sha256": "fc93b1aa92b1a48f42ee4d00dbdd7d4023f4d1e6df34496a79b9ca8fc8cf416c"
+        }
+      ]
+    },
+    {
+      "chapter": 13,
+      "authored_body_sha256": "11ab25f82d29fb480838ebe147374510edc5a34064579a08636f9a4623ba277f",
+      "accepted": true,
+      "reviews": [
+        {
+          "round": 1,
+          "report": "work/reviews/ch13-r1.md",
+          "verdict": "accepted",
+          "authored_body_sha256": "11ab25f82d29fb480838ebe147374510edc5a34064579a08636f9a4623ba277f"
+        },
+        {
+          "round": 2,
+          "report": "work/reviews/ch13-r2.md",
+          "verdict": "accepted",
+          "authored_body_sha256": "11ab25f82d29fb480838ebe147374510edc5a34064579a08636f9a4623ba277f"
+        }
+      ]
+    },
+    {
+      "chapter": 14,
+      "authored_body_sha256": "a7de276c927893fe87961ba2444eac633799b66b0a24cd1d5e9599bc17ec49cf",
+      "accepted": true,
+      "reviews": [
+        {
+          "round": 1,
+          "report": "work/reviews/ch14-r1.md",
+          "verdict": "accepted",
+          "authored_body_sha256": "a7de276c927893fe87961ba2444eac633799b66b0a24cd1d5e9599bc17ec49cf"
+        },
+        {
+          "round": 2,
+          "report": "work/reviews/ch14-r2.md",
+          "verdict": "accepted",
+          "authored_body_sha256": "a7de276c927893fe87961ba2444eac633799b66b0a24cd1d5e9599bc17ec49cf"
+        }
+      ]
+    },
+    {
+      "chapter": 15,
+      "authored_body_sha256": "9a7b943facaf086e7041e6754583c8c0ecee65b94dbb0dbcc96d7e5ed6a9b872",
+      "accepted": true,
+      "reviews": [
+        {
+          "round": 1,
+          "report": "work/reviews/ch15-r1.md",
+          "verdict": "accepted",
+          "authored_body_sha256": "9a7b943facaf086e7041e6754583c8c0ecee65b94dbb0dbcc96d7e5ed6a9b872",
+          "reviewer": "Independent Thermodynamics course worker",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0
+        },
+        {
+          "round": 2,
+          "report": "work/reviews/ch15-r2.md",
+          "verdict": "accepted",
+          "authored_body_sha256": "9a7b943facaf086e7041e6754583c8c0ecee65b94dbb0dbcc96d7e5ed6a9b872",
+          "reviewer": "Independent coordinating reviewer",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0
+        }
+      ]
+    },
+    {
+      "chapter": 16,
+      "authored_body_sha256": "a8b73eb8995176b7db549762607d94476ab89f780abba9e417dfeea506c24a59",
+      "accepted": true,
+      "reviews": [
+        {
+          "round": 1,
+          "report": "work/reviews/ch16-r1.md",
+          "verdict": "accepted",
+          "authored_body_sha256": "a8b73eb8995176b7db549762607d94476ab89f780abba9e417dfeea506c24a59",
+          "reviewer": "Independent Thermodynamics course worker",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0
+        },
+        {
+          "round": 2,
+          "report": "work/reviews/ch16-r2.md",
+          "verdict": "accepted",
+          "authored_body_sha256": "a8b73eb8995176b7db549762607d94476ab89f780abba9e417dfeea506c24a59",
+          "reviewer": "Independent coordinating reviewer",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0
+        }
+      ]
+    }
+  ]
+}

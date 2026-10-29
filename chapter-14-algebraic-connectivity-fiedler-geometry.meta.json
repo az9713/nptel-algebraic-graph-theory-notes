@@ -1,0 +1,221 @@
+{
+  "chapter": 14,
+  "title": "Algebraic connectivity and the Fiedler vector",
+  "status": "reviewed — two independent AI scientific reviews",
+  "authored_body_sha256": "a7de276c927893fe87961ba2444eac633799b66b0a24cd1d5e9599bc17ec49cf",
+  "recordings": [
+    {
+      "video_id": "NnuxsyYGoi4",
+      "playlist_position": 37,
+      "lecture_label": "Lecture 37",
+      "duration_seconds": 1429,
+      "decoded_audio_duration_seconds": 1428.8166875,
+      "complete_decoded_audio": true,
+      "media_sha256": "662026b1120d39e6ce07c1a18f5df841438b5cfaef1a68a3f335003e4e13faab",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1421.6,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    },
+    {
+      "video_id": "N4VwpElxD7g",
+      "playlist_position": 38,
+      "lecture_label": "Lecture 38",
+      "duration_seconds": 1257,
+      "decoded_audio_duration_seconds": 1256.80325,
+      "complete_decoded_audio": true,
+      "media_sha256": "ac090b52fef5a9cb326da434a4b1c9925e151669f9367604d65d4ee9e40fcfb8",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1250.58,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    },
+    {
+      "video_id": "ArIfY5DL_WM",
+      "playlist_position": 39,
+      "lecture_label": "Lecture 39",
+      "duration_seconds": 1194,
+      "decoded_audio_duration_seconds": 1193.5056875,
+      "complete_decoded_audio": true,
+      "media_sha256": "454c7c64beb1157f7bfbd13d7ee39e472c2e837285316d471d72c60cfcc05476",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1193.2,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    },
+    {
+      "video_id": "9rpTWrUAP6M",
+      "playlist_position": 40,
+      "lecture_label": "Lecture 40",
+      "duration_seconds": 969,
+      "decoded_audio_duration_seconds": 968.8758125,
+      "complete_decoded_audio": true,
+      "media_sha256": "b832f93b686aeeb657320993c8910f5698fbdf65d5845d8a2166993e1a9d8b8d",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 962.48,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    }
+  ],
+  "sections": [
+    {
+      "section": "14.1 A constrained minimum, not a degree count",
+      "anchor": "definition",
+      "video_id": "NnuxsyYGoi4",
+      "start": 0,
+      "end": 348,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "14.2 The weak sign regions are connected",
+      "anchor": "weak-domains",
+      "video_id": "NnuxsyYGoi4",
+      "start": 348,
+      "end": 1429,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "14.3 A distance-separated-set trial vector",
+      "anchor": "distance-bound",
+      "video_id": "N4VwpElxD7g",
+      "start": 0,
+      "end": 1257,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "14.4 Minimum degree, induced density and cut expansion",
+      "anchor": "corollaries",
+      "video_id": "ArIfY5DL_WM",
+      "start": 0,
+      "end": 1194,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "14.5 Induced deletion and the external-degree correction",
+      "anchor": "induced",
+      "video_id": "9rpTWrUAP6M",
+      "start": 448,
+      "end": 969,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "14.6 Edge addition, complements and consensus",
+      "anchor": "monotonicity",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "14.7 Exact identities and a local edge-sensitivity check",
+      "anchor": "code",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "14.8 Worked problems",
+      "anchor": "solutions",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "14.9 Read the operator together with its constraints",
+      "anchor": "perspective",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    }
+  ],
+  "references": [
+    {
+      "url": "https://www.dml.cz/handle/10338.dmlcz/101168",
+      "title": "Fiedler 1973 paper",
+      "supports": "Exact claim and locator are stated beside the chapter citation"
+    },
+    {
+      "url": "https://dml.cz/handle/10338.dmlcz/101357",
+      "title": "1975 eigenvector paper's bibliographic record",
+      "supports": "Exact claim and locator are stated beside the chapter citation"
+    }
+  ],
+  "prose_words_including_math": 3014,
+  "solution_count": 9,
+  "executable_listing_count": 1,
+  "independent_review": {
+    "accepted": true,
+    "accepted_body_sha256": "a7de276c927893fe87961ba2444eac633799b66b0a24cd1d5e9599bc17ec49cf",
+    "rounds": [
+      {
+        "round": 1,
+        "report": "work/reviews/ch14-r1.md",
+        "verdict": "accepted",
+        "authored_body_sha256": "a7de276c927893fe87961ba2444eac633799b66b0a24cd1d5e9599bc17ec49cf"
+      },
+      {
+        "round": 2,
+        "report": "work/reviews/ch14-r2.md",
+        "verdict": "accepted",
+        "authored_body_sha256": "a7de276c927893fe87961ba2444eac633799b66b0a24cd1d5e9599bc17ec49cf"
+      }
+    ],
+    "blocking": 0,
+    "major": 0,
+    "minor": 0
+  },
+  "visual_boundary": "No comprehensive audiovisual or board transcription; machine recognition and chunk boundaries remain fallible."
+}

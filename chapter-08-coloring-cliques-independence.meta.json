@@ -1,0 +1,206 @@
+{
+  "chapter": 8,
+  "title": "Spectral bounds for coloring, cliques and independence",
+  "status": "reviewed — two independent AI scientific reviews",
+  "authored_body_sha256": "ee01b82813ddf528472f7201b2226e10c11a09a58ff70e27851d1c406076d5ff",
+  "recordings": [
+    {
+      "video_id": "id7YurTPhsg",
+      "playlist_position": 20,
+      "lecture_label": "Lecture 20",
+      "duration_seconds": 2021,
+      "decoded_audio_duration_seconds": 2020.2289375,
+      "complete_decoded_audio": true,
+      "media_sha256": "c93b75ebd4ec48d2a56435734319a8e282f4d198a2e72550a196205e5ed294ff",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 2013.2,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    }
+  ],
+  "sections": [
+    {
+      "section": "8.1 Three optimization questions and their witnesses",
+      "anchor": "objects",
+      "video_id": "id7YurTPhsg",
+      "start": 0,
+      "end": 453,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "8.2 A bound and an exact algorithm answer different questions",
+      "anchor": "complexity",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "8.3 A coloring creates zero diagonal blocks",
+      "anchor": "hoffman",
+      "video_id": "id7YurTPhsg",
+      "start": 453,
+      "end": 808,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "8.4 A vertex-critical subgraph supplies a spectral upper bound",
+      "anchor": "upper",
+      "video_id": "id7YurTPhsg",
+      "start": 808,
+      "end": 1452,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "8.5 A clique places a complete principal block inside the matrix",
+      "anchor": "clique",
+      "video_id": "id7YurTPhsg",
+      "start": 1452,
+      "end": 1612,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "8.6 The signs of the spectrum bound independent sets",
+      "anchor": "inertia",
+      "video_id": "id7YurTPhsg",
+      "start": 1612,
+      "end": 2013,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "8.7 Determine all three quantities on the running network",
+      "anchor": "running",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "8.8 An original extension: choose a matrix with the same forbidden entries",
+      "anchor": "weighted",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "8.9 Enumerate the examples and check the certificates",
+      "anchor": "code",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "8.10 Problems with complete solutions",
+      "anchor": "exercises",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "8.11 Close a gap only when both sides meet",
+      "anchor": "limits",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    }
+  ],
+  "references": [
+    {
+      "url": "https://www2.seas.gwu.edu/~simhaweb/champalg/tsp/papers/KarpOriginal.pdf",
+      "title": "Karp's primary 1972 paper",
+      "supports": "Exact claim and locator are stated beside the chapter citation"
+    }
+  ],
+  "prose_words_including_math": 3537,
+  "solution_count": 9,
+  "executable_listing_count": 1,
+  "independent_review": {
+    "accepted": true,
+    "accepted_body_sha256": "ee01b82813ddf528472f7201b2226e10c11a09a58ff70e27851d1c406076d5ff",
+    "rounds": [
+      {
+        "round": 1,
+        "reviewer": "Independent thermodynamics course worker",
+        "verdict": "accepted",
+        "blocking": 0,
+        "major": 0,
+        "minor": 0,
+        "authored_body_sha256": "ee01b82813ddf528472f7201b2226e10c11a09a58ff70e27851d1c406076d5ff",
+        "scope": "Formatting-only exact-byte equivalence closure carrying prior full scientific R1",
+        "report": "work/reviews/spacing-peer-closure.md"
+      },
+      {
+        "round": 2,
+        "reviewer": "Independent lead coordinator",
+        "verdict": "accepted",
+        "blocking": 0,
+        "major": 0,
+        "minor": 0,
+        "authored_body_sha256": "ee01b82813ddf528472f7201b2226e10c11a09a58ff70e27851d1c406076d5ff",
+        "scope": "Formatting-only exact-byte equivalence closure carrying prior full scientific R2",
+        "report": "work/reviews/spacing-root-closure.md"
+      }
+    ],
+    "previous_scientific_acceptance": {
+      "accepted": true,
+      "accepted_body_sha256": "13ff57d5e640060a4116e9d3dd71a03687b12ec56691067e0119a8fe9c152ba4",
+      "rounds": [
+        {
+          "round": 1,
+          "reviewer": "Independent thermodynamics course worker",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0,
+          "verdict": "accepted",
+          "authored_body_sha256": "13ff57d5e640060a4116e9d3dd71a03687b12ec56691067e0119a8fe9c152ba4"
+        },
+        {
+          "round": 2,
+          "reviewer": "Independent lead coordinator",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0,
+          "verdict": "accepted",
+          "authored_body_sha256": "13ff57d5e640060a4116e9d3dd71a03687b12ec56691067e0119a8fe9c152ba4"
+        }
+      ],
+      "scope": "Exact raw-byte body; R1 full available source text, both rounds proofs/solutions/exact code. No comprehensive audiovisual or publication acceptance."
+    },
+    "scope": "Prior full scientific reviews plus two independent proofs that only ordinary prose spaces were inserted; all TeX/listings/output bytes unchanged. No new scientific claims or full audiovisual/publication acceptance."
+  },
+  "visual_boundary": "No comprehensive audiovisual or board transcription; machine recognition and chunk boundaries remain fallible."
+}

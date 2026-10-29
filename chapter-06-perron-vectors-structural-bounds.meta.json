@@ -1,0 +1,242 @@
+{
+  "chapter": 6,
+  "title": "Perron vectors and structural eigenvalue bounds",
+  "status": "reviewed — two independent AI scientific reviews",
+  "authored_body_sha256": "462733a5b5f079812823169e3d82830831988f950d27b91366dcd8a8d170320b",
+  "recordings": [
+    {
+      "video_id": "W_qSiyHLeBk",
+      "playlist_position": 13,
+      "lecture_label": "Lecture 13",
+      "duration_seconds": 1566,
+      "decoded_audio_duration_seconds": 1565.8144375,
+      "complete_decoded_audio": true,
+      "media_sha256": "dcaa271d28b3daa5732e90af97324d215a4d18f1710da492ca97661b5565d2d0",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1559.38,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    },
+    {
+      "video_id": "W5X0fVR0NPQ",
+      "playlist_position": 14,
+      "lecture_label": "Lecture 14",
+      "duration_seconds": 1318,
+      "decoded_audio_duration_seconds": 1317.221625,
+      "complete_decoded_audio": true,
+      "media_sha256": "53750566898a5d631313035205f15e4ecd8af937e932868d6c731eca02780a2d",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1310.84,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    },
+    {
+      "video_id": "ONPTNhSl11c",
+      "playlist_position": 15,
+      "lecture_label": "Lecture 15",
+      "duration_seconds": 1696,
+      "decoded_audio_duration_seconds": 1695.2424375,
+      "complete_decoded_audio": true,
+      "media_sha256": "5b444ae8cd85babdafd715a98d564da40a91757eb7085f681133be2c8840c49d",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1688.44,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    }
+  ],
+  "sections": [
+    {
+      "section": "6.1 Absolute values improve a nonnegative quadratic form",
+      "anchor": "nonnegative",
+      "video_id": "W_qSiyHLeBk",
+      "start": 586,
+      "end": 945,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "6.2 Connectivity propagates positivity",
+      "anchor": "positive",
+      "video_id": "W_qSiyHLeBk",
+      "start": 945,
+      "end": 1559,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "6.3 The positive direction is unique",
+      "anchor": "simple",
+      "video_id": "W5X0fVR0NPQ",
+      "start": 486,
+      "end": 1180,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "6.4 Every proper subgraph of a connected graph lowers the top value",
+      "anchor": "subgraphs",
+      "video_id": "ONPTNhSl11c",
+      "start": 0,
+      "end": 1004,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "6.5 Degrees give bounds, with different equality mechanisms",
+      "anchor": "degrees",
+      "video_id": "ONPTNhSl11c",
+      "start": 1004,
+      "end": 1688,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "6.6 A sharp bound using only vertices and edges",
+      "anchor": "edge-count",
+      "video_id": "W_qSiyHLeBk",
+      "start": 0,
+      "end": 586,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "6.7 Positive trial vectors give computable certificates",
+      "anchor": "certificates",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "6.8 Positivity does not remove bipartite oscillation",
+      "anchor": "parity",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "6.9 Execute bounds, strict comparison and parity checks",
+      "anchor": "code",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "6.10 Problems with complete solutions",
+      "anchor": "exercises",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "6.11 What the positive mode tells us",
+      "anchor": "limits",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    }
+  ],
+  "references": [],
+  "prose_words_including_math": 3829,
+  "solution_count": 9,
+  "executable_listing_count": 1,
+  "independent_review": {
+    "accepted": true,
+    "accepted_body_sha256": "462733a5b5f079812823169e3d82830831988f950d27b91366dcd8a8d170320b",
+    "rounds": [
+      {
+        "round": 1,
+        "reviewer": "Independent thermodynamics course worker",
+        "verdict": "accepted",
+        "blocking": 0,
+        "major": 0,
+        "minor": 0,
+        "authored_body_sha256": "462733a5b5f079812823169e3d82830831988f950d27b91366dcd8a8d170320b",
+        "scope": "Formatting-only exact-byte equivalence closure carrying prior full scientific R1",
+        "report": "work/reviews/spacing-peer-closure.md"
+      },
+      {
+        "round": 2,
+        "reviewer": "Independent lead coordinator",
+        "verdict": "accepted",
+        "blocking": 0,
+        "major": 0,
+        "minor": 0,
+        "authored_body_sha256": "462733a5b5f079812823169e3d82830831988f950d27b91366dcd8a8d170320b",
+        "scope": "Formatting-only exact-byte equivalence closure carrying prior full scientific R2",
+        "report": "work/reviews/spacing-root-closure.md"
+      }
+    ],
+    "previous_scientific_acceptance": {
+      "accepted": true,
+      "accepted_body_sha256": "0f4ab64473003f69ee49874d51bd6713669d4486768c95947bd9a197a75a572c",
+      "rounds": [
+        {
+          "round": 1,
+          "reviewer": "Independent thermodynamics course worker",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0,
+          "verdict": "accepted",
+          "authored_body_sha256": "0f4ab64473003f69ee49874d51bd6713669d4486768c95947bd9a197a75a572c"
+        },
+        {
+          "round": 2,
+          "reviewer": "Independent lead coordinator",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0,
+          "verdict": "accepted",
+          "authored_body_sha256": "0f4ab64473003f69ee49874d51bd6713669d4486768c95947bd9a197a75a572c"
+        }
+      ],
+      "scope": "Exact raw-byte chapter6 body; R1 full sources and both rounds full proof/solution/code checks. No full AV or course publication acceptance."
+    },
+    "scope": "Prior full scientific reviews plus two independent proofs that only ordinary prose spaces were inserted; all TeX/listings/output bytes unchanged. No new scientific claims or full audiovisual/publication acceptance."
+  },
+  "visual_boundary": "No comprehensive audiovisual or board transcription; machine recognition and chunk boundaries remain fallible."
+}

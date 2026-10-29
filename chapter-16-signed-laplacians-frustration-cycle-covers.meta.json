@@ -1,0 +1,192 @@
+{
+  "chapter": 16,
+  "title": "Signed Laplacians, frustration and permutation expansions",
+  "status": "reviewed — two independent AI scientific reviews",
+  "authored_body_sha256": "a8b73eb8995176b7db549762607d94476ab89f780abba9e417dfeea506c24a59",
+  "recordings": [
+    {
+      "video_id": "M2cEQ23rG_I",
+      "playlist_position": 43,
+      "lecture_label": "Lecture 43",
+      "duration_seconds": 1805,
+      "decoded_audio_duration_seconds": 1804.3298125,
+      "complete_decoded_audio": true,
+      "media_sha256": "cb50e84979487d4e10e3c41b3252a2ea13f8f2117c55c1a675b1c58c16d5f896",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1804.0,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    },
+    {
+      "video_id": "HzsutO6Y-G4",
+      "playlist_position": 44,
+      "lecture_label": "Lecture 44",
+      "duration_seconds": 2024,
+      "decoded_audio_duration_seconds": 2023.4333125,
+      "complete_decoded_audio": true,
+      "media_sha256": "573782d7b94681122894d81b272c2cb2e07a5f67ee8df7cbd329acdefdbd918a",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 2016.44,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    }
+  ],
+  "sections": [
+    {
+      "section": "16.1 Degree counts incident edges, regardless of sign",
+      "anchor": "signed-energy",
+      "video_id": "M2cEQ23rG_I",
+      "start": 0,
+      "end": 895,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "16.2 Define the repair problem before naming its number",
+      "anchor": "frustration",
+      "video_id": "M2cEQ23rG_I",
+      "start": 895,
+      "end": 1069,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "16.3 Spectral lower bounds on repair cost",
+      "anchor": "relaxation",
+      "video_id": "M2cEQ23rG_I",
+      "start": 1069,
+      "end": 1590,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "16.4 Weak balance allows more than two clusters",
+      "anchor": "weak",
+      "video_id": "M2cEQ23rG_I",
+      "start": 1590,
+      "end": 1805,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "16.5 A permutation is a directed cycle cover",
+      "anchor": "covers",
+      "video_id": "HzsutO6Y-G4",
+      "start": 0,
+      "end": 1117,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "16.6 Undirected determinants need two distinct component counts",
+      "anchor": "elementary",
+      "video_id": "HzsutO6Y-G4",
+      "start": 1712,
+      "end": 2024,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "16.7 Why a signed Laplacian determinant counts negative unicycles",
+      "anchor": "signed-tree",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "16.8 Execute both sides of the structural identities",
+      "anchor": "code",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "16.9 Worked problems",
+      "anchor": "solutions",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "16.10 From incidence to cycles, and back",
+      "anchor": "closing",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    }
+  ],
+  "references": [
+    {
+      "url": "https://people.math.binghamton.edu/zaslav/Tpapers/mananthavady-lecture-notes.20110729.pdf",
+      "title": "Zaslavsky's author notes, pp.11–13",
+      "supports": "Exact claim and locator are stated beside the chapter citation"
+    }
+  ],
+  "prose_words_including_math": 3769,
+  "solution_count": 9,
+  "executable_listing_count": 1,
+  "independent_review": {
+    "accepted": true,
+    "accepted_body_sha256": "a8b73eb8995176b7db549762607d94476ab89f780abba9e417dfeea506c24a59",
+    "rounds": [
+      {
+        "round": 1,
+        "report": "work/reviews/ch16-r1.md",
+        "verdict": "accepted",
+        "authored_body_sha256": "a8b73eb8995176b7db549762607d94476ab89f780abba9e417dfeea506c24a59",
+        "reviewer": "Independent Thermodynamics course worker",
+        "blocking": 0,
+        "major": 0,
+        "minor": 0
+      },
+      {
+        "round": 2,
+        "report": "work/reviews/ch16-r2.md",
+        "verdict": "accepted",
+        "authored_body_sha256": "a8b73eb8995176b7db549762607d94476ab89f780abba9e417dfeea506c24a59",
+        "reviewer": "Independent coordinating reviewer",
+        "blocking": 0,
+        "major": 0,
+        "minor": 0
+      }
+    ],
+    "blocking": 0,
+    "major": 0,
+    "minor": 0
+  },
+  "visual_boundary": "No comprehensive audiovisual or board transcription; machine recognition and chunk boundaries remain fallible."
+}

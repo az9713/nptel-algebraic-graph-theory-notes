@@ -1,0 +1,226 @@
+{
+  "chapter": 13,
+  "title": "Expansion, Ramanujan bounds and graph products",
+  "status": "reviewed — two independent AI scientific reviews",
+  "authored_body_sha256": "11ab25f82d29fb480838ebe147374510edc5a34064579a08636f9a4623ba277f",
+  "recordings": [
+    {
+      "video_id": "T_KuqjVn9aQ",
+      "playlist_position": 33,
+      "lecture_label": "Lecture 33",
+      "duration_seconds": 1225,
+      "decoded_audio_duration_seconds": 1224.2024375,
+      "complete_decoded_audio": true,
+      "media_sha256": "698bebcfb9e0111caaa54e7ad7125fda7b43a506115b2472f1ceecb6ea51f7b1",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1217.52,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    },
+    {
+      "video_id": "cLldlBGwgVw",
+      "playlist_position": 34,
+      "lecture_label": "Lecture 34",
+      "duration_seconds": 1590,
+      "decoded_audio_duration_seconds": 1589.6845625,
+      "complete_decoded_audio": true,
+      "media_sha256": "05a51bc65bb8132ee418d40d55a97a8a26d23230310b20a0114102782581865d",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1583.32,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    },
+    {
+      "video_id": "KB9VxN4OZmY",
+      "playlist_position": 35,
+      "lecture_label": "Lecture 35",
+      "duration_seconds": 1177,
+      "decoded_audio_duration_seconds": 1176.3229375,
+      "complete_decoded_audio": true,
+      "media_sha256": "8982a62fdf5ba675c732985c2236d6f21d3e2bfb768ea6ab2a3be5333fd8036c",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1169.92,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    },
+    {
+      "video_id": "irblAz_OmUo",
+      "playlist_position": 36,
+      "lecture_label": "Lecture 36",
+      "duration_seconds": 1808,
+      "decoded_audio_duration_seconds": 1807.85925,
+      "complete_decoded_audio": true,
+      "media_sha256": "79587c9de9c63977ed5e2fac4bdc11e69cf540292d519f57defb3910460c72ce",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1801.24,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    }
+  ],
+  "sections": [
+    {
+      "section": "13.1 Sparsity and uniform boundary growth",
+      "anchor": "expansion",
+      "video_id": "T_KuqjVn9aQ",
+      "start": 0,
+      "end": 945,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "13.2 Both directions of the regular Cheeger inequality",
+      "anchor": "cheeger",
+      "video_id": "cLldlBGwgVw",
+      "start": 0,
+      "end": 795,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "13.3 Expander mixing requires an absolute spectral parameter",
+      "anchor": "mixing",
+      "video_id": "cLldlBGwgVw",
+      "start": 795,
+      "end": 1590,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "13.4 Ramanujan is an asymptotic spectral benchmark",
+      "anchor": "ramanujan",
+      "video_id": "KB9VxN4OZmY",
+      "start": 0,
+      "end": 1177,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "13.5 Two-lifts split into old and signed spectra",
+      "anchor": "lifts",
+      "video_id": "irblAz_OmUo",
+      "start": 0,
+      "end": 1012,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "13.6 Zig-zag products need ports and normalized operators",
+      "anchor": "zigzag",
+      "video_id": "irblAz_OmUo",
+      "start": 1012,
+      "end": 1808,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "13.7 Exact cut enumeration and constructive spectral checks",
+      "anchor": "code",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "13.8 Worked problems",
+      "anchor": "solutions",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "13.9 What a spectral certificate does and does not establish",
+      "anchor": "limits",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    }
+  ],
+  "references": [
+    {
+      "url": "https://www.cs.yale.edu/homes/spielman/PAPERS/Marcus_Spielman_SrivastavaIFI.pdf",
+      "title": "Marcus–Spielman–Srivastava, printed pp.307–310",
+      "supports": "Exact claim and locator are stated beside the chapter citation"
+    },
+    {
+      "url": "https://www.math.mcgill.ca/goren/667.2010/Reingold.Vadhan.Wigderson.pdf",
+      "title": "Reingold–Vadhan–Wigderson, printed pp.168–173",
+      "supports": "Exact claim and locator are stated beside the chapter citation"
+    },
+    {
+      "url": "https://doi.org/10.1145/780542.780646",
+      "title": "Friedman's original abstract",
+      "supports": "Exact claim and locator are stated beside the chapter citation"
+    }
+  ],
+  "prose_words_including_math": 3132,
+  "solution_count": 9,
+  "executable_listing_count": 1,
+  "independent_review": {
+    "accepted": true,
+    "accepted_body_sha256": "11ab25f82d29fb480838ebe147374510edc5a34064579a08636f9a4623ba277f",
+    "rounds": [
+      {
+        "round": 1,
+        "report": "work/reviews/ch13-r1.md",
+        "verdict": "accepted",
+        "authored_body_sha256": "11ab25f82d29fb480838ebe147374510edc5a34064579a08636f9a4623ba277f"
+      },
+      {
+        "round": 2,
+        "report": "work/reviews/ch13-r2.md",
+        "verdict": "accepted",
+        "authored_body_sha256": "11ab25f82d29fb480838ebe147374510edc5a34064579a08636f9a4623ba277f"
+      }
+    ],
+    "blocking": 0,
+    "major": 0,
+    "minor": 0
+  },
+  "visual_boundary": "No comprehensive audiovisual or board transcription; machine recognition and chunk boundaries remain fallible."
+}

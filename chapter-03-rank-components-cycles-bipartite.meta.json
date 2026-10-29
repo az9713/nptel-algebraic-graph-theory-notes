@@ -1,0 +1,208 @@
+{
+  "chapter": 3,
+  "title": "Rank, components, cycles and bipartite structure",
+  "status": "reviewed — two independent AI scientific reviews",
+  "authored_body_sha256": "ecd104aa41a1f39b80732d88323f0c766e2db7e24ef8539c227b8a967af77fb1",
+  "recordings": [
+    {
+      "video_id": "5SXp4rIGOBo",
+      "playlist_position": 5,
+      "lecture_label": "Lecture 5",
+      "duration_seconds": 1854,
+      "decoded_audio_duration_seconds": 1853.649,
+      "complete_decoded_audio": true,
+      "media_sha256": "4ae43c05dc1ead2822a833459666b0f25afdaaa3ce9dc9b9696b4a70ebdcfd7f",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1847.48,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    },
+    {
+      "video_id": "YCpdfmRTc3c",
+      "playlist_position": 6,
+      "lecture_label": "Lecture 6",
+      "duration_seconds": 1534,
+      "decoded_audio_duration_seconds": 1533.6315625,
+      "complete_decoded_audio": true,
+      "media_sha256": "270b2eff632366c9cbfd22958c6132858806c394b2fbdfc12ac9bcdc87c714dc",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1527.4,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    }
+  ],
+  "sections": [
+    {
+      "section": "3.1 Independence means no nontrivial zero combination 01:01",
+      "anchor": "linear-algebra",
+      "video_id": "5SXp4rIGOBo",
+      "start": 61,
+      "end": 495,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "3.2 Keep the two kernels in the correct spaces 08:15",
+      "anchor": "rank-nullity",
+      "video_id": "5SXp4rIGOBo",
+      "start": 495,
+      "end": 782,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "3.3 Every component contributes one constant potential 13:15",
+      "anchor": "components",
+      "video_id": "5SXp4rIGOBo",
+      "start": 795,
+      "end": 1793,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "3.4 The Laplacian has the same real rank 29:53",
+      "anchor": "laplacian-rank",
+      "video_id": "5SXp4rIGOBo",
+      "start": 1793,
+      "end": 1847,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "3.5 Independent incidence columns are exactly forests 00:48",
+      "anchor": "forests",
+      "video_id": "YCpdfmRTc3c",
+      "start": 48,
+      "end": 765,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "3.6 The missing edge dimensions form a cycle space",
+      "anchor": "cycle-space",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "3.7 Bipartiteness is a consistency condition on signs 12:45",
+      "anchor": "bipartite",
+      "video_id": "YCpdfmRTc3c",
+      "start": 765,
+      "end": 898,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "3.8 Unsigned incidence counts bipartite components 14:58",
+      "anchor": "unsigned-rank",
+      "video_id": "YCpdfmRTc3c",
+      "start": 898,
+      "end": 1527,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "3.9 An original flow problem: compatibility and minimum norm",
+      "anchor": "flow-extension",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "3.10 Exact rank, cycle and flow checks",
+      "anchor": "code",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "3.11 Problems with complete solutions",
+      "anchor": "exercises",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "3.12 What rank reveals and what remains invisible",
+      "anchor": "limits",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    }
+  ],
+  "references": [
+    {
+      "url": "https://homepages.cwi.nl/~aeb/math/ipm/ipm.pdf",
+      "title": "Brouwer–Haemers author-hosted text, §1.1",
+      "supports": "Exact claim and locator are stated beside the chapter citation"
+    }
+  ],
+  "prose_words_including_math": 4345,
+  "solution_count": 8,
+  "executable_listing_count": 1,
+  "independent_review": {
+    "accepted": true,
+    "accepted_body_sha256": "ecd104aa41a1f39b80732d88323f0c766e2db7e24ef8539c227b8a967af77fb1",
+    "rounds": [
+      {
+        "round": 1,
+        "reviewer": "Independent thermodynamics course worker",
+        "blocking": 0,
+        "major": 0,
+        "minor": 0,
+        "verdict": "accepted",
+        "authored_body_sha256": "ecd104aa41a1f39b80732d88323f0c766e2db7e24ef8539c227b8a967af77fb1"
+      },
+      {
+        "round": 2,
+        "reviewer": "Independent lead coordinator",
+        "blocking": 0,
+        "major": 0,
+        "minor": 0,
+        "verdict": "accepted",
+        "authored_body_sha256": "ecd104aa41a1f39b80732d88323f0c766e2db7e24ef8539c227b8a967af77fb1"
+      }
+    ],
+    "scope": "Exact authored chapter3 only; proofs,allsolutions,actualcode independently verified; R1 completeASR reading. No formal proof,audiovisual,engineering or full-course acceptance."
+  },
+  "visual_boundary": "No comprehensive audiovisual or board transcription; machine recognition and chunk boundaries remain fallible."
+}

@@ -1,0 +1,189 @@
+{
+  "chapter": 12,
+  "title": "Hypercubes and the sensitivity theorem",
+  "status": "reviewed — two independent AI scientific reviews",
+  "authored_body_sha256": "fc93b1aa92b1a48f42ee4d00dbdd7d4023f4d1e6df34496a79b9ca8fc8cf416c",
+  "recordings": [
+    {
+      "video_id": "s0MRcD5XI-g",
+      "playlist_position": 31,
+      "lecture_label": "Lecture 31",
+      "duration_seconds": 1749,
+      "decoded_audio_duration_seconds": 1748.5090625,
+      "complete_decoded_audio": true,
+      "media_sha256": "302e832206348d764486a62d56fb5ee93eebb9b571a3d286df7a30e585522c16",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1742.1,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    },
+    {
+      "video_id": "prwOZivzEUU",
+      "playlist_position": 32,
+      "lecture_label": "Lecture 32",
+      "duration_seconds": 1612,
+      "decoded_audio_duration_seconds": 1611.55775,
+      "complete_decoded_audio": true,
+      "media_sha256": "304184f65440e97bebaaa9c7523fab43e41b53d5441f994499bb43196a3c66c4",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1610.22,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    }
+  ],
+  "sections": [
+    {
+      "section": "12.1 Local changes and disjoint blocks",
+      "anchor": "local-changes",
+      "video_id": "s0MRcD5XI-g",
+      "start": 0,
+      "end": 760,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "12.2 The hypercube and a threshold just above half",
+      "anchor": "cube",
+      "video_id": "s0MRcD5XI-g",
+      "start": 760,
+      "end": 1749,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "12.3 Signs that make all cross terms cancel",
+      "anchor": "signed-cube",
+      "video_id": "prwOZivzEUU",
+      "start": 0,
+      "end": 844,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "12.4 A complete proof of the induced-cube theorem",
+      "anchor": "interlacing-proof",
+      "video_id": "prwOZivzEUU",
+      "start": 844,
+      "end": 1612,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "12.5 Why the graph theorem bounds Boolean degree",
+      "anchor": "fourier-bridge",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "12.6 A self-contained route from degree to block sensitivity",
+      "anchor": "polynomial-bridge",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "12.7 A family where whole blocks reveal more than single bits",
+      "anchor": "separation",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "12.8 Finite checks of support, induced degree and Boolean degree",
+      "anchor": "code",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "12.9 Worked problems",
+      "anchor": "solutions",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "12.10 The reusable idea is the choice of operator",
+      "anchor": "perspective",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    }
+  ],
+  "references": [
+    {
+      "url": "https://www.math.emory.edu/~hhuan30/papers/sensitivity_1.pdf",
+      "title": "Hao Huang's complete six-page author manuscript",
+      "supports": "Exact claim and locator are stated beside the chapter citation"
+    },
+    {
+      "url": "https://annals.math.princeton.edu/2019/190-3/p06",
+      "title": "2019 Annals record",
+      "supports": "Exact claim and locator are stated beside the chapter citation"
+    }
+  ],
+  "prose_words_including_math": 3413,
+  "solution_count": 9,
+  "executable_listing_count": 1,
+  "independent_review": {
+    "accepted": true,
+    "accepted_body_sha256": "fc93b1aa92b1a48f42ee4d00dbdd7d4023f4d1e6df34496a79b9ca8fc8cf416c",
+    "rounds": [
+      {
+        "round": 1,
+        "report": "work/reviews/ch12-r1.md",
+        "verdict": "accepted",
+        "authored_body_sha256": "fc93b1aa92b1a48f42ee4d00dbdd7d4023f4d1e6df34496a79b9ca8fc8cf416c"
+      },
+      {
+        "round": 2,
+        "report": "work/reviews/ch12-r2.md",
+        "verdict": "accepted",
+        "authored_body_sha256": "fc93b1aa92b1a48f42ee4d00dbdd7d4023f4d1e6df34496a79b9ca8fc8cf416c"
+      }
+    ],
+    "blocking": 0,
+    "major": 0,
+    "minor": 0
+  },
+  "visual_boundary": "No comprehensive audiovisual or board transcription; machine recognition and chunk boundaries remain fallible."
+}

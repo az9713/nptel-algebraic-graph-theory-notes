@@ -1,0 +1,608 @@
+{
+  "course": "Introduction to Algebraic Graph Theory",
+  "slug": ".",
+  "provider": "NPTEL · IIT Indore",
+  "instructor": "Prof. Ranveer Singh",
+  "term": "Independent study edition · source inventory 28 October 2026",
+  "course_url": "https://nptel.ac.in/courses/106106698",
+  "playlist_url": "https://www.youtube.com/playlist?list=PLyqSpQzTE6M_ciAYiv53KZyKncwXZw8TU",
+  "expected_recordings": 45,
+  "chapters": [
+    {
+      "order": 1,
+      "title": "Graphs, routes and the spanning-tree question",
+      "chapter_status": "reviewed — two independent AI scientific reviews",
+      "file": "chapter-01-graphs-routes-spanning-trees.html"
+    },
+    {
+      "order": 2,
+      "title": "Incidence determinants and the matrix-tree theorem",
+      "chapter_status": "reviewed — two independent AI scientific reviews",
+      "file": "chapter-02-incidence-determinants-matrix-tree.html"
+    },
+    {
+      "order": 3,
+      "title": "Rank, components, cycles and bipartite structure",
+      "chapter_status": "reviewed — two independent AI scientific reviews",
+      "file": "chapter-03-rank-components-cycles-bipartite.html"
+    },
+    {
+      "order": 4,
+      "title": "Eigenvectors, walks and the spectral theorem",
+      "chapter_status": "reviewed — two independent AI scientific reviews",
+      "file": "chapter-04-eigenvectors-walks-spectral-theorem.html"
+    },
+    {
+      "order": 5,
+      "title": "Diameter, annihilating polynomials and spectral rank",
+      "chapter_status": "reviewed — two independent AI scientific reviews",
+      "file": "chapter-05-diameter-polynomials-spectral-rank.html"
+    },
+    {
+      "order": 6,
+      "title": "Perron vectors and structural eigenvalue bounds",
+      "chapter_status": "reviewed — two independent AI scientific reviews",
+      "file": "chapter-06-perron-vectors-structural-bounds.html"
+    },
+    {
+      "order": 7,
+      "title": "Interlacing, positive semidefiniteness and quotient matrices",
+      "chapter_status": "reviewed — two independent AI scientific reviews",
+      "file": "chapter-07-interlacing-positive-blocks-quotients.html"
+    },
+    {
+      "order": 8,
+      "title": "Spectral bounds for coloring, cliques and independence",
+      "chapter_status": "reviewed — two independent AI scientific reviews",
+      "file": "chapter-08-coloring-cliques-independence.html"
+    },
+    {
+      "order": 9,
+      "title": "Lazy random walks and quantitative mixing",
+      "chapter_status": "reviewed — two independent AI scientific reviews",
+      "file": "chapter-09-random-walks-stationary-mixing.html"
+    },
+    {
+      "order": 10,
+      "title": "Regular graphs, strong regularity and friendship",
+      "chapter_status": "reviewed — two independent AI scientific reviews",
+      "file": "chapter-10-regularity-strong-regularity-friendship.html"
+    },
+    {
+      "order": 11,
+      "title": "Cospectrality, switching and spectral determination",
+      "chapter_status": "reviewed — two independent AI scientific reviews",
+      "file": "chapter-11-cospectral-switching-spectral-uniqueness.html"
+    },
+    {
+      "order": 12,
+      "title": "Hypercubes and the sensitivity theorem",
+      "chapter_status": "reviewed — two independent AI scientific reviews",
+      "file": "chapter-12-hypercubes-sensitivity-theorem.html"
+    },
+    {
+      "order": 13,
+      "title": "Expansion, Ramanujan bounds and graph products",
+      "chapter_status": "reviewed — two independent AI scientific reviews",
+      "file": "chapter-13-expanders-ramanujan-lifts-zigzag.html"
+    },
+    {
+      "order": 14,
+      "title": "Algebraic connectivity and the Fiedler vector",
+      "chapter_status": "reviewed — two independent AI scientific reviews",
+      "file": "chapter-14-algebraic-connectivity-fiedler-geometry.html"
+    },
+    {
+      "order": 15,
+      "title": "Signed graphs, balance and switching",
+      "chapter_status": "reviewed — two independent AI scientific reviews",
+      "file": "chapter-15-signed-balance-switching-spectra.html"
+    },
+    {
+      "order": 16,
+      "title": "Signed Laplacians, frustration and permutation expansions",
+      "chapter_status": "reviewed — two independent AI scientific reviews",
+      "file": "chapter-16-signed-laplacians-frustration-cycle-covers.html"
+    }
+  ],
+  "lectures": [
+    {
+      "id": "NFjiBr1EeO4",
+      "playlist_position": 1,
+      "title": "Warm-up with graphs",
+      "url": "https://www.youtube.com/watch?v=NFjiBr1EeO4",
+      "duration": 1938,
+      "lecture_number": 1,
+      "label": "Lecture 1",
+      "chapter_order": 1,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "uK5TqHRL1Uo",
+      "playlist_position": 2,
+      "title": "Incidence matrix, cofactors of the Laplacian matrix (towards Matrix-Tree Theorem)",
+      "url": "https://www.youtube.com/watch?v=uK5TqHRL1Uo",
+      "duration": 1580,
+      "lecture_number": 2,
+      "label": "Lecture 2",
+      "chapter_order": 2,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "6agb6_zMIE8",
+      "playlist_position": 3,
+      "title": "Determinant of submatrices of incidence matrices and characterization of spanning trees",
+      "url": "https://www.youtube.com/watch?v=6agb6_zMIE8",
+      "duration": 1665,
+      "lecture_number": 3,
+      "label": "Lecture 3",
+      "chapter_order": 2,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "bQBZn77jdhY",
+      "playlist_position": 4,
+      "title": "Cauchy-Binet theorem and the proof of matrix-tree theorem",
+      "url": "https://www.youtube.com/watch?v=bQBZn77jdhY",
+      "duration": 1662,
+      "lecture_number": 4,
+      "label": "Lecture 4",
+      "chapter_order": 2,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "5SXp4rIGOBo",
+      "playlist_position": 5,
+      "title": "Rank of incidence matrix and the number of connected components",
+      "url": "https://www.youtube.com/watch?v=5SXp4rIGOBo",
+      "duration": 1854,
+      "lecture_number": 5,
+      "label": "Lecture 5",
+      "chapter_order": 3,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "YCpdfmRTc3c",
+      "playlist_position": 6,
+      "title": "Rank and acyclic graphs, 0-1 incidence matrix and characterization of bipartite graph",
+      "url": "https://www.youtube.com/watch?v=YCpdfmRTc3c",
+      "duration": 1534,
+      "lecture_number": 6,
+      "label": "Lecture 6",
+      "chapter_order": 3,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "wIWOF0EhWP0",
+      "playlist_position": 7,
+      "title": "Introduction of the eigenvalues and eigenvector",
+      "url": "https://www.youtube.com/watch?v=wIWOF0EhWP0",
+      "duration": 2121,
+      "lecture_number": 7,
+      "label": "Lecture 7",
+      "chapter_order": 4,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "z9-dtneG-M0",
+      "playlist_position": 8,
+      "title": "Adjacency matrix and number of walks; powers of a symmetric matrix",
+      "url": "https://www.youtube.com/watch?v=z9-dtneG-M0",
+      "duration": 1340,
+      "lecture_number": 8,
+      "label": "Lecture 8",
+      "chapter_order": 4,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "hzkjI3Hyz7Y",
+      "playlist_position": 9,
+      "title": "The spectral theorem",
+      "url": "https://www.youtube.com/watch?v=hzkjI3Hyz7Y",
+      "duration": 2121,
+      "lecture_number": 9,
+      "label": "Lecture 9",
+      "chapter_order": 4,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "8194KQlOqZw",
+      "playlist_position": 10,
+      "title": "Rayleigh quotient and the eigenvalues",
+      "url": "https://www.youtube.com/watch?v=8194KQlOqZw",
+      "duration": 1519,
+      "lecture_number": 10,
+      "label": "Lecture 10",
+      "chapter_order": 4,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "PzundwbulNw",
+      "playlist_position": 11,
+      "title": "A bound on the diameter of a graph using the number of distinct eigenvalues",
+      "url": "https://www.youtube.com/watch?v=PzundwbulNw",
+      "duration": 1846,
+      "lecture_number": 11,
+      "label": "Lecture 11",
+      "chapter_order": 5,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "oYNPAhZjiVw",
+      "playlist_position": 12,
+      "title": "The rank of a symmetric matrix equals the number of nonzero eigenvalues.",
+      "url": "https://www.youtube.com/watch?v=oYNPAhZjiVw",
+      "duration": 1250,
+      "lecture_number": 12,
+      "label": "Lecture 12",
+      "chapter_order": 5,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "W_qSiyHLeBk",
+      "playlist_position": 13,
+      "title": "Perron-Frobenius theorem for nonnegative symmetric matrices",
+      "url": "https://www.youtube.com/watch?v=W_qSiyHLeBk",
+      "duration": 1566,
+      "lecture_number": 13,
+      "label": "Lecture 13",
+      "chapter_order": 6,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "W5X0fVR0NPQ",
+      "playlist_position": 14,
+      "title": "The consequences of the Perron-Frobenius theorem",
+      "url": "https://www.youtube.com/watch?v=W5X0fVR0NPQ",
+      "duration": 1318,
+      "lecture_number": 14,
+      "label": "Lecture 14",
+      "chapter_order": 6,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "ONPTNhSl11c",
+      "playlist_position": 15,
+      "title": "Eigenvalues of a graph and its subgraph; a relation between the largest eigenvalue and the degree(s)",
+      "url": "https://www.youtube.com/watch?v=ONPTNhSl11c",
+      "duration": 1696,
+      "lecture_number": 15,
+      "label": "Lecture 15",
+      "chapter_order": 6,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "IN-iNP2hCQc",
+      "playlist_position": 16,
+      "title": "Cauchy interlace theorem",
+      "url": "https://www.youtube.com/watch?v=IN-iNP2hCQc",
+      "duration": 1725,
+      "lecture_number": 16,
+      "label": "Lecture 16",
+      "chapter_order": 7,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "XOGvcPDku6A",
+      "playlist_position": 17,
+      "title": "Bipartite graphs and their eigenvalues",
+      "url": "https://www.youtube.com/watch?v=XOGvcPDku6A",
+      "duration": 1268,
+      "lecture_number": 17,
+      "label": "Lecture 17",
+      "chapter_order": 7,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "ohozC9tyWxk",
+      "playlist_position": 18,
+      "title": "Positive semi-definite matrices and the eigenvalues of their partitioned form",
+      "url": "https://www.youtube.com/watch?v=ohozC9tyWxk",
+      "duration": 1434,
+      "lecture_number": 18,
+      "label": "Lecture 18",
+      "chapter_order": 7,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "OFEi2IxU1Ic",
+      "playlist_position": 19,
+      "title": "The eigenvalues of a symmetric matrix in partitioned form",
+      "url": "https://www.youtube.com/watch?v=OFEi2IxU1Ic",
+      "duration": 1240,
+      "lecture_number": 19,
+      "label": "Lecture 19",
+      "chapter_order": 7,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "id7YurTPhsg",
+      "playlist_position": 20,
+      "title": "Bounds on chromatic number, clique number, and independence number",
+      "url": "https://www.youtube.com/watch?v=id7YurTPhsg",
+      "duration": 2021,
+      "lecture_number": 20,
+      "label": "Lecture 20",
+      "chapter_order": 8,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "9-VLJXN74as",
+      "playlist_position": 21,
+      "title": "Introduction to lazy random walk, walk matrix",
+      "url": "https://www.youtube.com/watch?v=9-VLJXN74as",
+      "duration": 1725,
+      "lecture_number": 21,
+      "label": "Lecture 21",
+      "chapter_order": 9,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "bBCWtErLAm8",
+      "playlist_position": 22,
+      "title": "Convergence of lazy random walk",
+      "url": "https://www.youtube.com/watch?v=bBCWtErLAm8",
+      "duration": 1495,
+      "lecture_number": 22,
+      "label": "Lecture 22",
+      "chapter_order": 9,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "W1cutgYdfQ0",
+      "playlist_position": 23,
+      "title": "Rate of convergence of lazy random walk",
+      "url": "https://www.youtube.com/watch?v=W1cutgYdfQ0",
+      "duration": 1468,
+      "lecture_number": 23,
+      "label": "Lecture 23",
+      "chapter_order": 9,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "-POvidrMWII",
+      "playlist_position": 24,
+      "title": "Regular graphs, spectral properties, bound on size of independent set",
+      "url": "https://www.youtube.com/watch?v=-POvidrMWII",
+      "duration": 1736,
+      "lecture_number": 24,
+      "label": "Lecture 24",
+      "chapter_order": 10,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "n8FSPmb-fWg",
+      "playlist_position": 25,
+      "title": "Strongly regular graphs, their eigenvalues, and characterization",
+      "url": "https://www.youtube.com/watch?v=n8FSPmb-fWg",
+      "duration": 1855,
+      "lecture_number": 25,
+      "label": "Lecture 25",
+      "chapter_order": 10,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "URZUYdARfDI",
+      "playlist_position": 26,
+      "title": "The friendship theorem",
+      "url": "https://www.youtube.com/watch?v=URZUYdARfDI",
+      "duration": 1474,
+      "lecture_number": 26,
+      "label": "Lecture 26",
+      "chapter_order": 10,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "MQ0x_mv1blI",
+      "playlist_position": 27,
+      "title": "Introduction to cospectral graphs",
+      "url": "https://www.youtube.com/watch?v=MQ0x_mv1blI",
+      "duration": 1926,
+      "lecture_number": 27,
+      "label": "Lecture 27",
+      "chapter_order": 11,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "QP1WJLJKpcU",
+      "playlist_position": 28,
+      "title": "Godsil McKay switching to generate cospectral graphs",
+      "url": "https://www.youtube.com/watch?v=QP1WJLJKpcU",
+      "duration": 1678,
+      "lecture_number": 28,
+      "label": "Lecture 28",
+      "chapter_order": 11,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "-T0B5-Fhy0c",
+      "playlist_position": 29,
+      "title": "Cartesian product and their eigenvalues, Shrikhande graph",
+      "url": "https://www.youtube.com/watch?v=-T0B5-Fhy0c",
+      "duration": 1672,
+      "lecture_number": 29,
+      "label": "Lecture 29",
+      "chapter_order": 11,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "M6ja-UNxrGQ",
+      "playlist_position": 30,
+      "title": "Graph determined by the spectrum",
+      "url": "https://www.youtube.com/watch?v=M6ja-UNxrGQ",
+      "duration": 2085,
+      "lecture_number": 30,
+      "label": "Lecture 30",
+      "chapter_order": 11,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "s0MRcD5XI-g",
+      "playlist_position": 31,
+      "title": "Sensitivity, block sensitivity and hypercube graph",
+      "url": "https://www.youtube.com/watch?v=s0MRcD5XI-g",
+      "duration": 1749,
+      "lecture_number": 31,
+      "label": "Lecture 31",
+      "chapter_order": 12,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "prwOZivzEUU",
+      "playlist_position": 32,
+      "title": "Proof of sensitivity conjecture",
+      "url": "https://www.youtube.com/watch?v=prwOZivzEUU",
+      "duration": 1612,
+      "lecture_number": 32,
+      "label": "Lecture 32",
+      "chapter_order": 12,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "T_KuqjVn9aQ",
+      "playlist_position": 33,
+      "title": "Introduction to expander graphs",
+      "url": "https://www.youtube.com/watch?v=T_KuqjVn9aQ",
+      "duration": 1225,
+      "lecture_number": 33,
+      "label": "Lecture 33",
+      "chapter_order": 13,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "cLldlBGwgVw",
+      "playlist_position": 34,
+      "title": "A lower bound on Cheeger constant, and expander mixing lemma",
+      "url": "https://www.youtube.com/watch?v=cLldlBGwgVw",
+      "duration": 1590,
+      "lecture_number": 34,
+      "label": "Lecture 34",
+      "chapter_order": 13,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "KB9VxN4OZmY",
+      "playlist_position": 35,
+      "title": "Introduction to Ramanujan graphs",
+      "url": "https://www.youtube.com/watch?v=KB9VxN4OZmY",
+      "duration": 1177,
+      "lecture_number": 35,
+      "label": "Lecture 35",
+      "chapter_order": 13,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "irblAz_OmUo",
+      "playlist_position": 36,
+      "title": "2-Lift and Zig-zag product for construction of expander and Ramanujan graphs",
+      "url": "https://www.youtube.com/watch?v=irblAz_OmUo",
+      "duration": 1808,
+      "lecture_number": 36,
+      "label": "Lecture 36",
+      "chapter_order": 13,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "NnuxsyYGoi4",
+      "playlist_position": 37,
+      "title": "Introduction of algebraic connectivity and Fiedler vector.",
+      "url": "https://www.youtube.com/watch?v=NnuxsyYGoi4",
+      "duration": 1429,
+      "lecture_number": 37,
+      "label": "Lecture 37",
+      "chapter_order": 14,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "N4VwpElxD7g",
+      "playlist_position": 38,
+      "title": "Upper bound on algebraic connectivity.",
+      "url": "https://www.youtube.com/watch?v=N4VwpElxD7g",
+      "duration": 1257,
+      "lecture_number": 38,
+      "label": "Lecture 38",
+      "chapter_order": 14,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "ArIfY5DL_WM",
+      "playlist_position": 39,
+      "title": "Some more bounds on algebraic connectivity",
+      "url": "https://www.youtube.com/watch?v=ArIfY5DL_WM",
+      "duration": 1194,
+      "lecture_number": 39,
+      "label": "Lecture 39",
+      "chapter_order": 14,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "9rpTWrUAP6M",
+      "playlist_position": 40,
+      "title": "Relation between algebraic connectivity of graph and its induced subgraph.",
+      "url": "https://www.youtube.com/watch?v=9rpTWrUAP6M",
+      "duration": 969,
+      "lecture_number": 40,
+      "label": "Lecture 40",
+      "chapter_order": 14,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "JY9oBv9-zBc",
+      "playlist_position": 41,
+      "title": "Introduction to Balanced Signed Graphs",
+      "url": "https://www.youtube.com/watch?v=JY9oBv9-zBc",
+      "duration": 1438,
+      "lecture_number": 41,
+      "label": "Lecture 41",
+      "chapter_order": 15,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "P7vy9Gtym_I",
+      "playlist_position": 42,
+      "title": "Sign Switching in Signed Graphs",
+      "url": "https://www.youtube.com/watch?v=P7vy9Gtym_I",
+      "duration": 1058,
+      "lecture_number": 42,
+      "label": "Lecture 42",
+      "chapter_order": 15,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "M2cEQ23rG_I",
+      "playlist_position": 43,
+      "title": "Laplacian of Signed Graphs, Frustration number and Frustration index",
+      "url": "https://www.youtube.com/watch?v=M2cEQ23rG_I",
+      "duration": 1805,
+      "lecture_number": 43,
+      "label": "Lecture 43",
+      "chapter_order": 16,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "HzsutO6Y-G4",
+      "playlist_position": 44,
+      "title": "Determinant, Permanent in terms of graph structure.",
+      "url": "https://www.youtube.com/watch?v=HzsutO6Y-G4",
+      "duration": 2024,
+      "lecture_number": 44,
+      "label": "Lecture 44",
+      "chapter_order": 16,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews"
+    },
+    {
+      "id": "iFi1I-qSI14",
+      "playlist_position": 45,
+      "title": "Introduction to Balanced Signed Graphs",
+      "url": "https://www.youtube.com/watch?v=iFi1I-qSI14",
+      "duration": 1438,
+      "lecture_number": 41,
+      "label": "Lecture 41 alternative upload",
+      "chapter_order": 15,
+      "source_status": "Complete decoded audio and full machine transcript read; exact chapter body accepted after two independent scientific reviews",
+      "duplicate_acquired_audio_of": "JY9oBv9-zBc"
+    }
+  ],
+  "source_boundary": "All45playlist identities are retained;44unique acquired audio representations were verified. Entries41and45 are byte-identical audio uploads of the balanced-signed-graphs lesson. Four official live sessions outside the supplied playlist are excluded. Audio acquisition, ASR, full transcript reading, scientific review and publication are separate evidence classes.",
+  "unique_acquired_audio_representations": 44
+}

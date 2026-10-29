@@ -1,0 +1,231 @@
+{
+  "chapter": 5,
+  "title": "Diameter, annihilating polynomials and spectral rank",
+  "status": "reviewed — two independent AI scientific reviews",
+  "authored_body_sha256": "e01ba208b3361b71f0c997f94358db25dc6c8044ce496de0dd0d21ac18d952d1",
+  "recordings": [
+    {
+      "video_id": "PzundwbulNw",
+      "playlist_position": 11,
+      "lecture_label": "Lecture 11",
+      "duration_seconds": 1846,
+      "decoded_audio_duration_seconds": 1845.1040625,
+      "complete_decoded_audio": true,
+      "media_sha256": "e7b3f526909301a63b8a6df829d36e9d51180f93783565a671dbc8551a3f502e",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1838.64,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    },
+    {
+      "video_id": "oYNPAhZjiVw",
+      "playlist_position": 12,
+      "lecture_label": "Lecture 12",
+      "duration_seconds": 1250,
+      "decoded_audio_duration_seconds": 1249.8373125,
+      "complete_decoded_audio": true,
+      "media_sha256": "5f0a760d8c0e8b02ac778a58ee847608e098e9af85bc0c993f389019be417aff",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1249.8373125,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    }
+  ],
+  "sections": [
+    {
+      "section": "5.1 Distance measures a shortest path 13:41",
+      "anchor": "distance",
+      "video_id": "PzundwbulNw",
+      "start": 821,
+      "end": 1068,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "5.2 A polynomial can annihilate a matrix 17:48",
+      "anchor": "annihilator",
+      "video_id": "PzundwbulNw",
+      "start": 1068,
+      "end": 1650,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "5.3 A long shortest path demands many spectral values 27:30",
+      "anchor": "diameter-bound",
+      "video_id": "PzundwbulNw",
+      "start": 1650,
+      "end": 1838,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "5.4 Rank counts nonzero eigenvalues with multiplicity 01:15",
+      "anchor": "rank",
+      "video_id": "oYNPAhZjiVw",
+      "start": 75,
+      "end": 575,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "5.5 Complete graphs separate a constant mode and a zero-sum space 09:35",
+      "anchor": "complete",
+      "video_id": "oYNPAhZjiVw",
+      "start": 575,
+      "end": 904,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "5.6 Complete bipartite graphs have just two nonzero modes 15:04",
+      "anchor": "complete-bipartite",
+      "video_id": "oYNPAhZjiVw",
+      "start": 904,
+      "end": 1184,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "5.7 Solve the path by imposing endpoint conditions 19:44",
+      "anchor": "path-spectrum",
+      "video_id": "oYNPAhZjiVw",
+      "start": 1184,
+      "end": 1249,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "5.8 Solve the cycle by periodic boundary conditions",
+      "anchor": "cycle-spectrum",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "5.9 An original extension: local recurrences can be shorter",
+      "anchor": "recurrence-extension",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "5.10 Verify distances, ranks, recurrences and a signed counterexample",
+      "anchor": "code",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "5.11 Problems with complete solutions",
+      "anchor": "exercises",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "5.12 What the bound and rank formulas retain",
+      "anchor": "limits",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    }
+  ],
+  "references": [],
+  "prose_words_including_math": 4104,
+  "solution_count": 9,
+  "executable_listing_count": 1,
+  "independent_review": {
+    "accepted": true,
+    "accepted_body_sha256": "e01ba208b3361b71f0c997f94358db25dc6c8044ce496de0dd0d21ac18d952d1",
+    "rounds": [
+      {
+        "round": 1,
+        "reviewer": "Independent thermodynamics course worker",
+        "verdict": "accepted",
+        "blocking": 0,
+        "major": 0,
+        "minor": 0,
+        "authored_body_sha256": "e01ba208b3361b71f0c997f94358db25dc6c8044ce496de0dd0d21ac18d952d1",
+        "scope": "Formatting-only exact-byte equivalence closure carrying prior full scientific R1",
+        "report": "work/reviews/spacing-peer-closure.md"
+      },
+      {
+        "round": 2,
+        "reviewer": "Independent lead coordinator",
+        "verdict": "accepted",
+        "blocking": 0,
+        "major": 0,
+        "minor": 0,
+        "authored_body_sha256": "e01ba208b3361b71f0c997f94358db25dc6c8044ce496de0dd0d21ac18d952d1",
+        "scope": "Formatting-only exact-byte equivalence closure carrying prior full scientific R2",
+        "report": "work/reviews/spacing-root-closure.md"
+      }
+    ],
+    "previous_scientific_acceptance": {
+      "accepted": true,
+      "accepted_body_sha256": "181a1a7c98e982ca2f6ad02185ee44b6b77e616bba40fd9c64f8067479fbf8d0",
+      "rounds": [
+        {
+          "round": 1,
+          "reviewer": "Independent lead coordinator",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0,
+          "verdict": "accepted",
+          "authored_body_sha256": "181a1a7c98e982ca2f6ad02185ee44b6b77e616bba40fd9c64f8067479fbf8d0"
+        },
+        {
+          "round": 2,
+          "reviewer": "Independent thermodynamics course worker",
+          "blocking": 0,
+          "major": 0,
+          "minor": 0,
+          "verdict": "accepted",
+          "authored_body_sha256": "181a1a7c98e982ca2f6ad02185ee44b6b77e616bba40fd9c64f8067479fbf8d0"
+        }
+      ],
+      "scope": "Exact chapter5 body only; both rounds full proof/solution/code/source checks. No full AV or course publication acceptance."
+    },
+    "scope": "Prior full scientific reviews plus two independent proofs that only ordinary prose spaces were inserted; all TeX/listings/output bytes unchanged. No new scientific claims or full audiovisual/publication acceptance."
+  },
+  "visual_boundary": "No comprehensive audiovisual or board transcription; machine recognition and chunk boundaries remain fallible."
+}

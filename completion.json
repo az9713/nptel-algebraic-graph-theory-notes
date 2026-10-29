@@ -1,0 +1,21 @@
+{
+  "complete": false,
+  "stage": "all-chapters-reviewed-final-validation-and-publication-pending",
+  "planned_chapters": 16,
+  "authored_chapters": 16,
+  "scientifically_accepted_chapters": 16,
+  "complete_transcript_identities": 45,
+  "unique_audio_representations": 44,
+  "all_transcripts_read": true,
+  "worked_solutions": 139,
+  "executed_listing_count": 16,
+  "public_repository_created": false,
+  "committed": false,
+  "pushed": false,
+  "limitations": [
+    "Machine ASR and chunk boundaries remain fallible.",
+    "All45 playlist identities are retained; entries41/45 are verified byte-identical media,44 unique audio representations.",
+    "Original expositions and finite checks are distinguished from source claims and reported research.",
+    "Primary source access scopes are bounded by explicit chapter citations and sidecars."
+  ]
+}

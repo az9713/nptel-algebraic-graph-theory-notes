@@ -1,0 +1,151 @@
+{
+  "scope": "Actual isolated execution of authored listings; numerical checks are not a proof audit.",
+  "passed": true,
+  "listing_count": 16,
+  "results": [
+    {
+      "chapter": "chapter-01-graphs-routes-spanning-trees.html",
+      "listing": "pilot-enumeration",
+      "code_sha256": "e79df4c48458c40fcac7df10a6fb76dd20499333596d346613ff5c088c992a2a",
+      "returncode": 0,
+      "passed": true,
+      "stdout": "candidate subsets: 15\nspanning trees: 8\npendant edge in every tree: True\ntrees without diagonal: 4\n",
+      "stderr": ""
+    },
+    {
+      "chapter": "chapter-02-incidence-determinants-matrix-tree.html",
+      "listing": "matrix-tree-exact",
+      "code_sha256": "0f3f0e5abea24e9445754343d21597e5435de2e211808e43c774385bcbdf46f2",
+      "returncode": 0,
+      "passed": true,
+      "stdout": "candidate edge sets: 15\nzero minors: 7\nsum of squared minors: 8\nall signed cofactors: [8]\norientation reversal preserves L: True\nweighted partition: 4*ell*t + 4*ell\nmatching determinant / permanent: -1 / 3\n",
+      "stderr": ""
+    },
+    {
+      "chapter": "chapter-03-rank-components-cycles-bipartite.html",
+      "listing": "rank-cycles-flows",
+      "code_sha256": "2fe6af83de7b27ee8c8772e3f1aa8d1f79109f6a36a6f1fbbc9ca779649b9814",
+      "returncode": 0,
+      "passed": true,
+      "stdout": "running oriented / Laplacian / unsigned ranks: 4 4 5\nleft / right oriented nullities: 1 2\nfundamental cycle basis size: 2\nminimum-norm flow: [1/4, 1/4, -1/4, 1/4, 1/2, 1]\nminimum / perturbed squared norms: 3/2 / 11/2\ntriangle + edge + isolate ranks: 3 4\nabsolute unsigned triangle determinant: 2\n",
+      "stderr": ""
+    },
+    {
+      "chapter": "chapter-04-eigenvectors-walks-spectral-theorem.html",
+      "listing": "walks-and-spectrum",
+      "code_sha256": "8994235ea865434f9245f0ac885d28ebf9220628a5ca2b928bd9cfe33a59c77c",
+      "returncode": 0,
+      "passed": true,
+      "stdout": "eight-step endpoint counts from 0: [748, 576, 832, 576, 304]\ntrace A2 / A3 / A4: 12 12 64\ntriangles / four-cycles: 2 / 1\nall principal-minor coefficient checks: True\nexact Laplacian spectrum: [0, 1, 2, 4, 5]\nspectral tree count: 8\napproximate spectral reconstruction and residual checks: True\n",
+      "stderr": ""
+    },
+    {
+      "chapter": "chapter-05-diameter-polynomials-spectral-rank.html",
+      "listing": "diameter-rank-spectra",
+      "code_sha256": "77637744d8927c8741c307395578050962d7c6fff9fb65c188e9ad465d3c2b8e",
+      "returncode": 0,
+      "passed": true,
+      "stdout": "running diameter / distinct eigenvalues / adjacency rank: 2 5 4\nsquare-free polynomial and fifth-power recurrence: True\npaths P1-P7 and cycles C3-C8: all distance/rank checks passed\nK2,3 characteristic polynomial: z**5 - 6*z**3\nP3 middle-input Krylov dimension: 2\nsigned-square diameter / distinct eigenvalues: 2 2\n",
+      "stderr": ""
+    },
+    {
+      "chapter": "chapter-06-perron-vectors-structural-bounds.html",
+      "listing": "perron",
+      "code_sha256": "3227a99b4b3695baaf5af88f678a3592a2b0b1aaa6168683bd0d7f832e99a24d",
+      "returncode": 0,
+      "passed": true,
+      "stdout": "Running graph radius: 2.685544\nExact trial ratios: [11/4, 3, 12/5, 3, 5/2]\nPositive unit Perron vector: [0.523683, 0.411917, 0.582539, 0.411917, 0.216917]\nAdded edge 1-3: increase 0.400586; Rayleigh lower bound 0.339352\nAll six single-edge deletions lower the radius\nDisconnected upper-bound counterexample: radius=Delta=2, degrees=[2,2,2,0]\nStar: raw powers alternate on the negative mode; averaged operator kills it\nComplete graphs K2 through K7 attain the edge-count bound\n",
+      "stderr": ""
+    },
+    {
+      "chapter": "chapter-07-interlacing-positive-blocks-quotients.html",
+      "listing": "interlacing",
+      "code_sha256": "87edd0a6270e9441bdc0bec4068a91c50d7fc6c678105fc6ae982e47579ae5fb",
+      "returncode": 0,
+      "passed": true,
+      "stdout": "All 30 nonempty proper principal subsets interlace\nC4 to P4 edge deletion raises the second eigenvalue\nPSD block bound: 3.000000 <= 3.618034\nTwin quotient polynomial: z**4 - 6*z**2 - 4*z + 2\nTwo-cell top Ritz value: 2.581139; lifted residual: 0.565518\nPrincipal compression, block bound and exact/approximate quotient checks passed\n",
+      "stderr": ""
+    },
+    {
+      "chapter": "chapter-08-coloring-cliques-independence.html",
+      "listing": "coloring",
+      "code_sha256": "d46b7eb0ce4f3f627f201e82cdf4c006e306b0f6321ceb21715c741a3f0e38c3",
+      "returncode": 0,
+      "passed": true,
+      "stdout": "running: chi=3, clique=3, alpha=3; inertia=2/2/1\nC5: chi=3, clique=2, alpha=2; inertia=3/2/0\nK4: chi=4, clique=4, alpha=1; inertia=1/3/0\nK2,3: chi=2, clique=2, alpha=3; inertia=1/1/3\nK1,9: explicit two-part coloring uses 2; spectral upper endpoint is 4\nExact quartic signs certify two positive, two negative and one zero adjacency mode\nK3 disjoint C5: ordinary inertia bound 4; signed-block bound 3; exact alpha 3\nAll finite coloring, clique, independence and signed-pattern checks passed\n",
+      "stderr": ""
+    },
+    {
+      "chapter": "chapter-09-random-walks-stationary-mixing.html",
+      "listing": "code/ch09_walks.py",
+      "code_sha256": "ec636d7d5042993620a9aeedc2eb51318b777afee314a579788712e86a68f786",
+      "returncode": 0,
+      "passed": true,
+      "stdout": "degrees: [3, 2, 4, 2, 1]\nstationary: [0.25, 0.166667, 0.333333, 0.166667, 0.083333]\nnormalized spectrum: [1.0, 0.228714, -0.0, -0.5, -0.728714]\nt=0: TV=0.91666667, TV bound=1.65831240\nt=5: TV=0.09548611, TV bound=0.14513415\nt=20: TV=0.00006413, TV bound=0.00009729\nC5: lambda2=0.30901699, lambda_min=-0.80901699\nC5: alpha_opt=0.20000000, modulus=0.44721360\n",
+      "stderr": ""
+    },
+    {
+      "chapter": "chapter-10-regularity-strong-regularity-friendship.html",
+      "listing": "code/ch10_regular_graphs.py",
+      "code_sha256": "9a5eb1290177e92b10e582e50b670658743aa44d4c904f47f984134ce8a8c82e",
+      "returncode": 0,
+      "passed": true,
+      "stdout": "C5: parameters (5, 2, 0, 1), independence 2\nPetersen: parameters (10, 3, 0, 1), independence 4\n3x3 rook: parameters (9, 4, 1, 2), independence 3\nPetersen characteristic polynomial: (z - 3)*(z - 1)**5*(z + 2)**4\nPetersen Hoffman equality: four-vertex witness; outside neighbor count 2\nC6 is not strongly regular; two disjoint C5 have three distinct roots but are not SRG\nImpossible candidate (10,6,2,6): multiplicities 15/2, 3/2\nFriendship windmill: degrees [6, 2, 2, 2, 2, 2, 2]\nFriendship windmill characteristic polynomial: (z - 3)*(z - 1)**2*(z + 1)**3*(z + 2)\n",
+      "stderr": ""
+    },
+    {
+      "chapter": "chapter-11-cospectral-switching-spectral-uniqueness.html",
+      "listing": "code/ch11_cospectral.py",
+      "code_sha256": "b22591c3720d6f641ab8b3e892a7647fa6ee31ffcc61698b5a58c4497a1dd1d5",
+      "returncode": 0,
+      "passed": true,
+      "stdout": "Five-vertex adjacency pair: z**3*(z - 2)*(z + 2)\nOrders 1..4: distinct isomorphism classes and spectra: [1, 2, 4, 11]\nSix-vertex Laplacian pair: z*(z - 3)**2*(z - 2)*(z**2 - 6*z + 4)\nSignless pair: z*(z - 4)*(z - 1)**2\nGM degree lists: [1, 1, 1, 2, 2, 2, 3] [0, 2, 2, 2, 2, 2, 2]\nRook/Shrikhande polynomial: (z - 6)*(z - 2)**6*(z + 2)**9\nRook/Shrikhande clique numbers: 4 / 3; explicit Cayley isomorphism PASS\nPath fourth moments n=2..8 and single-branch difference4: PASS\n",
+      "stderr": ""
+    },
+    {
+      "chapter": "chapter-12-hypercubes-sensitivity-theorem.html",
+      "listing": "code/ch12_sensitivity.py",
+      "code_sha256": "a173da19b7171bcbf5ab256311123ad2dfeaa52c7b5f786b232b9210aa441c31",
+      "returncode": 0,
+      "passed": true,
+      "stdout": "Signed cube identities and exact supports: n=1..6 PASS\nQ2: 4 subsets of size 3; minimum maximum-degree 2\nQ3: 56 subsets of size 5; minimum maximum-degree 2\nQ4: 11440 subsets of size 9; minimum maximum-degree 2\nQ4 degree-two witness: (0, 1, 2, 5, 6, 11, 12, 13, 14)\nPaired-OR m=2: exhaustive sensitivity 4; exact Fourier degree 8\nPaired-OR m=3: 9 disjoint sensitive pairs at zero; analytic sensitivity 6\nAND-of-two-ORs: sensitivity 2 and degree 4, attaining degree=sensitivity^2\n",
+      "stderr": ""
+    },
+    {
+      "chapter": "chapter-13-expanders-ramanujan-lifts-zigzag.html",
+      "listing": "code/ch13_expanders.py",
+      "code_sha256": "0d5ef100f753decd181e7f1f779e9dc3fcb2cfe4c059f9da92523307a35809f1",
+      "returncode": 0,
+      "passed": true,
+      "stdout": "C5 exact edge expansion: 1\nC6 exact edge expansion: 2/3\nC9 exact edge expansion: 1/2\nPetersen exact edge expansion 1; gap 2; Cheeger bounds 1 and sqrt(12)\nAll-crossed K4 lift: exact spectrum {-3,-1^3,1^3,3}; old/new factorization PASS\nK4 zig-zag C3 adjacency polynomial: (x - 4)*(x - 1)**2*(x + 1)**3*(x**2 + x - 4)**3\nZig-zag: 12 vertices, degree 4; normalized nonconstant norm 0.640388203\nK4 S=T={0,1}: oriented count 2, baseline 3, sharp centered bound 1\n",
+      "stderr": ""
+    },
+    {
+      "chapter": "chapter-14-algebraic-connectivity-fiedler-geometry.html",
+      "listing": "code/ch14_fiedler.py",
+      "code_sha256": "9a8a61b0e54fe80200c4e4d4548c9d805b210b55a48c97d4dc919bfd8b1dc261",
+      "returncode": 0,
+      "passed": true,
+      "stdout": "P7 mu=0.198062264; truncated-distance quotient=2/9; set bound=1/4\nStar Fiedler vector (0,1,1,-1,-1): positive support disconnected; weak supports connected\nP4 mu=0.585786438; delete endpoint gives P3 mu=1; delete interior gives mu=0\nStar center deletion: principal Laplacian I4, induced Laplacian 0; bound 1<=0+1 is tight\nP4 added endpoint-edge derivative: analytic 1.707106781, finite difference 1.707106604\nL(P4)+L(complement)=4I-J; complete-graph mu=4\nC6 induced 3-vertex path: average degree 4/3 <= 3/2\nAll exact identities and finite-difference checks PASS\n",
+      "stderr": ""
+    },
+    {
+      "chapter": "chapter-15-signed-balance-switching-spectra.html",
+      "listing": "code/ch15_balance.py",
+      "code_sha256": "c60cd785b28955eb7bfea2cc03cad8bccb42367609247d24b41eceac3cde937d",
+      "returncode": 0,
+      "passed": true,
+      "stdout": "K4 signatures=64: switching classes=8, each size=8; balanced=8, antibalanced=8\nAll K4 signatures: top-eigenvalue and absolute-radius equality classifications PASS\nOne-negative-edge K4 polynomial: (x - 1)*(x + 1)*(x**2 - 5)\nEqual spectra but different fixed-label cycle signs: not switching equivalent\nK4 third-trace deficit=24=4*3*2 negative triangles\nAll-negative triangle: largest eigenvalue 1, absolute radius 2; unbalanced but antibalanced\nDisconnected K4 plus unbalanced triangle: signed/unsigned top root both 3, whole graph unbalanced\nUnbalanced C4 polynomial=(x^2-2)^2; radius sqrt(2)<2\n",
+      "stderr": ""
+    },
+    {
+      "chapter": "chapter-16-signed-laplacians-frustration-cycle-covers.html",
+      "listing": "code/ch16_frustration_covers.py",
+      "code_sha256": "1f2faa94612c69b1ed885887f84eab4524823e8d76276cca26916285c032ff4e",
+      "returncode": 0,
+      "passed": true,
+      "stdout": "All64 K4 signatures: signed incidence Gram/nullity and vertex<=edge frustration PASS\nAll-negative K4: Laplacian eigenvalues 2,2,2,6; determinant48=12*4\nUnicyclic incidence-minor squares: {0: 3, 4: 12}\nAll-negative K4: edge frustration2, vertex frustration2, smallest eigenvalue2\nDirected weighted example: determinant=62, permanent=50, nonzero cycle covers=3\nUnsigned K4: three matching covers + six directed Hamilton covers; det=-3, per=9\nUnsigned C4: determinant0 from cancellation; permanent4\nAll-negative triangle adjacency: determinant=-2, permanent=-2; not an unsigned count\n",
+      "stderr": ""
+    }
+  ]
+}

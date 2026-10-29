@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark light"><meta name="book-content-sha256" content="aa394d53050fff385959e213fb6a47ff72202f68b1f620ed9709f4d78661d7d6">
+<title>Lazy random walks and quantitative mixing · Introduction to Algebraic Graph Theory</title><link rel="stylesheet" href="assets/book.css">
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']],processEscapes:true},svg:{fontCache:'local'},options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script defer src="assets/mathjax-tex-svg.js"></script><script defer src="assets/book.js"></script></head>
+<body><a class="skip" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="index.html">Introduction to Algebraic Graph Theory · NPTEL IIT Indore</a><nav class="course-nav" aria-label="Book"><a href="index.html">Chapters</a><a href="source-map.html">Source map</a><a href="references.html">References</a><a href="numerical-lab.html">Numerical lab</a></nav></header>
+<div class="layout"><aside class="toc" id="chapter-toc" aria-label="On this page"><h2>On this page</h2></aside><main id="main"><div class="reading-tools" aria-label="Reading controls"><button id="theme-toggle" aria-pressed="false">Light theme</button><button id="text-toggle" aria-pressed="false">Larger text</button><button id="solutions-toggle" aria-pressed="false">Expand solutions</button><button id="print-page">Print with solutions</button></div>
+<article id="chapter-content"><!-- BOOK-CONTENT-START -->
+<h1>9. Random walks, stationary measures and spectral mixing</h1>
+<p class="lead">At each step a particle chooses an incident edge with probability proportional to its weight. This local rule produces a global bias: vertices with more incident weight receive more stationary probability. Symmetric spectral theory survives even though the transition matrix is usually nonsymmetric. The right change of coordinates turns the walk into a symmetric matrix, identifies its stationary state, and controls the decay of every other mode. A stationary distribution exists on a bipartite graph; what may fail is convergence to it from a point start.</p>
+<div class="callout"><strong>Source and scope.</strong> The entire machine transcripts of lessons 21–23 were read. These notes reconstruct their weighted-walk, laziness and convergence arguments with explicit conventions and repaired endpoint qualifications. No comprehensive board or audiovisual audit is claimed. Proofs, finite computations, weighted-norm extension and all solutions are original exposition. Unless stated otherwise, the weighted graph has $n\ge2$ vertices, symmetric nonnegative weights $m_{uv}=m_{vu}$, zero diagonal, and connected positive-weight support. Every weighted degree $d_u=\sum_vm_{vu}$ is positive. Zero-weight pairs are absent edges.</div>
+<h2 id="transition" data-video="9-VLJXN74as" data-start="0" data-end="720">9.1 Fix the probability convention before multiplying matrices</h2>
+<p>Let $X_t$ be the vertex occupied after $t$ steps, where $t$ is a nonnegative integer. Conditional on the current vertex $u$, the next vertex is $v$ with probability $m_{vu}/d_u$. This is the Markov property: given $X_t$, the conditional distribution of $X_{t+1}$ does not depend on earlier positions. It does not say that $X_t$ is independent of $X_0$, or that the initial state is forgotten after one step.</p>
+<p>We store probabilities in a <em>column</em> vector $p_t$, with $(p_t)_v=\Pr(X_t=v)$. Put $M=(m_{vu})$, $D=\operatorname{diag}(d_1,\ldots,d_n)$ and</p>
+$$W=MD^{-1},\qquad W_{vu}=\Pr(X_{t+1}=v\mid X_t=u),\qquad p_{t+1}=Wp_t.$$
+<p>Column $u$ sums to one. Thus $\mathbf1^TW=\mathbf1^T$, and nonnegative unit-sum columns remain nonnegative unit-sum columns. The law of total probability proves the update:$(p_{t+1})_v=\sum_uW_{vu}(p_t)_u$. Iteration gives $p_t=W^tp_0$. With a row-probability convention the matrix would instead be $D^{-1}M=W^T$, acting on the right. Mixing these conventions silently reverses the degree factors in later formulas.</p>
+<p>As a small weighted example, take the path $a-b-c$ with edge weights $m_{ab}=1$ and $m_{bc}=3$. Then $d=(1,4,3)^T$. From $b$ the probabilities of moving to $a,c$ are $1/4,3/4$; from either leaf the next position is certainly $b$. Equal probability among neighbors is a special case of equal edge weights, not the definition of a weighted walk. Multiplying every edge weight by the same positive constant leaves $W$ unchanged.</p>
+<h2 id="stationary" data-video="9-VLJXN74as" data-start="720" data-end="1720">9.2 Degree bias and detailed balance</h2>
+<p>A stationary distribution is a nonnegative unit-sum column $\pi$ satisfying $W\pi=\pi$. This is a fixed-point equation, not a convergence assertion. Write $\operatorname{vol}(G)=\sum_ud_u=2\sum_{\{u,v\}}m_{uv}$. Then</p>
+$$\pi_u=\frac{d_u}{\operatorname{vol}(G)},\qquad
+(W\pi)_v=\sum_u\frac{m_{vu}}{d_u}\frac{d_u}{\operatorname{vol}(G)}
+=\frac{d_v}{\operatorname{vol}(G)}=\pi_v.$$
+<p>The normalization is the sum of the degrees, an $\ell^1$ normalization. Dividing the degree vector by its Euclidean norm generally does not produce probabilities. More strongly, each oriented edge has stationary flow</p>
+$$W_{vu}\pi_u=\frac{m_{vu}}{\operatorname{vol}(G)}=W_{uv}\pi_v.$$
+<p>This equality is detailed balance: every edge's two opposite stationary flows cancel. It implies stationarity after summing incoming flows, but is stronger than stationarity in a general directed chain. Symmetric undirected weights supply it automatically here. The weighted path therefore has $\pi=(1/8,1/2,3/8)^T$. Its center has half the stationary mass even though there are three vertices.</p>
+<p>For the running five-vertex network, with edges $01,12,23,03,02,24$ of unit weight, $d=(3,2,4,2,1)^T$ and $\pi=(3,2,4,2,1)^T/12$. This degree vector differs from the adjacency Perron vector in chapter 6. Adjacency amplification counts weighted walk branching; probability transport normalizes every departing column. These are different operators and their distinguished positive vectors answer different questions.</p>
+<h2 id="similarity" data-video="bBCWtErLAm8" data-start="0" data-end="690">9.3 Symmetric normalization restores an orthonormal eigenbasis</h2>
+<p>Define $N=D^{-1/2}MD^{-1/2}$. It is real symmetric, and</p>
+$$W=D^{1/2}ND^{-1/2},\qquad
+x_1=\frac{D^{1/2}\mathbf1}{\sqrt{\operatorname{vol}(G)}},\qquad Nx_1=x_1.$$
+<p>The similarity preserves eigenvalues and diagonalizability, but not ordinary Euclidean orthogonality of the eigenvectors of $W$. We may choose an orthonormal eigenbasis $x_1,\ldots,x_n$ for $N$, ordered $1=\lambda_1\ge\lambda_2\ge\cdots\ge\lambda_n$.</p>
+<p>Here is a direct proof of the spectral endpoints. For any real $z$, put $y=D^{-1/2}z$. Sum over unordered positive-weight edges:</p>
+$$z^T(I-N)z=\sum_{\{u,v\}}m_{uv}(y_u-y_v)^2\ge0,$$
+$$z^T(I+N)z=\sum_{\{u,v\}}m_{uv}(y_u+y_v)^2\ge0.$$
+<p>Both identities use $\sum_ud_uy_u^2=\sum_{\{u,v\}}m_{uv}(y_u^2+y_v^2)$. Every eigenvalue therefore lies in $[-1,1]$. Equality at $1$ forces $y_u=y_v$ on every edge; connectivity forces $y$ constant. Thus $1$ is simple, and its normalized eigenvector is exactly $x_1$. This proves uniqueness of the stationary distribution as well: a fixed vector of $W$ transforms to a multiple of $x_1$, and unit total probability fixes that multiple.</p>
+<p>Equality at $-1$ forces $y_u=-y_v$ on every edge. A nonzero solution has nonzero equal-magnitude entries throughout the connected support and divides vertices by sign into two independent sets. Conversely, on a bipartition assign $y=1$ on one part and $y=-1$ on the other; then $z=D^{1/2}y$ realizes eigenvalue $-1$. Hence the connected weighted graph is bipartite exactly when $\lambda_n=-1$. This proof needs positivity only on the support edges, not integer or equal weights.</p>
+<h2 id="laziness" data-video="bBCWtErLAm8" data-start="690" data-end="1495">9.4 Laziness changes periodicity without changing stationary mass</h2>
+<p>A generalized lazy step stays at the current vertex with probability $\alpha$ and otherwise performs the original edge move. For $0\le\alpha\le1$, define</p>
+$$K_\alpha=\alpha I+(1-\alpha)W,\qquad
+H_\alpha=\alpha I+(1-\alpha)N.$$
+<p>Again $K_\alpha=D^{1/2}H_\alpha D^{-1/2}$. The eigenvectors $x_i$ remain the same and the eigenvalues become $\mu_i=\alpha+(1-\alpha)\lambda_i$. Because $K_\alpha\pi=\pi$, adding state-independent holding does not change the stationary distribution. Holding probabilities that vary by vertex require a new calculation; this statement does not automatically extend to them.</p>
+<p>If $0&lt;\alpha&lt;1$, then $\mu_1=1$ is simple and $-1&lt;\mu_i&lt;1$ for every $i\ge2$. The upper strict inequality follows from $\lambda_i&lt;1$, while the lower follows from $\mu_i\ge2\alpha-1&gt;-1$. If $\alpha=0$, the same conclusion holds exactly when the connected graph is nonbipartite. If $\alpha=1$, the transition is the identity: every probability distribution is stationary and there is no forgetting. These endpoints cannot be hidden inside an unqualified convergence theorem.</p>
+<p>The lecture occasionally describes a bipartite graph as having no stationary distribution. The fixed-point calculation above shows the precise repair: the degree distribution exists and is unique for the connected nonlazy walk too. What fails is convergence from general initial states. On a single edge, a walk started at one endpoint alternates forever, while the stationary initial distribution $(1/2,1/2)$ remains unchanged. Half laziness turns this example into the matrix with every entry $1/2$, which reaches stationarity in one step.</p>
+<h2 id="expansion" data-video="bBCWtErLAm8" data-start="1040" data-end="1495">9.5 Expand the entire probability law, including its constant mode</h2>
+<p>Expand the transformed initial vector as $D^{-1/2}p_0=\sum_ic_ix_i$, where $c_i=x_i^TD^{-1/2}p_0$. Since $\mathbf1^Tp_0=1$,</p>
+$$c_1=\frac1{\sqrt{\operatorname{vol}(G)}},\qquad
+p_t=\pi+D^{1/2}\sum_{i=2}^n\mu_i^tc_ix_i.$$
+<p>Indeed the first transformed mode gives $D^{1/2}x_1c_1=d/\operatorname{vol}(G)=\pi$. If $r=\max_{i\ge2}|\mu_i|&lt;1$, the remaining finite sum converges to zero. This proves $p_t\to\pi$ for every initial probability vector. The assertion is asymptotic. Unless all excited nonconstant eigenmodes are annihilated after finitely many powers, there is no universal finite time after which the probabilities become exactly constant.</p>
+<p>Without laziness on a connected bipartite graph, the $-1$ mode changes sign each step. Each part has stationary mass $1/2$: summing degrees on either part counts each edge weight once. Let $s$ be $+1$ on one part and $-1$ on the other. The coefficient of the normalized $-1$ mode is proportional to $\sum_us_up_{0,u}$. Thus a nonlazy connected bipartite walk converges to $\pi$ <em>if and only if</em> its initial mass on each part is $1/2$; all other modes have modulus below one. A point start never has that balance. Stationarity and convergence have now been separated exactly, rather than merely by example.</p>
+<h2 id="pointwise" data-video="W1cutgYdfQ0" data-start="0" data-end="1461">9.6 A pointwise mixing bound and the square root of a degree ratio</h2>
+<p>Suppose $p_0=e_u$, the coordinate vector concentrated at vertex $u$. Then $c_i=x_i(u)/\sqrt{d_u}$, so the exact entrywise error is</p>
+$$(p_t)_v-\pi_v=\sqrt{\frac{d_v}{d_u}}\sum_{i=2}^n\mu_i^tx_i(v)x_i(u).$$
+<p>Taking absolute values, bounding $|\mu_i|^t\le r^t$ and applying Cauchy–Schwarz to the two lists of coordinates gives</p>
+$$|(p_t)_v-\pi_v|\le
+\sqrt{\frac{d_v}{d_u}}\,r^t
+\sqrt{(1-\pi_v)(1-\pi_u)}
+\le\sqrt{\frac{d_v}{d_u}}\,r^t.$$
+<p>The identity $\sum_{i=2}^nx_i(v)^2=1-x_1(v)^2=1-\pi_v$ follows from completeness of the orthonormal basis: the rows as well as columns of its eigenvector matrix have unit norm. This is the small step that makes the bound independent of $n$. The degree prefactor is a square root, arising from two diagonal similarity factors; an ASR rendering that drops the root should not be adopted.</p>
+<p>For $1/2\le\alpha&lt;1$, all $\mu_i$ are nonnegative. Their largest nonconstant modulus is therefore $r=\mu_2$. Below half laziness, the negative end may dominate. For example, the nonlazy $C_5$ has $\lambda_2=(\sqrt5-1)/4\approx0.309017$ but $\lambda_n=-(\sqrt5+1)/4\approx-0.809017$. A bound that uses $\lambda_2^t$ alone generally fails; the slower oscillating mode decays like $0.809017^t$. At $t=2$, starting at a fixed vertex of $C_5$ gives return probability $1/2$, error $3/10$, which already exceeds $\lambda_2^2$.</p>
+<h2 id="total-variation">9.7 A weighted norm controls the error of every event</h2>
+<p>An entrywise estimate controls a single vertex. To control any subset of vertices, define the total variation distance</p>
+$$\|p-\pi\|_{\rm TV}=\frac12\sum_v|p_v-\pi_v|=\max_{S\subseteq V}|p(S)-\pi(S)|.$$
+<p>For the equality, the entries of $p-\pi$ sum to zero. The sum of its positive entries equals half its absolute sum and is attained by taking $S$ to be their support; no other subset can exceed that positive sum. Define also $\|z\|_{\pi^{-1}}^2=\sum_vz_v^2/\pi_v$. Because $\pi_v=d_v/\operatorname{vol}(G)$, the spectral expansion yields</p>
+$$\|p_t-\pi\|_{\pi^{-1}}^2=
+\operatorname{vol}(G)\sum_{i=2}^n\mu_i^{2t}c_i^2
+\le r^{2t}\|p_0-\pi\|_{\pi^{-1}}^2.$$
+<p>Cauchy–Schwarz applied to $\sum_v\sqrt{\pi_v}|p_v-\pi_v|/\sqrt{\pi_v}$ gives $\|p-\pi\|_{\rm TV}\le\tfrac12\|p-\pi\|_{\pi^{-1}}$. For a point start $e_u$, direct expansion gives $\|e_u-\pi\|_{\pi^{-1}}^2=1/\pi_u-1$. Therefore</p>
+$$\|K_\alpha^te_u-\pi\|_{\rm TV}\le
+\min\left\{1,\frac12r^t\sqrt{\frac{1-\pi_u}{\pi_u}}\right\}.$$
+<p>This extension supplies an explicit sufficient time for any tolerance $\varepsilon&gt;0$. If $0&lt;r&lt;1$ and the right-hand logarithm is positive, it suffices to choose an integer</p>
+$$t\ge\frac{\log\left(\sqrt{(1-\pi_u)/\pi_u}/(2\varepsilon)\right)}{-\log r}.$$
+<p>If the logarithm is nonpositive, $t=0$ already satisfies this sufficient bound. If $r=0$, one step annihilates every nonconstant mode; handle that case without dividing by $\log0$. Rare starting vertices make the prefactor larger. A spectral gap alone does not specify a universal tolerance time without the stationary mass and the chosen error metric.</p>
+<h2 id="choice">9.8 More waiting is not always faster mixing</h2>
+<p>Within $[1/2,1)$, increasing $\alpha$ increases $\mu_2=1-(1-\alpha)(1-\lambda_2)$ and worsens the worst-mode contraction per recorded step. Half laziness is a convenient way to remove negative eigenvalues, but it need not be optimal. On $K_3$, the nonconstant normalized eigenvalues are both $-1/2$. Choosing $\alpha=1/3$ makes them zero, and $K_{1/3}=J/3$ reaches the uniform distribution in one step. Half laziness leaves both modes at $1/4$.</p>
+<p>More generally, because the affine eigenvalue map is increasing, the worst nonconstant modulus is $\max\{|\alpha+(1-\alpha)\lambda_2|,|\alpha+(1-\alpha)\lambda_n|\}$. Interior balancing of the positive and negative endpoints gives</p>
+$$\alpha_*=-\frac{\lambda_2+\lambda_n}{2-\lambda_2-\lambda_n}.$$
+<p>This expression is admissible when $\lambda_2+\lambda_n&lt;0$; it then lies in $(0,1)$ and equalizes the two endpoint magnitudes, minimizing their maximum over $[0,1)$. One endpoint increases and the negative endpoint's magnitude decreases until the crossing, so moving to either side cannot improve the maximum. If $\lambda_2+\lambda_n\ge0$, the optimum is $\alpha=0$: its nonnegative top endpoint already dominates and only increases with holding. For $C_5$, $\alpha_*=1/5$ and $r_*=1/\sqrt5$. This is optimization within the single global-holding family, not among all possible transitions on the graph.</p>
+<h2 id="code">9.9 Execute probability, reversibility and rate checks</h2>
+<p>The following NumPy program checks the running graph's transition conventions, stationary flows, symmetric similarity, and every pointwise and total variation bound for forty steps from vertex 4. It also checks the exact small-graph constructions with finite numerical tolerance. Printed eigenvalues, including the displayed negative zero, are approximations; the proofs above establish their structural signs and endpoints. The time-zero TV bound may exceed one before the trivial cap is applied.</p>
+<pre data-run="code/ch09_walks.py"><code class="language-python">import numpy as np
+
+edges = [(0, 1), (1, 2), (2, 3), (0, 3), (0, 2), (2, 4)]
+M = np.zeros((5, 5))
+for u, v in edges:
+    M[u, v] = M[v, u] = 1.0
+d = M.sum(axis=0)
+pi = d / d.sum()
+s = np.sqrt(d)
+W = M / d[None, :]
+N = M / s[:, None] / s[None, :]
+assert np.allclose(W.sum(axis=0), 1)
+assert np.allclose(W @ pi, pi)
+assert np.allclose(W * pi[None, :], (W * pi[None, :]).T)
+assert np.allclose(W, s[:, None] * N / s[None, :])
+lam = np.linalg.eigvalsh(N)[::-1]
+print('degrees:', d.astype(int).tolist())
+print('stationary:', np.round(pi, 6).tolist())
+print('normalized spectrum:', np.round(lam, 6).tolist())
+alpha = 0.5
+K = alpha*np.eye(5) + (1-alpha)*W
+mu = alpha + (1-alpha)*lam
+r = max(abs(mu[1:]))
+start = 4
+p = np.eye(5)[:, start]
+for t in range(41):
+    err = p-pi
+    point_bound = np.sqrt(d/d[start])*r**t*np.sqrt((1-pi)*(1-pi[start]))
+    assert np.all(abs(err) &lt;= point_bound + 2e-14)
+    l2 = np.sqrt(np.sum(err**2/pi))
+    l2_bound = r**t*np.sqrt(1/pi[start]-1)
+    tv = 0.5*np.sum(abs(err))
+    assert l2 &lt;= l2_bound+2e-13
+    assert tv &lt;= 0.5*l2_bound+2e-13
+    if t in (0, 5, 20):
+        print(f't={t}: TV={tv:.8f}, TV bound={0.5*l2_bound:.8f}')
+    p = K@p
+# An edge alternates without laziness; half laziness mixes in one step.
+E = np.array([[0., 1.], [1., 0.]])
+assert np.allclose(np.linalg.matrix_power(E, 2), np.eye(2))
+assert np.allclose((np.eye(2)+E)/2, np.ones((2, 2))/2)
+# Three equal-degree vertices: the optimum alpha=1/3 gives J/3.
+T = (np.ones((3, 3))-np.eye(3))/2
+assert np.allclose(np.eye(3)/3 + 2*T/3, np.ones((3, 3))/3)
+# C5 has a negative mode with larger modulus than lambda2.
+C = np.zeros((5, 5))
+for i in range(5):
+    C[i, (i+1)%5] = C[(i+1)%5, i] = 1
+cl = np.linalg.eigvalsh(C/2)[::-1]
+aopt = -(cl[1]+cl[-1])/(2-cl[1]-cl[-1])
+ropt = max(abs(aopt+(1-aopt)*cl[1:]))
+print(f'C5: lambda2={cl[1]:.8f}, lambda_min={cl[-1]:.8f}')
+print(f'C5: alpha_opt={aopt:.8f}, modulus={ropt:.8f}')
+assert np.isclose(aopt, 0.2) and np.isclose(ropt, 1/np.sqrt(5))
+# Exact symmetric similarity is structural; these checks use finite tolerance.
+</code></pre>
+<pre class="output" data-output="code/ch09_walks.py">degrees: [3, 2, 4, 2, 1]
+stationary: [0.25, 0.166667, 0.333333, 0.166667, 0.083333]
+normalized spectrum: [1.0, 0.228714, -0.0, -0.5, -0.728714]
+t=0: TV=0.91666667, TV bound=1.65831240
+t=5: TV=0.09548611, TV bound=0.14513415
+t=20: TV=0.00006413, TV bound=0.00009729
+C5: lambda2=0.30901699, lambda_min=-0.80901699
+C5: alpha_opt=0.20000000, modulus=0.44721360</pre>
+<h2 id="exercises">9.10 Problems with complete solutions</h2>
+<details><summary>1. Weighted path: stationary does not mean uniform</summary><p><strong>Problem.</strong> For weights1 and3 on $a-b-c$, write $W$, find $\pi$, and follow a walk starting at $b$ for two steps. Does its distribution converge?</p><p><strong>Solution.</strong> In the order $a,b,c$, $W=\begin{pmatrix}0&amp;1/4&amp;0\\1&amp;0&amp;1\\0&amp;3/4&amp;0\end{pmatrix}$ and $\pi=(1,4,3)^T/8$. From $b$, $p_1=(1/4,0,3/4)^T$ and $p_2=e_b$. These two laws alternate. The graph is bipartite with center on one side, and the point start has all mass on that side. The stationary initial law would remain fixed despite this periodicity.</p></details>
+<details><summary>2. A column-versus-row trap</summary><p><strong>Problem.</strong> A programmer uses $D^{-1}M$ on a column probability vector for the same weighted path. Start at $a$ and find the resulting total mass. Explain the error and give two repairs.</p><p><strong>Solution.</strong> Column $a$ of $D^{-1}M$ is $(0,1/4,0)^T$, whose mass is $1/4$, so it is not the required column-stochastic update. Either use $MD^{-1}$ on columns, which sends $e_a$ to $e_b$, or store a row vector and multiply it on the right by $D^{-1}M$. The issue is normalization of departing states, not a numerical roundoff defect.</p></details>
+<details><summary>3. Prove the exact bipartite convergence criterion</summary><p><strong>Problem.</strong> For a connected nonlazy weighted bipartite graph, show that convergence from $p_0$ occurs exactly when both parts initially have mass $1/2$.</p><p><strong>Solution.</strong> The simple $-1$ eigenvector is $x_- =D^{1/2}s/\sqrt{\operatorname{vol}(G)}$, with $s=\pm1$ on the two parts. Its coefficient is $x_-^TD^{-1/2}p_0=(p_0(L)-p_0(R))/\sqrt{\operatorname{vol}(G)}$. Every other nonconstant eigenvalue lies strictly between $-1$ and1 by the two edge-energy kernels and connectivity. If the coefficient vanishes, all remaining errors decay. If it does not, the $-1$ component oscillates with nonzero magnitude and the transformed vector cannot converge. Total unit mass makes vanishing equivalent to the stated half-half condition.</p></details>
+<details><summary>4. Why the second algebraic eigenvalue is insufficient</summary><p><strong>Problem.</strong> Test the nonlazy pointwise bound $|(p_2)_u-1/5|\le\lambda_2^2$ on $C_5$.</p><p><strong>Solution.</strong> Two independent choices of direction return to $u$ in exactly two of the four equally likely two-step histories, so $(p_2)_u=1/2$. The error is $3/10$. Yet $\lambda_2^2=(3-\sqrt5)/8\approx0.095492$, less than $3/10$. The negative eigenvalue has magnitude $(\sqrt5+1)/4\approx0.809017$ and must be included in $r$. Nonbipartiteness removes eigenvalue $-1$; it does not remove negative eigenvalues or force $\lambda_2$ to dominate their moduli.</p></details>
+<details><summary>5. A sufficient total variation time</summary><p><strong>Problem.</strong> Suppose $\pi_u=1/100$ and a reversible chain in this setting has $r=0.8$. Give a sufficient integer time for TV distance at most $0.01$ from $u$.</p><p><strong>Solution.</strong> The bound is $\tfrac12\sqrt{99}(0.8)^t$. We require $t\ge\log(\sqrt{99}/0.02)/[-\log0.8]\approx27.82$, so $t=28$ suffices. This is an upper bound on a sufficient time, not a proof that27steps fail for the actual chain. A particular initial state may have zero coefficient in the slowest mode.</p></details>
+<details><summary>6. Optimize holding on a triangle</summary><p><strong>Problem.</strong> Derive the globally held walk on $K_3$ and choose $\alpha$ for fastest worst-mode contraction per step.</p><p><strong>Solution.</strong> Its original transition is $(J-I)/2$, so $K_\alpha=(3\alpha-1)I/2+(1-\alpha)J/2$. On constants its eigenvalue is1, and on the orthogonal plane it is $(3\alpha-1)/2$. Setting $\alpha=1/3$ makes both nonconstant modes zero and gives $J/3$. The resulting one-step uniform law is exact. Greater holding is not uniformly better; half laziness has a nonzero contraction factor $1/4$.</p></details>
+<details><summary>7. Disconnected graphs: a simplex of stationary distributions</summary><p><strong>Problem.</strong> Drop connectivity but retain positive degrees. Characterize stationary distributions and the lazy limit for $0&lt;\alpha&lt;1$.</p><p><strong>Solution.</strong> Reorder vertices by connected component. The transition becomes block diagonal, so each component's initial total mass is conserved. On component $j$, define its unit-sum degree distribution $\pi^{(j)}$, extended by zeros elsewhere. The eigenspace at1 has one independent positive vector per component by the edge-energy kernel. Hence all stationary probabilities are $\sum_ja_j\pi^{(j)}$ with $a_j\ge0$ and $\sum_ja_j=1$. All other lazy modes decay, so the limit has $a_j=p_0(C_j)$. There is no unique global stationary distribution and no transfer of probability between disconnected components.</p></details>
+<details><summary>8. Isolates and the endpoint that freezes everything</summary><p><strong>Problem.</strong> Explain how to define the walk at an isolated vertex and distinguish it from choosing $\alpha=1$ on a connected graph.</p><p><strong>Solution.</strong> An isolate has $d_u=0$, so the edge-choice formula and $D^{-1}$ are undefined. A separate natural convention makes it absorbing: set its transition column to $e_u$. Treat it as a singleton closed component with stationary point mass; the global degree-normalization formula alone misses such components. At $\alpha=1$, every vertex, even one incident to edges, is absorbing because $K_1=I$. Every initial law remains unchanged. This does not contradict uniqueness for $\alpha&lt;1$ on connected positive-degree support, since that strict endpoint assumption has been removed.</p></details>
+<details><summary>9. Degree bias under an edge-weight perturbation</summary><p><strong>Problem.</strong> In the running graph, change the weight of edge24 from1 to $t&gt;0$. Compute the stationary probability at vertex 4 and its derivative at $t=1$. Does global rescaling of all weights produce the same effect?</p><p><strong>Solution.</strong> Degrees become $(3,2,3+t,2,t)$ with volume $10+2t$. Thus $\pi_4(t)=t/(10+2t)$ and $\pi_4'(t)=10/(10+2t)^2$, giving $5/72$ at $t=1$. Increasing a single incident weight raises both its endpoint degree and total volume; accounting only for the numerator gives an incorrect derivative. Multiplying every weight by one common factor multiplies every degree and the volume equally, leaving both transition and stationary law unchanged.</p></details>
+<h2 id="limits">9.11 A spectral rate is a statement about a specified chain</h2>
+<p>The proof uses finite undirected symmetric weights, positive degrees and the chosen holding rule. Directed walks may lack detailed balance and a symmetric similarity; nonsymmetric transient behavior cannot be handled by reusing an orthonormal expansion that does not exist. Random-walk steps are mathematical transitions, so a smaller per-step contraction does not by itself imply a cheaper implementation in physical time. Within the present setting, the connection is exact: edge weights determine a reversible probability law, diagonal similarity exposes its modes, and their absolute nonconstant eigenvalues quantify how quickly the law approaches its stationary measure.</p>
+<!-- BOOK-CONTENT-END --></article><nav class="page-turn" aria-label="Chapter navigation"><a rel="prev" href="chapter-08-coloring-cliques-independence.html">Previous chapter</a><a href="index.html">Chapter index</a><a rel="next" href="chapter-10-regularity-strong-regularity-friendship.html">Next chapter</a></nav></main></div><footer class="site-footer">Independent study edition. Prof. Ranveer Singh’s NPTEL recordings provide the topic spine. Original exposition, source limitations and verification evidence are separately recorded.</footer></body></html>

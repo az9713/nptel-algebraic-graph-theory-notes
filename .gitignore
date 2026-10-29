@@ -1,0 +1,9 @@
+work/
+__pycache__/
+*.pyc
+.env
+.env.*
+INITIAL_PROMPT.txt
+AGENTS.md
+README.txt
+.venv/

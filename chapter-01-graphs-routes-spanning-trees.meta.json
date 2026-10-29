@@ -1,0 +1,177 @@
+{
+  "chapter": 1,
+  "title": "Graphs, routes and the spanning-tree question",
+  "status": "reviewed — two independent AI scientific reviews",
+  "authored_body_sha256": "7287ead1d34b2792b0f9c7cf5c9cfe05a6a92d6b98ddeabcb610210546f64770",
+  "recordings": [
+    {
+      "video_id": "NFjiBr1EeO4",
+      "playlist_position": 1,
+      "lecture_label": "Lecture 1",
+      "duration_seconds": 1938,
+      "decoded_audio_duration_seconds": 1937.28725,
+      "complete_decoded_audio": true,
+      "media_sha256": "a0536465b47602065a0578d150bcbe658839a596917621b5764627c6f85ef3ce",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1932.72,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    }
+  ],
+  "sections": [
+    {
+      "section": "1.1 The objects in a simple graph 01:53",
+      "anchor": "simple-graphs",
+      "video_id": "NFjiBr1EeO4",
+      "start": 113,
+      "end": 358,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "1.2 A walk records a traversal 05:58",
+      "anchor": "walks",
+      "video_id": "NFjiBr1EeO4",
+      "start": 358,
+      "end": 675,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "1.3 Reachability and connectedness 11:15",
+      "anchor": "connectivity",
+      "video_id": "NFjiBr1EeO4",
+      "start": 675,
+      "end": 868,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "1.4 Ordinary, induced and spanning subgraphs 14:28",
+      "anchor": "subgraphs",
+      "video_id": "NFjiBr1EeO4",
+      "start": 868,
+      "end": 1024,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "1.5 Components are maximal, not necessarily largest 17:04",
+      "anchor": "components",
+      "video_id": "NFjiBr1EeO4",
+      "start": 1024,
+      "end": 1263,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "1.6 Trees, leaves and the edge-count characterization 21:03",
+      "anchor": "trees-and-leaves",
+      "video_id": "NFjiBr1EeO4",
+      "start": 1263,
+      "end": 1623,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "1.7 Count all admissible backbones 27:03",
+      "anchor": "spanning-trees",
+      "video_id": "NFjiBr1EeO4",
+      "start": 1623,
+      "end": 1798,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "1.8 A determinant finds the same eight 29:58",
+      "anchor": "determinant-question",
+      "video_id": "NFjiBr1EeO4",
+      "start": 1798,
+      "end": 1937,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "1.9 Exhaustive enumeration as a finite check",
+      "anchor": "code",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "1.10 Problems with complete solutions",
+      "anchor": "exercises",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "1.11 What is established and what comes next",
+      "anchor": "limits",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    }
+  ],
+  "references": [
+    {
+      "url": "https://homepages.cwi.nl/~aeb/math/ipm/ipm.pdf",
+      "title": "Brouwer and Haemers, Spectra of Graphs, author-hosted preprint",
+      "supports": "Matrix definitions in§1.1(PDFpage11); tree-counting statement and proof routes in§1.3.5(PDFpages15–16), locally inspected."
+    }
+  ],
+  "prose_words_including_math": 4205,
+  "solution_count": 6,
+  "executable_listing_count": 1,
+  "independent_review": {
+    "accepted": true,
+    "accepted_body_sha256": "7287ead1d34b2792b0f9c7cf5c9cfe05a6a92d6b98ddeabcb610210546f64770",
+    "rounds": [
+      {
+        "round": 1,
+        "reviewer": "Independent lead coordinator",
+        "blocking": 0,
+        "major": 0,
+        "minor": 0,
+        "verdict": "accepted",
+        "authored_body_sha256": "7287ead1d34b2792b0f9c7cf5c9cfe05a6a92d6b98ddeabcb610210546f64770"
+      },
+      {
+        "round": 2,
+        "reviewer": "Independent thermodynamics course worker",
+        "blocking": 0,
+        "major": 0,
+        "minor": 0,
+        "verdict": "accepted",
+        "authored_body_sha256": "7287ead1d34b2792b0f9c7cf5c9cfe05a6a92d6b98ddeabcb610210546f64770"
+      }
+    ],
+    "scope": "Exact chapter1body only. AI scientific/pedagogical review; no formal proof checking, full audiovisual audit or full-course completion."
+  },
+  "visual_boundary": "No comprehensive audiovisual or board transcription; machine recognition and chunk boundaries remain fallible."
+}

@@ -1,0 +1,260 @@
+{
+  "chapter": 4,
+  "title": "Eigenvectors, walks and the spectral theorem",
+  "status": "reviewed — two independent AI scientific reviews",
+  "authored_body_sha256": "61fe97718525b99a1d150dd7b7cb361acb9347db42ebd1b97fc9af4e73169e18",
+  "recordings": [
+    {
+      "video_id": "wIWOF0EhWP0",
+      "playlist_position": 7,
+      "lecture_label": "Lecture 7",
+      "duration_seconds": 2121,
+      "decoded_audio_duration_seconds": 2120.167625,
+      "complete_decoded_audio": true,
+      "media_sha256": "ae86fb3e90db679e61b2664c6ef2df5a5684acbff92eb7fa4bb84a97e0984c06",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 2119.84,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    },
+    {
+      "video_id": "z9-dtneG-M0",
+      "playlist_position": 8,
+      "lecture_label": "Lecture 8",
+      "duration_seconds": 1340,
+      "decoded_audio_duration_seconds": 1339.51275,
+      "complete_decoded_audio": true,
+      "media_sha256": "f18933cb027c30dbf38fc98d7e2338b6defd1a06bf4fffa0f437e7cfe204e0ce",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1332.84,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    },
+    {
+      "video_id": "hzkjI3Hyz7Y",
+      "playlist_position": 9,
+      "lecture_label": "Lecture 9",
+      "duration_seconds": 2121,
+      "decoded_audio_duration_seconds": 2120.07475,
+      "complete_decoded_audio": true,
+      "media_sha256": "b7593fe3bd559980b9c530d6d5d291944852e90f6891f25d07da22dafa6bca11",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 2113.56,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    },
+    {
+      "video_id": "8194KQlOqZw",
+      "playlist_position": 10,
+      "lecture_label": "Lecture 10",
+      "duration_seconds": 1519,
+      "decoded_audio_duration_seconds": 1518.9565625,
+      "complete_decoded_audio": true,
+      "media_sha256": "33cdb2359f4eee8e14662d896a4dca42f3e3fa2368af4056feec094e8e05a639",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1512.58,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    }
+  ],
+  "sections": [
+    {
+      "section": "4.1 An eigenvector keeps its line under a transformation 02:02",
+      "anchor": "eigenpairs",
+      "video_id": "wIWOF0EhWP0",
+      "start": 122,
+      "end": 857,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "4.2 A determinant locates eigenvalues but not an eigenbasis 14:17",
+      "anchor": "characteristic",
+      "video_id": "wIWOF0EhWP0",
+      "start": 857,
+      "end": 1095,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "4.3 Distinct eigenvalues separate directions 18:43",
+      "anchor": "independence",
+      "video_id": "wIWOF0EhWP0",
+      "start": 1123,
+      "end": 1864,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "4.4 Adjacency powers count walks, including repetitions 05:24",
+      "anchor": "walks",
+      "video_id": "z9-dtneG-M0",
+      "start": 324,
+      "end": 1125,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "4.5 Why every real symmetric matrix has an orthonormal eigenbasis 12:23",
+      "anchor": "spectral-theorem",
+      "video_id": "hzkjI3Hyz7Y",
+      "start": 743,
+      "end": 2013,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "4.6 Spectral projectors turn powers into scalar powers 01:21",
+      "anchor": "spectral-powers",
+      "video_id": "hzkjI3Hyz7Y",
+      "start": 81,
+      "end": 685,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "4.7 Closed walks reveal triangles and four-cycles 21:29",
+      "anchor": "cycles",
+      "video_id": "z9-dtneG-M0",
+      "start": 1289,
+      "end": 1332,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "4.8 Principal minors are symmetric sums of eigenvalues 31:04",
+      "anchor": "principal-minors",
+      "video_id": "wIWOF0EhWP0",
+      "start": 1864,
+      "end": 2119,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "4.9 Rayleigh quotients are weighted averages of eigenvalues 01:03",
+      "anchor": "rayleigh",
+      "video_id": "8194KQlOqZw",
+      "start": 63,
+      "end": 1039,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "4.10 Equality identifies a whole extreme eigenspace 17:19",
+      "anchor": "rayleigh-equality",
+      "video_id": "8194KQlOqZw",
+      "start": 1039,
+      "end": 1512,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "4.11 Exact walk counts and approximate spectral reconstruction",
+      "anchor": "code",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "4.12 Problems with complete solutions",
+      "anchor": "exercises",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "4.13 What spectral coordinates have made possible",
+      "anchor": "limits",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    }
+  ],
+  "references": [
+    {
+      "url": "https://homepages.cwi.nl/~aeb/math/ipm/ipm.pdf",
+      "title": "Brouwer–Haemers, §1.3.5",
+      "supports": "Exact claim and locator are stated beside the chapter citation"
+    }
+  ],
+  "prose_words_including_math": 4427,
+  "solution_count": 9,
+  "executable_listing_count": 1,
+  "independent_review": {
+    "accepted": true,
+    "accepted_body_sha256": "61fe97718525b99a1d150dd7b7cb361acb9347db42ebd1b97fc9af4e73169e18",
+    "rounds": [
+      {
+        "round": 1,
+        "reviewer": "Independent thermodynamics course worker",
+        "blocking": 0,
+        "major": 0,
+        "minor": 0,
+        "verdict": "accepted",
+        "authored_body_sha256": "61fe97718525b99a1d150dd7b7cb361acb9347db42ebd1b97fc9af4e73169e18"
+      },
+      {
+        "round": 2,
+        "reviewer": "Independent lead coordinator",
+        "blocking": 0,
+        "major": 0,
+        "minor": 0,
+        "verdict": "accepted",
+        "authored_body_sha256": "61fe97718525b99a1d150dd7b7cb361acb9347db42ebd1b97fc9af4e73169e18"
+      }
+    ],
+    "scope": "Exact chapter4 body only; both rounds full proof/solution/code checks, R1 full four-transcript reading. No formal proof, full AV, browser or course-publication acceptance."
+  },
+  "visual_boundary": "No comprehensive audiovisual or board transcription; machine recognition and chunk boundaries remain fallible."
+}

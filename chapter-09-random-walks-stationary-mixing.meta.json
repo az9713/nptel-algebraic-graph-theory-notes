@@ -1,0 +1,213 @@
+{
+  "chapter": 9,
+  "title": "Lazy random walks and quantitative mixing",
+  "status": "reviewed — two independent AI scientific reviews",
+  "authored_body_sha256": "aa394d53050fff385959e213fb6a47ff72202f68b1f620ed9709f4d78661d7d6",
+  "recordings": [
+    {
+      "video_id": "9-VLJXN74as",
+      "playlist_position": 21,
+      "lecture_label": "Lecture 21",
+      "duration_seconds": 1725,
+      "decoded_audio_duration_seconds": 1724.8246875,
+      "complete_decoded_audio": true,
+      "media_sha256": "2d15396422c981a381ca53deca7fb2c0d56f99f813c8029e7bfefc27944e82c0",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1718.4,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    },
+    {
+      "video_id": "bBCWtErLAm8",
+      "playlist_position": 22,
+      "lecture_label": "Lecture 22",
+      "duration_seconds": 1495,
+      "decoded_audio_duration_seconds": 1494.6685,
+      "complete_decoded_audio": true,
+      "media_sha256": "ddeed34a643c5cfc4876b374bb4dcd4c1035a2ccc827e433e112a7cb7461146d",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1488.44,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    },
+    {
+      "video_id": "W1cutgYdfQ0",
+      "playlist_position": 23,
+      "lecture_label": "Lecture 23",
+      "duration_seconds": 1468,
+      "decoded_audio_duration_seconds": 1467.3618125,
+      "complete_decoded_audio": true,
+      "media_sha256": "40252c4f9eb9f0548b891bf989859a9ac6c212282b996f7abb3e898df9f2e447",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1461.16,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    }
+  ],
+  "sections": [
+    {
+      "section": "9.1 Fix the probability convention before multiplying matrices",
+      "anchor": "transition",
+      "video_id": "9-VLJXN74as",
+      "start": 0,
+      "end": 720,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "9.2 Degree bias and detailed balance",
+      "anchor": "stationary",
+      "video_id": "9-VLJXN74as",
+      "start": 720,
+      "end": 1720,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "9.3 Symmetric normalization restores an orthonormal eigenbasis",
+      "anchor": "similarity",
+      "video_id": "bBCWtErLAm8",
+      "start": 0,
+      "end": 690,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "9.4 Laziness changes periodicity without changing stationary mass",
+      "anchor": "laziness",
+      "video_id": "bBCWtErLAm8",
+      "start": 690,
+      "end": 1495,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "9.5 Expand the entire probability law, including its constant mode",
+      "anchor": "expansion",
+      "video_id": "bBCWtErLAm8",
+      "start": 1040,
+      "end": 1495,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "9.6 A pointwise mixing bound and the square root of a degree ratio",
+      "anchor": "pointwise",
+      "video_id": "W1cutgYdfQ0",
+      "start": 0,
+      "end": 1461,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "9.7 A weighted norm controls the error of every event",
+      "anchor": "total-variation",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "9.8 More waiting is not always faster mixing",
+      "anchor": "choice",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "9.9 Execute probability, reversibility and rate checks",
+      "anchor": "code",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "9.10 Problems with complete solutions",
+      "anchor": "exercises",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "9.11 A spectral rate is a statement about a specified chain",
+      "anchor": "limits",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    }
+  ],
+  "references": [],
+  "prose_words_including_math": 2974,
+  "solution_count": 9,
+  "executable_listing_count": 1,
+  "independent_review": {
+    "accepted": true,
+    "accepted_body_sha256": "aa394d53050fff385959e213fb6a47ff72202f68b1f620ed9709f4d78661d7d6",
+    "rounds": [
+      {
+        "round": 1,
+        "reviewer": "Independent thermodynamics course worker",
+        "blocking": 0,
+        "major": 0,
+        "minor": 0,
+        "verdict": "accepted",
+        "authored_body_sha256": "aa394d53050fff385959e213fb6a47ff72202f68b1f620ed9709f4d78661d7d6"
+      },
+      {
+        "round": 2,
+        "reviewer": "Independent lead coordinator",
+        "blocking": 0,
+        "major": 0,
+        "minor": 0,
+        "verdict": "accepted",
+        "authored_body_sha256": "aa394d53050fff385959e213fb6a47ff72202f68b1f620ed9709f4d78661d7d6"
+      }
+    ],
+    "scope": "Full source-text R1, both rounds complete proofs/solutions and exact code; one TeX-backslash repair closed at exact raw digest. No comprehensive audiovisual or publication acceptance."
+  },
+  "visual_boundary": "No comprehensive audiovisual or board transcription; machine recognition and chunk boundaries remain fallible."
+}

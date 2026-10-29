@@ -1,0 +1,215 @@
+{
+  "chapter": 10,
+  "title": "Regular graphs, strong regularity and friendship",
+  "status": "reviewed — two independent AI scientific reviews",
+  "authored_body_sha256": "8db57925fc5ad85d78d52d6d3c5333c565c939e54bebf1d9d0e51ea1621618ec",
+  "recordings": [
+    {
+      "video_id": "-POvidrMWII",
+      "playlist_position": 24,
+      "lecture_label": "Lecture 24",
+      "duration_seconds": 1736,
+      "decoded_audio_duration_seconds": 1735.22725,
+      "complete_decoded_audio": true,
+      "media_sha256": "743b06ae4ed40773dabbc013edfb3ea9ab439340e2c0cbab9ddd7a6ad5b19050",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1728.92,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    },
+    {
+      "video_id": "n8FSPmb-fWg",
+      "playlist_position": 25,
+      "lecture_label": "Lecture 25",
+      "duration_seconds": 1855,
+      "decoded_audio_duration_seconds": 1854.3455625,
+      "complete_decoded_audio": true,
+      "media_sha256": "429112032919bde7702a08e493776bac33e6136d402d83b1ec4e1b713bebf2da",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1854.3455625,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    },
+    {
+      "video_id": "URZUYdARfDI",
+      "playlist_position": 26,
+      "lecture_label": "Lecture 26",
+      "duration_seconds": 1474,
+      "decoded_audio_duration_seconds": 1473.1668125,
+      "complete_decoded_audio": true,
+      "media_sha256": "f283ae390c0230341f8f59df1db872227e0cdec7b9b1650211c048373c323c7a",
+      "machine_transcript_complete": true,
+      "sequential_transcript_reading_complete": true,
+      "transcript_first_start": 0.0,
+      "transcript_last_end": 1470.06,
+      "transcript_provenance": "local machine ASR, not publisher captions",
+      "asr_method": {
+        "model": "faster-whisper small.en",
+        "beam_size": 1,
+        "chunk_core_seconds": 90,
+        "chunk_overlap_seconds": 2,
+        "chunk_boundary_method": "Retain segments whose absolute midpoint lies in the90second core;2second overlaps supply local context. ASR boundary and recognition uncertainty remain."
+      }
+    }
+  ],
+  "sections": [
+    {
+      "section": "10.1 Regularity makes the top eigenspace explicit",
+      "anchor": "regular",
+      "video_id": "-POvidrMWII",
+      "start": 0,
+      "end": 971,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "10.2 A sharper independence bound for regular graphs",
+      "anchor": "ratio",
+      "video_id": "-POvidrMWII",
+      "start": 971,
+      "end": 1729,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "10.3 Two-distance counts define strong regularity",
+      "anchor": "srg",
+      "video_id": "n8FSPmb-fWg",
+      "start": 0,
+      "end": 448,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "10.4 A common-neighbor identity collapses the spectrum",
+      "anchor": "quadratic",
+      "video_id": "n8FSPmb-fWg",
+      "start": 448,
+      "end": 1124,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "10.5 Multiplicity turns a real-root formula into an arithmetic test",
+      "anchor": "multiplicity",
+      "video_id": "n8FSPmb-fWg",
+      "start": 1124,
+      "end": 1294,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "10.6 Three distinct eigenvalues characterize the connected regular case",
+      "anchor": "converse",
+      "video_id": "n8FSPmb-fWg",
+      "start": 1294,
+      "end": 1854,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "10.7 Unique common neighbors force regularity unless there is a hub",
+      "anchor": "friendship",
+      "video_id": "URZUYdARfDI",
+      "start": 0,
+      "end": 1039,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "10.8 Integer multiplicities eliminate the no-hub alternative",
+      "anchor": "arithmetic",
+      "video_id": "URZUYdARfDI",
+      "start": 1039,
+      "end": 1470,
+      "lecture_material": "Related topic located by the stated recording span",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "10.9 Execute local counts, exact spectra and equality certificates",
+      "anchor": "code",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "10.10 Problems with complete solutions",
+      "anchor": "exercises",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    },
+    {
+      "section": "10.11 Uniform counts give certificates, not a complete existence theory",
+      "anchor": "limits",
+      "video_id": null,
+      "start": null,
+      "end": null,
+      "lecture_material": "",
+      "research_extension": "Specific inspected primary support is cited locally",
+      "teaching_construction": "Original exposition, proofs, examples, code and solutions; a timestamp does not attribute every statement to the recording"
+    }
+  ],
+  "references": [
+    {
+      "url": "https://users.renyi.hu/~p_erdos/1966-06.pdf",
+      "title": "1966 primary paper of Erdős, Rényi and Sós, Theorem 6 on printed pp. 234–235",
+      "supports": "Exact claim and locator are stated beside the chapter citation"
+    }
+  ],
+  "prose_words_including_math": 3924,
+  "solution_count": 9,
+  "executable_listing_count": 1,
+  "independent_review": {
+    "accepted": true,
+    "accepted_body_sha256": "8db57925fc5ad85d78d52d6d3c5333c565c939e54bebf1d9d0e51ea1621618ec",
+    "rounds": [
+      {
+        "round": 1,
+        "report": "work/reviews/ch10-r1.md",
+        "verdict": "accepted",
+        "authored_body_sha256": "8db57925fc5ad85d78d52d6d3c5333c565c939e54bebf1d9d0e51ea1621618ec"
+      },
+      {
+        "round": 2,
+        "report": "work/reviews/ch10-r2.md",
+        "verdict": "accepted",
+        "authored_body_sha256": "8db57925fc5ad85d78d52d6d3c5333c565c939e54bebf1d9d0e51ea1621618ec"
+      }
+    ],
+    "blocking": 0,
+    "major": 0,
+    "minor": 0
+  },
+  "visual_boundary": "No comprehensive audiovisual or board transcription; machine recognition and chunk boundaries remain fallible."
+}
