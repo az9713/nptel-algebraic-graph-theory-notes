@@ -6,20 +6,22 @@
 <script defer src="assets/mathjax-tex-svg.js"></script><script defer src="assets/book.js"></script></head>
 <body><a class="skip" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="index.html">Introduction to Algebraic Graph Theory · NPTEL IIT Indore</a><nav class="course-nav" aria-label="Book"><a href="index.html">Chapters</a><a href="source-map.html">Source map</a><a href="references.html">References</a><a href="numerical-lab.html">Numerical lab</a></nav></header>
 <div class="layout"><aside class="toc" id="chapter-toc" aria-label="On this page"><h2>On this page</h2></aside><main id="main"><div class="reading-tools" aria-label="Reading controls"><button id="theme-toggle" aria-pressed="false">Light theme</button><button id="text-toggle" aria-pressed="false">Larger text</button><button id="solutions-toggle" aria-pressed="false">Expand solutions</button><button id="print-page">Print with solutions</button></div>
-<article id="chapter-content"><!-- BOOK-CONTENT-START --><h1>8. Spectral bounds for coloring, cliques and independence</h1>
+<article id="chapter-content"><!-- BOOK-CONTENT-START --><h1 id="chapter-title">8. Spectral bounds for coloring, cliques and independence</h1>
 <p class="lead">A triangle proves that three colors are necessary; a displayed three-coloring proves that three suffice. Spectral bounds can supply one side of such a certificate without finding the combinatorial object itself. We derive lower and upper bounds for coloring, an upper bound for cliques, and an inertia bound for independent sets. On the running five-vertex network the bounds and explicit witnesses meet, determining all three quantities exactly. On other graphs a visible gap remains, and that gap is part of the result.</p>
 <div class="callout"><strong>Source and scope.</strong> Lesson 20 provides the topic progression; its entire local machine transcript was read. Recognition and board details remain fallible, and no comprehensive audiovisual audit is claimed. All proofs, certificates, weighted-matrix extension, code and solutions are original exposition. Graphs are finite, undirected and simple, with $n\ge1$; adjacency eigenvalues $\lambda_1\ge\cdots\ge\lambda_n$ include multiplicities. The edge-free case is handled before any division by $\lambda_n$.</div>
 <h2 id="objects" data-video="id7YurTPhsg" data-start="0" data-end="453">8.1 Three optimization questions and their witnesses</h2>
+<p>Write $G=(V,E)$, $n=|V|\ge1$ and $A$ for its adjacency matrix. The matrices $I=I_n$ and $J=J_n$ are respectively the identity and all-ones matrices. For a real number $x$, $\lceil x\rceil$ is the least integer at least $x$, and $\lfloor x\rfloor$ is the greatest integer at most $x$.</p>
 <p>A proper vertex coloring assigns labels so that adjacent vertices receive different labels. The chromatic number $\chi(G)$ is the fewest labels in such a coloring. Each nonempty color class is an independent set: a set of vertices containing no internal edge. The independence number $\alpha(G)$ is the largest size of an independent set. A clique is a vertex set in which every distinct pair is adjacent, and $\omega(G)$ is the largest clique size. These definitions concern vertices; a clique of size $r$ has $r(r-1)/2$ edges, not $r$ edges.</p>
 <p>Each clique needs a different color at every vertex, so $\omega\le\chi$. Every color class has size at most $\alpha$. A coloring with $k$ classes therefore satisfies $n\le k\alpha$, giving $\chi\ge\lceil n/\alpha\rceil$. An independent set of size $a$ is a witness for $\alpha\ge a$, while a clique of size $r$ is a witness for $\omega\ge r$. A proper $k$-coloring is a witness for $\chi\le k$. The directions matter: finding a large clique gives a lower bound on its maximum size, not an upper bound.</p>
 <p>A nonempty edgeless graph has $\chi=1$, $\omega=1$ and $\alpha=n$. A graph is bipartite exactly when $\chi\le2$. If it has an edge, it cannot be one-colored and hence $\chi=2$; isolates or an entirely edgeless graph require this qualification. For disconnected graphs, color labels can be reused across components, so $\chi$ is the maximum component chromatic number. A clique lies in one component, making $\omega$ the maximum component clique number, whereas independent sets combine across components, making $\alpha$ the sum of component independence numbers.</p>
 <p>The complement $\overline G$ has an edge exactly on distinct nonadjacent pairs of $G$. Thus a clique of $\overline G$ is exactly an independent set of $G$, proving $\alpha(G)=\omega(\overline G)$. Its adjacency matrix is $J-I-A$. One cannot generally subtract the spectra of $J-I$ and $A$ term by term: they need a common eigenbasis for that operation. Regular graphs have a useful common constant direction, developed later; arbitrary graphs do not receive that shortcut.</p>
 <h2 id="complexity">8.2 A bound and an exact algorithm answer different questions</h2>
+<p>The decision classes $P$, $NP$ and witness verification are defined in <a href="chapter-02-incidence-determinants-matrix-tree.html#permanent">§2.8</a>. NP-completeness means membership in $NP$ together with polynomial-time reductions from every problem in $NP$; the cited theorem supplies the reductions used here.</p>
 <p>For a proposed coloring, checking each edge verifies validity; for a proposed clique or independent set, checking all pairs verifies validity. Efficient verification of a proposed witness does not itself find an optimum. The corresponding general decision questions ask whether $\chi\le k$, $\omega\ge k$ or $\alpha\ge k$ for an input integer $k$.</p>
 <p><a href="https://www2.seas.gwu.edu/~simhaweb/champalg/tsp/papers/KarpOriginal.pdf">Karp's primary 1972 paper</a>, introduction and pp.91–95, establishes the NP-complete framework and includes CLIQUE and CHROMATIC NUMBER in its complete-problem list. Complementation gives the same decision difficulty for independent sets. Thus a polynomial-time exact algorithm for any of these general optimization problems would imply $P=NP$. The reduction proofs are not reproduced here, and no unconditional impossibility of such an algorithm is asserted. Particular graph families and small finite examples can be much easier.</p>
 <p>Our finite enumeration program deliberately searches all subsets and color assignments for graphs of at most eight vertices. That is a reproducible exact check of those examples, with exponential growth in the search space. It is not evidence for an efficient general solver. Spectral inequalities can be useful even when the exact combinatorial optimum remains undetermined.</p>
 <h2 id="hoffman" data-video="id7YurTPhsg" data-start="453" data-end="808">8.3 A coloring creates zero diagonal blocks</h2>
-<p>Suppose $G$ has an edge. Its top eigenvalue $\lambda_1=\rho$ is positive: the normalized vector supported equally at an edge's endpoints has Rayleigh quotient1. Since $\operatorname{tr}A=0$, the eigenvalues sum to0; at least one must be negative. Hence $\lambda_n<0$, justifying the division below even if the graph is disconnected.</p>
+<p>Suppose $G$ has an edge. Its top eigenvalue $\lambda_1=\rho$ is positive: the normalized vector supported equally at an edge's endpoints has Rayleigh quotient1. Since $\operatorname{tr}A=0$, the eigenvalues sum to0; at least one must be negative. Hence $\lambda_n\lt 0$, justifying the division below even if the graph is disconnected.</p>
 <p>A proper coloring with $k$ nonempty classes lets us order vertices by class. Every diagonal block of $A$ is then a zero matrix, because no edge lies inside a class. The zero-block theorem proved in chapter 7 gives</p>
 $$\lambda_1+(k-1)\lambda_n\le0.$$
 <p>Subtract $\lambda_1$ and divide by the negative number $\lambda_n$, reversing the inequality:</p>
@@ -48,84 +50,115 @@ $$\boxed{\omega(G)\le1+\rho(G)}.$$
 <p>The lower side at index1 gives $0\ge\lambda_{n-a+1}$, so at least $a$ eigenvalues are nonpositive. Hence $n_+\le n-a$, or $a\le n-n_+$. Combining and maximizing over independent sets gives</p>
 $$\boxed{\alpha(G)\le\min\{n-n_+,n-n_-\}=n_0+\min\{n_+,n_-\}.}$$
 <p>Zeros count on both nonnegative and nonpositive sides and must not be omitted. Counting only distinct positive values instead of their multiplicities can make the bound false. For $K_r$, $n_+=1,n_-=r-1,n_0=0$, giving $\alpha\le1$, exact. For $K_{p,q}$ with positive $p,q$, the inertia is $(1,1,p+q-2)$, giving $\alpha\le p+q-1$. The actual value is $\max(p,q)$: one may take an entire part, and including a vertex from each part would create an edge. The inertia bound is sharp for stars but can be weak for balanced complete bipartite graphs.</p>
-<p>As a separate geometric proof, consider the coordinate subspace $E_S$ supported on an independent set. Every vector in it has $x^TAx=0$. If $\dim E_S>n-n_+$, it must meet the $n_+$-dimensional positive spectral subspace nontrivially, where every nonzero quadratic value is positive, a contradiction. Intersecting with the negative spectral subspace gives the other half. This proof shows that the result depends on a vanishing quadratic form over the supported space, not only on an accidental zero eigenvector.</p>
+<p>As a separate geometric proof, consider the coordinate subspace $E_S$ supported on an independent set. Every vector in it has $x^TAx=0$. If $\dim E_S\gt n-n_+$, it must meet the $n_+$-dimensional positive spectral subspace nontrivially, where every nonzero quadratic value is positive, a contradiction. Intersecting with the negative spectral subspace gives the other half. This proof shows that the result depends on a vanishing quadratic form over the supported space, not only on an accidental zero eigenvector.</p>
 <h2 id="running">8.7 Determine all three quantities on the running network</h2>
+<p>For a positive trial vector $y$, its row ratio is $r_i(y)=(Ay)_i/y_i$. In the polynomial sign calculation, $z$ is a real scalar variable and $I$ is the vertex-coordinate identity.</p>
 <p>Recall vertices $0,1,2,3,4$ and edges $01,12,23,03,02,24$. The triangle $\{0,1,2\}$ proves $\omega\ge3$ and $\chi\ge3$. A proper coloring is</p>
 $$\{0,4\}\ \text{red},\qquad\{1,3\}\ \text{blue},\qquad\{2\}\ \text{green}.$$
 <p>No listed class contains an edge, so $\chi\le3$. The independent set $\{1,3,4\}$ proves $\alpha\ge3$. These are explicit witnesses; the spectral work below supplies compatible upper/lower certificates and closes the remaining independence question.</p>
 <p>The positive trial vector $y=(4,3,5,3,2)^T$ has row ratios $(11/4,3,12/5,3,5/2)$. In a connected graph the positive unit Perron vector $p$ makes $\rho$ a weighted average of these ratios:</p>
 $$\rho=\frac{p^TAy}{p^Ty}=\frac{\sum_i p_i y_i r_i(y)}{\sum_i p_i y_i}.$$
-<p>All weights are strictly positive and some ratios are strictly below3, so $\rho<3$. This exact strict inequality, not a rounded eigensolve, gives $\chi\le1+\rho<4$ and $\omega<4$; integrality yields upper bounds3 for both. The graph is connected and nonbipartite because of its triangle. Chapter 6 therefore gives $\rho>|\lambda_n|$, making the ratio lower bound strictly above2 and forcing $\chi\ge3$ independently of the displayed triangle witness.</p>
+<p>All weights are strictly positive and some ratios are strictly below3, so $\rho\lt 3$. This exact strict inequality, not a rounded eigensolve, gives $\chi\le1+\rho\lt 4$ and $\omega\lt 4$; integrality yields upper bounds3 for both. The graph is connected and nonbipartite because of its triangle. Chapter 6 therefore gives $\rho\gt |\lambda_n|$, making the ratio lower bound strictly above2 and forcing $\chi\ge3$ independently of the displayed triangle witness.</p>
 <p>To certify inertia without a numerical zero tolerance, its exact characteristic polynomial is</p>
 $$\det(zI-A)=zq(z),\qquad q(z)=z^4-6z^2-4z+2.$$
 <p>Exact rational evaluations give $q(-2)=2$, $q(-3/2)=-7/16$, $q(-1)=1$, $q(0)=2$, $q(1/2)=-23/16$, $q(2)=-14$ and $q(3)=17$. The intermediate value theorem supplies roots in $(-2,-3/2)$, $(-3/2,-1)$, $(0,1/2)$ and $(2,3)$. These four disjoint open intervals already account for all four roots of the quartic, so there are exactly two negative and two positive roots, with no repetitions or further roots. Since $q(0)=2$, the additional factor $z$ supplies exactly one zero.</p>
 <p>Thus $(n_+,n_-,n_0)=(2,2,1)$ and $\alpha\le1+2=3$. Together with $\{1,3,4\}$ this proves $\alpha=3$. We have now determined $\chi=\omega=\alpha=3$, with explicit objects and exact upper bounds. The decimal eigenvalues are useful for orientation, but none of these exact conclusions requires treating a tiny floating-point value as exactly0.</p>
 <h2 id="weighted">8.8 An original extension: choose a matrix with the same forbidden entries</h2>
+<p>The notation $n_+(M),n_-(M),n_0(M)$ applies the positive, negative and zero eigenvalue counts to the specified matrix $M$. A block diagonal $\operatorname{diag}(B,C)$ places $B,C$ on separate coordinate blocks and puts zero in the off-diagonal blocks.</p>
 <p>The inertia proof applies to more than the ordinary adjacency matrix. Let $M$ be any real symmetric matrix such that $M_{ii}=0$ and $M_{ij}=0$ whenever distinct vertices $i,j$ are nonadjacent in $G$. Edge entries may have arbitrary real weights, including negative or zero values. Every independent-set principal block of $M$ is still zero. Therefore</p>
 $$\alpha(G)\le n_0(M)+\min\{n_+(M),n_-(M)\}.$$
 <p>Entrywise nonnegativity and Perron arguments are unnecessary for this extension; symmetry and the zero pattern suffice. A nonzero diagonal or a new nonzero entry on a nonedge would invalidate the independent-set zero-block hinge. Different admissible weights can change the inertia and improve or weaken the certificate. Optimization over weights is a separate problem; the statement does not promise that arbitrary weights help.</p>
 <p>For an explicit improvement take $G=K_3\sqcup C_5$. The triangle has inertia $(1,2,0)$; the pentagon's spectrum is $2$, twice $(\sqrt5-1)/2$ and twice $-(1+\sqrt5)/2$, so its inertia is $(3,2,0)$. Ordinary adjacency therefore has inertia $(4,4,0)$ and gives $\alpha\le4$. Now negate only the pentagon block: $M=\operatorname{diag}(A_{K_3},-A_{C_5})$. Its zero pattern is permitted and its inertia is $(3,5,0)$, giving $\alpha\le3$. One triangle vertex plus two nonadjacent pentagon vertices attain3. The improved certificate is exact and requires no reconstruction of a maximum set from eigenvectors.</p>
 <p>Even for a fixed graph, numerical inertia needs care near zero. A computed eigenvalue of order machine precision may represent an exact zero or a small nonzero value. Exact polynomial sign arguments, exact congruence methods with their hypotheses checked, or verified eigenvalue enclosures can certify signs. Simply changing a numerical tolerance until a desired bound appears is not a scientific method.</p>
 <h2 id="code">8.9 Enumerate the examples and check the certificates</h2>
+<p>The listing takes no command-line inputs; its graph constructions are fixed in the code. It writes the displayed results to standard output, performs no file or network writes, and stops with an assertion error if a checked invariant fails. Download <a href="code/ch08_coloring.py">the exact executable program</a>.</p>
 <p>The original standard-size calculation below enumerates vertex subsets and color assignments for five small graphs. It checks witnesses, verifies every displayed bound numerically away from ambiguous thresholds, certifies the running inertia using exact rational polynomial signs, and confirms the signed-block improvement. Enumeration is deliberately exponential; the largest example has eight vertices.</p>
-<pre data-run="coloring"><code>from itertools import combinations, product
+<pre data-run="code/ch08_coloring.py"><code class="language-python">from itertools import combinations, product
 import numpy as np
 from sympy import Matrix, Rational, symbols
 
-def graph(n,edges):
-    A=np.zeros((n,n),dtype=int)
-    for i,j in edges:A[i,j]=A[j,i]=1
+
+def graph(n, edges):
+    A = np.zeros((n, n), dtype=int)
+    for i, j in edges:
+        A[i, j] = A[j, i] = 1
     return A
 
+
 def exact_parameters(A):
-    n=len(A);alpha=omega=1
-    for r in range(1,n+1):
-        for S in combinations(range(n),r):
-            values=[A[i,j] for i,j in combinations(S,2)]
-            if not any(values):alpha=max(alpha,r)
-            if all(values):omega=max(omega,r)
-    edges=[(i,j) for i in range(n) for j in range(i) if A[i,j]]
-    for k in range(1,n+1):
-        if any(all(c[i]!=c[j] for i,j in edges)
-               for c in product(range(k),repeat=n)):
-            return k,omega,alpha
+    n = len(A)
+    alpha = omega = 1
+    for r in range(1, n + 1):
+        for S in combinations(range(n), r):
+            values = [A[i, j] for i, j in combinations(S, 2)]
+            if not any(values):
+                alpha = max(alpha, r)
+            if all(values):
+                omega = max(omega, r)
+    edges = [(i, j) for i in range(n) for j in range(i) if A[i, j]]
+    for k in range(1, n + 1):
+        if any(
+            all(c[i] != c[j] for i, j in edges)
+            for c in product(range(k), repeat=n)
+        ):
+            return k, omega, alpha
+
 
 def inertia(M):
-    w=np.linalg.eigvalsh(M)
-    return int(sum(w&gt;1e-9)),int(sum(w&lt;-1e-9)),int(sum(abs(w)&lt;=1e-9))
+    w = np.linalg.eigvalsh(M)
+    return int(sum(w &gt; 1e-9)), int(sum(w &lt; -1e-9)), int(sum(abs(w) &lt;= 1e-9))
 
-A=graph(5,[(0,1),(1,2),(2,3),(0,3),(0,2),(2,4)])
-C5=graph(5,[(i,(i+1)%5) for i in range(5)])
-star=graph(10,[(0,i) for i in range(1,10)])
-K4=np.ones((4,4),dtype=int)-np.eye(4,dtype=int)
-K23=graph(5,[(i,j) for i in range(2) for j in range(2,5)])
-# Avoid enumerating color assignments for the ten-vertex star: its two parts are exact witnesses.
-examples=[('running',A),('C5',C5),('K4',K4),('K2,3',K23)]
-for name,M in examples:
-    chi,clique,alpha=exact_parameters(M)
-    w=np.linalg.eigvalsh(M);rho,least=w[-1],w[0]
-    pos,neg,zero=inertia(M)
-    assert chi+1e-10 &gt;= 1-rho/least
-    assert chi &lt;= 1+rho+1e-10 and clique &lt;= 1+rho+1e-10
-    assert alpha &lt;= zero+min(pos,neg)
-    print(f'{name}: chi={chi}, clique={clique}, alpha={alpha}; inertia={pos}/{neg}/{zero}')
-assert np.isclose(np.linalg.eigvalsh(star)[-1],3)
-print('K1,9: explicit two-part coloring uses 2; spectral upper endpoint is 4')
-z=symbols('z');q=z**4-6*z**2-4*z+2
-assert Matrix(A).charpoly(z).as_expr().expand()==(z*q).expand()
-points=[-2,Rational(-3,2),-1,0,Rational(1,2),2,3]
-expected=[2,Rational(-7,16),1,2,Rational(-23,16),-14,17]
-assert [q.subs(z,t) for t in points]==expected
-print('Exact quartic signs certify two positive, two negative and one zero adjacency mode')
-triangle=np.ones((3,3),dtype=int)-np.eye(3,dtype=int)
-D=np.zeros((8,8),dtype=int);D[:3,:3]=triangle;D[3:,3:]=C5
-W=D.copy();W[3:,3:]*=-1
-assert inertia(D)==(4,4,0) and inertia(W)==(3,5,0)
-assert exact_parameters(D)[2]==3
-print('K3 disjoint C5: ordinary inertia bound 4; signed-block bound 3; exact alpha 3')
-print('All finite coloring, clique, independence and signed-pattern checks passed')
+
+A = graph(5, [(0, 1), (1, 2), (2, 3), (0, 3), (0, 2), (2, 4)])
+C5 = graph(5, [(i, (i + 1) % 5) for i in range(5)])
+star = graph(10, [(0, i) for i in range(1, 10)])
+K4 = np.ones((4, 4), dtype=int) - np.eye(4, dtype=int)
+K23 = graph(5, [(i, j) for i in range(2) for j in range(2, 5)])
+# Avoid enumerating color assignments for the ten-vertex star: its two parts
+# are exact witnesses.
+examples = [("running", A), ("C5", C5), ("K4", K4), ("K2,3", K23)]
+for name, M in examples:
+    chi, clique, alpha = exact_parameters(M)
+    w = np.linalg.eigvalsh(M)
+    rho, least = w[-1], w[0]
+    pos, neg, zero = inertia(M)
+    assert chi + 1e-10 &gt;= 1 - rho / least
+    assert chi &lt;= 1 + rho + 1e-10 and clique &lt;= 1 + rho + 1e-10
+    assert alpha &lt;= zero + min(pos, neg)
+    print(
+        f"{name}: chi={chi}, clique={clique}, alpha={alpha}; "
+        f"inertia={pos}/{neg}/{zero}"
+    )
+assert np.isclose(np.linalg.eigvalsh(star)[-1], 3)
+print("K1,9: explicit two-part coloring uses 2; spectral upper endpoint is 4")
+z = symbols("z")
+q = z**4 - 6 * z**2 - 4 * z + 2
+assert Matrix(A).charpoly(z).as_expr().expand() == (z * q).expand()
+points = [-2, Rational(-3, 2), -1, 0, Rational(1, 2), 2, 3]
+expected = [2, Rational(-7, 16), 1, 2, Rational(-23, 16), -14, 17]
+assert [q.subs(z, t) for t in points] == expected
+print(
+    "Exact quartic signs certify two positive, two negative and "
+    "one zero adjacency mode"
+)
+triangle = np.ones((3, 3), dtype=int) - np.eye(3, dtype=int)
+D = np.zeros((8, 8), dtype=int)
+D[:3, :3] = triangle
+D[3:, 3:] = C5
+W = D.copy()
+W[3:, 3:] *= -1
+assert inertia(D) == (4, 4, 0) and inertia(W) == (3, 5, 0)
+assert exact_parameters(D)[2] == 3
+print(
+    "K3 disjoint C5: ordinary inertia bound 4; signed-block "
+    "bound 3; exact alpha 3"
+)
+print(
+    "All finite coloring, clique, independence and "
+    "signed-pattern checks passed"
+)
 </code></pre>
-<pre data-output="coloring">running: chi=3, clique=3, alpha=3; inertia=2/2/1
+<pre data-output="code/ch08_coloring.py">running: chi=3, clique=3, alpha=3; inertia=2/2/1
 C5: chi=3, clique=2, alpha=2; inertia=3/2/0
 K4: chi=4, clique=4, alpha=1; inertia=1/3/0
 K2,3: chi=2, clique=2, alpha=3; inertia=1/1/3
@@ -135,15 +168,15 @@ K3 disjoint C5: ordinary inertia bound 4; signed-block bound 3; exact alpha 3
 All finite coloring, clique, independence and signed-pattern checks passed</pre>
 <h2 id="exercises">8.10 Problems with complete solutions</h2>
 <ol class="problems">
-<li><p><strong>Handle the empty case first.</strong> A graph has seven vertices and no edges. Find its three parameters and inertia. Why is the spectral ratio formula inapplicable?</p><details><summary>Solution</summary><p>One color suffices, every singleton is a maximum clique, and all seven vertices form an independent set, so $\chi=1$, $\omega=1$, $\alpha=7$. The adjacency matrix is zero with inertia $(0,0,7)$. Its inertia bound gives $\alpha\le7$, exact, and the upper bounds give $\chi,\omega\le1$. The ratio $1-\lambda_1/\lambda_n$ is $1-0/0$, undefined. The theorem required an edge to make the denominator strictly negative.</p></details></li>
-<li><p><strong>A spectral bracket can close after rounding.</strong> For $C_5$, use its extreme eigenvalues to determine $\chi$. Show directly that $\omega=2$ and $\alpha=2$.</p><details><summary>Solution</summary><p>The ratio lower bound is $\sqrt5$, so integrality forces $\chi\ge3$. Since $\rho=2$, the upper bound is3; alternatively color consecutive vertices with labels $(1,2,1,2,3)$. Thus $\chi=3$. Every vertex has exactly two cycle neighbors, which are not adjacent to each other, so no triangle exists and $\omega=2$. The set $\{0,2\}$ is independent. The inertia $(3,2,0)$ gives $\alpha\le2$, proving $\alpha=2$. The chromatic and clique numbers differ without contradicting $\omega\le\chi$.</p></details></li>
-<li><p><strong>Zeros carry information.</strong> Derive the inertia bound for $K_{p,q}$ and compare it with its actual independence number. Evaluate $p=q=4$.</p><details><summary>Solution</summary><p>The two nonzero adjacency eigenvalues are $\pm\sqrt{pq}$ and the remaining $p+q-2$ are zero, so the bound is $p+q-2+1=p+q-1$. An entire part is independent, and any set meeting both parts contains an edge, so the actual value is $\max(p,q)$. At $p=q=4$ the bound is7 while the answer is4. Zeros must remain in the expression even though this example shows that they can make it weak; dropping them would incorrectly claim $\alpha\le1$.</p></details></li>
-<li><p><strong>Why does the critical-subgraph proof need all low degrees?</strong> In a vertex-minimal $k$-chromatic induced subgraph, show that a vertex of degree strictly less than $k-2$ also yields the contradiction. Does the proof construct a polynomial-time optimal-coloring algorithm?</p><details><summary>Solution</summary><p>Delete the vertex and color the remaining graph with $k-1$ colors. A vertex with any degree at most $k-2$ sees at most $k-2$ distinct neighbor colors, leaving at least one unused color. This applies equally to a lower degree; equality is not the only forbidden case. Reintroducing it gives a $k-1$ coloring of the supposedly $k$-chromatic subgraph, a contradiction. The argument chooses $k$ and a minimal subgraph existentially; it neither computes $k$ efficiently nor supplies an efficient search for such a subgraph.</p></details></li>
-<li><p><strong>When does clique equality force completeness?</strong> Assume $G$ is connected and $\omega=1+\rho$. Prove it is complete, then give a disconnected counterexample to the same conclusion.</p><details><summary>Solution</summary><p>A maximum clique $H=K_\omega$ has radius $\omega-1=\rho(G)$. If it were a proper subgraph of a connected $G$, chapter 6's strict monotonicity would give $\rho(H)<\rho(G)$, impossible. Hence $H=G$ and the graph is complete. For a disconnected counterexample take $K_4\sqcup K_2$: its radius is3, its clique number4, and it is not complete. The equality is inherited from the component of largest radius.</p></details></li>
-<li><p><strong>Certify the running zero exactly.</strong> Explain why the four rational sign-change intervals of section8.7 prove inertia $(2,2,1)$, rather than only finding four possible root locations.</p><details><summary>Solution</summary><p>Each open interval has endpoint values of opposite signs, so each contains a real root. The intervals are disjoint, giving four distinct roots. A degree4 polynomial has at most four distinct roots over any field, so these account for its complete root list, each simple. Two intervals are negative and two positive. Since $q(0)=2\ne0$, the factor $z$ in the characteristic polynomial adds one simple zero and no zero is hidden in $q$. Hence the inertia is exactly $(2,2,1)$, and the independent-set bound is3. Floating-point proximity to zero was not used.</p></details></li>
-<li><p><strong>Exploit a signed zero pattern.</strong> Recompute the ordinary and signed-block inertia bounds for $K_3\sqcup C_5$. Why does a negative edge weight not invalidate the independent-set argument, whereas a nonzero diagonal would?</p><details><summary>Solution</summary><p>The component inertias are $(1,2,0)$ and $(3,2,0)$, so ordinary adjacency has $(4,4,0)$ and gives4. Negating the pentagon exchanges its positive and negative counts, producing total $(3,5,0)$ and bound3. An independent-set principal block contains no edge entries at all, so it is zero regardless of the signs assigned to edges elsewhere. A nonzero diagonal survives inside that block even for a singleton independent set, breaking the zero-quadratic-form proof. The extension requires a zero diagonal and zeros on all nonedges, not arbitrary symmetric weights everywhere.</p></details></li>
-<li><p><strong>A certificate is directional.</strong> A program finds a clique of size4 and a proper coloring with six colors. What does this establish about $\chi$ and $\omega$? If a separately certified spectral upper bound gives $\omega<5$, what changes?</p><details><summary>Solution</summary><p>The clique implies $\omega\ge4$ and $\chi\ge4$, while the coloring implies $\chi\le6$. Since every clique uses different colors, it also gives $\omega\le6$, so initially $4\le\omega\le\chi\le6$. The spectral bound $\omega<5$ and integrality imply $\omega\le4$, hence $\omega=4$. It does not force $\chi=4$: graphs may need more colors than their largest clique. A separate lower/upper certificate for coloring would be required to close that gap.</p></details></li>
-<li><p><strong>A nearly integral decimal is not a proof.</strong> An eigensolver reports a ratio lower bound $3.0000001$ with absolute uncertainty $0.000001$. What integer lower bound on $\chi$ follows from that enclosure? What evidence would be needed to force four colors?</p><details><summary>Solution</summary><p>The enclosed real lower-bound value may be as small as $2.9999991$. Its conservative ceiling is3, so only $\chi\ge3$ is certified. Taking the ceiling of the central estimate would incorrectly ignore that the interval crosses3. To force four colors one needs a rigorous ratio lower endpoint strictly greater than3, or an independent exact combinatorial/spectral certificate excluding three colors. More printed digits without an error bound do not provide that evidence.</p></details></li>
+<li><p><strong>Handle the empty case first.</strong> A graph has seven vertices and no edges. Find its three parameters and inertia. Why is the spectral ratio formula inapplicable?</p><details id="problem-01"><summary>Solution</summary><p class="problem-role"><strong>Role:</strong> Boundary case. <strong>Review:</strong> <a href="#objects">§8.1</a>.</p><p>One color suffices, every singleton is a maximum clique, and all seven vertices form an independent set, so $\chi=1$, $\omega=1$, $\alpha=7$. The adjacency matrix is zero with inertia $(0,0,7)$. Its inertia bound gives $\alpha\le7$, exact, and the upper bounds give $\chi,\omega\le1$. The ratio $1-\lambda_1/\lambda_n$ is $1-0/0$, undefined. The theorem required an edge to make the denominator strictly negative.</p></details></li>
+<li><p><strong>A spectral bracket can close after rounding.</strong> For $C_5$, use its extreme eigenvalues to determine $\chi$. Show directly that $\omega=2$ and $\alpha=2$.</p><details id="problem-02"><summary>Solution</summary><p class="problem-role"><strong>Role:</strong> Integer bracket. <strong>Review:</strong> <a href="#hoffman">§8.3</a>.</p><p>The ratio lower bound is $\sqrt5$, so integrality forces $\chi\ge3$. Since $\rho=2$, the upper bound is3; alternatively color consecutive vertices with labels $(1,2,1,2,3)$. Thus $\chi=3$. Every vertex has exactly two cycle neighbors, which are not adjacent to each other, so no triangle exists and $\omega=2$. The set $\{0,2\}$ is independent. The inertia $(3,2,0)$ gives $\alpha\le2$, proving $\alpha=2$. The chromatic and clique numbers differ without contradicting $\omega\le\chi$.</p></details></li>
+<li><p><strong>Zeros carry information.</strong> Derive the inertia bound for $K_{p,q}$ and compare it with its actual independence number. Evaluate $p=q=4$.</p><details id="problem-03"><summary>Solution</summary><p class="problem-role"><strong>Role:</strong> Loose-bound comparison. <strong>Review:</strong> <a href="#inertia">§8.6</a>.</p><p>The two nonzero adjacency eigenvalues are $\pm\sqrt{pq}$ and the remaining $p+q-2$ are zero, so the bound is $p+q-2+1=p+q-1$. An entire part is independent, and any set meeting both parts contains an edge, so the actual value is $\max(p,q)$. At $p=q=4$ the bound is7 while the answer is4. Zeros must remain in the expression even though this example shows that they can make it weak; dropping them would incorrectly claim $\alpha\le1$.</p></details></li>
+<li><p><strong>Why does the critical-subgraph proof need all low degrees?</strong> In a vertex-minimal $k$-chromatic induced subgraph, show that a vertex of degree strictly less than $k-2$ also yields the contradiction. Does the proof construct a polynomial-time optimal-coloring algorithm?</p><details id="problem-04"><summary>Solution</summary><p class="problem-role"><strong>Role:</strong> Existential proof analysis. <strong>Review:</strong> <a href="#upper">§8.4</a>.</p><p>Delete the vertex and color the remaining graph with $k-1$ colors. A vertex with any degree at most $k-2$ sees at most $k-2$ distinct neighbor colors, leaving at least one unused color. This applies equally to a lower degree; equality is not the only forbidden case. Reintroducing it gives a $k-1$ coloring of the supposedly $k$-chromatic subgraph, a contradiction. The argument chooses $k$ and a minimal subgraph existentially; it neither computes $k$ efficiently nor supplies an efficient search for such a subgraph.</p></details></li>
+<li><p><strong>When does clique equality force completeness?</strong> Assume $G$ is connected and $\omega=1+\rho$. Prove it is complete, then give a disconnected counterexample to the same conclusion.</p><details id="problem-05"><summary>Solution</summary><p class="problem-role"><strong>Role:</strong> Equality classification. <strong>Review:</strong> <a href="#clique">§8.5</a>.</p><p>A maximum clique $H=K_\omega$ has radius $\omega-1=\rho(G)$. If it were a proper subgraph of a connected $G$, chapter 6's strict monotonicity would give $\rho(H)\lt \rho(G)$, impossible. Hence $H=G$ and the graph is complete. For a disconnected counterexample take $K_4\sqcup K_2$: its radius is3, its clique number4, and it is not complete. The equality is inherited from the component of largest radius.</p></details></li>
+<li><p><strong>Certify the running zero exactly.</strong> Explain why the four rational sign-change intervals of section8.7 prove inertia $(2,2,1)$, rather than only finding four possible root locations.</p><details id="problem-06"><summary>Solution</summary><p class="problem-role"><strong>Role:</strong> Exact inertia certificate. <strong>Review:</strong> <a href="#running">§8.7</a>.</p><p>Each open interval has endpoint values of opposite signs, so each contains a real root. The intervals are disjoint, giving four distinct roots. A degree4 polynomial has at most four distinct roots over any field, so these account for its complete root list, each simple. Two intervals are negative and two positive. Since $q(0)=2\ne0$, the factor $z$ in the characteristic polynomial adds one simple zero and no zero is hidden in $q$. Hence the inertia is exactly $(2,2,1)$, and the independent-set bound is3. Floating-point proximity to zero was not used.</p></details></li>
+<li><p><strong>Exploit a signed zero pattern.</strong> Recompute the ordinary and signed-block inertia bounds for $K_3\sqcup C_5$. Why does a negative edge weight not invalidate the independent-set argument, whereas a nonzero diagonal would?</p><details id="problem-07"><summary>Solution</summary><p class="problem-role"><strong>Role:</strong> Weighted improvement. <strong>Review:</strong> <a href="#weighted">§8.8</a>.</p><p>The component inertias are $(1,2,0)$ and $(3,2,0)$, so ordinary adjacency has $(4,4,0)$ and gives4. Negating the pentagon exchanges its positive and negative counts, producing total $(3,5,0)$ and bound3. An independent-set principal block contains no edge entries at all, so it is zero regardless of the signs assigned to edges elsewhere. A nonzero diagonal survives inside that block even for a singleton independent set, breaking the zero-quadratic-form proof. The extension requires a zero diagonal and zeros on all nonedges, not arbitrary symmetric weights everywhere.</p></details></li>
+<li><p><strong>A certificate is directional.</strong> A program finds a clique of size4 and a proper coloring with six colors. What does this establish about $\chi$ and $\omega$? If a separately certified spectral upper bound gives $\omega\lt 5$, what changes?</p><details id="problem-08"><summary>Solution</summary><p class="problem-role"><strong>Role:</strong> Directional inference. <strong>Review:</strong> <a href="#objects">§8.1</a>.</p><p>The clique implies $\omega\ge4$ and $\chi\ge4$, while the coloring implies $\chi\le6$. Since every clique uses different colors, it also gives $\omega\le6$, so initially $4\le\omega\le\chi\le6$. The spectral bound $\omega\lt 5$ and integrality imply $\omega\le4$, hence $\omega=4$. It does not force $\chi=4$: graphs may need more colors than their largest clique. A separate lower/upper certificate for coloring would be required to close that gap.</p></details></li>
+<li><p><strong>A nearly integral decimal is not a proof.</strong> An eigensolver reports a ratio lower bound $3.0000001$ with absolute uncertainty $0.000001$. What integer lower bound on $\chi$ follows from that enclosure? What evidence would be needed to force four colors?</p><details id="problem-09"><summary>Solution</summary><p class="problem-role"><strong>Role:</strong> Uncertainty analysis. <strong>Review:</strong> <a href="#hoffman">§8.3</a>.</p><p>The enclosed real lower-bound value may be as small as $2.9999991$. Its conservative ceiling is3, so only $\chi\ge3$ is certified. Taking the ceiling of the central estimate would incorrectly ignore that the interval crosses3. To force four colors one needs a rigorous ratio lower endpoint strictly greater than3, or an independent exact combinatorial/spectral certificate excluding three colors. More printed digits without an error bound do not provide that evidence.</p></details></li>
 </ol>
 <h2 id="limits">8.11 Close a gap only when both sides meet</h2>
 <p>Color classes, cliques and independent sets produce different principal or block structures. Those structures make spectral inequalities possible, but do not make every inequality sharp. Integer rounding can close a proven gap; unverified numerical rounding can also invent one. The explicit running-network certificates and the weaker complete-bipartite example show both outcomes.</p>

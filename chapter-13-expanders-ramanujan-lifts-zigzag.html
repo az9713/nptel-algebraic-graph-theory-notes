@@ -6,29 +6,31 @@
 <script defer src="assets/mathjax-tex-svg.js"></script><script defer src="assets/book.js"></script></head>
 <body><a class="skip" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="index.html">Introduction to Algebraic Graph Theory · NPTEL IIT Indore</a><nav class="course-nav" aria-label="Book"><a href="index.html">Chapters</a><a href="source-map.html">Source map</a><a href="references.html">References</a><a href="numerical-lab.html">Numerical lab</a></nav></header>
 <div class="layout"><aside class="toc" id="chapter-toc" aria-label="On this page"><h2>On this page</h2></aside><main id="main"><div class="reading-tools" aria-label="Reading controls"><button id="theme-toggle" aria-pressed="false">Light theme</button><button id="text-toggle" aria-pressed="false">Larger text</button><button id="solutions-toggle" aria-pressed="false">Expand solutions</button><button id="print-page">Print with solutions</button></div>
-<article id="chapter-content"><!-- BOOK-CONTENT-START --><h1>13. Expansion, Ramanujan spectra and graph constructions</h1>
+<article id="chapter-content"><!-- BOOK-CONTENT-START --><h1 id="chapter-title">13. Expansion, Ramanujan spectra and graph constructions</h1>
 <p class="lead">An expander is a sparse graph whose every substantial region has a proportionally large exit boundary. The useful property belongs to an entire growing family: a connected graph at each size is not enough. Spectra make this uniform requirement accessible, but three different spectral parameters must be kept separate: the one-sided gap, the absolute nonconstant norm, and the Ramanujan bound after removing both trivial bipartite eigenvalues.</p>
 <p class="source-note">Lectures 33–36 were read completely through local ASR. Their applications and historical overview motivate the chapter; informal biological analogies are not used as evidence. All elementary inequalities and construction identities below are derived explicitly. Advanced existence statements are bounded by inspected primary sources: <a href="https://www.cs.yale.edu/homes/spielman/PAPERS/Marcus_Spielman_SrivastavaIFI.pdf">Marcus–Spielman–Srivastava, printed pp.307–310</a>, <a href="https://www.math.mcgill.ca/goren/667.2010/Reingold.Vadhan.Wigderson.pdf">Reingold–Vadhan–Wigderson, printed pp.168–173</a>, and <a href="https://doi.org/10.1145/780542.780646">Friedman's original abstract</a>. The full interlacing-polynomial and random-graph proofs are not reproduced.</p>
 <h2 id="expansion" data-video="T_KuqjVn9aQ" data-start="0" data-end="945">13.1 Sparsity and uniform boundary growth</h2>
+<p>Let $G$ have $n\ge2$ vertices. Here $N(S)$ is the union of neighbors of vertices in $S$. Explicitly, $h_V(G)=\min_{0&lt;|S|\le n/2}|N(S)\setminus S|/|S|$. Floor and ceiling respectively round down and up to integers.</p>
 <p>Initially let $G$ be a finite simple graph with $n\ge2$ vertices. For a set $S$, its edge boundary $\partial S$ consists of edges with one endpoint in $S$ and one outside it. Define the unnormalized edge Cheeger constant</p>
-$$h(G)=\min_{0<|S|\le n/2}\frac{|\partial S|}{|S|}.$$
+$$h(G)=\min_{0\lt |S|\le n/2}\frac{|\partial S|}{|S|}.$$
 <p>Consequently every nonempty proper $S$ satisfies $|\partial S|\ge h(G)\min(|S|,n-|S|)$. The smaller side has at most half the vertices and the same boundary. If $G$ is disconnected, some component has size at most half and boundary zero. Conversely, in a connected finite graph every admissible set has at least one boundary edge and there are only finitely many such sets, so the minimum is positive. This equivalence describes one graph, not a uniform family.</p>
-<p>A fixed-degree expander family is a sequence of $d$-regular graphs $G_i$ with orders tending to infinity, a fixed finite $d$, and a number $c>0$ independent of $i$ such that $h(G_i)\ge c$. Each graph has $dn_i/2$ edges, so the edge count is linear in its order. Requiring merely $h(G_i)>0$ would only require every member to be connected. That weaker condition would incorrectly admit cycles.</p>
+<p>A fixed-degree expander family is a sequence of $d$-regular graphs $G_i$ with orders tending to infinity, a fixed finite $d$, and a number $c\gt 0$ independent of $i$ such that $h(G_i)\ge c$. Each graph has $dn_i/2$ edges, so the edge count is linear in its order. Requiring merely $h(G_i)\gt 0$ would only require every member to be connected. That weaker condition would incorrectly admit cycles.</p>
 <p>Indeed, for $n\ge3$, every nonempty proper subset of $C_n$ has at least two boundary edges, and a consecutive interval of $\lfloor n/2\rfloor$ vertices has exactly two. Hence $h(C_n)=2/\lfloor n/2\rfloor$, equal to $4/n$ only for even $n$. For $K_n$, a set of size $s$ has boundary $s(n-s)$, so $h(K_n)=\lceil n/2\rceil$. Cycles fail the uniform lower bound; complete graphs fail the fixed-degree sparsity requirement.</p>
 <p>External vertex expansion is another quantity: replace $|\partial S|$ by $|N(S)\setminus S|$. For maximum degree at most $d$, every external boundary vertex accounts for at least one and at most $d$ crossing edges. Thus the vertex constant $h_V$ satisfies $h_V\le h\le d h_V$. These notions give equivalent positivity bounds for a bounded-degree family, but they are not numerically equal. An edge-boundary statement should not be silently reinterpreted as arbitrary vertex-deletion resilience.</p>
 <h2 id="cheeger" data-video="cLldlBGwgVw" data-start="0" data-end="795">13.2 Both directions of the regular Cheeger inequality</h2>
-<p>Let $G$ be connected and $d$-regular, with adjacency eigenvalues $d=\lambda_1>\lambda_2\ge\cdots\ge\lambda_n$. Put $\mu=d-\lambda_2>0$, the second-smallest eigenvalue of $L=dI-A$. For $x\perp\mathbf1$, the Rayleigh minimum is $\mu=\min x^TLx/\|x\|^2$, and $x^TLx=\sum_{uv\in E}(x_u-x_v)^2$. With our unnormalized $h$, the inequalities are</p>
+<p>The adjacency is $A$, $I=I_n$ is the identity and $\mathbf1$ is the all-ones vector. An indicator $\mathbf1_S$ is one on $S$ and zero elsewhere. All norms in the variational arguments are Euclidean.</p>
+<p>Let $G$ be connected and $d$-regular, with adjacency eigenvalues $d=\lambda_1\gt \lambda_2\ge\cdots\ge\lambda_n$. Put $\mu=d-\lambda_2\gt 0$, the second-smallest eigenvalue of $L=dI-A$. For $x\perp\mathbf1$, the Rayleigh minimum is $\mu=\min x^TLx/\|x\|^2$, and $x^TLx=\sum_{uv\in E}(x_u-x_v)^2$. With our unnormalized $h$, the inequalities are</p>
 $$\frac{\mu}{2}\le h(G)\le\sqrt{2d\mu}.$$
 <p>For the lower bound, choose an admissible $S$ of size $s$ and set $x=\mathbf1_S-(s/n)\mathbf1$. It is orthogonal to constants, has squared norm $s(n-s)/n$, and has energy $|\partial S|$. Therefore</p>
 $$\mu\le\frac{n|\partial S|}{s(n-s)}\le\frac{2|\partial S|}{s}.$$
 <p>The last step uses $s\le n/2$, so $n/(n-s)\le2$, not the reverse inequality. Minimizing gives $h\ge\mu/2$. This direction is a certificate: a positive lower bound on the spectral gap certifies expansion without enumerating all cuts.</p>
 <p>For the upper bound, take a nonzero eigenvector $f$ with $Lf=\mu f$ and $f\perp\mathbf1$. It has both positive and negative entries. Choose its sign so that the positive support has at most $n/2$ vertices, and let $g_i=\max(f_i,0)$. The positive part is nonzero. On each edge, monotonic truncation gives $(g_i-g_j)^2\le(g_i-g_j)(f_i-f_j)$. Summing yields</p>
 $$\sum_{ij\in E}(g_i-g_j)^2\le g^TLf=\mu\sum_i g_i^2.$$
-<p>All superlevel sets $S_t=\{i:g_i^2>t\}$ are contained in the positive support. Counting an edge across the levels between its two squared endpoint values gives the finite coarea identity</p>
+<p>All superlevel sets $S_t=\{i:g_i^2\gt t\}$ are contained in the positive support. Counting an edge across the levels between its two squared endpoint values gives the finite coarea identity</p>
 $$\sum_{ij\in E}|g_i^2-g_j^2|=\int_0^\infty|\partial S_t|\,dt\ge h\int_0^\infty|S_t|\,dt=h\sum_i g_i^2.$$
 <p>Cauchy–Schwarz and $(a+b)^2\le2(a^2+b^2)$ give an upper bound on the left:</p>
 $$\sum_{ij\in E}|g_i-g_j|(g_i+g_j)\le\sqrt{\sum_{ij\in E}(g_i-g_j)^2\sum_{ij\in E}(g_i+g_j)^2}\le\sqrt{2d\mu}\sum_i g_i^2.$$
-<p>Division proves the other direction. These arguments also explain why thresholding an eigenvector can reveal a sparse cut. For fixed $d$, uniform expansion and a uniform positive gap are equivalent: $\mu\le2h$ and $\mu\ge h^2/(2d)$. The fact that $\lambda_2<d$ separately at each size proves only connectivity.</p>
+<p>Division proves the other direction. These arguments also explain why thresholding an eigenvector can reveal a sparse cut. For fixed $d$, uniform expansion and a uniform positive gap are equivalent: $\mu\le2h$ and $\mu\ge h^2/(2d)$. The fact that $\lambda_2\lt d$ separately at each size proves only connectivity.</p>
 <h2 id="mixing" data-video="cLldlBGwgVw" data-start="795" data-end="1590">13.3 Expander mixing requires an absolute spectral parameter</h2>
 <p>Let $\Lambda=\max_{2\le i\le n}|\lambda_i|$. Define $e(S,T)=\mathbf1_S^TA\mathbf1_T$ as an <em>oriented</em> count. For disjoint sets, this is the usual number of crossing edges. When $S=T$, each internal edge is counted twice; overlapping sets require the bilinear convention too.</p>
 <p>Write $u=\mathbf1_S-(|S|/n)\mathbf1$ and $v=\mathbf1_T-(|T|/n)\mathbf1$. Both are orthogonal to constants and $A\mathbf1=d\mathbf1$. Hence</p>
@@ -42,10 +44,11 @@ $$\left|e(S,T)-\frac{d|S||T|}{n}\right|\le\Lambda\sqrt{|S||T|\left(1-\frac{|S|}{
 <p>A simple trace calculation already gives an obstruction to making all nonconstant eigenvalues tiny. Since $\operatorname{tr}A^2=nd$,</p>
 $$nd=d^2+\sum_{i=2}^n\lambda_i^2\le d^2+(n-1)\Lambda^2,\qquad\Lambda\ge\sqrt{\frac{d(n-d)}{n-1}}.$$
 <p>For fixed $d$ and large $n$, this approaches $\sqrt d$. The stronger Alon–Boppana benchmark approaches $2\sqrt{d-1}$; its statement is summarized in the inspected MSS introduction, but its proof is not supplied here. “Optimal” refers to that fixed-degree, unbounded-order asymptotic obstruction. It does not assert that every finite Ramanujan graph minimizes every cut ratio or every mixing time among graphs of its size.</p>
-<p>Examples can be verified directly. $K_{d+1}$ has remaining eigenvalues all $-1$; $K_{d,d}$ has nontrivial eigenvalues zero after removing $\pm d$; the Petersen graph has $3,1^{(5)},(-2)^{(4)}$, so its nontrivial absolute maximum is two, below $2\sqrt2$. Complete graphs of increasing order do not form a fixed-degree expander family, despite each satisfying its own degree's Ramanujan criterion. Cycles are degree-two Ramanujan graphs because their eigenvalues lie in $[-2,2]$, yet their expansion tends to zero. For $d\ge3$, $d-2\sqrt{d-1}>0$, which is why Ramanujan families then have a uniform one-sided gap.</p>
-<p>The recordings discuss Margulis's arithmetic construction and its later improvements. The primary RVW historical discussion records those constructions as sources of explicit families. Their important conclusion is a uniform quantitative spectral bound; a separate proof of $\lambda_2<d$ at every order would not suffice. We do not infer a universal bound from the slide's approximate decimal or reconstruct ambiguous neighbor formulas from ASR.</p>
-<p>Friedman's primary abstract states the random-regular conclusion with a fixed $\varepsilon>0$: nontrivial eigenvalues are bounded in absolute value by $2\sqrt{d-1}+\varepsilon$ with probability tending to one in the relevant models. An arbitrarily small fixed slack is not the same assertion as exact Ramanujan graphs occurring with probability tending to one. Model, degree and asymptotic quantifiers are part of the result. No current open-problem status is inferred from the recording's date.</p>
+<p>Examples can be verified directly. $K_{d+1}$ has remaining eigenvalues all $-1$; $K_{d,d}$ has nontrivial eigenvalues zero after removing $\pm d$; the Petersen graph has $3,1^{(5)},(-2)^{(4)}$, so its nontrivial absolute maximum is two, below $2\sqrt2$. Complete graphs of increasing order do not form a fixed-degree expander family, despite each satisfying its own degree's Ramanujan criterion. Cycles are degree-two Ramanujan graphs because their eigenvalues lie in $[-2,2]$, yet their expansion tends to zero. For $d\ge3$, $d-2\sqrt{d-1}\gt 0$, which is why Ramanujan families then have a uniform one-sided gap.</p>
+<p>The recordings discuss Margulis's arithmetic construction and its later improvements. The primary RVW historical discussion records those constructions as sources of explicit families. Their important conclusion is a uniform quantitative spectral bound; a separate proof of $\lambda_2\lt d$ at every order would not suffice. We do not infer a universal bound from the slide's approximate decimal or reconstruct ambiguous neighbor formulas from ASR.</p>
+<p>Friedman's primary abstract states the random-regular conclusion with a fixed $\varepsilon\gt 0$: nontrivial eigenvalues are bounded in absolute value by $2\sqrt{d-1}+\varepsilon$ with probability tending to one in the relevant models. An arbitrarily small fixed slack is not the same assertion as exact Ramanujan graphs occurring with probability tending to one. Model, degree and asymptotic quantifiers are part of the result. No current open-problem status is inferred from the recording's date.</p>
 <h2 id="lifts" data-video="irblAz_OmUo" data-start="0" data-end="1012">13.5 Two-lifts split into old and signed spectra</h2>
+<p>In the lift decomposition $n$ is the base order and $v,w\in\mathbb R^n$. The notation $\operatorname{spec}$ records eigenvalues with multiplicity, and $\uplus$ joins such multisets while retaining repeated entries.</p>
 <p>A two-lift replaces each base vertex $v$ by $(v,0),(v,1)$. Give every edge a sign. A positive edge produces two within-layer edges; a negative edge produces the two crossed edges. If $A_+$ and $A_-$ are the ordinary adjacency matrices of the positive and negative edge sets, respectively, then</p>
 $$\widehat A=\begin{pmatrix}A_+&A_-\\A_-&A_+\end{pmatrix},\qquad A=A_++A_-,\qquad A_\sigma=A_+-A_-.$$
 <p>The subspaces $\{(v,v)\}$ and $\{(w,-w)\}$ are mutually orthogonal and each has dimension $n$. On the first, $\widehat A$ acts as $A$; on the second, it acts as $A_\sigma$. Orthonormal eigenbases for the two symmetric matrices, divided by $\sqrt2$ when embedded, therefore form a complete $2n$-dimensional eigenbasis. This proves the multiset identity</p>
@@ -54,6 +57,7 @@ $$\operatorname{spec}(\widehat A)=\operatorname{spec}(A)\mathbin{\uplus}\operato
 <p>The inspected MSS introduction explains its key qualification: its signing theorem controls the largest new eigenvalue by $2\sqrt{d-1}$, rather than automatically controlling both ends for every base graph. For a bipartite base, the signed adjacency matrix is also bipartite-block off-diagonal, so its spectrum is symmetric. The one-sided estimate then becomes a two-sided one. Starting from $K_{d,d}$ and taking the guaranteed lifts gives an infinite bipartite Ramanujan family for every $d\ge3$. The new top eigenvalue is strictly below $d$, preventing an additional component eigenvalue; thus connectivity persists.</p>
 <p>This is an application of an advanced existence theorem, not a proof that arbitrary sign choices work. Nor does it give every graph order by doubling. Statements about all sizes need their own parity, simplicity and multiplicity conventions; for example, a bipartite regular graph of positive degree has equal part sizes and therefore even order. The chapter does not repeat an unqualified “every number of vertices” claim.</p>
 <h2 id="zigzag" data-video="irblAz_OmUo" data-start="1012" data-end="1808">13.6 Zig-zag products need ports and normalized operators</h2>
+<p>Take $N\ge2$, $D\ge2$ and $k\ge1$ so the normalized operators are defined. The port set is $[D]=\{1,\ldots,D\}$. The identity $I_N$ acts on base vertices; the Kronecker product places one cloud operator in each diagonal block.</p>
 <p>Let $G$ have $N$ vertices and degree $D$. Label the incident edge ports at each vertex by $[D]$. The rotation map sends a port $(v,i)$ across its edge to the reverse port $(w,j)$, and is an involution. Let $H$ be a $k$-regular graph on exactly $D$ vertices. Replace each base vertex by a cloud labeled by $[D]$.</p>
 <p>The replacement graph has cloud edges from $H$ plus one rotation edge per port, giving degree $k+1$. The zig-zag graph instead makes one cloud step, one rotation step, and one cloud step into a single new edge. There are $k^2$ choices and $ND$ vertices. Choices are retained with multiplicity; merging repeated endpoints into one simple edge can destroy regularity and the operator formula. This is naturally a regular multigraph/port construction. Loops and multiplicities are counted by the symmetric adjacency operator and its row sums.</p>
 <p>Let $B=A(H)/k$, let $C=I_N\otimes B$, and let $R$ be the symmetric permutation matrix of rotation. The normalized zig-zag adjacency operator is</p>
@@ -61,64 +65,102 @@ $$Z=CRC.$$
 <p>It is symmetric, nonnegative and has row sum one. Its unnormalized adjacency is $k^2Z$. A normalized bound cannot be applied unchanged to raw eigenvalues of a graph whose degree has changed from $D$ to $k^2$.</p>
 <p>Here is a full elementary estimate. Suppose $a$ is the absolute norm of $A(G)/D$ on global constants' orthogonal complement, and $b$ is the analogous norm for $B$. Decompose a unit vector $x\perp\mathbf1$ into its cloud-constant part $p$ and cloud-mean-zero part $q$. They are orthogonal. We have $Cp=p$, $\|Cq\|\le b\|q\|$, and the rotation permutation preserves norm. Averaging the port pairings gives $|p^TRp|\le a\|p\|^2$: under the isometry sending base coordinate $y_v$ to the cloud value $y_v/\sqrt D$, the compression of $R$ is exactly $A(G)/D$. Hence</p>
 $$|x^TZx|\le a\|p\|^2+2b\|p\|\|q\|+b^2\|q\|^2\le a+b+b^2.$$
-<p>The last inequality uses $2\|p\|\|q\|\le1$. Symmetry converts the Rayleigh estimate into an absolute eigenvalue bound. It is useful when the right side is below one, but can be numerically inconclusive otherwise. The original RVW theorem gives a sharper uniform function below one whenever $a,b<1$; its full sharper analysis is not reproduced. The coarse inequality alone must not be presented as proving that strict conclusion for every pair.</p>
-<p>For example, with $a=b=0.1$, the coarse bound is $0.21$, a definite gap. With base $K_4$ and cloud $C_3$, $a=1/3$, $b=1/2$, so the coarse bound is $13/12>1$ and proves no strict contraction. The actual exact construction below has normalized nonconstant norm $(1+\sqrt{17})/8\approx0.640388$. A failed bound is not a failed graph.</p>
+<p>The last inequality uses $2\|p\|\|q\|\le1$. Symmetry converts the Rayleigh estimate into an absolute eigenvalue bound. It is useful when the right side is below one, but can be numerically inconclusive otherwise. The original RVW theorem gives a sharper uniform function below one whenever $a,b\lt 1$; its full sharper analysis is not reproduced. The coarse inequality alone must not be presented as proving that strict conclusion for every pair.</p>
+<p>For example, with $a=b=0.1$, the coarse bound is $0.21$, a definite gap. With base $K_4$ and cloud $C_3$, $a=1/3$, $b=1/2$, so the coarse bound is $13/12\gt 1$ and proves no strict contraction. The actual exact construction below has normalized nonconstant norm $(1+\sqrt{17})/8\approx0.640388$. A failed bound is not a failed graph.</p>
 <h2 id="code">13.7 Exact cut enumeration and constructive spectral checks</h2>
+<p>The listing takes no command-line inputs; its graph constructions are fixed in the code. It writes the displayed results to standard output, performs no file or network writes, and stops with an assertion error if a checked invariant fails. Download <a href="code/ch13_expanders.py">the exact executable program</a>.</p>
 <p>The program exhausts cuts only in the displayed small graphs, with rational boundary ratios. It verifies the two-lift polynomial factorization exactly, constructs an explicit rotation map, and checks the zig-zag degree and exact characteristic polynomial. Floating eigenvalues are used only for the reported normalized decimal and a finite bound check. Download <a href="code/ch13_expanders.py">the program</a>.</p>
-<pre data-run="code/ch13_expanders.py"><code>"""Finite expansion, lift-spectrum and normalized zig-zag checks."""
+<pre data-run="code/ch13_expanders.py"><code class="language-python">"""Finite expansion, lift-spectrum and normalized zig-zag checks."""
+
 from itertools import combinations
 from fractions import Fraction
 import numpy as np
 import sympy as s
 
+
 def cheeger(a):
-    n=len(a);best=None
-    for k in range(1,n//2+1):
-        for subset in combinations(range(n),k):
-            outside=[i for i in range(n) if i not in subset]
-            q=Fraction(int(a[np.ix_(subset,outside)].sum()),k)
-            if best is None or q&lt;best:best=q
+    n = len(a)
+    best = None
+    for k in range(1, n // 2 + 1):
+        for subset in combinations(range(n), k):
+            outside = [i for i in range(n) if i not in subset]
+            q = Fraction(int(a[np.ix_(subset, outside)].sum()), k)
+            if best is None or q &lt; best:
+                best = q
     return best
 
+
 def cycle(n):
-    a=np.zeros((n,n),dtype=int)
-    for i in range(n):a[i,(i+1)%n]=a[(i+1)%n,i]=1
+    a = np.zeros((n, n), dtype=int)
+    for i in range(n):
+        a[i, (i + 1) % n] = a[(i + 1) % n, i] = 1
     return a
-for n in (5,6,9):
-    h=cheeger(cycle(n));assert h==Fraction(2,n//2)
-    print(f'C{n} exact edge expansion: {h}')
-subsets=list(combinations(range(5),2))
-p=np.array([[int(set(u).isdisjoint(v)) for v in subsets] for u in subsets])
-h=cheeger(p);e=np.linalg.eigvalsh(p);mu=3-e[-2]
-assert h==1 and mu/2&lt;=float(h)&lt;=np.sqrt(6*mu)
-print('Petersen exact edge expansion 1; gap 2; Cheeger bounds 1 and sqrt(12)')
-# K4 lift with every edge crossed is the bipartite double cover, isomorphic to Q3.
-a=np.ones((4,4),dtype=int)-np.eye(4,dtype=int);z=np.zeros_like(a)
-lift=np.block([[z,a],[a,z]])
-x=s.symbols('x')
-assert s.expand(s.Matrix(lift).charpoly(x).as_expr()-s.Matrix(a).charpoly(x).as_expr()*s.Matrix(-a).charpoly(x).as_expr())==0
-assert sorted(round(v) for v in np.linalg.eigvalsh(lift))==[-3,-1,-1,-1,1,1,1,3]
-print('All-crossed K4 lift: exact spectrum {-3,-1^3,1^3,3}; old/new factorization PASS')
-# Ports at v are neighbors in increasing order; the rotation reverses the base edge.
-neighbors=[[w for w in range(4) if w!=v] for v in range(4)]
-r=np.zeros((12,12),dtype=int)
+
+
+for n in (5, 6, 9):
+    h = cheeger(cycle(n))
+    assert h == Fraction(2, n // 2)
+    print(f"C{n} exact edge expansion: {h}")
+subsets = list(combinations(range(5), 2))
+p = np.array([[int(set(u).isdisjoint(v)) for v in subsets] for u in subsets])
+h = cheeger(p)
+e = np.linalg.eigvalsh(p)
+mu = 3 - e[-2]
+assert h == 1 and mu / 2 &lt;= float(h) &lt;= np.sqrt(6 * mu)
+print("Petersen exact edge expansion 1; gap 2; Cheeger bounds 1 and sqrt(12)")
+# K4 lift with every edge crossed is the bipartite double cover, isomorphic to
+# Q3.
+a = np.ones((4, 4), dtype=int) - np.eye(4, dtype=int)
+z = np.zeros_like(a)
+lift = np.block([[z, a], [a, z]])
+x = s.symbols("x")
+assert (
+    s.expand(
+        s.Matrix(lift).charpoly(x).as_expr()
+        - s.Matrix(a).charpoly(x).as_expr()
+        * s.Matrix(-a).charpoly(x).as_expr()
+    )
+    == 0
+)
+assert sorted(round(v) for v in np.linalg.eigvalsh(lift)) == [
+    -3,
+    -1,
+    -1,
+    -1,
+    1,
+    1,
+    1,
+    3,
+]
+print(
+    "All-crossed K4 lift: exact spectrum {-3,-1^3,1^3,3}; "
+    "old/new factorization PASS"
+)
+# Ports at v are neighbors in increasing order; the rotation reverses the base
+# edge.
+neighbors = [[w for w in range(4) if w != v] for v in range(4)]
+r = np.zeros((12, 12), dtype=int)
 for v in range(4):
-    for port,w in enumerate(neighbors[v]):
-        back=neighbors[w].index(v);r[3*v+port,3*w+back]=1
-assert np.array_equal(r@r,np.eye(12,dtype=int))
-hsmall=np.ones((3,3),dtype=int)-np.eye(3,dtype=int)
-big=np.kron(np.eye(4,dtype=int),hsmall)
-zz=big@r@big
-assert np.array_equal(zz,zz.T) and np.all(zz.sum(axis=1)==4)
-char=s.factor(s.Matrix(zz).charpoly(x).as_expr())
-print('K4 zig-zag C3 adjacency polynomial:',char)
-normalized=np.linalg.eigvalsh(zz/4);rho=max(abs(normalized[:-1]))
-assert rho&lt;=1/3+1/2+1/4+1e-12
-print(f'Zig-zag: 12 vertices, degree 4; normalized nonconstant norm {rho:.9f}')
+    for port, w in enumerate(neighbors[v]):
+        back = neighbors[w].index(v)
+        r[3 * v + port, 3 * w + back] = 1
+assert np.array_equal(r @ r, np.eye(12, dtype=int))
+hsmall = np.ones((3, 3), dtype=int) - np.eye(3, dtype=int)
+big = np.kron(np.eye(4, dtype=int), hsmall)
+zz = big @ r @ big
+assert np.array_equal(zz, zz.T) and np.all(zz.sum(axis=1) == 4)
+char = s.factor(s.Matrix(zz).charpoly(x).as_expr())
+print("K4 zig-zag C3 adjacency polynomial:", char)
+normalized = np.linalg.eigvalsh(zz / 4)
+rho = max(abs(normalized[:-1]))
+assert rho &lt;= 1 / 3 + 1 / 2 + 1 / 4 + 1e-12
+print(f"Zig-zag: 12 vertices, degree 4; normalized nonconstant norm {rho:.9f}")
 # Mixing uses oriented counts; with S=T each internal edge contributes twice.
-S=np.array([1,1,0,0]);count=int(S@a@S);center=Fraction(3*4,4)
-assert count==2 and abs(Fraction(count)-center)&lt;=Fraction(1)
-print('K4 S=T={0,1}: oriented count 2, baseline 3, sharp centered bound 1')
+S = np.array([1, 1, 0, 0])
+count = int(S @ a @ S)
+center = Fraction(3 * 4, 4)
+assert count == 2 and abs(Fraction(count) - center) &lt;= Fraction(1)
+print("K4 S=T={0,1}: oriented count 2, baseline 3, sharp centered bound 1")
 </code></pre><pre class="expected-output" data-output="code/ch13_expanders.py">C5 exact edge expansion: 1
 C6 exact edge expansion: 2/3
 C9 exact edge expansion: 1/2
@@ -128,14 +170,14 @@ K4 zig-zag C3 adjacency polynomial: (x - 4)*(x - 1)**2*(x + 1)**3*(x**2 + x - 4)
 Zig-zag: 12 vertices, degree 4; normalized nonconstant norm 0.640388203
 K4 S=T={0,1}: oriented count 2, baseline 3, sharp centered bound 1</pre>
 <h2 id="solutions">13.8 Worked problems</h2>
-<details><summary>1. Connectivity is not uniform expansion</summary><p><strong>Problem.</strong> Show that $C_{2r}$ is connected at every size and nevertheless fails to be a fixed-degree expander family.</p><p><strong>Solution.</strong> Its degree is two and it is connected. A consecutive $r$-vertex interval has two boundary edges, so $h\le2/r$. Every nonempty proper subset has at least two boundary edges and has size at most $r$ when tested in the definition, so $h\ge2/r$. Thus $h=2/r\to0$. Its second adjacency eigenvalue is $2\cos(\pi/r)$, making the gap $2-2\cos(\pi/r)\to0$ as well. Positivity separately at each finite $r$ supplies no common positive lower bound.</p></details>
-<details><summary>2. Repair a Cheeger proof's factor</summary><p><strong>Problem.</strong> For a cut of size $s=n/3$, evaluate the Rayleigh factor exactly and identify its relation to two.</p><p><strong>Solution.</strong> Centering the indicator gives quotient $n|\partial S|/[s(n-s)]$. The factor multiplying $|\partial S|/s$ is $n/(n-s)=3/2$, which is below two. In general $s\le n/2$ gives $1<n/(n-s)\le2$ for a nonempty cut. Reversing this inequality would invalidate the chain proving $\mu\le2h$.</p></details>
-<details><summary>3. Overlap changes the meaning of edge count</summary><p><strong>Problem.</strong> In $K_4$, take $S=T=\{0,1\}$. Check the centered mixing bound.</p><p><strong>Solution.</strong> The oriented count is two, since the single internal edge contributes in both directions. The baseline is $3\cdot2\cdot2/4=3$. The nonconstant norm is one and each centered indicator has squared norm $2(1-2/4)=1$. The sharp bound is therefore one and the discrepancy is exactly one. Substituting the unoriented count one would give discrepancy two and falsely appear to disprove the inequality.</p></details>
-<details><summary>4. A bipartite Ramanujan graph can have a periodic walk</summary><p><strong>Problem.</strong> Explain the three relevant spectral parameters for $K_{d,d}$, $d\ge3$.</p><p><strong>Solution.</strong> Its adjacency spectrum is $d,-d,0^{(2d-2)}$. The one-sided gap is $d-0=d$. The absolute nonconstant norm is $d$, because the $-d$ eigenvector is orthogonal to constants. After excluding both trivial bipartite roots, the Ramanujan nontrivial norm is zero. A nonlazy walk has normalized eigenvalue $-1$ and alternates sides. Half holding changes that eigenvalue to zero and makes the other nonconstant normalized eigenvalues $1/2$. Large expansion and the Ramanujan criterion do not erase periodicity without this change of walk.</p></details>
-<details><summary>5. Check the trace obstruction without changing conventions</summary><p><strong>Problem.</strong> Apply the trace lower bound to the Petersen graph and compare it with the actual nonconstant norm.</p><p><strong>Solution.</strong> Here $n=10,d=3$, so the bound is $\sqrt{3(10-3)/9}=\sqrt{7/3}$. The actual absolute nonconstant maximum is two, which satisfies it. The trace identity is $30=9+5\cdot1+4\cdot4$. Removing the negative eigenvalues from the sum would make both the identity and resulting bound wrong. The stronger Ramanujan threshold is $2\sqrt2$, which this finite graph lies below.</p></details>
-<details><summary>6. Two sign choices produce very different lifts</summary><p><strong>Problem.</strong> Compare all-positive and all-negative lifts of $K_4$.</p><p><strong>Solution.</strong> All positive gives $A_\sigma=A$, so the lift spectrum is two copies of $3,-1,-1,-1$ and the graph is disconnected. All negative gives $A_\sigma=-A$, adding $-3,1,1,1$ instead. The lift is the connected graph $K_{4,4}$ minus a matching, isomorphic to $Q_3$, with a simple top root three. The inherited spectrum is identical in both cases, so the new signed spectrum determines whether an extra component eigenvalue appears.</p></details>
-<details><summary>7. Why bipartiteness upgrades a signing theorem</summary><p><strong>Problem.</strong> Show that a one-sided signed eigenvalue bound becomes two-sided for a bipartite base.</p><p><strong>Solution.</strong> Order vertices by parts so $A_\sigma=\begin{pmatrix}0&M\\M^T&0\end{pmatrix}$. With $J_\pm=\operatorname{diag}(I,-I)$, conjugation gives $J_\pm A_\sigma J_\pm=-A_\sigma$. Every eigenvalue thus has its negative with the same multiplicity. If the largest is at most $c$, the smallest is at least $-c$. This symmetry is available for every signing of a bipartite support; it is not an implication of symmetry of an arbitrary real matrix alone.</p></details>
-<details><summary>8. Read product parameters in the correct units</summary><p><strong>Problem.</strong> If the base has $N=100$, degree $D=16$, and the cloud graph has sixteen vertices and degree four, find the replacement and zig-zag orders and degrees. Interpret $a=b=0.1$.</p><p><strong>Solution.</strong> Both products have $ND=1600$ vertices. Replacement degree is $4+1=5$; zig-zag degree is $4^2=16$, retaining port multiplicities. The normalized zig-zag nonconstant norm is at most $0.1+0.1+0.01=0.21$. The raw adjacency nonconstant absolute eigenvalues are therefore at most $16(0.21)=3.36$. Applying $0.21$ directly to the raw adjacency would lose the degree factor.</p></details>
-<details><summary>9. A coarse estimate can exceed one for a good product</summary><p><strong>Problem.</strong> Recover the actual normalized norm of the computed $K_4$ zig-zag $C_3$ example from its characteristic polynomial.</p><p><strong>Solution.</strong> The polynomial is $(x-4)(x-1)^2(x+1)^3(x^2+x-4)^3$. The roots are four, one twice, minus one three times, and $(-1\pm\sqrt{17})/2$ each three times. Their multiplicities sum to twelve. After removing the top root and dividing by degree four, the largest modulus is $(1+\sqrt{17})/8$, approximately $0.640388203$. The coarse estimate $1/3+1/2+1/4=13/12$ is valid but supplies no gap. The exact calculation resolves this particular example without pretending to prove the stronger uniform RVW theorem.</p></details>
+<details id="problem-01"><summary>1. Connectivity is not uniform expansion</summary><p class="problem-role"><strong>Role:</strong> Uniformity counterexample. <strong>Review:</strong> <a href="#expansion">§13.1</a>.</p><p><strong>Problem.</strong> Show that $C_{2r}$ is connected at every size and nevertheless fails to be a fixed-degree expander family.</p><p><strong>Solution.</strong> Its degree is two and it is connected. A consecutive $r$-vertex interval has two boundary edges, so $h\le2/r$. Every nonempty proper subset has at least two boundary edges and has size at most $r$ when tested in the definition, so $h\ge2/r$. Thus $h=2/r\to0$. Its second adjacency eigenvalue is $2\cos(\pi/r)$, making the gap $2-2\cos(\pi/r)\to0$ as well. Positivity separately at each finite $r$ supplies no common positive lower bound.</p></details>
+<details id="problem-02"><summary>2. Repair a Cheeger proof's factor</summary><p class="problem-role"><strong>Role:</strong> Proof-factor check. <strong>Review:</strong> <a href="#cheeger">§13.2</a>.</p><p><strong>Problem.</strong> For a cut of size $s=n/3$, evaluate the Rayleigh factor exactly and identify its relation to two.</p><p><strong>Solution.</strong> Centering the indicator gives quotient $n|\partial S|/[s(n-s)]$. The factor multiplying $|\partial S|/s$ is $n/(n-s)=3/2$, which is below two. In general $s\le n/2$ gives $1\lt n/(n-s)\le2$ for a nonempty cut. Reversing this inequality would invalidate the chain proving $\mu\le2h$.</p></details>
+<details id="problem-03"><summary>3. Overlap changes the meaning of edge count</summary><p class="problem-role"><strong>Role:</strong> Oriented-count check. <strong>Review:</strong> <a href="#mixing">§13.3</a>.</p><p><strong>Problem.</strong> In $K_4$, take $S=T=\{0,1\}$. Check the centered mixing bound.</p><p><strong>Solution.</strong> The oriented count is two, since the single internal edge contributes in both directions. The baseline is $3\cdot2\cdot2/4=3$. The nonconstant norm is one and each centered indicator has squared norm $2(1-2/4)=1$. The sharp bound is therefore one and the discrepancy is exactly one. Substituting the unoriented count one would give discrepancy two and falsely appear to disprove the inequality.</p></details>
+<details id="problem-04"><summary>4. A bipartite Ramanujan graph can have a periodic walk</summary><p class="problem-role"><strong>Role:</strong> Spectral-parameter comparison. <strong>Review:</strong> <a href="#ramanujan">§13.4</a>.</p><p><strong>Problem.</strong> Explain the three relevant spectral parameters for $K_{d,d}$, $d\ge3$.</p><p><strong>Solution.</strong> Its adjacency spectrum is $d,-d,0^{(2d-2)}$. The one-sided gap is $d-0=d$. The absolute nonconstant norm is $d$, because the $-d$ eigenvector is orthogonal to constants. After excluding both trivial bipartite roots, the Ramanujan nontrivial norm is zero. A nonlazy walk has normalized eigenvalue $-1$ and alternates sides. Half holding changes that eigenvalue to zero and makes the other nonconstant normalized eigenvalues $1/2$. Large expansion and the Ramanujan criterion do not erase periodicity without this change of walk.</p></details>
+<details id="problem-05"><summary>5. Check the trace obstruction without changing conventions</summary><p class="problem-role"><strong>Role:</strong> Trace obstruction. <strong>Review:</strong> <a href="#ramanujan">§13.4</a>.</p><p><strong>Problem.</strong> Apply the trace lower bound to the Petersen graph and compare it with the actual nonconstant norm.</p><p><strong>Solution.</strong> Here $n=10,d=3$, so the bound is $\sqrt{3(10-3)/9}=\sqrt{7/3}$. The actual absolute nonconstant maximum is two, which satisfies it. The trace identity is $30=9+5\cdot1+4\cdot4$. Removing the negative eigenvalues from the sum would make both the identity and resulting bound wrong. The stronger Ramanujan threshold is $2\sqrt2$, which this finite graph lies below.</p></details>
+<details id="problem-06"><summary>6. Two sign choices produce very different lifts</summary><p class="problem-role"><strong>Role:</strong> Lift comparison. <strong>Review:</strong> <a href="#lifts">§13.5</a>.</p><p><strong>Problem.</strong> Compare all-positive and all-negative lifts of $K_4$.</p><p><strong>Solution.</strong> All positive gives $A_\sigma=A$, so the lift spectrum is two copies of $3,-1,-1,-1$ and the graph is disconnected. All negative gives $A_\sigma=-A$, adding $-3,1,1,1$ instead. The lift is the connected graph $K_{4,4}$ minus a matching, isomorphic to $Q_3$, with a simple top root three. The inherited spectrum is identical in both cases, so the new signed spectrum determines whether an extra component eigenvalue appears.</p></details>
+<details id="problem-07"><summary>7. Why bipartiteness upgrades a signing theorem</summary><p class="problem-role"><strong>Role:</strong> Signing theorem hypothesis. <strong>Review:</strong> <a href="#lifts">§13.5</a>.</p><p><strong>Problem.</strong> Show that a one-sided signed eigenvalue bound becomes two-sided for a bipartite base.</p><p><strong>Solution.</strong> Order vertices by parts so $A_\sigma=\begin{pmatrix}0&M\\M^T&0\end{pmatrix}$. With $J_\pm=\operatorname{diag}(I,-I)$, conjugation gives $J_\pm A_\sigma J_\pm=-A_\sigma$. Every eigenvalue thus has its negative with the same multiplicity. If the largest is at most $c$, the smallest is at least $-c$. This symmetry is available for every signing of a bipartite support; it is not an implication of symmetry of an arbitrary real matrix alone.</p></details>
+<details id="problem-08"><summary>8. Read product parameters in the correct units</summary><p class="problem-role"><strong>Role:</strong> Normalization calculation. <strong>Review:</strong> <a href="#zigzag">§13.6</a>.</p><p><strong>Problem.</strong> If the base has $N=100$, degree $D=16$, and the cloud graph has sixteen vertices and degree four, find the replacement and zig-zag orders and degrees. Interpret $a=b=0.1$.</p><p><strong>Solution.</strong> Both products have $ND=1600$ vertices. Replacement degree is $4+1=5$; zig-zag degree is $4^2=16$, retaining port multiplicities. The normalized zig-zag nonconstant norm is at most $0.1+0.1+0.01=0.21$. The raw adjacency nonconstant absolute eigenvalues are therefore at most $16(0.21)=3.36$. Applying $0.21$ directly to the raw adjacency would lose the degree factor.</p></details>
+<details id="problem-09"><summary>9. A coarse estimate can exceed one for a good product</summary><p class="problem-role"><strong>Role:</strong> Exact product inference. <strong>Review:</strong> <a href="#zigzag">§13.6</a>.</p><p><strong>Problem.</strong> Recover the actual normalized norm of the computed $K_4$ zig-zag $C_3$ example from its characteristic polynomial.</p><p><strong>Solution.</strong> The polynomial is $(x-4)(x-1)^2(x+1)^3(x^2+x-4)^3$. The roots are four, one twice, minus one three times, and $(-1\pm\sqrt{17})/2$ each three times. Their multiplicities sum to twelve. After removing the top root and dividing by degree four, the largest modulus is $(1+\sqrt{17})/8$, approximately $0.640388203$. The coarse estimate $1/3+1/2+1/4=13/12$ is valid but supplies no gap. The exact calculation resolves this particular example without pretending to prove the stronger uniform RVW theorem.</p></details>
 <h2 id="limits">13.9 What a spectral certificate does and does not establish</h2>
 <p>A lower gap certificate controls all cuts simultaneously, while an explicit small cut can refute a proposed expansion constant. Two-lifts separate inherited eigenvalues from a signing problem. Zig-zag products trade cloud mixing against base mixing while controlling degree. Each construction needs its own normalization and multiplicity conventions. Finite exhaustive checks establish the examples here; the stated advanced existence theorems support growing families, and their unreproduced proofs remain a declared boundary.</p><!-- BOOK-CONTENT-END --></article><nav class="page-turn" aria-label="Chapter navigation"><a rel="prev" href="chapter-12-hypercubes-sensitivity-theorem.html">Previous chapter</a><a href="index.html">Chapter index</a><a rel="next" href="chapter-14-algebraic-connectivity-fiedler-geometry.html">Next chapter</a></nav></main></div><footer class="site-footer">Independent study edition. Prof. Ranveer Singh’s NPTEL recordings provide the topic spine. Original exposition, source limitations and verification evidence are separately recorded.</footer></body></html>

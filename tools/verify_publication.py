@@ -13,6 +13,7 @@ from urllib.parse import quote, urlparse
 from urllib.request import Request, urlopen
 from bs4 import BeautifulSoup
 from audit_public import ROOT, public_files
+from validate_books import source_math_counts
 
 
 def fetch(url):
@@ -48,7 +49,10 @@ def browser_checks(base):
                 response = page.goto(base+filename)
                 page.wait_for_function('!window.MathJax || !!MathJax.startup?.promise')
                 page.evaluate('async () => {if(window.MathJax) await MathJax.startup.promise}')
+                source_count, parsed_count = source_math_counts(
+                    (ROOT / filename).read_bytes().decode('utf-8'))
                 count = page.locator('mjx-container').count()
+                math_parity = count == source_count == parsed_count
                 math_errors = page.locator('mjx-merror,[data-mml-node="merror"]').count()
                 overflow = page.evaluate('document.documentElement.scrollWidth > innerWidth+2')
                 page.locator('#theme-toggle').click()
@@ -76,11 +80,13 @@ def browser_checks(base):
                     page.locator('#lab-reset').click()
                 needs_math = filename.startswith('chapter-')
                 passed = (response is not None and response.status == 200 and not errors
-                          and not overflow and not math_errors
+                          and not overflow and not math_errors and math_parity
                           and (not needs_math or count > 0)
                           and all((theme, text, solutions, extra)))
                 results.append({'page': filename, 'width': width, 'passed': passed,
-                    'math_count': count, 'math_errors': math_errors, 'javascript_errors': errors,
+                    'math_count': count, 'math_errors': math_errors,
+                    'source_math_count': source_count, 'parsed_source_math_count': parsed_count,
+                    'math_span_parity': math_parity, 'javascript_errors': errors,
                     'horizontal_overflow': overflow, 'theme': theme, 'text_size': text,
                     'solutions': solutions, 'page_specific_controls': extra})
                 page.close()

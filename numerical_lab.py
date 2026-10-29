@@ -3,6 +3,10 @@
 Run with Python, NumPy and SymPy. The program performs no network or file writes.
 Enumeration is deliberately restricted to small teaching graphs.
 """
+
+# This standalone check uses row probability vectors, unlike chapter 9.
+# Its incidence columns use -tail/+head, the reverse orientation of chapter 2;
+# BB^T and all orientation-independent checks are unchanged.
 from itertools import combinations
 
 import numpy as np

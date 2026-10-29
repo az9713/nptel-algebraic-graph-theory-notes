@@ -7,18 +7,21 @@
 <body><a class="skip" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="index.html">Introduction to Algebraic Graph Theory · NPTEL IIT Indore</a><nav class="course-nav" aria-label="Book"><a href="index.html">Chapters</a><a href="source-map.html">Source map</a><a href="references.html">References</a><a href="numerical-lab.html">Numerical lab</a></nav></header>
 <div class="layout"><aside class="toc" id="chapter-toc" aria-label="On this page"><h2>On this page</h2></aside><main id="main"><div class="reading-tools" aria-label="Reading controls"><button id="theme-toggle" aria-pressed="false">Light theme</button><button id="text-toggle" aria-pressed="false">Larger text</button><button id="solutions-toggle" aria-pressed="false">Expand solutions</button><button id="print-page">Print with solutions</button></div>
 <article id="chapter-content"><!-- BOOK-CONTENT-START -->
-<h1>11. Cospectral constructions and graphs determined by their spectrum</h1>
+<h1 id="chapter-title">11. Cospectral constructions and graphs determined by their spectrum</h1>
 <p class="lead">An eigenvalue list is an invariant, not a universal fingerprint. A connected tree and a disconnected graph containing a cycle can have exactly the same adjacency eigenvalues, including every multiplicity and every closed-walk count. Other matrices distinguish that pair while admitting different collisions of their own. We build such collisions explicitly, prove two switching operations, construct the rook–Shrikhande pair, and then prove that several familiar families really are determined by their adjacency spectrum.</p>
 <div class="callout"><strong>Source and scope.</strong> Full machine transcripts of lessons 27–30 were read sequentially. All matrices, examples, proofs, finite enumeration and solutions below are original reconstruction. Unread board entries are replaced by explicit labeled constructions. Graphs are finite, simple and undirected, with at least one vertex. The spectrum always includes multiplicities. A matrix must be named whenever “cospectral” or “determined by the spectrum” could be ambiguous. No comprehensive audiovisual audit or general graph-isomorphism algorithm is claimed.</div>
 <h2 id="invariant" data-video="MQ0x_mv1blI" data-start="0" data-end="501">11.1 Permutation similarity is sufficient, but orthogonal similarity is weaker</h2>
+<p>Let $n$ be the common vertex count when spectra agree, and $m$ the edge count of a named graph. Write $I_q,J_q$ for the identity and all-ones matrices of order $q$. The notation $\chi_M(z)=\det(zI-M)$ denotes a characteristic polynomial; this subscripted polynomial is separate from the chromatic number $\chi(G)$.</p>
 <p>Graphs $G,H$ are isomorphic if a bijection between their vertex sets preserves adjacency in both directions. In a fixed labeling, this is equivalent to $A_H=P^TA_GP$ for a permutation matrix $P$. Since $P^TP=I$, this is a similarity, so the characteristic polynomials and eigenvalue multisets agree. Relabeling cannot change the spectrum.</p>
 <p>Two graphs are adjacency-cospectral when their adjacency characteristic polynomials agree. They need not be nonisomorphic; every graph is cospectral with itself. A <em>nonisomorphic cospectral pair</em> is the interesting collision. For real symmetric matrices, equality of spectra is equivalent to some orthogonal similarity, because orthonormal eigenbases can be matched by eigenvalue. That orthogonal matrix need not be a permutation and need not identify vertices.</p>
 <p>The simplest useful collision has five vertices. The star $K_{1,4}$ has eigenvalues $2,-2,0,0,0$. The square together with an isolated vertex, $C_4\sqcup K_1$, has the same list, since $C_4$ has eigenvalues $2,0,0,-2$. Both characteristic polynomials are</p>
 $$\chi_A(z)=z^3(z-2)(z+2).$$
 <p>They are not isomorphic: the star is connected and acyclic, with degree list $(4,1,1,1,1)$; the other graph has two components and degree list $(2,2,2,2,0)$. Consequently an adjacency spectrum alone does not determine connectivity, the full degree list, maximum degree, or whether a graph is a tree. There is no contradiction with recovering edges and triangles from traces. These graphs both have four edges and no triangles. In fact they have exactly the same number of closed walks of every length, while arranging those walks differently among vertices and components.</p>
 <p>The accompanying exact enumeration checks all labeled simple graphs on one through four vertices. Their numbers of distinct isomorphism classes are $1,2,4,11$, and within each order every class has a different adjacency characteristic polynomial. The five-vertex collision is therefore minimal in vertex count. This is a finite exhaustive certificate, not an inference from rounded eigenvalues or a claim about larger orders.</p>
-<figure><img src="assets/cospectral-structures.svg" alt="A connected four-leaf star and a square plus an isolate have the same adjacency spectrum. Below, a rook vertex has two triangles as its neighbor graph, while a Shrikhande vertex has a six-cycle."><figcaption>Original constructions. Equal spectra can hide connectivity at five vertices and local clique structure in the sixteen-vertex regular pair. The lower panels show induced neighbor graphs, not the entire rook or Shrikhande graph.</figcaption></figure>
+<p><a href="#figure-11-1">Figure 11.1</a> displays the collision and the different local clique geometry used below.</p>
+<figure id="figure-11-1"><img src="assets/cospectral-structures.svg" alt="A connected four-leaf star and a square plus an isolate have the same adjacency spectrum. Below, a rook vertex has two triangles as its neighbor graph, while a Shrikhande vertex has a six-cycle."><figcaption>Figure 11.1. Original constructions. Equal spectra can hide connectivity at five vertices and local clique structure in the sixteen-vertex regular pair. The lower panels show induced neighbor graphs, not the entire rook or Shrikhande graph.</figcaption></figure>
 <h2 id="matrix-choice" data-video="MQ0x_mv1blI" data-start="501" data-end="1363">11.2 Change the matrix, change which distinctions survive</h2>
+<p>Here $D=\operatorname{diag}(d_v)$ uses ordinary degrees, and the unsigned incidence matrix $R$ has $n$ vertex rows and $m$ edge columns. Identities in the two Gram spaces therefore have different sizes.</p>
 <p>Write $L=D-A$ for the Laplacian and $Q=D+A$ for the signless Laplacian. The nullity of $L$ counts connected components, so it separates the five-vertex pair immediately. The nullity of $Q$ counts bipartite components, including isolated vertices, by the real unsigned-incidence rank result of chapter 3. The often-used “rank $n-1$ means bipartite” statement needs a connected graph; without that hypothesis several bipartite components supply several zero eigenvalues.</p>
 <p>Laplacian spectra can have their own collisions. On vertices $0,\ldots,5$, take edge sets</p>
 $$E_G=\{02,05,13,14,23,34,35\},\qquad
@@ -32,12 +35,14 @@ $$RR^T=Q,\qquad R^TR=2I_m+A_{\operatorname{line}(G)}.$$
 <p>If $r=\operatorname{rank}R$, the two Gram matrices share their $r$ positive eigenvalues with multiplicity. The remaining multiplicities of zero are $n-r$ and $m-r$ respectively. Thus line-graph adjacency eigenvalues are the positive signless eigenvalues minus two, together with $-2$ repeated $m-r$ times. In particular they are all at least $-2$. Dimension bookkeeping is essential; the complete eigenvalue lists of two rectangular Gram products need not be the same.</p>
 <p>Both the triangle and three-edge star have line graph $K_3$, and adding an isolate does not change a line graph. The two original graphs in the example have the same vertex count, so their Gram zero padding agrees too. In general, equal line graphs do not recover how many isolated vertices were present in the original graph. Conversely, equal signless spectra determine $n$ and $2m=\operatorname{tr}Q$, so they determine the full line-graph adjacency spectrum through this formula.</p>
 <h2 id="seidel" data-video="MQ0x_mv1blI" data-start="1363" data-end="1919">11.3 Seidel switching toggles a cut, not the whole graph</h2>
+<p>In this vertex-coordinate formula $J=J_n$, $I=I_n$, and $a_{uv}=A_{uv}$ is zero or one. The cut consists of pairs with endpoints on opposite sides of the chosen vertex subset.</p>
 <p>The Seidel matrix is $S=J-I-2A$. It has diagonal zero, entry $-1$ on an edge and $+1$ on a distinct nonedge. Choose a vertex subset $U$. Leave all adjacencies within $U$ and within its complement unchanged, and toggle every pair crossing the cut. If $T$ is diagonal with entries $+1$ on $U$ and $-1$ outside, then the switched Seidel matrix is</p>
 $$S'=TST,\qquad T^T=T=T^{-1}.$$
 <p>The diagonal blocks retain their signs and the crossing blocks reverse theirs. This proves Seidel cospectrality by an explicit orthogonal similarity. It does not generally preserve adjacency eigenvalues or edge count. It is also not global complementation: complementing the whole graph gives $S_{\overline G}=-S_G$, whose eigenvalues are negated and need not be the original multiset.</p>
 <p>For example, switching one vertex of a triangle removes its two incident edges and leaves one edge plus an isolate. The two Seidel spectra agree although their adjacency edge counts differ. Switching can sometimes give an isomorphic graph, so a chosen cut alone does not certify nonisomorphism.</p>
 <p>There is nevertheless always a cut giving a nonisomorphic Seidel mate when $n\ge2$. Switching one vertex $u$ changes the edge count by $n-1-2d_u$. If any degree differs from $(n-1)/2$, this is nonzero. Otherwise the graph is regular with $d=(n-1)/2$. Switch a two-vertex set $\{u,v\}$. Its original crossing-edge count is $2d-2a_{uv}=n-1-2a_{uv}$, while there are $2(n-2)$ possible crossing pairs. The change in edge count is therefore $4a_{uv}-2$, again nonzero. This covers the remaining case. Only the one-vertex graph has no such alternative. The argument proves existence of a useful cut; it does not say every cut works.</p>
 <h2 id="gm" data-video="QP1WJLJKpcU" data-start="0" data-end="1678">11.4 Godsil–McKay switching preserves adjacency by a block reflection</h2>
+<p>Write $J_{p,q}$ for the rectangular $p\times q$ all-ones matrix. If the remaining set $Y$ is empty, its identity block has order zero and makes no contribution.</p>
 <p>Partition the vertex set into nonempty cells $X_1,\ldots,X_k$ and a remaining set $Y$. Require two conditions. First, for each ordered pair $(i,j)$, every vertex in $X_i$ has the same number of neighbors in $X_j$. Second, each vertex of $Y$ has either zero, half, or all of the vertices of any $X_i$ as neighbors. A half-size case can occur only when that cell's size is even. Edges within $Y$ are unrestricted.</p>
 <p>For each half-size case, remove those neighbors and connect the $Y$ vertex to the other half of that cell. Leave all other edges unchanged. We now prove that the resulting simple graph is adjacency-cospectral with the original.</p>
 <p>For a positive integer $m$, set $F_m=2J_m/m-I_m$. Since $J_m^2=mJ_m$, we obtain $F_m^2=I_m$. It is a symmetric orthogonal reflection and $F_m\mathbf1=\mathbf1$. For a zero–one column $x$ with exactly $m/2$ ones, $J_mx=(m/2)\mathbf1$, so $F_mx=\mathbf1-x$. The zero column and all-ones column remain unchanged.</p>
@@ -49,6 +54,7 @@ $$F_pBF_q=B+\left(\frac{4r}{q}-\frac{2c}{p}-\frac{2r}{q}\right)J_{p,q}=B,$$
 <p>For a complete small example, let $X=\{0,1,2,3\}$ be independent and let $Y=\{4,5,6\}$ be independent. Give the three $Y$ vertices neighbor sets $\{0,1\}$, $\{0,2\}$ and $\{0,3\}$. The original graph is a three-arm star with each edge subdivided once. Switching all half-columns makes vertex 0 isolated and makes the other six vertices a cycle. The degree lists change from $(3,2,2,2,1,1,1)$ to $(2,2,2,2,2,2,0)$, proving nonisomorphism independently of the shared spectrum. The construction guarantees equal spectra; this separate witness proves that they are different graphs.</p>
 
 <h2 id="cartesian" data-video="-T0B5-Fhy0c" data-start="0" data-end="1096">11.5 Cartesian products add eigenvalues, including multiplicities</h2>
+<p>Put $n=|V(G)|$ and $m=|V(H)|$. The Kronecker matrix product $B\otimes C$ replaces entry $B_{ij}$ by the block $B_{ij}C$. For orthogonality, $\delta_{ia}$ is one when $i=a$ and zero otherwise.</p>
 <p>The Cartesian product $G\square H$ has vertices $(u,v)\in V(G)\times V(H)$. Two pairs are adjacent when one coordinate is equal and the other follows an edge in its corresponding graph. This differs from a product requiring both coordinates to follow edges. With lexicographic ordering, its adjacency matrix is</p>
 $$A_{G\square H}=A_G\otimes I_m+I_n\otimes A_H.$$
 <p>If $A_Gx_i=\lambda_ix_i$ and $A_Hy_j=\mu_jy_j$, the tensor vector with entries $x_i(u)y_j(v)$ satisfies</p>
@@ -56,6 +62,7 @@ $$A_{G\square H}(x_i\otimes y_j)=(\lambda_i+\mu_j)(x_i\otimes y_j).$$
 <p>These are all the eigenvalues, not merely some candidates. Choose orthonormal bases in the two factors. Then $(x_i\otimes y_j)^T(x_a\otimes y_b)=(x_i^Tx_a)(y_j^Ty_b)=\delta_{ia}\delta_{jb}$. The $nm$ tensor vectors form an orthonormal basis of an $nm$-dimensional space. Repeated sums receive the sum of all contributing product multiplicities. This completes the dimension argument that a calculation with one eigenvector pair alone would miss.</p>
 <p>For $K_4\square K_4$, each factor has eigenvalues $3$ once and $-1$ three times. The sum spectrum is therefore $6$ once, $2$ six times, and $-2$ nine times. Geometrically this is the $4\times4$ rook graph: cells $(i,j)$ are adjacent when they share a row or column. Every cell has six neighbors. A row supplies a four-clique, and no clique is larger: if two clique vertices share a row but have different columns, any vertex adjacent to both must share that row too. The column case is the same.</p>
 <h2 id="shrikhande" data-video="-T0B5-Fhy0c" data-start="1096" data-end="1665">11.6 Equal regular spectra can hide different clique geometry</h2>
+<p>The group $\mathbb Z_4^2$ consists of ordered pairs of residues modulo four; addition and subtraction act on each coordinate modulo four. Its Cayley adjacency below uses exactly the listed allowed differences.</p>
 <p>In the rook graph take $X=\{(0,0),(1,1),(2,2),(3,3)\}$. It is independent. Each remaining cell $(i,j)$ with $i\ne j$ is adjacent to exactly the two diagonal cells $(i,i),(j,j)$, half of $X$. Godsil–McKay switching on $X$ is therefore valid. The resulting graph is the Shrikhande graph in this construction. It remains 6-regular: each outside cell exchanges two diagonal neighbors for two others; each diagonal vertex exchanges six outside neighbors for the other six. It has the same spectrum $6,2^{(6)},(-2)^{(9)}$.</p>
 <p>We can prove nonisomorphism by examining neighborhoods. In the rook graph the six neighbors of any vertex induce two disjoint triangles, its row and its column. In the switched graph every neighborhood instead induces a six-cycle. Here are enough details to check that assertion without trusting a picture.</p>
 <p>Simultaneously permuting the four row and column labels preserves the diagonal switching set. There are only two vertex types under these symmetries: diagonal and off-diagonal. At diagonal vertex $(0,0)$, the new neighbors are the six off-diagonal cells $(i,j)$ with $i,j\in\{1,2,3\}$ and $i\ne j$. Their unchanged rook adjacencies give one cycle of length six. At off-diagonal vertex $(0,1)$, the neighbors are diagonal cells $(2,2),(3,3)$ and cells $(0,2),(0,3),(2,1),(3,1)$. Their induced edges form the cycle</p>
@@ -70,6 +77,7 @@ $$(2,2)-(0,3)-(0,2)-(3,3)-(2,1)-(3,1)-(2,2).$$
 <p><strong>Balanced complete bipartite graphs.</strong> A candidate with the spectrum of $K_{q,q}$ has $2q$ vertices, eigenvalues $q,-q$ and $2q-2$ zeros, and average degree $q$. The lemma makes it $q$-regular. The symmetric spectrum makes it bipartite by chapter 7's odd-walk argument; the simple top eigenvalue also makes it connected. Each bipartition part has at least $q$ vertices because a vertex has $q$ distinct neighbors in the other part. Their total is $2q$, so both sizes are $q$ and every possible cross edge must occur. Hence the candidate is $K_{q,q}$. The case $q=1$ is included.</p>
 <p><strong>Cycles.</strong> For $n\ge3$, the cycle spectrum $2\cos(2\pi j/n)$, $0\le j&lt;n$, has top eigenvalue 2 once and average degree 2. Every cospectral candidate is 2-regular and connected. A finite connected simple 2-regular graph is one cycle: following unused edges from a vertex must eventually close, and degree two leaves no edge to a vertex outside that cycle. Its order fixes it as $C_n$.</p>
 <h2 id="paths" data-video="M6ja-UNxrGQ" data-start="1184" data-end="2078">11.8 A fourth moment finishes the less obvious path case</h2>
+<p>In the fourth-moment calculation, $d_v$ is vertex degree and $c_4$ is the number of ordinary undirected four-cycles, counted without a root or direction.</p>
 <p>The path $P_n$ is also DS, with $P_n$ meaning a path on $n$ vertices. Handle $n=1$ separately. For $n\ge2$ its eigenvalues are $2\cos(\pi j/(n+1))$, $1\le j\le n$. Any cospectral candidate $H$ therefore has $n$ vertices, $n-1$ edges and spectral radius strictly less than two.</p>
 <p>It cannot contain any cycle. A cycle has spectral radius two, and the nonnegative adjacency subgraph comparison of chapter 6 gives $\rho(H)\ge2$ if such a subgraph is present. Alternatively choose a shortest cycle, which is induced, and apply principal interlacing. Thus $H$ is a forest; a forest with $n$ vertices and $n-1$ edges has one component, so it is a tree. Edge count alone would not have justified that step: a triangle and an isolate also have four vertices and three edges.</p>
 <p>For any simple graph, classify closed walks of length four by whether they use one edge, two adjacent edges, or a four-cycle. There are two per edge, four per unordered adjacent-edge pair, and eight per four-cycle. Therefore</p>
@@ -79,6 +87,7 @@ $$\sum_v(d_v-1)(d_v-2)=(4n-6)-3(2n-2)+2n=0.$$
 <p>Every degree in this nontrivial tree is a positive integer, so each summand is nonnegative, and it is positive for degree at least three. Every degree must therefore be one or two. A connected tree with that degree restriction is a path, completing the proof.</p>
 <p>The lecture's interlacing route supplies another useful obstruction. A tree with two degree-three vertices contains an induced two-fork tree: a path connecting two branch vertices with two extra leaves attached at either end. Give the four leaves weight one and every vertex on the connecting path weight two. Every weighted neighbor sum is twice that vertex's weight, so the positive vector has eigenvalue two. Interlacing excludes it from a graph of spectral radius below two. Likewise, an induced four-leaf star has spectral radius two. The fourth-moment identity above treats the remaining possible branching and, more strongly, eliminates all branching in one calculation. For a tree with exactly one degree-three vertex and all other degrees at most two, the fourth trace exceeds the path's by exactly four, matching the lecture's branch-move observation.</p>
 <h2 id="code">11.9 Reproduce exact collisions and uniqueness ingredients</h2>
+<p>The listing takes no command-line inputs; its graph constructions are fixed in the code. It writes the displayed results to standard output, performs no file or network writes, and stops with an assertion error if a checked invariant fails. Download <a href="code/ch11_cospectral.py">the exact executable program</a>.</p>
 <p>The following SymPy code checks all displayed characteristic polynomials and switching certificates exactly. The only exhaustive isomorphism calculation enumerates all permutations for graphs of order at most four; it is deliberately small. Sixteen-vertex nonisomorphism is proved by neighborhood and clique structure, while the Cayley identification is checked by a supplied explicit bijection. No rounded eigenvalue comparison is used as an exact certificate.</p>
 <pre data-run="code/ch11_cospectral.py"><code class="language-python">from itertools import combinations, permutations, product
 import sympy as sp
@@ -92,7 +101,7 @@ def adjacency(n, edges):
 
 
 def laplacian(A):
-    return sp.diag(*list(A*sp.ones(A.rows, 1)))-A
+    return sp.diag(*list(A * sp.ones(A.rows, 1))) - A
 
 
 def polynomial(A):
@@ -101,17 +110,20 @@ def polynomial(A):
 
 def canonical(A):
     pairs = list(combinations(range(A.rows), 2))
-    return min(tuple(A[p[i], p[j]] for i, j in pairs)
-               for p in permutations(range(A.rows)))
+    return min(
+        tuple(A[p[i], p[j]] for i, j in pairs)
+        for p in permutations(range(A.rows))
+    )
 
 
-z = sp.Symbol('z')
+z = sp.Symbol("z")
 star = adjacency(5, [(0, i) for i in range(1, 5)])
 cycle4plus = adjacency(5, [(0, 1), (1, 2), (2, 3), (0, 3)])
 assert polynomial(star) == polynomial(cycle4plus)
 assert polynomial(laplacian(star)) != polynomial(laplacian(cycle4plus))
-print('Five-vertex adjacency pair:', sp.factor(star.charpoly(z).as_expr()))
-# All labeled simple graphs on one through four vertices; no graph-library oracle.
+print("Five-vertex adjacency pair:", sp.factor(star.charpoly(z).as_expr()))
+# All labeled simple graphs on one through four vertices; no graph-library
+# oracle.
 counts = []
 for n in range(1, 5):
     edges = list(combinations(range(n), 2))
@@ -124,65 +136,97 @@ for n in range(1, 5):
         spectra[key] = iso
         classes.add(iso)
     counts.append(len(classes))
-print('Orders 1..4: distinct isomorphism classes and spectra:', counts)
-G = adjacency(6, [(0,2),(0,5),(1,3),(1,4),(2,3),(3,4),(3,5)])
-H = adjacency(6, [(0,2),(1,2),(1,3),(1,4),(2,5),(3,5),(4,5)])
+print("Orders 1..4: distinct isomorphism classes and spectra:", counts)
+G = adjacency(6, [(0, 2), (0, 5), (1, 3), (1, 4), (2, 3), (3, 4), (3, 5)])
+H = adjacency(6, [(0, 2), (1, 2), (1, 3), (1, 4), (2, 5), (3, 5), (4, 5)])
 assert polynomial(laplacian(G)) == polynomial(laplacian(H))
 assert sp.trace(G**3) == 6 and sp.trace(H**3) == 0
-print('Six-vertex Laplacian pair:', sp.factor(laplacian(G).charpoly(z).as_expr()))
-# A star and triangle+isolate share the same signless spectrum via their line graph.
-T = adjacency(4, [(0,1),(1,2),(0,2)])
-U = adjacency(4, [(0,i) for i in range(1,4)])
-Q = lambda A: sp.diag(*list(A*sp.ones(A.rows,1)))+A
+print(
+    "Six-vertex Laplacian pair:", sp.factor(laplacian(G).charpoly(z).as_expr())
+)
+# A star and triangle+isolate share the same signless spectrum via their line
+# graph.
+T = adjacency(4, [(0, 1), (1, 2), (0, 2)])
+U = adjacency(4, [(0, i) for i in range(1, 4)])
+
+
+def Q(A):
+    return sp.diag(*list(A * sp.ones(A.rows, 1))) + A
+
+
 assert polynomial(Q(T)) == polynomial(Q(U))
-print('Signless pair:', sp.factor(Q(T).charpoly(z).as_expr()))
+print("Signless pair:", sp.factor(Q(T).charpoly(z).as_expr()))
 # Exact seven-vertex Godsil-McKay certificate, X={0,1,2,3}.
-B = adjacency(7, [(0,4),(1,4),(0,5),(2,5),(0,6),(3,6)])
-reflection = sp.diag(sp.ones(4)/2-sp.eye(4), sp.eye(3))
-Bs = reflection*B*reflection
+B = adjacency(7, [(0, 4), (1, 4), (0, 5), (2, 5), (0, 6), (3, 6)])
+reflection = sp.diag(sp.ones(4) / 2 - sp.eye(4), sp.eye(3))
+Bs = reflection * B * reflection
 assert reflection**2 == sp.eye(7)
-assert all(x in (0,1) for x in Bs) and all(Bs[i,i] == 0 for i in range(7))
+assert all(x in (0, 1) for x in Bs) and all(Bs[i, i] == 0 for i in range(7))
 assert polynomial(B) == polynomial(Bs)
-assert polynomial(sp.ones(7)-sp.eye(7)-B) == polynomial(sp.ones(7)-sp.eye(7)-Bs)
-print('GM degree lists:', sorted(B*sp.ones(7,1)), sorted(Bs*sp.ones(7,1)))
+assert polynomial(sp.ones(7) - sp.eye(7) - B) == polynomial(
+    sp.ones(7) - sp.eye(7) - Bs
+)
+print(
+    "GM degree lists:", sorted(B * sp.ones(7, 1)), sorted(Bs * sp.ones(7, 1))
+)
 # Cartesian rook graph and switching on its four diagonal cells.
 V = list(product(range(4), repeat=2))
-R = adjacency(16, [(i,j) for i,j in combinations(range(16),2)
-                   if V[i][0] == V[j][0] or V[i][1] == V[j][1]])
-X = [i for i,v in enumerate(V) if v[0] == v[1]]
+R = adjacency(
+    16,
+    [
+        (i, j)
+        for i, j in combinations(range(16), 2)
+        if V[i][0] == V[j][0] or V[i][1] == V[j][1]
+    ],
+)
+X = [i for i, v in enumerate(V) if v[0] == v[1]]
 F = sp.eye(16)
 for i in X:
     for j in X:
-        F[i,j] = sp.Rational(1,2)-int(i==j)
-S = F*R*F
+        F[i, j] = sp.Rational(1, 2) - int(i == j)
+S = F * R * F
 assert polynomial(S) == polynomial(R)
-expected = (z-6)*(z-2)**6*(z+2)**9
-assert sp.expand(R.charpoly(z).as_expr()-expected) == 0
+expected = (z - 6) * (z - 2) ** 6 * (z + 2) ** 9
+assert sp.expand(R.charpoly(z).as_expr() - expected) == 0
 # Each switched neighborhood is a connected 6-cycle: degree2 and no triangle,
 # with six vertices, rules out any disconnected simple2-regular alternative.
 for i in range(16):
-    N = [j for j in range(16) if S[i,j]]
-    local = S.extract(N,N)
-    assert len(N) == 6 and local*sp.ones(6,1) == 2*sp.ones(6,1)
+    N = [j for j in range(16) if S[i, j]]
+    local = S.extract(N, N)
+    assert len(N) == 6 and local * sp.ones(6, 1) == 2 * sp.ones(6, 1)
     assert sp.trace(local**3) == 0
-assert any(all(R[i,j] for i,j in combinations(C,2)) for C in combinations(range(16),4))
-assert not any(all(S[i,j] for i,j in combinations(C,2)) for C in combinations(range(16),4))
-print('Rook/Shrikhande polynomial:', sp.factor(expected))
+assert any(
+    all(R[i, j] for i, j in combinations(C, 2))
+    for C in combinations(range(16), 4)
+)
+assert not any(
+    all(S[i, j] for i, j in combinations(C, 2))
+    for C in combinations(range(16), 4)
+)
+print("Rook/Shrikhande polynomial:", sp.factor(expected))
 # Explicit isomorphism to Cayley(Z4 x Z4, +/-e1,+/-e2,+/-(e1+e2)).
-generators = {(1,0),(3,0),(0,1),(0,3),(1,1),(3,3)}
-C = adjacency(16, [(i,j) for i,j in combinations(range(16),2)
-                   if ((V[j][0]-V[i][0])%4,(V[j][1]-V[i][1])%4) in generators])
-f = [0,7,6,11,13,10,1,12,14,3,8,15,9,4,5,2]
+generators = {(1, 0), (3, 0), (0, 1), (0, 3), (1, 1), (3, 3)}
+C = adjacency(
+    16,
+    [
+        (i, j)
+        for i, j in combinations(range(16), 2)
+        if ((V[j][0] - V[i][0]) % 4, (V[j][1] - V[i][1]) % 4) in generators
+    ],
+)
+f = [0, 7, 6, 11, 13, 10, 1, 12, 14, 3, 8, 15, 9, 4, 5, 2]
 assert sorted(f) == list(range(16))
-assert all(S[i,j] == C[f[i],f[j]] for i in range(16) for j in range(16))
-print('Rook/Shrikhande clique numbers: 4 / 3; explicit Cayley isomorphism PASS')
-for n in range(2,9):
-    P = adjacency(n, [(i,i+1) for i in range(n-1)])
-    assert sp.trace(P**4) == 6*n-10
-claw = adjacency(4, [(0,i) for i in range(1,4)])
-p4 = adjacency(4, [(i,i+1) for i in range(3)])
-assert sp.trace(claw**4)-sp.trace(p4**4) == 4
-print('Path fourth moments n=2..8 and single-branch difference4: PASS')
+assert all(S[i, j] == C[f[i], f[j]] for i in range(16) for j in range(16))
+print(
+    "Rook/Shrikhande clique numbers: 4 / 3; explicit Cayley isomorphism PASS"
+)
+for n in range(2, 9):
+    P = adjacency(n, [(i, i + 1) for i in range(n - 1)])
+    assert sp.trace(P**4) == 6 * n - 10
+claw = adjacency(4, [(0, i) for i in range(1, 4)])
+p4 = adjacency(4, [(i, i + 1) for i in range(3)])
+assert sp.trace(claw**4) - sp.trace(p4**4) == 4
+print("Path fourth moments n=2..8 and single-branch difference4: PASS")
 </code></pre>
 <pre data-output="code/ch11_cospectral.py">Five-vertex adjacency pair: z**3*(z - 2)*(z + 2)
 Orders 1..4: distinct isomorphism classes and spectra: [1, 2, 4, 11]
@@ -193,16 +237,16 @@ Rook/Shrikhande polynomial: (z - 6)*(z - 2)**6*(z + 2)**9
 Rook/Shrikhande clique numbers: 4 / 3; explicit Cayley isomorphism PASS
 Path fourth moments n=2..8 and single-branch difference4: PASS</pre>
 <h2 id="exercises">11.10 Problems with complete solutions</h2>
-<details><summary>1. Identify what the five-vertex collision preserves</summary><p><strong>Problem.</strong> For $K_{1,4}$ and $C_4\sqcup K_1$, compute vertex count, edge count, triangle count, adjacency rank, and Laplacian nullity. Which quantities distinguish them?</p><p><strong>Solution.</strong> Their shared five-entry spectrum gives $n=5$, $m=(2^2+(-2)^2)/2=4$, triangles $(2^3+(-2)^3)/6=0$, and adjacency rank two. Laplacian nullities are one and two because their component counts differ. Connectivity and degrees distinguish them despite every adjacency closed-walk trace agreeing. A common adjacency zero multiplicity is not a common Laplacian zero multiplicity.</p></details>
-<details><summary>2. Keep the rectangular Gram zero padding</summary><p><strong>Problem.</strong> Explain why $K_3\sqcup K_1$ and $K_{1,3}$ have the same signless spectrum, and what would happen if the isolate were omitted from the first graph.</p><p><strong>Solution.</strong> Both have $m=3$ edges and line graph $K_3$, so their edge Gram matrix has spectrum $4,1,1$ from $2I+A_{K_3}$. Both unsigned incidence matrices have rank three. With $n=4$, their vertex Gram matrices therefore have $4,1,1,0$. Omitting the isolate makes $n=3$, removes that zero, and leaves $4,1,1$. The positive eigenvalues agree but the complete multisets no longer have equal size. Their line graphs still agree because line graphs ignore isolates.</p></details>
-<details><summary>3. A switching cut may preserve edge count and still change the graph</summary><p><strong>Problem.</strong> Switch vertex 0 in a cyclically labeled $C_5$. Then switch the adjacent pair $\{0,1\}$ instead. What do edge-count tests establish?</p><p><strong>Solution.</strong> A single vertex has degree two, so the edge-count change is $4-2(2)=0$. But its neighbors change from $1,4$ to $2,3$, giving degree list $(2,1,3,3,1)$ and a triangle $023$; it is still nonisomorphic to the original cycle. For the adjacent pair, the cut originally has two edges among six possible cross pairs, so switching changes the count by $6-2(2)=2$, from five to seven. The second case is nonisomorphic immediately by edge count. In both cases Seidel spectra agree. Unchanged edge count is only an inconclusive test, not a proof of isomorphism.</p></details>
-<details><summary>4. Why Godsil–McKay output need not be a new isomorphism class</summary><p><strong>Problem.</strong> Let $X=\{0,1\}$ be independent and let one outside vertex be adjacent only to 0. Apply the reflection and explain why the resulting graph is isomorphic.</p><p><strong>Solution.</strong> Here $F_2=J_2-I_2=\begin{pmatrix}0&amp;1\\1&amp;0\end{pmatrix}$, which is itself a permutation matrix. It exchanges the two coordinates of $X$. The edge from the outside vertex to 0 becomes an edge to 1, while the old vertex 0 becomes isolated. Swapping labels 0 and 1 is an explicit isomorphism. The theorem guarantees the spectrum; a separate structural test is needed to certify a nonisomorphic mate.</p></details>
-<details><summary>5. Compute a Cartesian product with all multiplicities</summary><p><strong>Problem.</strong> Find the adjacency spectrum of $K_2\square P_3$ and justify that your list is complete.</p><p><strong>Solution.</strong> The factors have spectra $1,-1$ and $\sqrt2,0,-\sqrt2$. All six sums are $1+\sqrt2,1,1-\sqrt2,-1+\sqrt2,-1,-1-\sqrt2$, each occurring once. They come with six tensor eigenvectors forming an orthonormal basis in dimension six. Counting only the distinct numerical sums without their contributing product multiplicities would not be valid in a case where sums coincide.</p></details>
-<details><summary>6. Recover the shared parameters and the differing clique numbers</summary><p><strong>Problem.</strong> Use the rook/Shrikhande spectrum and neighborhood descriptions to recover their strongly regular parameters and prove that their clique numbers differ.</p><p><strong>Solution.</strong> Both are connected 6-regular graphs on 16 vertices with nonconstant roots $2,-2$. The quadratic-projector identity gives $b=(6-2)(6+2)/16=2$ and $a=b+2-2=2$. A rook row is a four-clique and every clique lies in a row or column, so its maximum is four. Every Shrikhande neighborhood is a six-cycle, which is triangle-free. A four-clique would create a triangle in a neighborhood and is impossible. A neighborhood contains an edge, which with its central vertex forms a triangle, so the maximum is three. Shared parameters and eigenvalues do not identify the graph.</p></details>
-<details><summary>7. Prove a balanced complete bipartite uniqueness claim</summary><p><strong>Problem.</strong> A simple graph has spectrum $4,-4$ and six zeros. Show that it must be $K_{4,4}$, including the regularity and connectivity steps.</p><p><strong>Solution.</strong> There are eight vertices and $m=(16+16)/2=16$ edges, so average degree is four. Equality with the top eigenvalue forces every degree to be four by the Rayleigh equality condition. The top eigenvalue is simple, so this regular graph has one component. Spectrum symmetry forces bipartiteness. Each part must contain at least four vertices to supply all neighbors of a vertex in the opposite part, so both parts have size four and every cross pair is an edge. Thus the graph is $K_{4,4}$.</p></details>
-<details><summary>8. Distinguish the steps in path recognition</summary><p><strong>Problem.</strong> Why are $n$ vertices and $n-1$ edges insufficient to identify $P_n$? Why does spectral radius below two still not finish the proof? Check the first branching example by fourth moments.</p><p><strong>Solution.</strong> A triangle plus an isolate has four vertices and three edges, so an acyclicity argument is needed before concluding the graph is a tree. Spectral radius below two excludes cycles but still allows the claw $K_{1,3}$, with radius $\sqrt3$. The claw and $P_4$ both have four vertices and three edges, but squared-degree sums are $3^2+1+1+1=12$ and $1+4+4+1=10$. Their fourth traces are $2(12)-6=18$ and $2(10)-6=14$. The difference is four. The general nonnegative sum $\sum(d-1)(d-2)$ excludes all branching when the path moment is imposed.</p></details>
-<details><summary>9. An unbalanced complete bipartite graph need not be DS</summary><p><strong>Problem.</strong> Generalize the star collision when $q=ab$ with integers $a,b\ge2$. Construct a graph cospectral with $K_{1,q}$ and explain why the balanced theorem is not contradicted.</p><p><strong>Solution.</strong> The star has $q+1$ vertices, roots $\pm\sqrt q$, and $q-1$ zeros. Take $K_{a,b}$ and add $r=q+1-a-b=(a-1)(b-1)$ isolates. Its order is again $q+1$, its two nonzero roots are $\pm\sqrt{ab}=\pm\sqrt q$, and its zero count is $(a+b-2)+r=q-1$. It is disconnected while the star is connected, proving nonisomorphism. The case $a=b=2$ is the five-vertex pair. Thus a blanket claim that every star is DS would be false. For the balanced case, the separate regularity and part-size proof excludes such alternatives; a special family's uniqueness cannot be transferred to all complete bipartite graphs.</p></details>
+<details id="problem-01"><summary>1. Identify what the five-vertex collision preserves</summary><p class="problem-role"><strong>Role:</strong> Invariant comparison. <strong>Review:</strong> <a href="#invariant">§11.1</a>.</p><p><strong>Problem.</strong> For $K_{1,4}$ and $C_4\sqcup K_1$, compute vertex count, edge count, triangle count, adjacency rank, and Laplacian nullity. Which quantities distinguish them?</p><p><strong>Solution.</strong> Their shared five-entry spectrum gives $n=5$, $m=(2^2+(-2)^2)/2=4$, triangles $(2^3+(-2)^3)/6=0$, and adjacency rank two. Laplacian nullities are one and two because their component counts differ. Connectivity and degrees distinguish them despite every adjacency closed-walk trace agreeing. A common adjacency zero multiplicity is not a common Laplacian zero multiplicity.</p></details>
+<details id="problem-02"><summary>2. Keep the rectangular Gram zero padding</summary><p class="problem-role"><strong>Role:</strong> Gram dimension check. <strong>Review:</strong> <a href="#matrix-choice">§11.2</a>.</p><p><strong>Problem.</strong> Explain why $K_3\sqcup K_1$ and $K_{1,3}$ have the same signless spectrum, and what would happen if the isolate were omitted from the first graph.</p><p><strong>Solution.</strong> Both have $m=3$ edges and line graph $K_3$, so their edge Gram matrix has spectrum $4,1,1$ from $2I+A_{K_3}$. Both unsigned incidence matrices have rank three. With $n=4$, their vertex Gram matrices therefore have $4,1,1,0$. Omitting the isolate makes $n=3$, removes that zero, and leaves $4,1,1$. The positive eigenvalues agree but the complete multisets no longer have equal size. Their line graphs still agree because line graphs ignore isolates.</p></details>
+<details id="problem-03"><summary>3. A switching cut may preserve edge count and still change the graph</summary><p class="problem-role"><strong>Role:</strong> Switching witness. <strong>Review:</strong> <a href="#seidel">§11.3</a>.</p><p><strong>Problem.</strong> Switch vertex 0 in a cyclically labeled $C_5$. Then switch the adjacent pair $\{0,1\}$ instead. What do edge-count tests establish?</p><p><strong>Solution.</strong> A single vertex has degree two, so the edge-count change is $4-2(2)=0$. But its neighbors change from $1,4$ to $2,3$, giving degree list $(2,1,3,3,1)$ and a triangle $023$; it is still nonisomorphic to the original cycle. For the adjacent pair, the cut originally has two edges among six possible cross pairs, so switching changes the count by $6-2(2)=2$, from five to seven. The second case is nonisomorphic immediately by edge count. In both cases Seidel spectra agree. Unchanged edge count is only an inconclusive test, not a proof of isomorphism.</p></details>
+<details id="problem-04"><summary>4. Why Godsil–McKay output need not be a new isomorphism class</summary><p class="problem-role"><strong>Role:</strong> Isomorphism boundary. <strong>Review:</strong> <a href="#gm">§11.4</a>.</p><p><strong>Problem.</strong> Let $X=\{0,1\}$ be independent and let one outside vertex be adjacent only to 0. Apply the reflection and explain why the resulting graph is isomorphic.</p><p><strong>Solution.</strong> Here $F_2=J_2-I_2=\begin{pmatrix}0&amp;1\\1&amp;0\end{pmatrix}$, which is itself a permutation matrix. It exchanges the two coordinates of $X$. The edge from the outside vertex to 0 becomes an edge to 1, while the old vertex 0 becomes isolated. Swapping labels 0 and 1 is an explicit isomorphism. The theorem guarantees the spectrum; a separate structural test is needed to certify a nonisomorphic mate.</p></details>
+<details id="problem-05"><summary>5. Compute a Cartesian product with all multiplicities</summary><p class="problem-role"><strong>Role:</strong> Product-spectrum derivation. <strong>Review:</strong> <a href="#cartesian">§11.5</a>.</p><p><strong>Problem.</strong> Find the adjacency spectrum of $K_2\square P_3$ and justify that your list is complete.</p><p><strong>Solution.</strong> The factors have spectra $1,-1$ and $\sqrt2,0,-\sqrt2$. All six sums are $1+\sqrt2,1,1-\sqrt2,-1+\sqrt2,-1,-1-\sqrt2$, each occurring once. They come with six tensor eigenvectors forming an orthonormal basis in dimension six. Counting only the distinct numerical sums without their contributing product multiplicities would not be valid in a case where sums coincide.</p></details>
+<details id="problem-06"><summary>6. Recover the shared parameters and the differing clique numbers</summary><p class="problem-role"><strong>Role:</strong> Geometric nonisomorphism. <strong>Review:</strong> <a href="#shrikhande">§11.6</a>.</p><p><strong>Problem.</strong> Use the rook/Shrikhande spectrum and neighborhood descriptions to recover their strongly regular parameters and prove that their clique numbers differ.</p><p><strong>Solution.</strong> Both are connected 6-regular graphs on 16 vertices with nonconstant roots $2,-2$. The quadratic-projector identity gives $b=(6-2)(6+2)/16=2$ and $a=b+2-2=2$. A rook row is a four-clique and every clique lies in a row or column, so its maximum is four. Every Shrikhande neighborhood is a six-cycle, which is triangle-free. A four-clique would create a triangle in a neighborhood and is impossible. A neighborhood contains an edge, which with its central vertex forms a triangle, so the maximum is three. Shared parameters and eigenvalues do not identify the graph.</p></details>
+<details id="problem-07"><summary>7. Prove a balanced complete bipartite uniqueness claim</summary><p class="problem-role"><strong>Role:</strong> Uniqueness proof. <strong>Review:</strong> <a href="#ds">§11.7</a>.</p><p><strong>Problem.</strong> A simple graph has spectrum $4,-4$ and six zeros. Show that it must be $K_{4,4}$, including the regularity and connectivity steps.</p><p><strong>Solution.</strong> There are eight vertices and $m=(16+16)/2=16$ edges, so average degree is four. Equality with the top eigenvalue forces every degree to be four by the Rayleigh equality condition. The top eigenvalue is simple, so this regular graph has one component. Spectrum symmetry forces bipartiteness. Each part must contain at least four vertices to supply all neighbors of a vertex in the opposite part, so both parts have size four and every cross pair is an edge. Thus the graph is $K_{4,4}$.</p></details>
+<details id="problem-08"><summary>8. Distinguish the steps in path recognition</summary><p class="problem-role"><strong>Role:</strong> Moment counterexample. <strong>Review:</strong> <a href="#paths">§11.8</a>.</p><p><strong>Problem.</strong> Why are $n$ vertices and $n-1$ edges insufficient to identify $P_n$? Why does spectral radius below two still not finish the proof? Check the first branching example by fourth moments.</p><p><strong>Solution.</strong> A triangle plus an isolate has four vertices and three edges, so an acyclicity argument is needed before concluding the graph is a tree. Spectral radius below two excludes cycles but still allows the claw $K_{1,3}$, with radius $\sqrt3$. The claw and $P_4$ both have four vertices and three edges, but squared-degree sums are $3^2+1+1+1=12$ and $1+4+4+1=10$. Their fourth traces are $2(12)-6=18$ and $2(10)-6=14$. The difference is four. The general nonnegative sum $\sum(d-1)(d-2)$ excludes all branching when the path moment is imposed.</p></details>
+<details id="problem-09"><summary>9. An unbalanced complete bipartite graph need not be DS</summary><p class="problem-role"><strong>Role:</strong> Cospectral family construction. <strong>Review:</strong> <a href="#invariant">§11.1</a>.</p><p><strong>Problem.</strong> Generalize the star collision when $q=ab$ with integers $a,b\ge2$. Construct a graph cospectral with $K_{1,q}$ and explain why the balanced theorem is not contradicted.</p><p><strong>Solution.</strong> The star has $q+1$ vertices, roots $\pm\sqrt q$, and $q-1$ zeros. Take $K_{a,b}$ and add $r=q+1-a-b=(a-1)(b-1)$ isolates. Its order is again $q+1$, its two nonzero roots are $\pm\sqrt{ab}=\pm\sqrt q$, and its zero count is $(a+b-2)+r=q-1$. It is disconnected while the star is connected, proving nonisomorphism. The case $a=b=2$ is the five-vertex pair. Thus a blanket claim that every star is DS would be false. For the balanced case, the separate regularity and part-size proof excludes such alternatives; a special family's uniqueness cannot be transferred to all complete bipartite graphs.</p></details>
 <h2 id="limits">11.11 Spectral rejection and isomorphism certification are different tasks</h2>
 <p>Different spectra rule out isomorphism for the named matrix. Equal spectra keep candidates alive; they do not identify a vertex bijection. The exact orthogonal reflections here deliberately exploit that gap. Conversely, a DS proof must exclude every cospectral competitor, including disconnected graphs and graphs whose regularity was not assumed in advance.</p>
-<p>Algorithmic complexity should be stated separately from these examples. <a href="https://arxiv.org/abs/1512.03547">Babai's primary abstract for <em>Graph Isomorphism in Quasipolynomial Time</em></a> reports a bound of $\exp((\log n)^{O(1)})$ for a substantially richer algorithm. Only that abstract was inspected here; the full algorithm and its proof are not reproduced or independently verified. The concrete claim proved in this chapter is narrower and unconditional: using only an adjacency eigenvalue multiset cannot decide isomorphism on all finite simple graphs, because explicit nonisomorphic graphs share that multiset.</p>
+<p>Algorithmic complexity should be stated separately from these examples. <a href="https://arxiv.org/abs/1512.03547">Babai's primary abstract for <em>Graph Isomorphism in Quasipolynomial Time</em></a> reports a bound of $\exp((\log n)^{O(1)})$ for a substantially richer algorithm. Here $\log$ is the natural logarithm, $\exp(t)=e^t$, and $O(1)$ in the exponent denotes a constant independent of graph order $n$. Only that abstract was inspected here; the full algorithm and its proof are not reproduced or independently verified. The concrete claim proved in this chapter is narrower and unconditional: using only an adjacency eigenvalue multiset cannot decide isomorphism on all finite simple graphs, because explicit nonisomorphic graphs share that multiset.</p>
 <!-- BOOK-CONTENT-END --></article><nav class="page-turn" aria-label="Chapter navigation"><a rel="prev" href="chapter-10-regularity-strong-regularity-friendship.html">Previous chapter</a><a href="index.html">Chapter index</a><a rel="next" href="chapter-12-hypercubes-sensitivity-theorem.html">Next chapter</a></nav></main></div><footer class="site-footer">Independent study edition. Prof. Ranveer Singh’s NPTEL recordings provide the topic spine. Original exposition, source limitations and verification evidence are separately recorded.</footer></body></html>

@@ -6,10 +6,11 @@
 <script defer src="assets/mathjax-tex-svg.js"></script><script defer src="assets/book.js"></script></head>
 <body><a class="skip" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="index.html">Introduction to Algebraic Graph Theory · NPTEL IIT Indore</a><nav class="course-nav" aria-label="Book"><a href="index.html">Chapters</a><a href="source-map.html">Source map</a><a href="references.html">References</a><a href="numerical-lab.html">Numerical lab</a></nav></header>
 <div class="layout"><aside class="toc" id="chapter-toc" aria-label="On this page"><h2>On this page</h2></aside><main id="main"><div class="reading-tools" aria-label="Reading controls"><button id="theme-toggle" aria-pressed="false">Light theme</button><button id="text-toggle" aria-pressed="false">Larger text</button><button id="solutions-toggle" aria-pressed="false">Expand solutions</button><button id="print-page">Print with solutions</button></div>
-<article id="chapter-content"><!-- BOOK-CONTENT-START --><h1>12. Hypercubes and the sensitivity theorem</h1>
+<article id="chapter-content"><!-- BOOK-CONTENT-START --><h1 id="chapter-title">12. Hypercubes and the sensitivity theorem</h1>
 <p class="lead">A graph can conceal the useful eigenvalues of its own edge pattern. Huang's idea is to attach signs to the edges of a cube, producing only two eigenvalues. Interlacing then forces a large induced subgraph to have a high-degree vertex. The final step translates that vertex into sensitivity of a Boolean function. We prove that translation explicitly and supply a self-contained, deliberately nonsharp polynomial bound for block sensitivity.</p>
 <p class="source-note">Topic spine: Lectures 31–32, read in full through local machine transcripts. Names, matrix signs and inequality directions are reconstructed mathematically; this is not a complete board audit. The primary support is <a href="https://www.math.emory.edu/~hhuan30/papers/sensitivity_1.pdf">Hao Huang's complete six-page author manuscript</a>, including its signed-matrix proof and stated Boolean consequences; publication is identified by the <a href="https://annals.math.princeton.edu/2019/190-3/p06">2019 Annals record</a>. The Fourier bridge and endpoint-polynomial argument below are expanded teaching derivations. No claim about the present optimal sensitivity exponent is needed here.</p>
 <h2 id="local-changes" data-video="s0MRcD5XI-g" data-start="0" data-end="760">12.1 Local changes and disjoint blocks</h2>
+<p>Let $n\ge1$ and $[n]=\{1,\ldots,n\}$. Sensitivity counts single-bit changes that alter the output. Boolean AND is one exactly when every input is one; OR is one exactly when at least one input is one.</p>
 <p>For $x\in\{0,1\}^n$ and $B\subseteq[n]$, let $x^B$ flip exactly the coordinates in $B$. A block is an arbitrary nonempty subset, not necessarily an interval of indices. For $f:\{0,1\}^n\to\{0,1\}$ define</p>
 $$s(f,x)=|\{i:f(x)\ne f(x^{\{i\}})\}|,\qquad s(f)=\max_x s(f,x).$$
 <p>The block sensitivity $bs(f,x)$ is the largest number of pairwise disjoint nonempty blocks $B_1,\ldots,B_b$ such that $f(x^{B_j})\ne f(x)$ for every $j$. Each comparison starts at the same $x$. We do not flip the blocks cumulatively. Set $bs(f)=\max_x bs(f,x)$. Singletons are admissible blocks, so</p>
@@ -17,34 +18,37 @@ $$s(f,x)\le bs(f,x)\le n,\qquad s(f)\le bs(f)\le n.$$
 <p>The upper bound uses disjointness and nonemptiness: $b$ disjoint blocks consume at least $b$ coordinates. For $\operatorname{AND}_n$, the all-one input has both sensitivities $n$. At the all-zero input, $s=0$ and $bs=1$ when $n\ge2$: only flipping the whole coordinate set can produce one. When $n=1$, the same zero input has $s=bs=1$. Local separation alone does not establish a separation between the global maxima.</p>
 <p>The sensitivity conjecture asked for a polynomial bound on $bs(f)$ in terms of $s(f)$, uniform in the number of input bits. Bounding $bs$ by $n$ cannot achieve this when many bits are present but very few individual changes matter. The cube theorem supplies an algebraic intermediary: the degree of the unique real multilinear polynomial representing $f$.</p>
 <h2 id="cube" data-video="s0MRcD5XI-g" data-start="760" data-end="1749">12.2 The hypercube and a threshold just above half</h2>
+<p>Hamming distance counts coordinates in which two strings differ. Hamming weight counts one-bits in a zero-one string. The ceiling $\lceil x\rceil$ is the least integer at least $x$.</p>
 <p>The vertices of $Q_n$ are binary strings of length $n$; two strings are adjacent precisely when their Hamming distance is one. Thus $Q_n$ has $2^n$ vertices, degree $n$, and $n2^{n-1}$ edges for $n\ge1$. Splitting on the first bit gives two copies of $Q_{n-1}$ with a perfect matching between corresponding vertices. Equivalently, $Q_n$ is the Cartesian product of $n$ copies of $K_2$.</p>
 <p>From the Cartesian spectral formula, the ordinary adjacency spectrum is $n-2j$ with multiplicity $\binom nj$. A product eigenvector chooses the $+1$ or $-1$ eigenvector of each $K_2$; choosing $j$ minus signs yields $n-2j$. There are exactly $\binom nj$ such choices. The sum of these multiplicities is $2^n$, so this accounts for an entire eigenbasis.</p>
 <p>Even and odd Hamming weights form the two parity classes. Each has $2^{n-1}$ vertices and is independent. The following result is consequently a sharp threshold in cardinality.</p>
-<p><strong>Huang's induced-cube theorem.</strong> If $n\ge1$ and $S\subseteq V(Q_n)$ has $|S|>2^{n-1}$, then</p>
+<p><strong>Huang's induced-cube theorem.</strong> If $n\ge1$ and $S\subseteq V(Q_n)$ has $|S|\gt 2^{n-1}$, then</p>
 $$\Delta(Q_n[S])\ge\sqrt n.$$
 <p>Since degrees are integers, the conclusion is at least $\lceil\sqrt n\rceil$. Exactly half the vertices can have maximum induced degree zero, so replacing the strict cardinality inequality by a weak one is false. We will prove the theorem for every larger set, rather than assume monotonicity without explaining it.</p>
 <p>Why not apply interlacing to the ordinary cube adjacency matrix? The relevant middle eigenvalue is zero for even $n$ and one for odd $n$. For example, $Q_4$ has middle eigenvalue zero, whereas the desired lower bound is two. A matrix with the same support but a more useful spectrum is needed.</p>
 <h2 id="signed-cube" data-video="prwOZivzEUU" data-start="0" data-end="844">12.3 Signs that make all cross terms cancel</h2>
+<p>The identity blocks in the recursion have order $2^{n-1}$. In the squared full matrix, $I$ instead has order $2^n$; both act on the coordinates of their corresponding block space.</p>
 <p>Define symmetric matrices recursively by</p>
 $$A_1=\begin{pmatrix}0&1\\1&0\end{pmatrix},\qquad A_n=\begin{pmatrix}A_{n-1}&I\\I&-A_{n-1}\end{pmatrix}\quad(n\ge2).$$
 <p>The dimension is $2^n$. The diagonal blocks correspond to the two subcubes; the identity blocks correspond to their matching. Induction shows that entries belong to $\{-1,0,1\}$, the diagonal is zero, and $|(A_n)_{xy}|=1$ exactly on cube edges. Thus $|A_n|$, with absolute values taken entrywise, is the ordinary cube adjacency matrix. The signs change the operator, not the underlying graph.</p>
 <p>Multiplying blocks, using the fact that the identity commutes with everything, gives</p>
 $$A_n^2=\begin{pmatrix}A_{n-1}^2+I&A_{n-1}-A_{n-1}\\A_{n-1}-A_{n-1}&I+A_{n-1}^2\end{pmatrix}=nI.$$
-<p>The induction begins with $A_1^2=I$. Because $A_n$ is real symmetric, it has an orthonormal eigenbasis. Every eigenvalue satisfies $\lambda^2=n$. Its trace is zero, and $n>0$, so the multiplicities of $+\sqrt n$ and $-\sqrt n$ are equal: each is $2^{n-1}$. The entire positive half of the spectrum has been flattened to the same useful value.</p>
+<p>The induction begins with $A_1^2=I$. Because $A_n$ is real symmetric, it has an orthonormal eigenbasis. Every eigenvalue satisfies $\lambda^2=n$. Its trace is zero, and $n\gt 0$, so the multiplicities of $+\sqrt n$ and $-\sqrt n$ are equal: each is $2^{n-1}$. The entire positive half of the spectrum has been flattened to the same useful value.</p>
 <p>Signs matter already for $n=2$. In the vertex order $00,01,10,11$,</p>
 $$A_2=\begin{pmatrix}0&1&1&0\\1&0&0&1\\1&0&0&-1\\0&1&-1&0\end{pmatrix}.$$
 <p>Its square is $2I$, whereas the ordinary square-cycle adjacency matrix has eigenvalues $2,0,0,-2$. Entrywise absolute value preserves support, but does not preserve eigenvalues, matrix squares or positive semidefiniteness. Replacing signed matrices by unsigned ones halfway through a proof would discard the main construction.</p>
 <h2 id="interlacing-proof" data-video="prwOZivzEUU" data-start="844" data-end="1612">12.4 A complete proof of the induced-cube theorem</h2>
-<p>First isolate a general bound. Let $B$ be a symmetric signed adjacency matrix of a finite simple graph $H$: zero on the diagonal and nonedges, and entries of absolute value at most one on edges. For any eigenpair $Bv=\lambda v$ with $v\ne0$, choose $i$ maximizing $|v_i|>0$. Then</p>
+<p>First isolate a general bound. Let $B$ be a symmetric signed adjacency matrix of a finite simple graph $H$: zero on the diagonal and nonedges, and entries of absolute value at most one on edges. For any eigenpair $Bv=\lambda v$ with $v\ne0$, choose $i$ maximizing $|v_i|\gt 0$. Then</p>
 $$|\lambda|\,|v_i|=\left|\sum_{j\sim i}B_{ij}v_j\right|\le\sum_{j\sim i}|v_j|\le d_H(i)|v_i|\le\Delta(H)|v_i|.$$
 <p>Division by the nonzero coordinate proves $|\lambda|\le\Delta(H)$. Nonnegativity of $B$ was never assumed. The zero diagonal matters: a freely chosen diagonal would contribute a term that the graph degree does not count.</p>
-<p>Now take the principal submatrix $B=A_n[S,S]$, where $k=|S|>2^{n-1}$. It has exactly the signed edge support of $H=Q_n[S]$. Write eigenvalues in decreasing order. Interlacing from Chapter 7 gives</p>
+<p>Now take the principal submatrix $B=A_n[S,S]$, where $k=|S|\gt 2^{n-1}$. It has exactly the signed edge support of $H=Q_n[S]$. Write eigenvalues in decreasing order. Interlacing from Chapter 7 gives</p>
 $$\lambda_1(B)\ge\lambda_{2^n-k+1}(A_n).$$
 <p>Because $k\ge2^{n-1}+1$, the index on the right is at most $2^{n-1}$. Every such eigenvalue equals $\sqrt n$. Combining the two bounds yields $\Delta(H)\ge\lambda_1(B)\ge\sqrt n$, as required. For $n=1$, the only larger-than-half set is the whole single edge; the proof and conclusion remain valid.</p>
 <p>There is also a stronger spectral statement about the <em>unsigned</em> induced graph. For every real vector $v$,</p>
 $$v^TBv\le |v|^T A(H)|v|\le\lambda_1(A(H))\|v\|^2.$$
 <p>The first inequality is termwise; the second is the Rayleigh bound. Maximizing over unit $v$ shows $\lambda_1(A(H))\ge\lambda_1(B)\ge\sqrt n$. This spectral lower bound is attained for every $n$: take all even vertices and one odd vertex. The induced graph is $K_{1,n}$ plus $2^{n-1}-n$ isolates, with spectral radius $\sqrt n$. Its maximum degree is $n$, so spectral sharpness and degree sharpness are different claims.</p>
 <h2 id="fourier-bridge">12.5 Why the graph theorem bounds Boolean degree</h2>
+<p>The empty product is one. Uniform expectation means $\mathbb E[H]=2^{-n}\sum_{x\in\{-1,1\}^n}H(x)$, so the orthogonality argument is a finite sum, rather than a limiting integral.</p>
 <p>Use input coordinates $x_i\in\{-1,1\}$ and output $F(x)\in\{-1,1\}$. Affine input and output recodings preserve real polynomial degree and sensitivities. For $T\subseteq[n]$, define $\chi_T(x)=\prod_{i\in T}x_i$. Under the uniform average, $\mathbb E[\chi_T\chi_U]$ is one if $T=U$ and zero otherwise: when the sets differ, some independent coordinate appears to the first power and averages to zero. There are $2^n$ characters on $2^n$ inputs, hence they form a basis. Consequently</p>
 $$F(x)=\sum_{T\subseteq[n]}\widehat F(T)\chi_T(x),\qquad\widehat F(T)=\mathbb E[F\chi_T].$$
 <p>This proves existence and uniqueness of the multilinear representation as well as the coefficient formula. Let $d=\deg F$. If $d=0$, the function is constant and the desired inequality is immediate. Otherwise select $T$ of size $d$ with nonzero coefficient and fix all coordinates outside $T$. No larger monomial can contain $T$, because $d$ was maximal. Therefore the coefficient of the full product on the surviving $d$ variables remains nonzero after every such restriction. Call the restricted Boolean function $G$.</p>
@@ -53,12 +57,13 @@ $$F(x)=\sum_{T\subseteq[n]}\widehat F(T)\chi_T(x),\qquad\widehat F(T)=\mathbb E[
 $$s(f)\ge\sqrt{\deg f},\qquad\deg f\le s(f)^2.$$
 <p>The argument uses a biased sign class of $G$ times parity, not necessarily a biased output class of $G$ itself. A Boolean function can be perfectly balanced and still have a nonzero highest-degree coefficient. Skipping the parity multiplication would leave precisely that gap.</p>
 <h2 id="polynomial-bridge">12.6 A self-contained route from degree to block sensitivity</h2>
+<p>For distinct nodes $x_0,\ldots,x_d$, the Lagrange basis is $\ell_j(x)=\prod_{k\ne j}(x-x_k)/(x_j-x_k)$. The Chebyshev polynomials satisfy $T_0(x)=1$, $T_1(x)=x$ and $T_{d+1}(x)=2xT_d(x)-T_{d-1}(x)$, which proves their polynomial degree by induction. Derivatives below are ordinary real-polynomial derivatives, and an interval length $L$ is positive.</p>
 <p>The preceding inequality settles the degree-versus-sensitivity question. To obtain a block-sensitivity conclusion without leaving another theorem unproved, we establish the nonsharp estimate $bs(f)\le6(\deg f)^2$. Huang's manuscript states a stronger classical bound; the constant six here belongs to the elementary argument below and is not asserted to be optimal.</p>
-<p>We first prove an endpoint inequality. If a real polynomial $p$ has degree at most $d\ge1$ and $M=\max_{[-1,1]}|p|$, then $|p'(1)|\le d^2M$, and likewise at $-1$. Interpolate at $x_j=\cos(j\pi/d)$, $0\le j\le d$, with Lagrange polynomials $\ell_j$. For $j\ge1$, differentiating at $x_0=1$ leaves a positive numerator and a denominator with exactly $j$ negative factors; hence $\ell_j'(1)$ has sign $(-1)^j$. Also $\ell_0'(1)=\sum_{j=1}^d(1-x_j)^{-1}>0$. The polynomial $T_d$ defined by $T_d(\cos\theta)=\cos(d\theta)$ has degree $d$ by the cosine recurrence and values $(-1)^j$ at these nodes. Differentiating its interpolation formula gives</p>
+<p>We first prove an endpoint inequality. If a real polynomial $p$ has degree at most $d\ge1$ and $M=\max_{[-1,1]}|p|$, then $|p'(1)|\le d^2M$, and likewise at $-1$. Interpolate at $x_j=\cos(j\pi/d)$, $0\le j\le d$, with Lagrange polynomials $\ell_j$. For $j\ge1$, differentiating at $x_0=1$ leaves a positive numerator and a denominator with exactly $j$ negative factors; hence $\ell_j'(1)$ has sign $(-1)^j$. Also $\ell_0'(1)=\sum_{j=1}^d(1-x_j)^{-1}\gt 0$. The polynomial $T_d$ defined by $T_d(\cos\theta)=\cos(d\theta)$ has degree $d$ by the cosine recurrence and values $(-1)^j$ at these nodes. Differentiating its interpolation formula gives</p>
 $$\sum_{j=0}^d|\ell_j'(1)|=T_d'(1)=\lim_{\theta\to0}\frac{d\sin(d\theta)}{\sin\theta}=d^2.$$
 <p>Thus $|p'(1)|=|\sum p(x_j)\ell_j'(1)|\le Md^2$. Reflection proves the other endpoint. An affine change of interval gives endpoint derivative at most $2d^2M/L$ on an interval of length $L$.</p>
-<p>Now fix an input with $b$ disjoint sensitive blocks. If $b=0$, there is nothing to prove. Encode flipping the $i$th whole block by a new bit $z_i$. After complementing the output if needed, the resulting Boolean function $g$ satisfies $g(0)=0$ and $g(e_i)=1$. Substitution into the degree-$d$ multilinear representation of $f$ gives a polynomial of degree at most $d$ in the block bits: every original coordinate is an affine function of one $z_i$ or a constant. Reducing powers by $z_i^r=z_i$ for $r\ge1$ cannot increase degree.</p>
-<p>Average $g$ over all bit vectors of weight $j$. A monomial on $t$ distinct block bits has average $\binom jt/\binom bt$, understood as the falling-factorial polynomial in $j$ divided by the nonzero constant denominator. Therefore these averages are values of a real polynomial $q$ of degree at most $d$ with</p>
+<p>Now fix an input with $b$ disjoint sensitive blocks. If $b=0$, there is nothing to prove. Encode flipping the $i$th whole block by a new bit $z_i$. Here $e_i$ is the block-bit string with just bit $i$ equal to one. After complementing the output if needed, the resulting Boolean function $g$ satisfies $g(0)=0$ and $g(e_i)=1$. Substitution into the degree-$d$ multilinear representation of $f$ gives a polynomial of degree at most $d$ in the block bits: every original coordinate is an affine function of one $z_i$ or a constant. Reducing powers by $z_i^r=z_i$ for $r\ge1$ cannot increase degree.</p>
+<p>Average $g$ over all bit vectors of weight $j$. A monomial on $t$ distinct block bits has average $\binom jt/\binom bt$, understood as the falling-factorial polynomial $j(j-1)\cdots(j-t+1)/[b(b-1)\cdots(b-t+1)]$ for $0\le t\le b$, with empty products equal to one. Therefore these averages are values of a real polynomial $q$ of degree at most $d$ with</p>
 $$q(0)=0,\quad q(1)=1,\quad0\le q(j)\le1\quad(j=0,1,\ldots,b).$$
 <p>Set $M=\max_{[0,b]}|q|$. At any $t\in[0,b]$, one of the intervals $[0,t]$ or $[t,b]$ has length at least $b/2$ and has $t$ as an endpoint. Applying the proved endpoint inequality on that interval yields $|q'(t)|\le4d^2M/b$. A nearest integer is at distance at most $1/2$, so the mean value theorem also gives</p>
 $$M\le1+\frac{2d^2}{b}M.$$
@@ -72,72 +77,113 @@ $$1\le\frac{4d^2}{b-2d^2},\qquad b\le6d^2.$$
 $$s(f)=2m,\qquad bs(f)\ge m^2=\tfrac14s(f)^2.$$
 <p>For $m=3$, this gives $s=6$ but $bs\ge9$. We have proved a lower bound for block sensitivity, not asserted that no more elaborate family of blocks could do better. The construction demonstrates why singleton tests can miss coordinated changes; it does not contradict the polynomial upper bound.</p>
 <h2 id="code">12.8 Finite checks of support, induced degree and Boolean degree</h2>
+<p>The listing takes no command-line inputs; its graph constructions are fixed in the code. It writes the displayed results to standard output, performs no file or network writes, and stops with an assertion error if a checked invariant fails. Download <a href="code/ch12_sensitivity.py">the exact executable program</a>.</p>
 <p>The program checks integer matrix identities and exact edge supports through dimension six, exhausts all subsets of the threshold size in dimensions two through four, and computes an integer Walsh transform for an eight-bit example. Its Fourier coefficients are unnormalized integers; nonzero support and degree do not depend on the common normalization factor. The exhaustive searches establish the displayed finite minima, while the dimension-independent proofs above carry the theorem. Download <a href="code/ch12_sensitivity.py">the program</a>.</p>
-<pre data-run="code/ch12_sensitivity.py"><code>"""Exact finite checks for signed cubes and Boolean sensitivity."""
+<pre data-run="code/ch12_sensitivity.py"><code class="language-python">"""Exact finite checks for signed cubes and Boolean sensitivity."""
+
 from itertools import combinations
 from math import comb
 import numpy as np
 
+
 def signed_cube(n):
-    a=np.array([[0,1],[1,0]],dtype=np.int64)
-    for _ in range(2,n+1):
-        eye=np.eye(len(a),dtype=np.int64)
-        a=np.block([[a,eye],[eye,-a]])
+    a = np.array([[0, 1], [1, 0]], dtype=np.int64)
+    for _ in range(2, n + 1):
+        eye = np.eye(len(a), dtype=np.int64)
+        a = np.block([[a, eye], [eye, -a]])
     return a
 
-for n in range(1,7):
-    a=signed_cube(n); size=1&lt;&lt;n
-    assert np.array_equal(a@a,n*np.eye(size,dtype=np.int64))
-    assert np.trace(a)==0
-    assert all((abs(int(a[x,y]))==1)==((x^y).bit_count()==1)
-               for x in range(size) for y in range(size))
-print('Signed cube identities and exact supports: n=1..6 PASS')
-for n in (2,3,4):
-    a=abs(signed_cube(n)); k=(1&lt;&lt;(n-1))+1
-    minimum=n; witness=None; count=0
-    for subset in combinations(range(1&lt;&lt;n),k):
-        delta=int(a[np.ix_(subset,subset)].sum(axis=1).max())
-        count+=1
-        if delta&lt;minimum: minimum,witness=delta,subset
-    assert minimum*minimum&gt;=n
-    print(f'Q{n}: {count} subsets of size {k}; minimum maximum-degree {minimum}')
-    if n==4: print('Q4 degree-two witness:',witness)
 
-def paired_or(x,m):
-    width=2*m; mask=(1&lt;&lt;width)-1
+for n in range(1, 7):
+    a = signed_cube(n)
+    size = 1 &lt;&lt; n
+    assert np.array_equal(a @ a, n * np.eye(size, dtype=np.int64))
+    assert np.trace(a) == 0
+    assert all(
+        (abs(int(a[x, y])) == 1) == ((x ^ y).bit_count() == 1)
+        for x in range(size)
+        for y in range(size)
+    )
+print("Signed cube identities and exact supports: n=1..6 PASS")
+for n in (2, 3, 4):
+    a = abs(signed_cube(n))
+    k = (1 &lt;&lt; (n - 1)) + 1
+    minimum = n
+    witness = None
+    count = 0
+    for subset in combinations(range(1 &lt;&lt; n), k):
+        delta = int(a[np.ix_(subset, subset)].sum(axis=1).max())
+        count += 1
+        if delta &lt; minimum:
+            minimum, witness = delta, subset
+    assert minimum * minimum &gt;= n
+    print(
+        f"Q{n}: {count} subsets of size {k}; minimum maximum-degree {minimum}"
+    )
+    if n == 4:
+        print("Q4 degree-two witness:", witness)
+
+
+def paired_or(x, m):
+    width = 2 * m
+    mask = (1 &lt;&lt; width) - 1
     for block in range(m):
-        z=(x&gt;&gt;(width*block))&amp;mask
-        if any(z==(3&lt;&lt;(2*j)) for j in range(m)): return 1
+        z = (x &gt;&gt; (width * block)) &amp; mask
+        if any(z == (3 &lt;&lt; (2 * j)) for j in range(m)):
+            return 1
     return 0
-m=2;n=2*m*m
-values=[paired_or(x,m) for x in range(1&lt;&lt;n)]
-s=max(sum(values[x]!=values[x^(1&lt;&lt;j)] for j in range(n))
-      for x in range(1&lt;&lt;n))
-coeff=[(-1 if value else 1) for value in values]
-step=1
-while step&lt;len(coeff):
-    for start in range(0,len(coeff),2*step):
-        for j in range(start,start+step):
-            u,v=coeff[j],coeff[j+step];coeff[j],coeff[j+step]=u+v,u-v
-    step*=2
-degree=max(i.bit_count() for i,c in enumerate(coeff) if c)
-assert s==4 and degree==8 and degree&lt;=s*s
-print(f'Paired-OR m=2: exhaustive sensitivity {s}; exact Fourier degree {degree}')
-m=3;blocks=[3&lt;&lt;(2*m*b+2*j) for b in range(m) for j in range(m)]
-assert all(paired_or(mask,m)==1 for mask in blocks)
-assert all(a&amp;b==0 for a,b in combinations(blocks,2))
-assert paired_or(0,m)==0
-print('Paired-OR m=3: 9 disjoint sensitive pairs at zero; analytic sensitivity 6')
-# Exact integer Fourier arithmetic for AND of two ORs on disjoint two-bit groups.
-def and_or(x): return int(bool(x&amp;3) and bool(x&amp;12))
-s=max(sum(and_or(x)!=and_or(x^(1&lt;&lt;j)) for j in range(4)) for x in range(16))
-c=[1-2*and_or(x) for x in range(16)]
-for step in (1,2,4,8):
-    for start in range(0,16,2*step):
-        for j in range(start,start+step):
-            u,v=c[j],c[j+step];c[j],c[j+step]=u+v,u-v
-assert s==2 and c[15]!=0
-print('AND-of-two-ORs: sensitivity 2 and degree 4, attaining degree=sensitivity^2')
+
+
+m = 2
+n = 2 * m * m
+values = [paired_or(x, m) for x in range(1 &lt;&lt; n)]
+s = max(
+    sum(values[x] != values[x ^ (1 &lt;&lt; j)] for j in range(n))
+    for x in range(1 &lt;&lt; n)
+)
+coeff = [(-1 if value else 1) for value in values]
+step = 1
+while step &lt; len(coeff):
+    for start in range(0, len(coeff), 2 * step):
+        for j in range(start, start + step):
+            u, v = coeff[j], coeff[j + step]
+            coeff[j], coeff[j + step] = u + v, u - v
+    step *= 2
+degree = max(i.bit_count() for i, c in enumerate(coeff) if c)
+assert s == 4 and degree == 8 and degree &lt;= s * s
+print(
+    f"Paired-OR m=2: exhaustive sensitivity {s}; exact Fourier degree {degree}"
+)
+m = 3
+blocks = [3 &lt;&lt; (2 * m * b + 2 * j) for b in range(m) for j in range(m)]
+assert all(paired_or(mask, m) == 1 for mask in blocks)
+assert all(a &amp; b == 0 for a, b in combinations(blocks, 2))
+assert paired_or(0, m) == 0
+print(
+    "Paired-OR m=3: 9 disjoint sensitive pairs at zero; analytic sensitivity 6"
+)
+
+
+# Exact integer Fourier arithmetic for AND of two ORs on disjoint two-bit
+# groups.
+def and_or(x):
+    return int(bool(x &amp; 3) and bool(x &amp; 12))
+
+
+s = max(
+    sum(and_or(x) != and_or(x ^ (1 &lt;&lt; j)) for j in range(4)) for x in range(16)
+)
+c = [1 - 2 * and_or(x) for x in range(16)]
+for step in (1, 2, 4, 8):
+    for start in range(0, 16, 2 * step):
+        for j in range(start, start + step):
+            u, v = c[j], c[j + step]
+            c[j], c[j + step] = u + v, u - v
+assert s == 2 and c[15] != 0
+print(
+    "AND-of-two-ORs: sensitivity 2 and degree 4, attaining "
+    "degree=sensitivity^2"
+)
 </code></pre><pre class="expected-output" data-output="code/ch12_sensitivity.py">Signed cube identities and exact supports: n=1..6 PASS
 Q2: 4 subsets of size 3; minimum maximum-degree 2
 Q3: 56 subsets of size 5; minimum maximum-degree 2
@@ -147,14 +193,14 @@ Paired-OR m=2: exhaustive sensitivity 4; exact Fourier degree 8
 Paired-OR m=3: 9 disjoint sensitive pairs at zero; analytic sensitivity 6
 AND-of-two-ORs: sensitivity 2 and degree 4, attaining degree=sensitivity^2</pre>
 <h2 id="solutions">12.9 Worked problems</h2>
-<details><summary>1. Why the cardinality inequality is strict</summary><p><strong>Problem.</strong> Give a half-sized induced subgraph with no edges, then explain what happens after adding one opposite-parity vertex.</p><p><strong>Solution.</strong> Take all even-weight strings. There are $2^{n-1}$, and every cube edge changes parity. Adding one odd string gives a star with its $n$ even neighbors and leaves all other even vertices isolated. Thus the new graph has maximum degree $n$ and spectral radius $\sqrt n$. This proves failure at half and spectral sharpness above half. It does not prove degree sharpness for every dimension; the two invariants differ.</p></details>
-<details><summary>2. Derive the signed square rather than guess its roots</summary><p><strong>Problem.</strong> Verify the two-dimensional matrix and its eigenvalue multiplicities without finding eigenvectors.</p><p><strong>Solution.</strong> In the displayed $A_2$, the two length-two contributions between each pair of distinct nonadjacent vertices have opposite signs and cancel. Every diagonal square entry is two, so $A_2^2=2I$. Symmetry makes the matrix diagonalizable; every root is $\pm\sqrt2$. The zero trace forces equal counts, namely two of each. For general $n$, the same cancellation occurs in the off-diagonal blocks of the recursive square.</p></details>
-<details><summary>3. Track the interlacing index</summary><p><strong>Problem.</strong> In $Q_5$, retain seventeen vertices. Which eigenvalue of $A_5$ bounds the largest principal eigenvalue from below? What integer degree bound follows?</p><p><strong>Solution.</strong> The full order is thirty-two and the retained order is seventeen. The lower interlacing index is $32-17+1=16$. The first sixteen signed eigenvalues are $\sqrt5$, so $\lambda_1(B)\ge\sqrt5$. Absolute row sums bound its largest eigenvalue above by maximum induced degree. That degree is an integer at least three. Retaining sixteen vertices would instead give index seventeen, whose signed eigenvalue is negative; the positive conclusion would be lost.</p></details>
-<details><summary>4. Reconstruct the nine-vertex witness</summary><p><strong>Problem.</strong> For the code's $Q_4$ subset, verify the claimed maximum degree directly using integer labels as four-bit strings.</p><p><strong>Solution.</strong> The selected labels are $0,1,2,5,6,11,12,13,14$. Their induced neighbor sets are respectively $\{1,2\}$, $\{0,5\}$, $\{0,6\}$, $\{1,13\}$, $\{2,14\}$, the empty set, $\{13,14\}$, $\{5,12\}$ and $\{6,12\}$. Each listed pair differs by one bit. They form an eight-cycle plus the isolate eleven, with maximum degree two. The theorem's $\sqrt4$ lower bound is therefore attained.</p></details>
-<details><summary>5. A balanced function still has a useful sign class</summary><p><strong>Problem.</strong> Use parity on $d$ bits to test the Fourier bridge.</p><p><strong>Solution.</strong> In sign coordinates take $G=\chi_{[d]}$. Its output is balanced for $d\ge1$, so its positive output class has exactly half the cube and cannot directly trigger Huang's theorem. However $h=G\chi_{[d]}=1$ everywhere. Its positive class is the entire cube, and each of the $d$ incident directions changes $G$. The top coefficient is one, degree is $d$, and sensitivity is $d$, consistent with $s\ge\sqrt d$. This identifies precisely why multiplication by parity is necessary.</p></details>
-<details><summary>6. An equality example for degree versus sensitivity</summary><p><strong>Problem.</strong> Let $f=(x_1\lor x_2)\land(x_3\lor x_4)$. Find its degree and sensitivity.</p><p><strong>Solution.</strong> On zero-one inputs, $f=(x_1+x_2-x_1x_2)(x_3+x_4-x_3x_4)$. Its unique degree-four coefficient is one, so the degree is four. When both OR groups are true, sensitivity counts groups with exactly one one-bit, at most two and attained at $1010$. If just one group is false, flipping either bit of that group changes the output, giving two; if both are false, no single bit changes the AND output. Thus $s=2$ and $d=s^2=4$. The code independently checks the sixteen inputs and nonzero top Fourier coefficient.</p></details>
-<details><summary>7. Endpoint interpolation in the first nontrivial case</summary><p><strong>Problem.</strong> Verify the endpoint bound for $d=2$ using nodes $1,0,-1$.</p><p><strong>Solution.</strong> The basis polynomials are $\ell_0=x(x+1)/2$, $\ell_1=1-x^2$, $\ell_2=x(x-1)/2$. Their derivatives at one are $3/2,-2,1/2$, whose absolute sum is four. Consequently $|p'(1)|\le4M$. The alternating interpolant is $T_2=2x^2-1$, and its derivative at one is four, so this endpoint constant cannot be reduced for degree two.</p></details>
-<details><summary>8. Why values at integers do not immediately bound the interval</summary><p><strong>Problem.</strong> Identify the missing step in claiming that the symmetrized polynomial has $|q(t)|\le1$ at every real $t\in[0,b]$.</p><p><strong>Solution.</strong> Only integer-weight averages have a probability interpretation. A polynomial can overshoot between integer samples. The proof instead introduces the unknown continuous maximum $M$, bounds all derivatives by $4d^2M/b$ using the endpoint lemma on a long subinterval, and compares a maximizer to its nearest integer. This yields $M\le1+2d^2M/b$. When $b>2d^2$, rearrangement gives a finite upper bound and makes the final derivative comparison valid. Assuming $M\le1$ would skip the essential control of overshoot.</p></details>
-<details><summary>9. Distinguish a lower witness from an exact block optimum</summary><p><strong>Problem.</strong> For the paired-group construction with $m=3$, explain which claims are exact and which are lower bounds.</p><p><strong>Solution.</strong> There are eighteen bits in three groups of six. Nine designated two-bit pairs are mutually disjoint and each flips the all-zero output, so the local block sensitivity there is at least nine. The case analysis over zero, one and multiple active groups proves the global single-bit sensitivity is exactly six, attained with exactly one active group. Therefore $bs\ge9>6=s$. We have not excluded other disjoint sensitive block collections elsewhere, so writing $bs=9$ would require an additional upper-bound proof. The polynomial estimate gives the independent, much looser $bs\le6s^4$.</p></details>
+<details id="problem-01"><summary>1. Why the cardinality inequality is strict</summary><p class="problem-role"><strong>Role:</strong> Threshold boundary. <strong>Review:</strong> <a href="#cube">§12.2</a>.</p><p><strong>Problem.</strong> Give a half-sized induced subgraph with no edges, then explain what happens after adding one opposite-parity vertex.</p><p><strong>Solution.</strong> Take all even-weight strings. There are $2^{n-1}$, and every cube edge changes parity. Adding one odd string gives a star with its $n$ even neighbors and leaves all other even vertices isolated. Thus the new graph has maximum degree $n$ and spectral radius $\sqrt n$. This proves failure at half and spectral sharpness above half. It does not prove degree sharpness for every dimension; the two invariants differ.</p></details>
+<details id="problem-02"><summary>2. Derive the signed square rather than guess its roots</summary><p class="problem-role"><strong>Role:</strong> Signed identity derivation. <strong>Review:</strong> <a href="#signed-cube">§12.3</a>.</p><p><strong>Problem.</strong> Verify the two-dimensional matrix and its eigenvalue multiplicities without finding eigenvectors.</p><p><strong>Solution.</strong> In the displayed $A_2$, the two length-two contributions between each pair of distinct nonadjacent vertices have opposite signs and cancel. Every diagonal square entry is two, so $A_2^2=2I$. Symmetry makes the matrix diagonalizable; every root is $\pm\sqrt2$. The zero trace forces equal counts, namely two of each. For general $n$, the same cancellation occurs in the off-diagonal blocks of the recursive square.</p></details>
+<details id="problem-03"><summary>3. Track the interlacing index</summary><p class="problem-role"><strong>Role:</strong> Index bookkeeping. <strong>Review:</strong> <a href="#interlacing-proof">§12.4</a>.</p><p><strong>Problem.</strong> In $Q_5$, retain seventeen vertices. Which eigenvalue of $A_5$ bounds the largest principal eigenvalue from below? What integer degree bound follows?</p><p><strong>Solution.</strong> The full order is thirty-two and the retained order is seventeen. The lower interlacing index is $32-17+1=16$. The first sixteen signed eigenvalues are $\sqrt5$, so $\lambda_1(B)\ge\sqrt5$. Absolute row sums bound its largest eigenvalue above by maximum induced degree. That degree is an integer at least three. Retaining sixteen vertices would instead give index seventeen, whose signed eigenvalue is negative; the positive conclusion would be lost.</p></details>
+<details id="problem-04"><summary>4. Reconstruct the nine-vertex witness</summary><p class="problem-role"><strong>Role:</strong> Witness reconstruction. <strong>Review:</strong> <a href="#code">§12.8</a>.</p><p><strong>Problem.</strong> For the code's $Q_4$ subset, verify the claimed maximum degree directly using integer labels as four-bit strings.</p><p><strong>Solution.</strong> The selected labels are $0,1,2,5,6,11,12,13,14$. Their induced neighbor sets are respectively $\{1,2\}$, $\{0,5\}$, $\{0,6\}$, $\{1,13\}$, $\{2,14\}$, the empty set, $\{13,14\}$, $\{5,12\}$ and $\{6,12\}$. Each listed pair differs by one bit. They form an eight-cycle plus the isolate eleven, with maximum degree two. The theorem's $\sqrt4$ lower bound is therefore attained.</p></details>
+<details id="problem-05"><summary>5. A balanced function still has a useful sign class</summary><p class="problem-role"><strong>Role:</strong> Fourier counterexample. <strong>Review:</strong> <a href="#fourier-bridge">§12.5</a>.</p><p><strong>Problem.</strong> Use parity on $d$ bits to test the Fourier bridge.</p><p><strong>Solution.</strong> In sign coordinates take $G=\chi_{[d]}$. Its output is balanced for $d\ge1$, so its positive output class has exactly half the cube and cannot directly trigger Huang's theorem. However $h=G\chi_{[d]}=1$ everywhere. Its positive class is the entire cube, and each of the $d$ incident directions changes $G$. The top coefficient is one, degree is $d$, and sensitivity is $d$, consistent with $s\ge\sqrt d$. This identifies precisely why multiplication by parity is necessary.</p></details>
+<details id="problem-06"><summary>6. An equality example for degree versus sensitivity</summary><p class="problem-role"><strong>Role:</strong> Equality example. <strong>Review:</strong> <a href="#fourier-bridge">§12.5</a>.</p><p><strong>Problem.</strong> Let $f=(x_1\lor x_2)\land(x_3\lor x_4)$. Find its degree and sensitivity.</p><p><strong>Solution.</strong> On zero-one inputs, $f=(x_1+x_2-x_1x_2)(x_3+x_4-x_3x_4)$. Its unique degree-four coefficient is one, so the degree is four. When both OR groups are true, sensitivity counts groups with exactly one one-bit, at most two and attained at $1010$. If just one group is false, flipping either bit of that group changes the output, giving two; if both are false, no single bit changes the AND output. Thus $s=2$ and $d=s^2=4$. The code independently checks the sixteen inputs and nonzero top Fourier coefficient.</p></details>
+<details id="problem-07"><summary>7. Endpoint interpolation in the first nontrivial case</summary><p class="problem-role"><strong>Role:</strong> Interpolation computation. <strong>Review:</strong> <a href="#polynomial-bridge">§12.6</a>.</p><p><strong>Problem.</strong> Verify the endpoint bound for $d=2$ using nodes $1,0,-1$.</p><p><strong>Solution.</strong> The basis polynomials are $\ell_0=x(x+1)/2$, $\ell_1=1-x^2$, $\ell_2=x(x-1)/2$. Their derivatives at one are $3/2,-2,1/2$, whose absolute sum is four. Consequently $|p'(1)|\le4M$. The alternating interpolant is $T_2=2x^2-1$, and its derivative at one is four, so this endpoint constant cannot be reduced for degree two.</p></details>
+<details id="problem-08"><summary>8. Why values at integers do not immediately bound the interval</summary><p class="problem-role"><strong>Role:</strong> Overshoot proof analysis. <strong>Review:</strong> <a href="#polynomial-bridge">§12.6</a>.</p><p><strong>Problem.</strong> Identify the missing step in claiming that the symmetrized polynomial has $|q(t)|\le1$ at every real $t\in[0,b]$.</p><p><strong>Solution.</strong> Only integer-weight averages have a probability interpretation. A polynomial can overshoot between integer samples. The proof instead introduces the unknown continuous maximum $M$, bounds all derivatives by $4d^2M/b$ using the endpoint lemma on a long subinterval, and compares a maximizer to its nearest integer. This yields $M\le1+2d^2M/b$. When $b\gt 2d^2$, rearrangement gives a finite upper bound and makes the final derivative comparison valid. Assuming $M\le1$ would skip the essential control of overshoot.</p></details>
+<details id="problem-09"><summary>9. Distinguish a lower witness from an exact block optimum</summary><p class="problem-role"><strong>Role:</strong> Witness versus optimum. <strong>Review:</strong> <a href="#separation">§12.7</a>.</p><p><strong>Problem.</strong> For the paired-group construction with $m=3$, explain which claims are exact and which are lower bounds.</p><p><strong>Solution.</strong> There are eighteen bits in three groups of six. Nine designated two-bit pairs are mutually disjoint and each flips the all-zero output, so the local block sensitivity there is at least nine. The case analysis over zero, one and multiple active groups proves the global single-bit sensitivity is exactly six, attained with exactly one active group. Therefore $bs\ge9\gt 6=s$. We have not excluded other disjoint sensitive block collections elsewhere, so writing $bs=9$ would require an additional upper-bound proof. The polynomial estimate gives the independent, much looser $bs\le6s^4$.</p></details>
 <h2 id="perspective">12.10 The reusable idea is the choice of operator</h2>
 <p>The decisive move was not a stronger version of interlacing. It was choosing an operator whose support still represented the cube while its spectrum became flat. Cancellation in $A_n^2$ turned geometry into an exact algebraic identity. A large principal submatrix then had no room to avoid the positive eigenspace. The parity transformation provided a second change of representation, turning a nonzero Fourier coefficient into a large induced subgraph. These two representation changes explain why a short matrix proof can control the complexity of arbitrary Boolean functions.</p><!-- BOOK-CONTENT-END --></article><nav class="page-turn" aria-label="Chapter navigation"><a rel="prev" href="chapter-11-cospectral-switching-spectral-uniqueness.html">Previous chapter</a><a href="index.html">Chapter index</a><a rel="next" href="chapter-13-expanders-ramanujan-lifts-zigzag.html">Next chapter</a></nav></main></div><footer class="site-footer">Independent study edition. Prof. Ranveer Singh’s NPTEL recordings provide the topic spine. Original exposition, source limitations and verification evidence are separately recorded.</footer></body></html>

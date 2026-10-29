@@ -16,9 +16,9 @@ ROOT_FILES = {
     'content-inventory.json', 'completion.json', 'editorial-review-summary.json',
     'course-review.json', 'chapter-code-validation.json', 'reader-validation.json',
     'package-validation.json', 'public-package-validation.json',
-    'source-free-validation.json', 'publication-validation.json',
+    'source-free-validation.json', 'publication-validation.json', 'pedagogy-review.json',
 }
-CODE_FILES = {'code/ch09_walks.py', 'code/ch10_regular_graphs.py', 'code/ch11_cospectral.py', 'code/ch12_sensitivity.py', 'code/ch13_expanders.py', 'code/ch14_fiedler.py', 'code/ch15_balance.py', 'code/ch16_frustration_covers.py'}
+CODE_FILES = {'code/ch01_graphs.py', 'code/ch02_matrix_tree.py', 'code/ch03_rank_cycles.py', 'code/ch04_spectral_walks.py', 'code/ch05_diameter_rank.py', 'code/ch06_perron.py', 'code/ch07_interlacing.py', 'code/ch08_coloring.py', 'code/ch09_walks.py', 'code/ch10_regular_graphs.py', 'code/ch11_cospectral.py', 'code/ch12_sensitivity.py', 'code/ch13_expanders.py', 'code/ch14_fiedler.py', 'code/ch15_balance.py', 'code/ch16_frustration_covers.py'}
 TOOL_FILES = {'tools/'+name for name in (
     'build_book.py', 'check_chapter_code.py', 'update_metadata.py',
     'validate_books.py', 'audit_public.py', 'verify_source_free.py',
@@ -27,6 +27,20 @@ ASSET_FILES = {'assets/'+name for name in (
     'book.css', 'book.js', 'lab.js', 'site-preview.png', 'regular-and-friendship.svg', 'cospectral-structures.svg', 'mathjax-tex-svg.js',
     'mathjax-LICENSE', 'input/tex/extensions/boldsymbol.js',
     'input/tex/extensions/cancel.js', 'input/tex/extensions/mathtools.js')}
+
+
+MUTABLE_REPORTS = {
+    'completion.json', 'chapter-code-validation.json', 'reader-validation.json',
+    'package-validation.json', 'public-package-validation.json',
+    'source-free-validation.json', 'publication-validation.json',
+}
+
+
+def json_object(path):
+    value = json.loads(path.read_bytes().decode('utf-8'))
+    if not isinstance(value, dict):
+        raise ValueError('Required JSON object: ' + path.name)
+    return value
 
 
 def public_files(root=ROOT, *, release=False, complete=False):
@@ -43,7 +57,7 @@ def public_files(root=ROOT, *, release=False, complete=False):
         else:
             errors.append('Unexpected chapter path: '+path.name)
     allowed = {p.relative_to(root).as_posix() for p in result}
-    manifest = json.loads((root / 'source-manifest.json').read_text(encoding='utf-8'))
+    manifest = json_object(root / 'source-manifest.json')
     expected_html = {chapter['file'] for chapter in manifest['chapters']}
     expected_meta = {name.replace('.html', '.meta.json') for name in expected_html}
     actual_html = {p.name for p in root.glob('chapter-??-*.html')}
@@ -63,7 +77,7 @@ def public_files(root=ROOT, *, release=False, complete=False):
             errors.append('Missing required public file: '+relative)
     if release and not errors:
         def record(name):
-            return json.loads((root / name).read_text(encoding='utf-8'))
+            return json_object(root / name)
         source = record('source-validation-summary.json')
         expected_count = manifest['expected_recordings']
         for key in ('recording_count', 'complete_decoded_audio_count',
@@ -73,7 +87,8 @@ def public_files(root=ROOT, *, release=False, complete=False):
         source_ids = {r.get('id') for r in source.get('recordings', [])}
         if source_ids != {r['id'] for r in manifest['lectures']}:
             errors.append('Source evidence identities differ from the manifest')
-        if not all(r.get('complete_decoded_audio') for r in source.get('recordings', [])):
+        if (len(source.get('recordings', [])) != expected_count
+                or not all(r.get('complete_decoded_audio') is True for r in source.get('recordings', []))):
             errors.append('Incomplete decoded recording evidence')
         inventory = record('content-inventory.json')
         course = record('course-review.json')
@@ -82,14 +97,14 @@ def public_files(root=ROOT, *, release=False, complete=False):
         if (inventory.get('planned_chapter_count') != number
                 or inventory.get('authored_chapter_count') != number
                 or {r.get('file') for r in inventory.get('chapters', [])} != expected_html
-                or not all(r.get('scientifically_accepted') for r in inventory.get('chapters', []))):
+                or not all(r.get('scientifically_accepted') is True for r in inventory.get('chapters', []))):
             errors.append('Incomplete authored/scientific chapter inventory')
         if (course.get('passed') is not True or course.get('chapter_count') != number
                 or course.get('independent_scientific_rounds_per_chapter') != 2
                 or len(course.get('chapters', [])) != number
-                or not all(r.get('accepted') for r in course.get('chapters', []))
+                or not all(r.get('accepted') is True for r in course.get('chapters', []))
                 or len(editorial.get('chapters', [])) != number
-                or not all(r.get('accepted') for r in editorial.get('chapters', []))):
+                or not all(r.get('accepted') is True for r in editorial.get('chapters', []))):
             errors.append('Incomplete independent scientific course record')
         for chapter in manifest['chapters']:
             filename = chapter['file']
@@ -107,8 +122,8 @@ def public_files(root=ROOT, *, release=False, complete=False):
                     or len({r.get('reviewer') for r in rounds}) != 2
                     or not all(r.get('verdict') == 'accepted' and r.get('authored_body_sha256') == digest for r in rounds)):
                 errors.append('Stale or incomplete exact chapter scientific evidence: '+filename)
-            if not all(r.get('complete_decoded_audio') and r.get('machine_transcript_complete')
-                       and r.get('sequential_transcript_reading_complete') for r in sidecar.get('recordings', [])):
+            if not all(r.get('complete_decoded_audio') is True and r.get('machine_transcript_complete') is True
+                       and r.get('sequential_transcript_reading_complete') is True for r in sidecar.get('recordings', [])):
                 errors.append('Incomplete chapter source-reading evidence: '+filename)
         completion = record('completion.json')
         if (completion.get('planned_chapters') != number
@@ -129,12 +144,110 @@ def public_files(root=ROOT, *, release=False, complete=False):
         expected_checks = {(name, width) for name in pages for width in (1440, 390)}
         if {(r.get('page'), r.get('width')) for r in record('reader-validation.json').get('results', [])} != expected_checks:
             errors.append('Reader verification lacks the exact complete page/viewport set')
+        required_validations = (
+            "source-validation-summary.json", "editorial-review-summary.json",
+            "course-review.json", "chapter-code-validation.json",
+            "reader-validation.json", "package-validation.json",
+            "pedagogy-review.json",
+        )
+        for filename in required_validations:
+            if record(filename).get("passed") is not True:
+                errors.append("Unpassed required validation: " + filename)
+        pedagogy = record("pedagogy-review.json")
+        if (
+            pedagogy.get("chapter_count") != number
+            or len(pedagogy.get("chapters", [])) != number
+            or {r.get("file") for r in pedagogy.get("chapters", [])}
+            != expected_html
+            or len(pedagogy.get("independent_amendment_reviews", [])) != 2
+        ):
+            errors.append("Incomplete current pedagogical amendment record")
+        else:
+            for chapter in pedagogy["chapters"]:
+                filename = chapter["file"]
+                document = (root / filename).read_bytes().decode("utf-8")
+                body = document.split("<!-- BOOK-CONTENT-START -->", 1)[1]
+                body = body.split("<!-- BOOK-CONTENT-END -->", 1)[0]
+                digest = hashlib.sha256(body.encode("utf-8")).hexdigest()
+                metrics = [
+                    r for r in pedagogy.get("chapter_metrics", [])
+                    if r.get("file") == filename
+                ]
+                if (
+                    chapter.get("authored_body_sha256") != digest
+                    or not chapter.get("symbol_roles")
+                    or not chapter.get("central_claims")
+                    or not chapter.get("five_part_assessment")
+                    or not chapter.get("current_closure_evidence")
+                    or len(metrics) != 1
+                    or metrics[0].get("body_sha256") != digest
+                ):
+                    errors.append("Stale pedagogical body binding: " + filename)
+        package = record("package-validation.json")
+        html_hashes = {
+            p.name: hashlib.sha256(p.read_bytes()).hexdigest()
+            for p in root.glob("*.html")
+        }
+        if package.get("html_sha256") != html_hashes:
+            errors.append("Static validation is not bound to current HTML")
+        for check in record("reader-validation.json").get("results", []):
+            if (
+                check.get("passed") is not True
+                or check.get("math_span_parity") is not True
+                or check.get("html_sha256") != html_hashes.get(check.get("page"))
+            ):
+                errors.append("Stale or failed reader verification row")
+        for check in code.get("results", []):
+            if (
+                check.get("passed") is not True
+                or check.get("download_byte_parity") is not True
+                or check.get("pep8_issues") != []
+                or check.get("maximum_line_length", 80) > 79
+                or check.get("returncode") != 0
+            ):
+                errors.append("Failed code/style verification row")
+            identity = check.get("listing", "")
+            path = root / identity
+            if (
+                not identity.startswith("code/") or not path.is_file()
+                or hashlib.sha256(path.read_bytes()).hexdigest()
+                != check.get("code_sha256")
+            ):
+                errors.append("Stale or missing code download verification")
+        if code.get("standalone_laboratory_pep8_issues") != []:
+            errors.append("Standalone laboratory style has not passed")
         if complete:
             if completion.get('complete') is not True or not all(completion.get(k) is True for k in ('public_repository_created', 'committed', 'pushed')):
                 errors.append('Completion/publication state is not final')
             for filename in ('source-free-validation.json', 'publication-validation.json'):
                 if record(filename).get('passed') is not True:
                     errors.append('Unpassed final release evidence: '+filename)
+            reproduced = record("source-free-validation.json")
+            if (
+                reproduced.get("fresh_isolated_dependency_install") is not True
+                or reproduced.get("system_site_packages_available") is not False
+                or reproduced.get("browser_checks_requested") is not True
+                or reproduced.get("raw_source_files_available") is not False
+                or reproduced.get("byte_identical_html_rebuild") is not True
+                or not reproduced.get("git_archive_commit")
+                or reproduced.get("requirements_sha256")
+                != hashlib.sha256((root / "requirements.txt").read_bytes()).hexdigest()
+            ):
+                errors.append("Final source-free isolated reproduction is incomplete")
+            core = {
+                p.relative_to(root).as_posix():
+                hashlib.sha256(p.read_bytes()).hexdigest()
+                for p in result
+                if p.relative_to(root).as_posix() not in MUTABLE_REPORTS
+            }
+            if reproduced.get("public_payload_sha256") != core:
+                errors.append("Reproduced public payload differs from current package")
+            own_report = record("public-package-validation.json")
+            if (
+                own_report.get("passed") is not True
+                or set(own_report.get("files", [])) != allowed
+            ):
+                errors.append("Current explicit public-package report is incomplete")
             publication = record('publication-validation.json')
             if publication.get('bootstrap_probe') is not False or publication.get('served_report_passed') is not True:
                 errors.append('Final live probe must verify an already accepted served report')

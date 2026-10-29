@@ -14,8 +14,41 @@ from build_book import original_body, read
 ROOT = Path(__file__).resolve().parents[1]
 
 
+MATH_SPANS = re.compile(
+    r"(?<!\\)\$\$([\s\S]*?)(?<!\\)\$\$"
+    r"|(?<!\\)\\\[([\s\S]*?)(?<!\\)\\\]"
+    r"|(?<!\\)\$(?!\$)([\s\S]*?)(?<!\\)\$(?!\$)"
+    r"|(?<!\\)\\\(([\s\S]*?)(?<!\\)\\\)",
+    re.S,
+)
+
+
+def mathematical_payloads(source):
+    """Read whole spans; never globally replace TeX delimiter substrings."""
+    source = re.sub(
+        r"<(pre|code|script|style)\b[^>]*>.*?</\1>", "", source,
+        flags=re.S | re.I,
+    )
+    return [
+        next(value for value in match.groups() if value is not None)
+        for match in MATH_SPANS.finditer(source)
+    ]
+
+
+def source_math_counts(source):
+    raw = len(mathematical_payloads(source))
+    parsed = BeautifulSoup(source, "html.parser")
+    for node in parsed.select("pre,code,script,style"):
+        node.decompose()
+    return raw, len(mathematical_payloads(parsed.get_text("\n")))
+
+
 def accepted_rounds(record, digest):
+    if not isinstance(record, dict):
+        return False
     rounds = record.get('rounds', [])
+    if not isinstance(rounds, list) or not all(isinstance(r, dict) for r in rounds):
+        return False
     if len(rounds) != 2 or {r.get('round') for r in rounds} != {1, 2}:
         return False
     reviewers = {r.get('reviewer', '').strip().casefold() for r in rounds}
@@ -28,9 +61,11 @@ def accepted_rounds(record, digest):
         return False
     previous = record.get('previous_scientific_acceptance')
     if previous is not None:
-        if not previous.get('accepted') or not accepted_rounds(previous, previous.get('accepted_body_sha256')):
+        if (not isinstance(previous, dict) or previous.get('accepted') is not True
+                or not accepted_rounds(previous, previous.get('accepted_body_sha256'))):
             return False
-    if any('Formatting-only' in r.get('scope', '') for r in rounds) and previous is None:
+    if any(any(term in r.get('scope', '').casefold() for term in
+               ('formatting-only', 'amendment')) for r in rounds) and previous is None:
         return False
     return record.get('accepted') is True and record.get('accepted_body_sha256') == digest
 
@@ -52,6 +87,13 @@ def static_checks():
     timestamps = 0
     for path, soup in documents.items():
         source = read(path)
+        raw_count, parsed_count = source_math_counts(source)
+        if raw_count != parsed_count:
+            errors.append(f'{path.name}: source math swallowed by HTML parsing')
+        if any('<' in span or '>' in span for span in mathematical_payloads(source)):
+            errors.append(f'{path.name}: raw angle comparison inside mathematics')
+        if any(not h.get('id') for h in soup.select('h1,h2,h3,h4,h5,h6')):
+            errors.append(f'{path.name}: heading without an anchor')
         if path.name.startswith('chapter-'):
             chapter_number = int(path.name.split('-')[1])
             expected = {r['id'] for r in manifest['lectures']
@@ -110,7 +152,9 @@ def static_checks():
                 if target_soup is None or target_soup.find(id=unquote(parsed.fragment)) is None:
                     errors.append(f'{path.name}: missing anchor {url}')
     return {'passed': not errors, 'html_count': len(paths),
-            'timestamp_count': timestamps, 'failures': errors}
+            'timestamp_count': timestamps, 'failures': errors,
+            'html_sha256': {p.name: hashlib.sha256(p.read_bytes()).hexdigest()
+                            for p in paths}}
 
 
 def browser_checks():
@@ -144,7 +188,9 @@ def browser_checks():
                 page.goto(path.as_uri())
                 page.wait_for_function('!window.MathJax || !!MathJax.startup?.promise')
                 page.evaluate('async () => {if(window.MathJax) await MathJax.startup.promise}')
+                expected_math_count, parsed_math_count = source_math_counts(read(path))
                 math_count = page.locator('mjx-container').count()
+                math_span_parity = (math_count == expected_math_count == parsed_math_count)
                 expected_math = path.name.startswith('chapter-') or path.name == 'numerical-lab.html'
                 math_errors = page.locator('mjx-merror, [data-mml-node="merror"]').count()
                 overflow = page.evaluate('document.documentElement.scrollWidth > innerWidth + 2')
@@ -184,11 +230,19 @@ def browser_checks():
                     page.locator('#lab-reset').click()
                 record = {'page': path.name, 'width': width, 'math_errors': math_errors,
                           'rendered_math_count': math_count,
+                          'source_math_count': expected_math_count,
+                          'parsed_source_math_count': parsed_math_count,
+                          'math_span_parity': math_span_parity,
+                          'html_sha256': hashlib.sha256(path.read_bytes()).hexdigest(),
                           'horizontal_overflow': overflow, 'theme': theme,
                           'solutions': solutions_open, 'text_size': text_size,
                           'page_specific_controls': extras}
+                record['passed'] = (math_span_parity and not math_errors
+                                    and not overflow
+                                    and (not expected_math or math_count > 0)
+                                    and all((theme, solutions_open, text_size, extras)))
                 records.append(record)
-                if (math_errors or overflow or (expected_math and not math_count)
+                if (not math_span_parity or math_errors or overflow or (expected_math and not math_count)
                         or not all((theme, solutions_open, text_size, extras))):
                     failures.append(record)
                 if path.name == 'index.html' or path.name.startswith('chapter-01-'):

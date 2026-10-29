@@ -7,6 +7,7 @@ from pathlib import Path
 
 from bs4 import BeautifulSoup
 from build_book import original_body, read
+from validate_books import accepted_rounds
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -46,8 +47,7 @@ def main():
         soup = BeautifulSoup(body, 'html.parser')
         prior = load(path.with_suffix('.meta.json'), {})
         reviews = prior.get('independent_review', {})
-        accepted = (reviews.get('accepted', False)
-                    and reviews.get('accepted_body_sha256') == checksum)
+        accepted = accepted_rounds(reviews, checksum)
         if not accepted and reviews.get('accepted'):
             reviews = {'accepted': False, 'reason': 'Body digest changed; re-review required',
                        'previous_acceptance': reviews}
@@ -121,9 +121,9 @@ def main():
     accepted_by_chapter = {row['chapter']: row['scientifically_accepted'] for row in inventory}
     for recording in manifest['lectures']:
         identity = recording['id']
-        has_audio = by_id.get(identity, {}).get('complete_decoded_audio', False)
-        has_asr = bool(transcripts[identity].get('complete'))
-        has_read = bool(reading.get(identity, {}).get('complete_sequential_reading'))
+        has_audio = by_id.get(identity, {}).get('complete_decoded_audio') is True
+        has_asr = transcripts[identity].get('complete') is True
+        has_read = reading.get(identity, {}).get('complete_sequential_reading') is True
         if has_audio and has_asr and has_read:
             recording['source_status'] = ('Complete decoded audio and full machine transcript read; ' +
                 ('exact chapter body accepted after two independent scientific reviews'
@@ -141,6 +141,8 @@ def main():
                           'accepted': row['scientifically_accepted'],
                           'reviews': meta.get('independent_review', {}).get('rounds', [])})
     dump(ROOT / 'editorial-review-summary.json', {
+        'passed': len(editorial) == len(manifest['chapters']) and all(
+            row['accepted'] is True for row in editorial),
         'scope': 'Recorded independent AI scientific reviews; acceptance binds only to an exact chapter body, not full-course completion.',
         'chapters': editorial})
     dump(ROOT / 'source-manifest.json', manifest)
@@ -152,7 +154,16 @@ def main():
         'executable_listing_count': sum(row['listings'] for row in inventory),
         'counting_note': 'Whitespace tokens include math and code; inventory is not a pure '
                          'prose estimate or a scientific completion verdict.'})
+    expected_ids = {row['id'] for row in manifest['lectures']}
+    source_passed = (
+        len(integrity) == len(expected_ids) == manifest['expected_recordings']
+        and {row.get('id') for row in integrity} == expected_ids
+        and all(row.get('complete_decoded_audio') is True for row in integrity)
+        and all(transcripts[i].get('complete') is True for i in expected_ids)
+        and all(reading.get(i, {}).get('complete_sequential_reading') is True
+                for i in expected_ids))
     dump(ROOT / 'source-validation-summary.json', {
+        'passed': source_passed,
         'recording_count': len(manifest['lectures']),
         'unique_acquired_audio_representations': len({row['audio_sha256'] for row in integrity}),
         'complete_decoded_audio_count': sum(row.get('complete_decoded_audio', False)

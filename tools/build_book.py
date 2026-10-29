@@ -38,7 +38,27 @@ def original_body(document):
     return document
 
 
+def auxiliary_heading_ids(body):
+    """Anchor generated auxiliary headings without rewriting chapter bodies."""
+    counts = {}
+
+    def heading(match):
+        level, attributes, label = match.groups()
+        if re.search(r"\bid\s*=", attributes):
+            return match[0]
+        text = re.sub(r"<[^>]+>", "", label)
+        slug = re.sub(r"[^a-z0-9]+", "-", html.unescape(text).lower()).strip("-")
+        slug = slug or "section"
+        counts[slug] = counts.get(slug, 0) + 1
+        suffix = "" if counts[slug] == 1 else "-" + str(counts[slug])
+        return f'<h{level} id="{slug}{suffix}"{attributes}>{label}</h{level}>'
+
+    return re.sub(r"<h([1-6])\b([^>]*)>(.*?)</h\1>", heading, body, flags=re.S)
+
+
 def page(title, body, chapter=False, previous=None, following=None):
+    if not chapter:
+        body = auxiliary_heading_ids(body)
     checksum = digest(body)
     nav = [('index.html', 'Chapters'), ('source-map.html', 'Source map'),
            ('references.html', 'References'), ('numerical-lab.html', 'Numerical lab')]
@@ -48,7 +68,7 @@ def page(title, body, chapter=False, previous=None, following=None):
         back = f'<a rel="prev" href="{esc(previous)}">Previous chapter</a>' if previous else '<span>First chapter</span>'
         ahead = f'<a rel="next" href="{esc(following)}">Next chapter</a>' if following else '<span>End of edition</span>'
         turns = f'<nav class="page-turn" aria-label="Chapter navigation">{back}<a href="index.html">Chapter index</a>{ahead}</nav>'
-    sidebar = '<aside class="toc" id="chapter-toc" aria-label="On this page"><h2>On this page</h2></aside>' if chapter else ''
+    sidebar = '<aside class="toc" id="chapter-toc" aria-label="On this page"><h2 id="toc-heading">On this page</h2></aside>' if chapter else ''
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="dark light"><meta name="book-content-sha256" content="{checksum}">
