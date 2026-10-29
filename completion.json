@@ -1,6 +1,6 @@
 {
   "complete": false,
-  "stage": "source-free-Git-export-passed-release-hardening-export-in-progress",
+  "stage": "all-local-and-source-free-gates-passed-initial-publication-pending",
   "planned_chapters": 16,
   "authored_chapters": 16,
   "scientifically_accepted_chapters": 16,
@@ -9,7 +9,7 @@
   "all_transcripts_read": true,
   "worked_solutions": 139,
   "executed_listing_count": 16,
-  "public_repository_created": false,
+  "public_repository_created": true,
   "committed": true,
   "pushed": false,
   "limitations": [
@@ -17,5 +17,16 @@
     "All45 playlist identities are retained; entries41/45 are verified byte-identical media,44 unique audio representations.",
     "Original expositions and finite checks are distinguished from source claims and reported research.",
     "Primary source access scopes are bounded by explicit chapter citations and sidecars."
-  ]
+  ],
+  "repository_url": "https://github.com/az9713/nptel-algebraic-graph-theory-notes",
+  "reader_url": "https://az9713.github.io/nptel-algebraic-graph-theory-notes/",
+  "source_free_git_archive_commit": "19407497ccc60a2194e49cb69f4427b347300a32",
+  "local_validation": {
+    "static": true,
+    "all16_programs": true,
+    "offline_reader_viewport_checks": 40,
+    "strict_public_files": 83,
+    "source_free_git_archive": true,
+    "byte_identical_html": 21
+  }
 }

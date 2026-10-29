@@ -6,7 +6,7 @@
   "changed_html": [],
   "raw_source_files_available": false,
   "browser_checks_requested": true,
-  "git_archive_commit": "4e3ce86079eb6a9153dadc380573f0ca8872c22f",
+  "git_archive_commit": "19407497ccc60a2194e49cb69f4427b347300a32",
   "export_method": "git archive HEAD",
   "scope": "A source-free export inside ignored work/; no acquisition sources or private review reports copied. Existing Python packages and installed Chrome are used; this is not a pristine-machine dependency installation test.",
   "html_sha256": {
