@@ -1,5 +1,727 @@
 {
-  "passed": false,
-  "stage": "pending-final-release-validation",
-  "scope": "No public repository or served-page verification yet."
+  "passed": true,
+  "checked_at_utc": "2026-10-29T00:57:57.658192+00:00",
+  "base_url": "https://az9713.github.io/nptel-algebraic-graph-theory-notes/",
+  "repository_url": "https://github.com/az9713/nptel-algebraic-graph-theory-notes",
+  "payload_commit": "49c47eefb1320a46d2cc9b518d61ad83003bb411",
+  "served_file_count": 82,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "cccd599fd597f2c126f53af57d05a8482544243a94d1d02496792b18db00c143",
+      "served_sha256": "cccd599fd597f2c126f53af57d05a8482544243a94d1d02496792b18db00c143",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "03b45d647916a7dd32019abd1892be4da364ab91941380f3cf272d2ed708698f",
+      "served_sha256": "03b45d647916a7dd32019abd1892be4da364ab91941380f3cf272d2ed708698f",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": ".nojekyll",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "served_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "assets/book.css",
+      "sha256": "0db5a603b9820800c9cbd02af1a332a3be2610201bb26625cac5786e212cb97a",
+      "served_sha256": "0db5a603b9820800c9cbd02af1a332a3be2610201bb26625cac5786e212cb97a",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "assets/book.js",
+      "sha256": "e31d522b88712b15eddb3323de2c325a4e1ff1bf77bf0cde74f021809d2bae4f",
+      "served_sha256": "e31d522b88712b15eddb3323de2c325a4e1ff1bf77bf0cde74f021809d2bae4f",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "assets/cospectral-structures.svg",
+      "sha256": "467217508e5573fd502ab079213c142a726053f95bc71fe598586807fda7db3d",
+      "served_sha256": "467217508e5573fd502ab079213c142a726053f95bc71fe598586807fda7db3d",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "assets/input/tex/extensions/boldsymbol.js",
+      "sha256": "d6771fee0772db2657796c8d0e20e1878bb3237f6d3ed1e828e1834a4ff743ca",
+      "served_sha256": "d6771fee0772db2657796c8d0e20e1878bb3237f6d3ed1e828e1834a4ff743ca",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "assets/input/tex/extensions/cancel.js",
+      "sha256": "0d263ecf2671d1cc13135b8b4afcdca4d40151a9aea51b69402e68adde4cf8c9",
+      "served_sha256": "0d263ecf2671d1cc13135b8b4afcdca4d40151a9aea51b69402e68adde4cf8c9",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "assets/input/tex/extensions/mathtools.js",
+      "sha256": "04272d69a0b64783cd5b66820d6f8220ee510409d0b12c38626404be9ed9689c",
+      "served_sha256": "04272d69a0b64783cd5b66820d6f8220ee510409d0b12c38626404be9ed9689c",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "assets/lab.js",
+      "sha256": "cac4fd6f38d82f889b514955a842392366114aeea46bf13548e623d4523af927",
+      "served_sha256": "cac4fd6f38d82f889b514955a842392366114aeea46bf13548e623d4523af927",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "assets/mathjax-LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+      "served_sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "assets/mathjax-tex-svg.js",
+      "sha256": "d4295dc33744836935c1399feece5159577b34c5c8ffb9f1c6324cd82e03a882",
+      "served_sha256": "d4295dc33744836935c1399feece5159577b34c5c8ffb9f1c6324cd82e03a882",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "assets/regular-and-friendship.svg",
+      "sha256": "b67803aac34fc462d6bacc5531a14cb9a716e732d07b2a3fac6e83d274fc9ca0",
+      "served_sha256": "b67803aac34fc462d6bacc5531a14cb9a716e732d07b2a3fac6e83d274fc9ca0",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "assets/site-preview.png",
+      "sha256": "81825cfbabe907e5fac40b2a0f9ec8a673b0baa8a64fb9689ea2e7dbce268498",
+      "served_sha256": "81825cfbabe907e5fac40b2a0f9ec8a673b0baa8a64fb9689ea2e7dbce268498",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "book-overview.html",
+      "sha256": "ea79a95b9266fbf885de3e27642a7b45b6e17b0941e009907f8ed58236f86dff",
+      "served_sha256": "ea79a95b9266fbf885de3e27642a7b45b6e17b0941e009907f8ed58236f86dff",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "chapter-01-graphs-routes-spanning-trees.html",
+      "sha256": "4db1fb6e1bb097ea5eeeaef4926ee4734cdba67361e352298ea31dde783a7c4c",
+      "served_sha256": "4db1fb6e1bb097ea5eeeaef4926ee4734cdba67361e352298ea31dde783a7c4c",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "chapter-01-graphs-routes-spanning-trees.meta.json",
+      "sha256": "de1e11a9eca6fcaae9d4fa9351a26b375ac62b084d93f654bd64fa57ea25a203",
+      "served_sha256": "de1e11a9eca6fcaae9d4fa9351a26b375ac62b084d93f654bd64fa57ea25a203",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "chapter-02-incidence-determinants-matrix-tree.html",
+      "sha256": "24fb6927874aa0031a4faa187c1317ff6f6fb50bb4bc338d26c6a8c3a395d4bd",
+      "served_sha256": "24fb6927874aa0031a4faa187c1317ff6f6fb50bb4bc338d26c6a8c3a395d4bd",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "chapter-02-incidence-determinants-matrix-tree.meta.json",
+      "sha256": "a783ae9c9c7678c60b78be8170b4a0097f4e9d8a902c3dbdb2128d9c38fd3b01",
+      "served_sha256": "a783ae9c9c7678c60b78be8170b4a0097f4e9d8a902c3dbdb2128d9c38fd3b01",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "chapter-03-rank-components-cycles-bipartite.html",
+      "sha256": "a90302628c487bee789bd317b7c4955b4353baf790bdc9d70cfa4ce75e6751d3",
+      "served_sha256": "a90302628c487bee789bd317b7c4955b4353baf790bdc9d70cfa4ce75e6751d3",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "chapter-03-rank-components-cycles-bipartite.meta.json",
+      "sha256": "bf29268e8d74db030ae5232fb79727081ca14f9efb7b7d26728034ddc667dcd3",
+      "served_sha256": "bf29268e8d74db030ae5232fb79727081ca14f9efb7b7d26728034ddc667dcd3",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "chapter-04-eigenvectors-walks-spectral-theorem.html",
+      "sha256": "d32e634f4e5a1a30fbde923932d4912e30bc07bb0a8168676f2946eef3535872",
+      "served_sha256": "d32e634f4e5a1a30fbde923932d4912e30bc07bb0a8168676f2946eef3535872",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "chapter-04-eigenvectors-walks-spectral-theorem.meta.json",
+      "sha256": "da5a01823846267c664a163257e2e188e28200ca3fb70d6e767dfdb3c5c714a8",
+      "served_sha256": "da5a01823846267c664a163257e2e188e28200ca3fb70d6e767dfdb3c5c714a8",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "chapter-05-diameter-polynomials-spectral-rank.html",
+      "sha256": "3cd77e10d849a2e983e7c42e79105f5fc9ec4fc9904e43e40da7c6328de807ae",
+      "served_sha256": "3cd77e10d849a2e983e7c42e79105f5fc9ec4fc9904e43e40da7c6328de807ae",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "chapter-05-diameter-polynomials-spectral-rank.meta.json",
+      "sha256": "6964a867ddff397090f3a0a19942626bcf7733993cfcef297897441501b4a091",
+      "served_sha256": "6964a867ddff397090f3a0a19942626bcf7733993cfcef297897441501b4a091",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "chapter-06-perron-vectors-structural-bounds.html",
+      "sha256": "8ce42580764edac19e1e0baf7af3650428f3fcea906d6ad669154c6bff595e78",
+      "served_sha256": "8ce42580764edac19e1e0baf7af3650428f3fcea906d6ad669154c6bff595e78",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "chapter-06-perron-vectors-structural-bounds.meta.json",
+      "sha256": "6be1d679787a29e28a2f7804589fb173d5b06a3389571ffabe8f86471d78524d",
+      "served_sha256": "6be1d679787a29e28a2f7804589fb173d5b06a3389571ffabe8f86471d78524d",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "chapter-07-interlacing-positive-blocks-quotients.html",
+      "sha256": "d30e5b3b0b166f8b4063cc34c4ca7b772a227438adcabb8b8ddb0699a3a5d24c",
+      "served_sha256": "d30e5b3b0b166f8b4063cc34c4ca7b772a227438adcabb8b8ddb0699a3a5d24c",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "chapter-07-interlacing-positive-blocks-quotients.meta.json",
+      "sha256": "dd09ed0e06d469f301f76ba2067b949dd26314dfd6a5f7595ab56bb86b2a64d8",
+      "served_sha256": "dd09ed0e06d469f301f76ba2067b949dd26314dfd6a5f7595ab56bb86b2a64d8",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "chapter-08-coloring-cliques-independence.html",
+      "sha256": "beaf388ea05c2e47903151d43ad165f938cbcff2c6ff053bf06e86aa452f7b3b",
+      "served_sha256": "beaf388ea05c2e47903151d43ad165f938cbcff2c6ff053bf06e86aa452f7b3b",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "chapter-08-coloring-cliques-independence.meta.json",
+      "sha256": "07a41c17d45637fd0de5c3770a38fdabf13d5c7cc15b7bb676279aaf4e461bf2",
+      "served_sha256": "07a41c17d45637fd0de5c3770a38fdabf13d5c7cc15b7bb676279aaf4e461bf2",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "chapter-09-random-walks-stationary-mixing.html",
+      "sha256": "8f36d98eb9b85a0939360142b0459ba8c7a9569d3422c620f8459eb5a724b120",
+      "served_sha256": "8f36d98eb9b85a0939360142b0459ba8c7a9569d3422c620f8459eb5a724b120",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "chapter-09-random-walks-stationary-mixing.meta.json",
+      "sha256": "140af8281c2c442156b8bb1e05fce7bbd7a69a570d019c9d047e692573b3aba3",
+      "served_sha256": "140af8281c2c442156b8bb1e05fce7bbd7a69a570d019c9d047e692573b3aba3",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "chapter-10-regularity-strong-regularity-friendship.html",
+      "sha256": "4faf77713c78e9bff62a3c43df209b63ddc1762646e7ccad603912516afda776",
+      "served_sha256": "4faf77713c78e9bff62a3c43df209b63ddc1762646e7ccad603912516afda776",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "chapter-10-regularity-strong-regularity-friendship.meta.json",
+      "sha256": "ba312c3e4ccd25281b644784d09074c4743da8628336876c250f86b2f7b1f0fa",
+      "served_sha256": "ba312c3e4ccd25281b644784d09074c4743da8628336876c250f86b2f7b1f0fa",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "chapter-11-cospectral-switching-spectral-uniqueness.html",
+      "sha256": "b21df57f7388f1ef3c4e6beb99b3cbbad008ca6c2a0607e6cb36266fef0815b4",
+      "served_sha256": "b21df57f7388f1ef3c4e6beb99b3cbbad008ca6c2a0607e6cb36266fef0815b4",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "chapter-11-cospectral-switching-spectral-uniqueness.meta.json",
+      "sha256": "9a1a9e47e0bc40566475f0be7ee39854be2a706955fe03cd5585ec7608a5cd31",
+      "served_sha256": "9a1a9e47e0bc40566475f0be7ee39854be2a706955fe03cd5585ec7608a5cd31",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "chapter-12-hypercubes-sensitivity-theorem.html",
+      "sha256": "3700b7136a32b8d8b0132bf194d2936cea518839fbc0d8f0fef42bf390490342",
+      "served_sha256": "3700b7136a32b8d8b0132bf194d2936cea518839fbc0d8f0fef42bf390490342",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "chapter-12-hypercubes-sensitivity-theorem.meta.json",
+      "sha256": "d57bc3bb1772ce6eeb5683c2c8e885772565341a81e92bae72bd9e09a85dc3f1",
+      "served_sha256": "d57bc3bb1772ce6eeb5683c2c8e885772565341a81e92bae72bd9e09a85dc3f1",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "chapter-13-expanders-ramanujan-lifts-zigzag.html",
+      "sha256": "3c0ea31dc15e8ecd58cc079100d8169ad361d8c39a346285d18ac7e8c2e2b2fa",
+      "served_sha256": "3c0ea31dc15e8ecd58cc079100d8169ad361d8c39a346285d18ac7e8c2e2b2fa",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "chapter-13-expanders-ramanujan-lifts-zigzag.meta.json",
+      "sha256": "cbbbff249dc71a9e4bdf1da8388d00814d4e881a74e9281e026d2769847be3df",
+      "served_sha256": "cbbbff249dc71a9e4bdf1da8388d00814d4e881a74e9281e026d2769847be3df",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "chapter-14-algebraic-connectivity-fiedler-geometry.html",
+      "sha256": "e55e537e334f869ff553512f28ba17370f79cca6ca8eb9f5bb1046a2e8daa1b2",
+      "served_sha256": "e55e537e334f869ff553512f28ba17370f79cca6ca8eb9f5bb1046a2e8daa1b2",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "chapter-14-algebraic-connectivity-fiedler-geometry.meta.json",
+      "sha256": "8a7757a9ebfa93f86d905a724e8aef3dc5855264e6d8c69120927cddabbc34a6",
+      "served_sha256": "8a7757a9ebfa93f86d905a724e8aef3dc5855264e6d8c69120927cddabbc34a6",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "chapter-15-signed-balance-switching-spectra.html",
+      "sha256": "a93d7865fcb791ae7f3e79460588abb85489b0c2719d9b7592fc0195fa717fa3",
+      "served_sha256": "a93d7865fcb791ae7f3e79460588abb85489b0c2719d9b7592fc0195fa717fa3",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "chapter-15-signed-balance-switching-spectra.meta.json",
+      "sha256": "c9ea72ecef0ae6d68e30ffa446096fb5c3dcf9db8607e5b689f79c3f796a7a4e",
+      "served_sha256": "c9ea72ecef0ae6d68e30ffa446096fb5c3dcf9db8607e5b689f79c3f796a7a4e",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "chapter-16-signed-laplacians-frustration-cycle-covers.html",
+      "sha256": "843133d92b700cf35c9789eded461643ae856512cf84d5fe5897891409e2d2cd",
+      "served_sha256": "843133d92b700cf35c9789eded461643ae856512cf84d5fe5897891409e2d2cd",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "chapter-16-signed-laplacians-frustration-cycle-covers.meta.json",
+      "sha256": "e817722e735e313d5ae39091d646397835c55aca45d738a3615c5b292bf82529",
+      "served_sha256": "e817722e735e313d5ae39091d646397835c55aca45d738a3615c5b292bf82529",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "chapter-code-validation.json",
+      "sha256": "761f0055af7971908ba10aeb2dc7198bb4ee5508f4807f1228ba1e90bee8915b",
+      "served_sha256": "761f0055af7971908ba10aeb2dc7198bb4ee5508f4807f1228ba1e90bee8915b",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "code/ch09_walks.py",
+      "sha256": "ec636d7d5042993620a9aeedc2eb51318b777afee314a579788712e86a68f786",
+      "served_sha256": "ec636d7d5042993620a9aeedc2eb51318b777afee314a579788712e86a68f786",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "code/ch10_regular_graphs.py",
+      "sha256": "9a5eb1290177e92b10e582e50b670658743aa44d4c904f47f984134ce8a8c82e",
+      "served_sha256": "9a5eb1290177e92b10e582e50b670658743aa44d4c904f47f984134ce8a8c82e",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "code/ch11_cospectral.py",
+      "sha256": "b22591c3720d6f641ab8b3e892a7647fa6ee31ffcc61698b5a58c4497a1dd1d5",
+      "served_sha256": "b22591c3720d6f641ab8b3e892a7647fa6ee31ffcc61698b5a58c4497a1dd1d5",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "code/ch12_sensitivity.py",
+      "sha256": "a173da19b7171bcbf5ab256311123ad2dfeaa52c7b5f786b232b9210aa441c31",
+      "served_sha256": "a173da19b7171bcbf5ab256311123ad2dfeaa52c7b5f786b232b9210aa441c31",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "code/ch13_expanders.py",
+      "sha256": "0d5ef100f753decd181e7f1f779e9dc3fcb2cfe4c059f9da92523307a35809f1",
+      "served_sha256": "0d5ef100f753decd181e7f1f779e9dc3fcb2cfe4c059f9da92523307a35809f1",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "code/ch14_fiedler.py",
+      "sha256": "9a8a61b0e54fe80200c4e4d4548c9d805b210b55a48c97d4dc919bfd8b1dc261",
+      "served_sha256": "9a8a61b0e54fe80200c4e4d4548c9d805b210b55a48c97d4dc919bfd8b1dc261",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "code/ch15_balance.py",
+      "sha256": "c60cd785b28955eb7bfea2cc03cad8bccb42367609247d24b41eceac3cde937d",
+      "served_sha256": "c60cd785b28955eb7bfea2cc03cad8bccb42367609247d24b41eceac3cde937d",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "code/ch16_frustration_covers.py",
+      "sha256": "1f2faa94612c69b1ed885887f84eab4524823e8d76276cca26916285c032ff4e",
+      "served_sha256": "1f2faa94612c69b1ed885887f84eab4524823e8d76276cca26916285c032ff4e",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "completion.json",
+      "sha256": "335a5c57154db1899f0b63a21b5fdac6d37c1ab0215bbef774a48c747fef8826",
+      "served_sha256": "335a5c57154db1899f0b63a21b5fdac6d37c1ab0215bbef774a48c747fef8826",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "content-inventory.json",
+      "sha256": "f66733943490c8747e42141c63079cb266092330367ffe2b15a50833d3ed0a2c",
+      "served_sha256": "f66733943490c8747e42141c63079cb266092330367ffe2b15a50833d3ed0a2c",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "course-review.json",
+      "sha256": "1ff6e6c8269c2a9c044f0a160c669e4d7c116b1fbdebe5608c9a8c74813cbf8f",
+      "served_sha256": "1ff6e6c8269c2a9c044f0a160c669e4d7c116b1fbdebe5608c9a8c74813cbf8f",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "editorial-review-summary.json",
+      "sha256": "3797fc9a44d41fbb04c164ae5b8acb7f3dfea648f9f0abb77814ee206f83ac34",
+      "served_sha256": "3797fc9a44d41fbb04c164ae5b8acb7f3dfea648f9f0abb77814ee206f83ac34",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "index.html",
+      "sha256": "fd5ee34171e1e1b59404469740319c9119651d45b7f48736935ee16e7970fa97",
+      "served_sha256": "fd5ee34171e1e1b59404469740319c9119651d45b7f48736935ee16e7970fa97",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "numerical-lab.html",
+      "sha256": "78ebcb17e8ba3d06fa0ccd8227562237ab171e6085938744c4d7eb01f78ad9b7",
+      "served_sha256": "78ebcb17e8ba3d06fa0ccd8227562237ab171e6085938744c4d7eb01f78ad9b7",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "numerical_lab.py",
+      "sha256": "fb7c531a435375bb96dae2d5c9f1ea0c787c751e2a74ac6b76e8a66b11b9fad0",
+      "served_sha256": "fb7c531a435375bb96dae2d5c9f1ea0c787c751e2a74ac6b76e8a66b11b9fad0",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "package-validation.json",
+      "sha256": "ab2a5e6c474fbba590fc291f946fd12b82e9baa77afa0480c1d2b237391a0290",
+      "served_sha256": "ab2a5e6c474fbba590fc291f946fd12b82e9baa77afa0480c1d2b237391a0290",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "public-package-validation.json",
+      "sha256": "2fc64bd6751e3dfa34bc8daa641a307edd8c6b7fce2a81a9ead13d3e07307785",
+      "served_sha256": "2fc64bd6751e3dfa34bc8daa641a307edd8c6b7fce2a81a9ead13d3e07307785",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "reader-validation.json",
+      "sha256": "c48172c4227ea88b893d5465d12771cfbb9bbbe2a2b7ffa2161db9c100c1ce13",
+      "served_sha256": "c48172c4227ea88b893d5465d12771cfbb9bbbe2a2b7ffa2161db9c100c1ce13",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "README.md",
+      "sha256": "46f9adc65273bb2d2d2b0cd4b1b88725bda7cd9a723f0b2b64c9633a247acf03",
+      "served_sha256": "46f9adc65273bb2d2d2b0cd4b1b88725bda7cd9a723f0b2b64c9633a247acf03",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "references.html",
+      "sha256": "b25c30047a019eb72221e7f22bf644df757ad3abd882a8b9892c263132f1b685",
+      "served_sha256": "b25c30047a019eb72221e7f22bf644df757ad3abd882a8b9892c263132f1b685",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "9376034b4aae43063c552d596c9295f1e4d31ca8d112dcddb7aee08d2f37e995",
+      "served_sha256": "9376034b4aae43063c552d596c9295f1e4d31ca8d112dcddb7aee08d2f37e995",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "source-free-validation.json",
+      "sha256": "2011eb0545105f9abccb5bbe93919aee604479aad21e0cb5d890452f63545c60",
+      "served_sha256": "2011eb0545105f9abccb5bbe93919aee604479aad21e0cb5d890452f63545c60",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "source-manifest.json",
+      "sha256": "4dab7ff66b8ee28f53c89edf6de0e905f3070815420f47f90f7cff04c7dad32a",
+      "served_sha256": "4dab7ff66b8ee28f53c89edf6de0e905f3070815420f47f90f7cff04c7dad32a",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "source-map.html",
+      "sha256": "7336aed5999cdef77e225f386d4f6e4e4141ed739d194ddd05ff3da35f2dfe5f",
+      "served_sha256": "7336aed5999cdef77e225f386d4f6e4e4141ed739d194ddd05ff3da35f2dfe5f",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "source-map.json",
+      "sha256": "7a86dcd5269f8075d8fe68dd4a04a646b12f77601d723210a855d4d1f5f8c2e8",
+      "served_sha256": "7a86dcd5269f8075d8fe68dd4a04a646b12f77601d723210a855d4d1f5f8c2e8",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "source-validation-summary.json",
+      "sha256": "c72f6295f497fa06d4980b93bcc72acaccd45965229b465e86c48dff2b8d771c",
+      "served_sha256": "c72f6295f497fa06d4980b93bcc72acaccd45965229b465e86c48dff2b8d771c",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "tools/audit_public.py",
+      "sha256": "f63213891e8109925d0a6a2bad909d569f7f3b34f631fd65c15b7cf4775c8827",
+      "served_sha256": "f63213891e8109925d0a6a2bad909d569f7f3b34f631fd65c15b7cf4775c8827",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "tools/build_book.py",
+      "sha256": "2e49350a034b4aa9f7a792098c4c40f9cc3754f4bbebcaab2b129d52f04a0462",
+      "served_sha256": "2e49350a034b4aa9f7a792098c4c40f9cc3754f4bbebcaab2b129d52f04a0462",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "tools/check_chapter_code.py",
+      "sha256": "0ca57a691a1b138ff4c62bced4086c3f0f664916bcaab1fe88db5f16660c3c7a",
+      "served_sha256": "0ca57a691a1b138ff4c62bced4086c3f0f664916bcaab1fe88db5f16660c3c7a",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "tools/update_metadata.py",
+      "sha256": "5ec6c5343f85dc4edb010067b4c01327db687189580a1a3d7acff5091085056b",
+      "served_sha256": "5ec6c5343f85dc4edb010067b4c01327db687189580a1a3d7acff5091085056b",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "tools/validate_books.py",
+      "sha256": "32560b8f1a61e67379eaeb9ea27114aea7c568f74cd288fe52d6ff2d622c650d",
+      "served_sha256": "32560b8f1a61e67379eaeb9ea27114aea7c568f74cd288fe52d6ff2d622c650d",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "tools/verify_publication.py",
+      "sha256": "218f6c31d459bc39b46baed1975a69e844f26abaef916e1cd85104dcf72a317e",
+      "served_sha256": "218f6c31d459bc39b46baed1975a69e844f26abaef916e1cd85104dcf72a317e",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "tools/verify_source_free.py",
+      "sha256": "52b1368170b3c13e1a7ce8e35250ff7959299c0873b0c84f7c398048f82f28ac",
+      "served_sha256": "52b1368170b3c13e1a7ce8e35250ff7959299c0873b0c84f7c398048f82f28ac",
+      "passed": true,
+      "error": null
+    },
+    {
+      "path": "WORKFLOW.md",
+      "sha256": "5f0fdf4d6f0d762feac902046f59e8bd6774ac5ba83bf839dcdd424ae63e101e",
+      "served_sha256": "5f0fdf4d6f0d762feac902046f59e8bd6774ac5ba83bf839dcdd424ae63e101e",
+      "passed": true,
+      "error": null
+    }
+  ],
+  "excluded_from_served_hashes": {
+    "publication-validation.json": "A report cannot contain a verifiable hash of itself; existence and JSON shape are checked separately."
+  },
+  "served_report_exists_and_is_json": true,
+  "served_report_passed": false,
+  "bootstrap_probe": true,
+  "served_report_error": null,
+  "browser_checks_requested": true,
+  "live_reader": [
+    {
+      "page": "index.html",
+      "width": 1440,
+      "passed": true,
+      "math_count": 0,
+      "math_errors": 0,
+      "javascript_errors": [],
+      "horizontal_overflow": false,
+      "theme": true,
+      "text_size": true,
+      "solutions": true,
+      "page_specific_controls": true
+    },
+    {
+      "page": "chapter-01-graphs-routes-spanning-trees.html",
+      "width": 1440,
+      "passed": true,
+      "math_count": 208,
+      "math_errors": 0,
+      "javascript_errors": [],
+      "horizontal_overflow": false,
+      "theme": true,
+      "text_size": true,
+      "solutions": true,
+      "page_specific_controls": true
+    },
+    {
+      "page": "chapter-09-random-walks-stationary-mixing.html",
+      "width": 1440,
+      "passed": true,
+      "math_count": 233,
+      "math_errors": 0,
+      "javascript_errors": [],
+      "horizontal_overflow": false,
+      "theme": true,
+      "text_size": true,
+      "solutions": true,
+      "page_specific_controls": true
+    },
+    {
+      "page": "chapter-16-signed-laplacians-frustration-cycle-covers.html",
+      "width": 1440,
+      "passed": true,
+      "math_count": 134,
+      "math_errors": 0,
+      "javascript_errors": [],
+      "horizontal_overflow": false,
+      "theme": true,
+      "text_size": true,
+      "solutions": true,
+      "page_specific_controls": true
+    },
+    {
+      "page": "numerical-lab.html",
+      "width": 1440,
+      "passed": true,
+      "math_count": 20,
+      "math_errors": 0,
+      "javascript_errors": [],
+      "horizontal_overflow": false,
+      "theme": true,
+      "text_size": true,
+      "solutions": true,
+      "page_specific_controls": true
+    },
+    {
+      "page": "index.html",
+      "width": 390,
+      "passed": true,
+      "math_count": 0,
+      "math_errors": 0,
+      "javascript_errors": [],
+      "horizontal_overflow": false,
+      "theme": true,
+      "text_size": true,
+      "solutions": true,
+      "page_specific_controls": true
+    },
+    {
+      "page": "chapter-01-graphs-routes-spanning-trees.html",
+      "width": 390,
+      "passed": true,
+      "math_count": 208,
+      "math_errors": 0,
+      "javascript_errors": [],
+      "horizontal_overflow": false,
+      "theme": true,
+      "text_size": true,
+      "solutions": true,
+      "page_specific_controls": true
+    },
+    {
+      "page": "chapter-09-random-walks-stationary-mixing.html",
+      "width": 390,
+      "passed": true,
+      "math_count": 233,
+      "math_errors": 0,
+      "javascript_errors": [],
+      "horizontal_overflow": false,
+      "theme": true,
+      "text_size": true,
+      "solutions": true,
+      "page_specific_controls": true
+    },
+    {
+      "page": "chapter-16-signed-laplacians-frustration-cycle-covers.html",
+      "width": 390,
+      "passed": true,
+      "math_count": 134,
+      "math_errors": 0,
+      "javascript_errors": [],
+      "horizontal_overflow": false,
+      "theme": true,
+      "text_size": true,
+      "solutions": true,
+      "page_specific_controls": true
+    },
+    {
+      "page": "numerical-lab.html",
+      "width": 390,
+      "passed": true,
+      "math_count": 20,
+      "math_errors": 0,
+      "javascript_errors": [],
+      "horizontal_overflow": false,
+      "theme": true,
+      "text_size": true,
+      "solutions": true,
+      "page_specific_controls": true
+    }
+  ],
+  "github_readme_preview_links_to_book": true,
+  "preview_error": null,
+  "scope": "Exact public payload bytes (including completion.json), served-report presence, rendered GitHub README preview/link, and representative hidden browser checks only when --browser is selected. No new mathematical or audiovisual review."
 }

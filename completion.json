@@ -1,6 +1,6 @@
 {
   "complete": false,
-  "stage": "all-local-and-source-free-gates-passed-initial-publication-pending",
+  "stage": "initial-live-payload-verified-final-served-report-verification-pending",
   "planned_chapters": 16,
   "authored_chapters": 16,
   "scientifically_accepted_chapters": 16,
@@ -11,7 +11,7 @@
   "executed_listing_count": 16,
   "public_repository_created": true,
   "committed": true,
-  "pushed": false,
+  "pushed": true,
   "limitations": [
     "Machine ASR and chunk boundaries remain fallible.",
     "All45 playlist identities are retained; entries41/45 are verified byte-identical media,44 unique audio representations.",
@@ -28,5 +28,11 @@
     "strict_public_files": 83,
     "source_free_git_archive": true,
     "byte_identical_html": 21
+  },
+  "initial_live_validation": {
+    "passed": true,
+    "served_files": 82,
+    "desktop_mobile_reader_checks": 10,
+    "readme_preview": true
   }
 }
