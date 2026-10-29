@@ -1,7 +1,7 @@
 {
   "passed": true,
   "strict_release_inventory": true,
-  "final_completion_gate": false,
+  "final_completion_gate": true,
   "file_count": 83,
   "files": [
     ".gitattributes",

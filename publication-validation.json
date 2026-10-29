@@ -1,9 +1,9 @@
 {
   "passed": true,
-  "checked_at_utc": "2026-10-29T00:57:57.658192+00:00",
+  "checked_at_utc": "2026-10-29T01:01:03.336617+00:00",
   "base_url": "https://az9713.github.io/nptel-algebraic-graph-theory-notes/",
   "repository_url": "https://github.com/az9713/nptel-algebraic-graph-theory-notes",
-  "payload_commit": "49c47eefb1320a46d2cc9b518d61ad83003bb411",
+  "payload_commit": "6dc2f940a41b8e50df68ad06df0e843fea7df0c5",
   "served_file_count": 82,
   "files": [
     {
@@ -400,8 +400,8 @@
     },
     {
       "path": "completion.json",
-      "sha256": "335a5c57154db1899f0b63a21b5fdac6d37c1ab0215bbef774a48c747fef8826",
-      "served_sha256": "335a5c57154db1899f0b63a21b5fdac6d37c1ab0215bbef774a48c747fef8826",
+      "sha256": "85ec8af4759cd44638333345bad69849bd05450e521f498a8acd3c6c5934f2ee",
+      "served_sha256": "85ec8af4759cd44638333345bad69849bd05450e521f498a8acd3c6c5934f2ee",
       "passed": true,
       "error": null
     },
@@ -585,8 +585,8 @@
     "publication-validation.json": "A report cannot contain a verifiable hash of itself; existence and JSON shape are checked separately."
   },
   "served_report_exists_and_is_json": true,
-  "served_report_passed": false,
-  "bootstrap_probe": true,
+  "served_report_passed": true,
+  "bootstrap_probe": false,
   "served_report_error": null,
   "browser_checks_requested": true,
   "live_reader": [
